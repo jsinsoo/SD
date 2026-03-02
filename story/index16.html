@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『홍길동전』 인물들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 5px;
+            background-color: #fafdff;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『홍길동전』 인물들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro">(시대를 넘어, 소설 속 인물들이 '율도국'의 원탁에 모여 대화를 시작합니다.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">홍길동</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-gildong">읽기</button></div>
+                        <div id="ko-gildong">나는 아버지를 아버지라 부르지 못하는 서러움 속에서, 썩어빠진 신분 제도를 타파하고자 했습니다. 지금 보니, 이 시대는 인간이 자연을 '아버지'라 부르지 못하고, 그저 이용할 자원으로만 여기는 것 같아 안타깝습니다. 지구의 지속가능 발전이란, 결국 자연을 우리의 근본이자 아버지로 다시 모시는 일입니다. 부패한 탐관오리들이 백성의 고혈을 빨아먹듯, 일부 국가와 기업들이 지구의 자원을 독차지하고 있습니다. 이제 새로운 활빈당을 조직하여, 파괴된 자연을 회복시키고 그 혜택이 모든 생명에게 공평하게 돌아가는 '지구 율도국'을 건설해야 할 때입니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">홍판서</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-panseo">읽기</button></div>
+                        <div id="ko-panseo">나는 길동이의 뛰어난 재주를 알면서도, 나라의 법도와 체면 때문에 그 아이를 끌어안지 못했소. 내 대의 명분에 갇혀 아들의 고통을 외면한 셈이지. 지금의 기성세대가 꼭 내 모습 같구려. 기후 변화의 심각성을 알면서도, '경제 발전'이라는 낡은 명분에 사로잡혀 미래 세대의 고통을 외면하고 있지 않소. 지속가능 발전은 과거의 잘못을 인정하는 데서 시작해야 하오. 나처럼 뒤늦게 후회하지 말고, 지금이라도 법도와 제도를 바꿔 미래 세대인 길동이들이 마음껏 재주를 펼칠 수 있는 터전을 마련해 주어야 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">춘섬 (길동의 어머니)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-chunseom">읽기</button></div>
+                        <div id="ko-chunseom">저는 신분이 낮다는 이유로 제 자식이 겪는 서러움을 그저 지켜볼 수밖에 없었습니다. 제 몸으로 낳은 자식이지만, 온전히 제 자식이라 말할 수 없는 아픔이었지요. 지금 병들어가는 대지는 마치 제 모습과 같습니다. 수많은 생명을 낳고 길러냈지만, 인간의 탐욕 앞에서 신음하며 파괴되는 것을 속수무책으로 지켜보고만 있습니다. 진정한 지속가능 발전은, 우리 모두를 낳아준 어머니, 이 대지의 아픔에 공감하는 마음에서 시작되어야 합니다. 어머니의 눈물을 닦아주려는 자식의 마음으로, 상처 입은 자연을 보듬고 치유하려는 노력이 필요합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">활빈당 대표</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-hwalbindang">읽기</button></div>
+                        <div id="ko-hwalbindang">우리는 굶주리는 백성을 외면하고 저들끼리 배를 불리는 관아를 털었습니다. 행동하지 않는 정의는 위선이기 때문입니다. 지금 '지속가능 발전'을 외치면서도, 정작 부유한 나라들은 여전히 막대한 탄소를 배출하고 가난한 나라에 그 피해를 떠넘기고 있습니다. 이것이 어찌 정의라 할 수 있겠습니까! 진정한 지속가능성은 말로만 하는 구호가 아니라 행동입니다. 우리는 부당하게 부를 축적한 자들에게서 빼앗아 가난한 이들에게 나누었듯, 환경을 파괴하며 이익을 독점하는 자들에게 '탄소세'와 같은 강력한 책임을 물어, 그 비용으로 고통받는 지역과 미래 세대를 위해 사용해야 합니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro">(Beyond the ages, the characters of the novel gather at a roundtable in the nation of Yuldo to begin their discussion.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Hong Gildong</span><button class="speak-btn" data-lang="en-US" data-target="en-gildong">Read</button></div>
+                        <div id="en-gildong">In the sorrow of not being able to call my father 'father,' I sought to overthrow a corrupt social system. Now, it seems to me that this era suffers from humanity's inability to call Nature 'father,' treating it merely as a resource to be exploited. Sustainable development, in the end, is the task of restoring Nature to its rightful place as our origin, our father. Just as corrupt officials bled the people dry, certain nations and corporations are monopolizing the Earth's resources. The time has come to form a new Hwalbindang, to restore the ravaged environment and build a 'Global Yuldo Nation' where the benefits are shared equally among all living beings.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Minister Hong</span><button class="speak-btn" data-lang="en-US" data-target="en-panseo">Read</button></div>
+                        <div id="en-panseo">I knew of Gildong's exceptional talents, yet I could not embrace him due to the laws and reputation of my station. Trapped by my own justifications, I ignored my son's suffering. The older generation of today seems just like me. They know the severity of climate change, yet, captivated by the old cause of 'economic growth,' they ignore the suffering of future generations. Sustainable development must begin with admitting the faults of the past. Do not be like me and regret it too late. We must change our laws and systems now to prepare a foundation where future generations—the Gildongs of tomorrow—can flourish with their talents.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Chunseom (Gildong's Mother)</span><button class="speak-btn" data-lang="en-US" data-target="en-chunseom">Read</button></div>
+                        <div id="en-chunseom">Because of my low status, I could only watch as my child suffered. He was the child I bore, yet it was a pain to not be able to fully claim him as my own. The ailing Earth today is just like me. It has given birth to and nurtured countless lives, yet it can only watch helplessly as it groans and is destroyed by human greed. True sustainable development must begin with empathy for the pain of this land, the mother who bore us all. With the heart of a child wanting to wipe away a mother's tears, we need efforts to embrace and heal our wounded nature.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Representative of the Hwalbindang</span><button class="speak-btn" data-lang="en-US" data-target="en-hwalbindang">Read</button></div>
+                        <div id="en-hwalbindang">We raided the offices of corrupt officials who ignored the starving people and filled their own bellies, because justice without action is hypocrisy. Today, while chanting 'sustainable development,' the wealthiest nations continue to emit vast amounts of carbon and pass the damage onto poorer nations. How can this be called justice? True sustainability is not a slogan; it is action. Just as we took from the unjustly rich and gave to the poor, we must hold those who monopolize profits by destroying the environment accountable with strong measures like a 'carbon tax,' and use that cost to support afflicted regions and future generations.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro">（時代を超え、小説の登場人物たちが「栗島国」の円卓に集い、対話を始めます。）</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">洪吉童 (ホン・ギルドン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-gildong">読む</button></div>
+                        <div id="ja-gildong">私は父を父と呼べない悲しみの中で、腐敗した身分制度を打破しようとしました。今見れば、この時代は人間が自然を「父」と呼べず、ただ利用すべき資源としか見ていないようで残念です。地球の持続可能な発展とは、結局のところ、自然を私たちの根源であり父として再び敬うことです。腐敗した役人が民衆の血を吸うように、一部の国や企業が地球の資源を独占しています。今こそ新たな活貧党を組織し、破壊された自然を回復させ、その恩恵がすべての生命に公平に行き渡る「地球栗島国」を建設すべき時です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">洪判書 (ホン・パンソ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-panseo">読む</button></div>
+                        <div id="ja-panseo">私はギルドンの優れた才能を知りながらも、国の法と体面のためにあの子を受け入れることができなかった。私の大義名分に囚われ、息子の苦しみに背を向けたのだ。今の既成世代は、まさに私の姿のようだ。気候変動の深刻さを知りながらも、「経済発展」という古い名分にとらわれ、未来の世代の苦しみから目をそらしているではないか。持続可能な発展は、過去の過ちを認めることから始めねばならぬ。私のように手遅れになって後悔するのではなく、今からでも法と制度を変え、未来の世代であるギルドンたちが存分に才能を発揮できる土台を築いてやるべきだ。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">春暹 (チュンソム)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-chunseom">読む</button></div>
+                        <div id="ja-chunseom">私は身分が低いという理由で、我が子が経験する悲しみをただ見守るしかありませんでした。自分のお腹を痛めて産んだ子でありながら、心から自分の子だと言えない痛みでした。今、病んでいく大地は、まるで私のようです。数多の命を産み育てながらも、人間の貪欲の前で呻き、破壊されるのをなすすべなく見守っています。真の持続可能な発展は、私たち皆を産んでくれた母なる大地、その痛みに共感する心から始まるべきです。母の涙を拭ってあげたいと願う子の心で、傷ついた自然を抱きしめ、癒そうとする努力が必要です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">活貧党 (ファルビンダン) 代表</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-hwalbindang">読む</button></div>
+                        <div id="ja-hwalbindang">我々は飢える民を顧みず、自分たちの腹ばかり肥やす役所を襲った。行動なき正義は偽善だからだ。今、「持続可能な発展」を叫びながらも、裕福な国々は依然として莫大な炭素を排出し、貧しい国々にその被害を押し付けている。これがどうして正義と言えようか！真の持続可能性とは、口先だけのスローガンではなく、行動である。我々が不当に富を蓄えた者から奪い、貧しい者たちに分け与えたように、環境を破壊して利益を独占する者たちには「炭素税」のような強力な責任を問い、その費用で苦しむ地域と未来の世代のために使うべきだ。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 '읽어주기' 및 '전체 듣기' 버튼을 선택합니다.
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            // 현재 재생 중인 음성을 중지하는 함수
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 다른 음성이 재생 중이면 즉시 중지합니다.
+                    stopSpeech();
+
+                    let lang;
+                    // 버튼 클래스에 따라 언어 코드와 텍스트 대상을 결정합니다.
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0; // 읽는 속도 (기본값 1)
+                        utterance.pitch = 1.0; // 음높이 (기본값 1)
+
+                        utterance.onend = function() {
+                            console.log('Speech playback finished for ' + targetId);
+                        };
+                        
+                        // 음성 재생
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

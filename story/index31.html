@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>열 손가락의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .finger-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #fd7e14;
+            border-radius: 5px;
+            background-color: #fffaf6;
+        }
+        .finger-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .finger-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>열 손가락의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 인류 문명의 가장 위대한 도구, 열 손가락 여러분을 모시고 '지구의 지속가능 발전'에 대한 고견을 듣고자 합니다. 먼저 오른손부터 자기소개와 제언을 부탁드립니다.</p>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">1. 오른쪽 엄지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">저는 '긍정과 결정'의 엄지입니다. 모든 것을 가능하게 하는 힘과 의지를 상징하죠. 지속가능 발전은 더 이상 망설일 문제가 아닙니다. 우리는 'Yes!'라고 엄지를 들어 보이며, 지금 당장 지속가능한 미래로 나아가겠다는 확고한 결정을 내려야 합니다. 각국 정상들은 기후 협약에 '좋아요'를 누르고, 기업들은 ESG 경영에 '최고'라고 엄지를 치켜세워야 합니다. 긍정적인 의지와 강력한 리더십 없이는, 다른 네 손가락이 아무리 움직여도 방향을 잃게 될 것입니다.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">2. 오른쪽 검지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">저는 '방향과 지시'의 검지입니다. 목표를 가리키고, 버튼을 누르며, 정보를 탐색하죠. 지속가능 발전을 위해, 우리는 명확한 방향을 '가리켜야' 합니다. '2050 탄소중립'과 같은 구체적인 목표를 설정하고, 모든 기술과 자원을 그 방향으로 집중시켜야 합니다. 저는 스마트 그리드, 인공지능 기반 환경 감시 시스템 등 지구를 위한 기술의 '버튼을 누를' 것을 제안합니다. 정확한 정보와 기술적 방향 제시가 없다면, 우리의 노력은 허공을 맴돌 뿐입니다.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">3. 오른쪽 중지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">저는 '균형과 중심'의 중지입니다. 다섯 손가락 중 가장 길게 뻗어 손의 중심을 잡습니다. 지속가능 발전의 핵심은 바로 '균형'입니다. 경제 성장, 사회적 안정, 환경 보전이라는 세 기둥 사이의 균형을 잡는 것이 저의 역할입니다. 어느 한쪽으로도 치우치지 않는 굳건한 중심축이 필요합니다. 저는 모든 개발 계획에 있어 환경적, 사회적 영향을 평가하는 '지속가능성 중심 지수'를 도입할 것을 제안합니다. 이 중심이 흔들리면, 손 전체가 무너지듯 인류 문명 전체가 위태로워질 것입니다.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">4. 오른쪽 약지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">저는 '약속과 관계'의 약지입니다. 소중한 언약의 반지를 끼우는 자리죠. 지속가능 발전은 미래 세대와의 깨뜨릴 수 없는 '약속'입니다. 우리는 지금 미래 세대의 자원을 빌려 쓰고 있습니다. 이 자원을 함부로 낭비하는 것은 약속을 저버리는 행위입니다. 저는 모든 헌법에 '미래 세대의 환경권을 보장한다'는 조항을 '반지'처럼 새겨 넣을 것을 제안합니다. 이 신성한 약속을 기억할 때만이, 우리는 눈앞의 이익을 넘어선 장기적인 관계를 생각할 수 있을 것입니다.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">5. 오른쪽 새끼</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">저는 '섬세함과 새로운 약속'의 새끼손가락입니다. 작은 것을 다루고, 새로운 다짐을 할 때 저를 겁니다. 거대한 담론도 중요하지만, 지속가능성은 아주 작은 '디테일'에서 시작됩니다. 저는 미세 플라스틱 문제, 희귀 생물 보호, 에너지 효율 1% 개선과 같은 섬세한 부분에 집중할 것을 제안합니다. 또한, 아이들이 환경 보호를 '새끼손가락 걸고 약속'하는 것처럼, 미래를 위한 다짐을 일상적인 문화로 만들어야 합니다. 이 작은 실천과 약속들이 모여 세상을 바꾸는 거대한 힘이 될 것입니다.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">6. 왼쪽 엄지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">저는 '지지와 받침'의 왼쪽 엄지입니다. 오른손이 정교한 작업을 할 때, 저는 묵묵히 물건을 받쳐주고 힘을 더하죠. 지속가능한 정책과 기술(오른손)이 제대로 작동하려면, 그것을 뒷받침하는 강력한 '사회적 기반'이 필요합니다. 저는 바로 그 기반의 역할을 하고자 합니다. 친환경 제품을 소비하는 시민 의식, 지속가능성을 가르치는 교육 시스템, 녹색 산업을 지원하는 금융 제도 등을 튼튼하게 구축해야 합니다. 이 든든한 받침이 없다면, 아무리 좋은 정책도 공중에서 헛돌 뿐입니다.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">7. 왼쪽 검지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">저는 '안정과 확인'의 왼쪽 검지입니다. 오른손 검지가 무언가를 가리킬 때, 저는 그 목표물이 흔들리지 않도록 꾹 눌러 고정시키는 역할을 합니다. 지속가능 발전을 위한 목표가 설정되었다면, 저는 그 목표가 흔들리지 않도록 '감시하고 검증'하는 시스템을 제안합니다. 국제적인 환경 감시 기구를 만들고, 기업의 ESG 경영 보고서를 철저히 검증해야 합니다. 또한, 설정된 목표가 구호에 그치지 않도록 진행 상황을 주기적으로 확인하고 압박하는 역할을 맡아야 합니다. 안정적인 고정 없이는 정확한 조준도 불가능합니다.</div></div>
+                    <div class="finger-item"><div class="subject-header"><span class="subject-title">8. 왼쪽 중지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div><div id="ko-8">저는 '협력과 연대'의 왼쪽 중지입니다. 오른손 중지가 중심을 잡을 때, 저는 그 옆에서 함께 힘을 보태어 가장 안정적인 균형을 만듭니다. 지구 문제는 어느 한 나라나 한 손가락의 힘만으로는 결코 해결할 수 없습니다. 저는 '글로벌 파트너십'의 강화를 주장합니다. 선진국과 개발도상국이, 정부와 기업이, 그리고 시민사회가 서로의 부족한 부분을 채워주며 함께 나아가야 합니다. 마치 양손의 중지가 힘을 합칠 때 가장 무거운 것도 들 수 있듯이, 인류가 힘을 합칠 때 지속가능성이라는 무거운 과제도 해결할 수 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. 왼쪽 약지</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div><div id="ko-9">저는 '묵묵한 지지'와 '내재적 가치'의 왼쪽 약지입니다. 다른 손가락에 비해 화려한 역할은 없지만, 손의 구조를 완성하는 데 필수적인 존재죠. 저는 눈에 보이지 않는 가치를 존중할 것을 제안합니다. 경제적 가치로 환산되지 않는 생물 다양성, 깨끗한 공기의 가치, 미래 세대의 행복권과 같은 것들입니다. 이러한 '내재적 가치'를 존중하는 철학이 사회의 바탕에 깔려 있어야만, 우리는 단기적 이익 때문에 장기적인 가치를 파괴하는 어리석음을 멈출 수 있습니다. 조용한 지지가 전체의 힘을 완성합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. 왼쪽 새끼</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div><div id="ko-10">저는 '마무리'와 '취약한 존재의 대변'을 맡은 왼쪽 새끼입니다. 가장 작고 약하지만, 저 없이는 온전한 주먹을 쥘 수 없죠. 저는 지속가능 발전 논의에서 가장 소외되기 쉬운 존재들의 목소리를 대변하고자 합니다. 기후 변화로 가장 먼저 삶의 터전을 잃는 빈곤층, 목소리 없는 야생동물, 그리고 미래의 아이들입니다. 우리는 이 가장 '작고 약한' 존재들의 안전망을 만드는 일을 최우선으로 삼아야 합니다. 이들을 보호하는 섬세한 마무리가 없다면, 우리의 지속가능성은 결코 온전해질 수 없습니다.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered the ten fingers, humanity's greatest tools, to hear your valuable opinions on 'sustainable development for the Earth.' We will start with the right hand.</p>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">1. Right Thumb</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I am the thumb of 'Approval and Decision.' I symbolize the power and will that make everything possible. Sustainable development is no longer a matter for hesitation. We must give it a 'thumbs-up' and make a firm decision to move toward a sustainable future right now. World leaders must 'like' the climate agreement, and corporations must give a 'thumbs-up' to ESG management. Without positive will and strong leadership, the other four fingers will lose their direction, no matter how much they move.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">2. Right Index Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">I am the index finger of 'Direction and Instruction.' I point to goals, press buttons, and search for information. For sustainable development, we must 'point' in a clear direction. We need to set specific goals like 'Carbon Neutral by 2050' and focus all technology and resources in that direction. I propose 'pressing the button' on technologies for the planet, such as smart grids and AI-based environmental monitoring systems. Without accurate information and a clear technological direction, our efforts will just be pointing at nothing.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">3. Right Middle Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">I am the middle finger of 'Balance and Center.' As the longest of the five, I anchor the hand's center. The core of sustainable development is precisely 'balance.' My role is to maintain the balance between the three pillars: economic growth, social stability, and environmental protection. We need a firm central axis that does not lean to any one side. I propose introducing a 'Sustainability Centrality Index' to evaluate the environmental and social impact of all development plans. If this center wavers, the entire civilization will be in peril, just as the whole hand collapses.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">4. Right Ring Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">I am the ring finger of 'Promise and Relationship.' I am the place for the precious ring of covenant. Sustainable development is an unbreakable 'promise' to future generations. We are currently borrowing resources from them. Wasting these resources recklessly is an act of breaking that promise. I propose engraving a clause 'to guarantee the environmental rights of future generations' into every constitution, like a 'ring.' Only by remembering this sacred promise can we think beyond short-term profits and consider our long-term relationship with the future.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">5. Right Pinky Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">I am the pinky finger of 'Finesse and New Pledges.' I handle small things and am used for making new promises. Grand discourses are important, but sustainability begins with the smallest 'details.' I propose focusing on delicate issues like microplastics, protecting rare species, and improving energy efficiency by 1%. Furthermore, just as children make a 'pinky promise' to protect the environment, we must make commitment for the future an everyday culture. These small actions and promises will gather to become a great force that changes the world.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">6. Left Thumb</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">I am the left thumb of 'Support and Foundation.' When the right hand performs a delicate task, I silently support the object and add strength. For sustainable policies and technologies (the right hand) to work properly, a strong 'social foundation' is needed to support them. I wish to play that foundational role. We must build a solid base of citizen consciousness that consumes eco-friendly products, an education system that teaches sustainability, and a financial system that supports green industries. Without this sturdy support, even the best policies will just be spinning in the air.</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">7. Left Index Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">I am the left index finger of 'Stability and Verification.' When the right index finger points at a target, my role is to press down and hold it steady. Once a goal for sustainable development is set, I propose a system to 'monitor and verify' that the goal does not waver. We must create an international environmental monitoring agency and thoroughly verify corporate ESG reports. Furthermore, I must take on the role of periodically checking and pressing for progress to ensure that set goals do not remain mere slogans. Accurate aiming is impossible without a stable hold.</div></div>
+                    <div class="finger-item"><div class="subject-header"><span class="subject-title">8. Left Middle Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">I am the left middle finger of 'Cooperation and Solidarity.' When the right middle finger finds the center, I add my strength beside it to create the most stable balance. The Earth's problems can never be solved by the strength of one nation or one finger alone. I call for the strengthening of 'global partnerships.' Developed and developing nations, governments and corporations, and civil society must move forward together, complementing each other's weaknesses. Just as the heaviest objects can be lifted when both middle fingers join forces, the heavy task of sustainability can be solved when humanity unites.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. Left Ring Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div><div id="en-9">I am the left ring finger of 'Silent Support' and 'Intrinsic Value.' Though I may not have a glamorous role compared to the other fingers, I am essential to completing the hand's structure. I propose that we respect intangible values. Things like biodiversity that cannot be converted into economic value, the value of clean air, and the right to happiness for future generations. Only when a philosophy that respects these 'intrinsic values' is embedded in our society can we stop the folly of destroying long-term values for short-term gains. Quiet support completes the whole's strength.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. Left Pinky Finger</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div><div id="en-10">I am the left pinky, in charge of 'Finishing Touches' and 'Representing the Vulnerable.' I am the smallest and weakest, but you cannot make a complete fist without me. I want to represent the voices most easily marginalized in the sustainability discussion: the poor who are the first to lose their homes to climate change, the voiceless wildlife, and the children of the future. We must make it our top priority to create a safety net for these 'smallest and weakest' beings. Without the delicate finishing touch of protecting them, our sustainability will never be complete.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。人類文明の最も偉大な道具、10本の指の皆様をお招きし、「地球の持続可能な発展」についてのご意見を伺いたいと思います。まず右手から自己紹介と提言をお願いします。</p>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">1. 右手の親指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私は「肯定と決定」の親指です。すべてを可能にする力と意志を象徴します。持続可能な発展は、もはや躊躇している問題ではありません。私たちは「イエス！」と親指を立て、今すぐ持続可能な未来へ進むという確固たる決定を下すべきです。各国の首脳は気候協約に「いいね！」を押し、企業はESG経営に「最高だ」と親指を立てるべきです。肯定的な意志と強力なリーダーシップがなければ、他の4本の指がいくら動いても方向を見失ってしまいます。</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">2. 右手の人差し指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">私は「方向と指示」の人差し指です。目標を指し示し、ボタンを押し、情報を探索します。持続可能な発展のため、私たちは明確な方向を「指し示す」べきです。「2050年カーボンニュートラル」のような具体的な目標を設定し、すべての技術と資源をその方向に集中させるべきです。私はスマートグリッド、人工知能ベースの環境監視システムなど、地球のための技術の「ボタンを押す」ことを提案します。正確な情報と技術的な方向提示がなければ、私たちの努力は空回りするだけです。</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">3. 右手の中指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">私は「均衡と中心」の中指です。5本の指の中で最も長く伸び、手の中心を支えます。持続可能な発展の核心は、まさに「均衡」です。経済成長、社会的安定、環境保全という三つの柱の間のバランスを取ることが私の役割です。どちらか一方に偏ることのない、強固な中心軸が必要です。私は、すべての開発計画において、環境的、社会的影響を評価する「持続可能性中心指数」を導入することを提案します。この中心が揺らげば、手全体が崩れるように、人類文明全体が危険にさらされるでしょう。</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">4. 右手の薬指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">私は「約束と関係」の薬指です。大切な誓いの指輪をはめる場所です。持続可能な発展は、未来の世代との破ることのできない「約束」です。私たちは今、未来の世代の資源を借りて使っています。この資源を無駄に浪費することは、約束を破る行為です。私は、すべての憲法に「未来世代の環境権を保障する」という条項を「指輪」のようにはめ込むことを提案します。この神聖な約束を記憶してこそ、私たちは目先の利益を超えた長期的な関係を考えることができるのです。</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">5. 右手の小指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私は「繊細さと新しい約束」の小指です。小さなものを扱い、新しい誓いを立てる時に私を使います。巨大な談論も重要ですが、持続可能性は非常に小さな「ディテール」から始まります。私はマイクロプラスチック問題、希少生物の保護、エネルギー効率の1%改善といった、繊細な部分に集中することを提案します。また、子供たちが環境保護を「指切りげんまん」するように、未来のための誓いを日常的な文化にすべきです。これらの小さな実践と約束が集まり、世界を変える巨大な力となるでしょう。</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">6. 左手の親指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は「支持と土台」の左手の親指です。右手が精巧な作業をする時、私は黙って物を支え、力を加えます。持続可能な政策や技術（右手）が適切に機能するためには、それを支える強力な「社会的基盤」が必要です。私はまさにその基盤の役割を果たしたいと思います。環境に優しい製品を消費する市民意識、持続可能性を教える教育システム、グリーン産業を支援する金融制度などを堅固に構築しなければなりません。このしっかりとした土台がなければ、どんなに良い政策も空中で空回りするだけです。</div></div>
+                    <div class="finger-item"><div class="finger-header"><span class="finger-title">7. 左手の人差し指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私は「安定と確認」の左手の人差し指です。右手の人差し指が何かを指し示す時、私はその目標が揺れないようにしっかりと押さえて固定する役割をします。持続可能な発展のための目標が設定されたなら、私はその目標が揺らがないように「監視し、検証する」システムを提案します。国際的な環境監視機関を設立し、企業のESG経営報告書を徹底的に検証すべきです。また、設定された目標がスローガンに終わらないよう、進捗状況を定期的に確認し、圧力をかける役割を担うべきです。安定した固定なくして、正確な照準は不可能です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">8. 左手の中指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">私は「協力と連帯」の左手の中指です。右手の中指が中心を取る時、私はその隣で共に力を合わせ、最も安定した均衡を作り出します。地球の問題は、一国や一本の指の力だけでは決して解決できません。私は「グローバル・パートナーシップ」の強化を主張します。先進国と開発途上国が、政府と企業が、そして市民社会が、互いの足りない部分を補いながら共に進むべきです。まるで両手の中指が力を合わせると最も重い物も持ち上げられるように、人類が力を合わせる時、持続可能性という重い課題も解決できるのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. 左手の薬指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">私は「黙々とした支持」と「内在的価値」の左手の薬指です。他の指に比べて華やかな役割はありませんが、手の構造を完成させるためには不可欠な存在です。私は目に見えない価値を尊重することを提案します。経済的価値に換算されない生物多様性、きれいな空気の価値、未来世代の幸福権といったものです。このような「内在的価値」を尊重する哲学が社会の基盤にあってこそ、私たちは短期的な利益のために長期的な価値を破壊する愚かさを止めることができます。静かな支持が全体の力を完成させるのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. 左手の小指</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div><div id="ja-10">私は「仕上げ」と「脆弱な存在の代弁」を担う左手の小指です。最も小さく弱いですが、私がいなければ完全な拳を握ることはできません。私は持続可能性の議論において最も疎外されがちな存在たちの声を代弁したいと思います。気候変動で最初に生活の場を失う貧困層、声なき野生動物、そして未来の子供たちです。私たちは、この最も「小さく弱い」存在たちのためのセーフティネットを作ることを最優先すべきです。彼らを保護するという繊細な仕上げがなければ、私たちの持続可能性は決して完全なものにはなりません。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

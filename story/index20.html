@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선형대수학 10개 분야의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .subject-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #fd7e14;
+            border-radius: 5px;
+            background-color: #fffaf6;
+        }
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .subject-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>선형대수학 10개 분야의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 현대 과학의 뼈대를 이루는 선형대수학의 10개 분야를 모시고, 각 학문의 관점에서 지구의 미래에 대한 고견을 듣겠습니다. 자기소개와 함께 제언을 부탁드립니다.</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. 행렬이론</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div>
+                        <div id="ko-1">저는 데이터의 뼈대를 만드는 건축가, 행렬이론입니다. 모든 복잡한 데이터를 행과 열의 단순한 표로 정리하고, 그 본질을 분해(SVD, LU)하여 핵심을 드러냅니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> '기후 위기'라는 거대한 데이터를 하나의 거대한 행렬로 봅시다. 저는 이 행렬을 '특이값 분해(SVD)'할 것을 제안합니다. 이를 통해 우리는 가장 큰 변화를 일으키는 핵심 요인(가장 큰 특이값)이 무엇인지 정확히 알 수 있습니다. 예를 들어, 특정 산업군의 탄소 배출이 가장 큰 요인이라면, 우리는 그곳에 자원을 집중해야 합니다. 문제를 막연하게 보지 말고, 분해를 통해 핵심을 파악하고 우선순위를 정하는 것이 지속가능성의 첫걸음입니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. 벡터공간 및 선형사상</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div>
+                        <div id="ko-2">저는 '관점의 전환'을 연구하는 철학자, 벡터공간과 선형사상입니다. 저는 모든 현상을 벡터로 보고, 어떤 '기저(basis)'로 세상을 바라보느냐에 따라 문제가 달라 보인다는 것을 압니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 우리는 지금까지 '경제 성장'이라는 단 하나의 기저 벡터로만 세상을 바라봤습니다. 저는 이 관점을 바꿔야 한다고 주장합니다. '환경 보전', '사회적 형평성', '미래 세대의 행복'을 새로운 기저 벡터로 추가하여 다차원적인 '지속가능성 벡터공간'을 만들어야 합니다. 우리의 모든 정책은 이 새로운 공간으로의 '선형 변환'이어야 합니다. 즉, 어떤 정책을 시행하든 경제적 이익뿐만 아니라 환경적, 사회적 좌표값도 함께 긍정적으로 변환시켜야 진정한 발전이라 할 수 있습니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. 수치선형대수학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div>
+                        <div id="ko-3">저는 '거대한 계산'을 현실로 만드는 공학자, 수치선형대수학입니다. 이론적으로 완벽한 해법도, 계산할 수 없다면 무용지물이죠. 저는 가장 빠르고 안정적인 알고리즘을 만듭니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 기후 시뮬레이션, 전 지구적 물류 최적화, 신재생에너지 그리드 제어 등은 수조 개의 변수가 얽힌 거대한 선형 시스템입니다. 저는 이러한 문제들을 현실적인 시간 안에 풀어낼 고성능 병렬 컴퓨팅 알고리즘 개발을 제안합니다. 예를 들어, 전 세계의 탄소 배출원과 흡수원을 실시간으로 계산하여 가장 효율적인 감축 방안을 찾는 모델을 만드는 것입니다. 지속가능성은 더 이상 이론이 아닌, 강력한 계산 능력으로 뒷받침되어야 하는 현실의 문제입니다.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. 희소행렬 이론</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div>
+                        <div id="ko-4">저는 '비어 있음의 가치'를 아는 미니멀리스트, 희소행렬 이론입니다. 대부분이 0인 행렬에서, 저는 0이 아닌 몇 개의 중요한 연결에만 집중하여 자원을 아낍니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구 생태계와 글로벌 경제는 사실 '희소 행렬' 구조입니다. 모든 것이 모든 것과 연결된 것이 아니라, 몇몇 핵심적인 종과 산업이 전체 시스템에 큰 영향을 미칩니다. 저는 이 '0이 아닌 중요한 연결'을 찾아내는 네트워크 분석을 제안합니다. 예를 들어, 특정 지역의 꿀벌(핵심 노드)이 사라졌을 때 전체 식량망에 미치는 영향을 파악하고, 그 연결을 보호하는 데 집중하는 것입니다. 모든 것을 다 하려 하지 말고, 가장 중요한 소수의 관계를 지키는 것이 가장 효율적인 지속가능성 전략입니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. 고유값 문제</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div>
+                        <div id="ko-5">저는 시스템의 '숨겨진 본성과 장기적 안정성'을 꿰뚫어 보는 예언가, 고유값 문제입니다. 저는 어떤 변화 속에서도 변치 않는 방향(고유벡터)과 그 변화의 크기(고유값)를 찾아냅니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구 시스템의 '상태 행렬'을 분석하여 '고유값'을 계산해야 합니다. 만약 고유값의 실수부가 양수라면, 이 시스템은 시간이 지남에 따라 불안정해져 결국 발산(붕괴)하게 됩니다. 현재 기후 시스템의 고유값은 위험한 양수를 향하고 있습니다. 지속가능 정책의 목표는 이 행렬을 변화시켜 모든 고유값이 음수 또는 0이 되도록, 즉 시스템이 '안정적인 평형 상태'로 수렴하도록 만드는 것입니다. 주성분 분석(PCA)을 통해 가장 큰 변화를 유발하는 고유벡터를 찾아 집중적으로 관리해야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. 행렬해석</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div>
+                        <div id="ko-6">저는 행렬을 함수처럼 다루며 '변화에 대한 민감도'를 측정하는 행렬해석입니다. 행렬의 미분을 통해, 입력의 작은 변화가 결과에 얼마나 큰 영향을 미치는지 분석합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 우리는 '정책 민감도 분석'을 수행해야 합니다. 예를 들어, 탄소세를 1% 인상하는 정책(입력 행렬의 변화)이 전체 탄소 배출량(결과 행렬)에 얼마나 큰 변화를 가져오는지 '행렬의 미분'을 통해 계산하는 것입니다. 이를 통해 우리는 가장 적은 비용으로 가장 큰 효과를 내는 정책, 즉 '노름(norm)'이 가장 큰 정책을 찾을 수 있습니다. 또한, 시스템이 특정 변화에 너무 민감하게 반응하지 않도록 제어 이론을 적용하여, 안정적인 지속가능성 경로를 유지해야 합니다.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. 응용선형대수학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div>
+                        <div id="ko-7">저는 '현실 문제를 수학의 언어로 번역'하는 통역가, 응용선형대수학입니다. 경제, 사회, 자연 현상 등 세상의 모든 문제를 벡터와 행렬로 모델링하여 해결의 실마리를 제공합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> '지속가능 발전'은 추상적인 구호가 아니라, 구체적인 모델링을 통해 해결해야 할 문제입니다. 저는 '순환 경제'를 하나의 거대한 '마르코프 체인 행렬'로 모델링할 것을 제안합니다. 이를 통해 자원이 생산, 소비, 폐기, 재활용의 각 단계를 어떤 확률로 이동하는지 분석하고, 최종적으로 폐기물(absorbing state)로 가는 확률을 최소화하는 시스템을 설계할 수 있습니다. 현실의 문제를 수학적 모델로 바꾸는 것, 그것이 바로 문제 해결의 시작입니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. 선형대수와 최적화</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div>
+                        <div id="ko-8">저는 '제약 속에서 최선의 답'을 찾는 전략가, 선형대수와 최적화입니다. 저는 주어진 자원과 조건 하에서 목표를 최대화하거나 비용을 최소화하는 방법을 찾습니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지속가능 발전은 인류 역사상 가장 거대한 '최적화 문제'입니다. 우리의 목표 함수는 '미래 세대의 복지 최대화' 또는 '생태계 파괴 최소화'가 되어야 합니다. 그리고 '한정된 자원', '필수 에너지 수요' 등은 '선형 제약 조건'입니다. 저는 '선형 계획법(Linear Programming)'을 이용해, 이 제약 조건들을 모두 만족시키면서 목표를 달성하는 최적의 자원 배분 포트폴리오를 찾을 것을 제안합니다. 모든 것을 다 가질 수는 없습니다. 우리는 주어진 제약 안에서 가장 현명한 선택을 해야만 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. 양자정보와 선형대수</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div>
+                        <div id="ko-9">저는 '중첩과 얽힘의 세계'를 탐험하는 양자정보와 선형대수학입니다. 저는 0 또는 1이 아닌, 모든 가능성이 동시에 존재하는 양자 상태를 유니터리 행렬로 다룹니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 고전적인 방식으로는 기후변화 같은 복잡한 시스템을 완벽히 시뮬레이션할 수 없습니다. 저는 이 문제에 '양자 컴퓨팅'을 도입할 것을 제안합니다. 양자 컴퓨터는 지구 시스템의 '중첩된 상태'를 그대로 모델링하여 기존 컴퓨터로는 수백만 년이 걸릴 계산을 단 몇 분 안에 해낼 수 있습니다. 이를 통해 우리는 훨씬 더 정확한 기후 예측과 최적의 해결책을 찾을 수 있습니다. 지속가능성의 돌파구는, 우리가 세상을 바라보는 방식 자체를 양자적으로 전환하는 데 있을지도 모릅니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. 텐서대수</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div>
+                        <div id="ko-10">저는 '고차원의 관계'를 꿰뚫어 보는 텐서대수입니다. 행렬이 2차원 관계(A가 B에게 영향을 줌)를 다룬다면, 저는 3차원 이상의 다중 선형 관계(A가 B에게 영향을 주는 방식이 C의 상태에 따라 달라짐)를 분석합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구의 문제는 단순한 2차원적 인과관계가 아닙니다. 예를 들어, '특정 국가의 정책'과 '탄소 배출량'의 관계는 '글로벌 경제 상황'이라는 제3의 축에 따라 완전히 달라집니다. 저는 이 모든 상호작용을 하나의 '텐서'로 모델링해야 한다고 주장합니다. 텐서 분해를 통해 우리는 이 복잡한 다중 관계 속에 숨어 있는 핵심적인 상호작용 패턴을 발견할 수 있습니다. 2차원적인 사고에서 벗어나, 세상을 고차원적인 관계로 이해할 때 비로소 진정한 해법이 보일 것입니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. Today, we have gathered the 10 fields of Linear Algebra that form the backbone of modern science to hear their expert opinions on the future of our planet. Please introduce yourselves and offer your proposals.</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. Matrix Theory</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div>
+                        <div id="en-1">I am Matrix Theory, the architect who builds the skeleton of data. I organize all complex data into a simple table of rows and columns, and reveal its essence by decomposing it (SVD, LU).
+                        <strong>Proposal for Sustainable Development:</strong> Let's view the 'climate crisis' as one giant matrix of data. I propose we perform a 'Singular Value Decomposition (SVD)' on this matrix. This will tell us exactly which factors (the largest singular values) are causing the most significant changes. For example, if the carbon emissions from a specific industry are the primary factor, we must focus our resources there. Instead of looking at the problem vaguely, the first step to sustainability is to grasp the core issues and set priorities through decomposition.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. Vector Spaces & Linear Transformations</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div>
+                        <div id="en-2">I am Vector Spaces and Linear Transformations, the philosopher who studies 'a change in perspective.' I see all phenomena as vectors and know that a problem looks different depending on the 'basis' you use to view the world.
+                        <strong>Proposal for Sustainable Development:</strong> Until now, we have viewed the world through the single basis vector of 'economic growth.' I argue that we must change this perspective. We need to create a multi-dimensional 'sustainability vector space' by adding new basis vectors like 'environmental conservation,' 'social equity,' and 'the happiness of future generations.' All our policies must be a 'linear transformation' into this new space. In other words, only when a policy transforms not only the economic but also the environmental and social coordinates positively can it be called true progress.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. Numerical Linear Algebra</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div>
+                        <div id="en-3">I am Numerical Linear Algebra, the engineer who makes 'massive calculations' a reality. A theoretically perfect solution is useless if it cannot be computed. I create the fastest, most stable algorithms.
+                        <strong>Proposal for Sustainable Development:</strong> Climate simulations, global logistics optimization, and renewable energy grid control are all massive linear systems with trillions of variables. I propose developing high-performance parallel computing algorithms to solve these problems in a realistic timeframe. For example, creating a model that calculates global carbon sources and sinks in real-time to find the most efficient reduction strategies. Sustainability is no longer a theory; it is a real-world problem that must be supported by powerful computational capabilities.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. Sparse Matrix Theory</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div>
+                        <div id="en-4">I am Sparse Matrix Theory, the minimalist who knows the 'value of emptiness.' In a matrix that is mostly zeros, I save resources by focusing only on the few important, non-zero connections.
+                        <strong>Proposal for Sustainable Development:</strong> The Earth's ecosystem and the global economy are, in fact, 'sparse matrix' structures. Not everything is connected to everything else; a few key species and industries have a major impact on the entire system. I propose a network analysis to find these 'important non-zero connections.' For example, identifying the impact on the entire food web if a key node like the honeybee in a specific region disappears, and concentrating on protecting that connection. Instead of trying to do everything, protecting the few most critical relationships is the most efficient sustainability strategy.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. Eigenvalue Problems</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div>
+                        <div id="en-5">I am Eigenvalue Problems, the oracle who sees a system's 'hidden nature and long-term stability.' I find the directions that remain unchanged amidst transformations (eigenvectors) and the scale of that change (eigenvalues).
+                        <strong>Proposal for Sustainable Development:</strong> We must analyze the 'state matrix' of the Earth system and calculate its 'eigenvalues.' If the real part of an eigenvalue is positive, the system will become unstable over time and eventually diverge (collapse). The eigenvalues of our current climate system are heading toward dangerous positive values. The goal of sustainability policy is to alter this matrix so that all eigenvalues become negative or zero, ensuring the system converges to a 'stable equilibrium.' We must use Principal Component Analysis (PCA) to identify and intensively manage the eigenvectors causing the largest variance.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. Matrix Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div>
+                        <div id="en-6">I am Matrix Analysis, who measures the 'sensitivity to change' by treating matrices like functions. Through matrix calculus, I analyze how a small change in input greatly affects the output.
+                        <strong>Proposal for Sustainable Development:</strong> We must perform 'policy sensitivity analysis.' For example, we can calculate how much a 1% increase in carbon tax (a change in the input matrix) affects the total carbon emissions (the resulting matrix) using the 'matrix derivative.' This allows us to find the policy with the greatest effect for the least cost—the policy with the largest 'norm.' Furthermore, we must apply control theory to ensure the system does not overreact to certain changes, thereby maintaining a stable path to sustainability.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. Applied Linear Algebra</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div>
+                        <div id="en-7">I am Applied Linear Algebra, the interpreter who 'translates real-world problems into the language of mathematics.' I model everything from economics to natural phenomena with vectors and matrices to provide clues for solutions.
+                        <strong>Proposal for Sustainable Development:</strong> 'Sustainable development' is not an abstract slogan but a concrete problem to be solved through modeling. I propose modeling the 'circular economy' as a giant 'Markov chain matrix.' This would allow us to analyze the probability with which resources move through the stages of production, consumption, disposal, and recycling, and to design a system that minimizes the probability of ending up as waste (an absorbing state). Translating real problems into mathematical models is the very beginning of problem-solving.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. Linear Algebra & Optimization</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div>
+                        <div id="en-8">I am Linear Algebra and Optimization, the strategist who finds the 'best answer under constraints.' I find ways to maximize a goal or minimize a cost given a set of resources and conditions.
+                        <strong>Proposal for Sustainable Development:</strong> Sustainable development is the largest 'optimization problem' in human history. Our objective function must be 'maximizing the well-being of future generations' or 'minimizing ecosystem destruction.' The 'linear constraints' are 'limited resources,' 'essential energy demands,' and so on. I propose using 'Linear Programming' to find the optimal resource allocation portfolio that satisfies all these constraints while achieving our objective. We cannot have everything. We must make the wisest choices within the given constraints.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. Quantum Information & Linear Algebra</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div>
+                        <div id="en-9">I am Quantum Information and Linear Algebra, explorer of the world of 'superposition and entanglement.' I handle quantum states, which exist as all possibilities at once, not just 0 or 1, using unitary matrices.
+                        <strong>Proposal for Sustainable Development:</strong> Classical methods cannot perfectly simulate a system as complex as climate change. I propose introducing 'quantum computing' to this problem. A quantum computer can model the 'superposed states' of the Earth system directly, performing calculations in minutes that would take classical computers millions of years. This would allow us to find much more accurate climate predictions and optimal solutions. The breakthrough for sustainability might lie in shifting our very way of seeing the world to a quantum one.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. Tensor Algebra</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div>
+                        <div id="en-10">I am Tensor Algebra, seeing through 'higher-order relationships.' If a matrix handles 2D relationships (A affects B), I analyze multilinear relationships of 3D or more (the way A affects B changes depending on the state of C).
+                        <strong>Proposal for Sustainable Development:</strong> The Earth's problems are not simple 2D causal relationships. For example, the relationship between a 'nation's policy' and 'carbon emissions' changes completely depending on a third axis, the 'global economic situation.' I argue that we must model all these interactions as a single 'tensor.' Through tensor decomposition, we can discover the hidden core interaction patterns within these complex, multi-way relationships. A true solution will only become visible when we move beyond 2D thinking and understand the world as a web of higher-order connections.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。現代科学の骨格をなす線形代数学の10分野をお招きし、各学問の観点から地球の未来についてのご意見を伺います。自己紹介と併せてご提言をお願いします。</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. 行列理論</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div>
+                        <div id="ja-1">私はデータの骨格を作る建築家、行列理論です。あらゆる複雑なデータを、行と列の単純な表に整理し、その本質を分解(SVD, LU)して核心を明らかにします。
+                        <strong>持続可能な発展への提言：</strong>「気候危機」という巨大なデータを一つの巨大な行列と見なしましょう。私はこの行列を「特異値分解(SVD)」することを提案します。これによって、私たちは最も大きな変化を引き起こしている核心的な要因（最大の特異値）が何であるかを正確に知ることができます。例えば、特定の産業分野の炭素排出が最大の要因であれば、そこに資源を集中すべきです。問題を漠然と捉えず、分解を通じて核心を把握し、優先順位をつけることが持続可能性の第一歩です。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. ベクトル空間と線形写像</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div>
+                        <div id="ja-2">私は「視点の転換」を研究する哲学者、ベクトル空間と線形写像です。私は全ての現象をベクトルとして捉え、どのような「基底」で世界を眺めるかによって問題の見え方が変わることを知っています。
+                        <strong>持続可能な発展への提言：</strong>私たちはこれまで、「経済成長」という単一の基底ベクトルだけで世界を見てきました。私はこの視点を変えるべきだと主張します。「環境保全」「社会的公平性」「未来世代の幸福」を新たな基底ベクトルとして加え、多次元的な「持続可能性ベクトル空間」を作るべきです。私たちの全ての政策は、この新しい空間への「線形変換」でなければなりません。つまり、どんな政策を実行するにせよ、経済的利益だけでなく、環境的、社会的座標値も共に肯定的に変換されてこそ、真の発展と言えるのです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. 数値線形代数</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div>
+                        <div id="ja-3">私は「巨大な計算」を現実に変える工学者、数値線形代数です。理論的に完璧な解法も、計算できなければ無用の長物です。私は最も速く、安定したアルゴリズムを構築します。
+                        <strong>持続可能な発展への提言：</strong>気候シミュレーション、全地球規模の物流最適化、再生可能エネルギーグリッド制御などは、何兆もの変数が絡み合った巨大な線形システムです。私はこれらの問題を現実的な時間内に解くための高性能並列計算アルゴリズムの開発を提案します。例えば、全世界の炭素排出源と吸収源をリアルタイムで計算し、最も効率的な削減策を見つけ出すモデルを構築するのです。持続可能性はもはや理論ではなく、強力な計算能力によって裏付けられるべき現実の問題です。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. 疎行列理論</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div>
+                        <div id="ja-4">私は「空であることの価値」を知るミニマリスト、疎行列理論です。ほとんどがゼロの行列において、私はゼロでない少数の重要な繋がりにのみ集中し、資源を節約します。
+                        <strong>持続可能な発展への提言：</strong>地球の生態系とグローバル経済は、実は「疎行列」構造をしています。すべてがすべてと繋がっているのではなく、少数の核心的な種や産業がシステム全体に大きな影響を与えています。私はこの「ゼロでない重要な繋がり」を見つけ出すネットワーク分析を提案します。例えば、特定地域のミツバチ（核心ノード）が消えた時に食糧網全体に及ぼす影響を把握し、その繋がりを保護することに集中するのです。全てをこなそうとせず、最も重要な少数の関係を守ることが、最も効率的な持続可能性戦略です。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. 固有値問題</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div>
+                        <div id="ja-5">私はシステムの「隠れた本性と長期的安定性」を見抜く預言者、固有値問題です。私はどんな変化の中でも変わらない方向（固有ベクトル）とその変化の大きさ（固有値）を見つけ出します。
+                        <strong>持続可能な発展への提言：</strong>地球システムの「状態行列」を分析し、「固有値」を計算すべきです。もし固有値の実部が正ならば、このシステムは時間と共に不安定になり、いずれ発散（崩壊）します。現在の気候システムの固有値は危険な正の数に向かっています。持続可能政策の目標は、この行列を変化させ、全ての固有値が負またはゼロになるように、つまりシステムが「安定した平衡状態」に収束するように作り変えることです。主成分分析(PCA)を通じて最も大きな変化を引き起こす固有ベクトルを見つけ、集中的に管理すべきです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. 行列解析</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div>
+                        <div id="ja-6">私は行列を関数のように扱い、「変化に対する感度」を測定する行列解析です。行列の微分を通じて、入力の小さな変化が出力にどれほど大きな影響を与えるかを分析します。
+                        <strong>持続可能な発展への提言：</strong>私たちは「政策感度分析」を実行すべきです。例えば、炭素税を1%引き上げる政策（入力行列の変化）が、総炭素排出量（結果行列）にどれほどの変化をもたらすかを「行列の微分」によって計算するのです。これによって、最小のコストで最大効果を生む政策、すなわち「ノルム」が最も大きい政策を見つけ出すことができます。また、システムが特定の変化に過敏に反応しないよう制御理論を適用し、安定した持続可能性への経路を維持すべきです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. 応用線形代数</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div>
+                        <div id="ja-7">私は「現実の問題を数学の言葉に翻訳する」通訳者、応用線形代数です。経済、社会、自然現象など、世の中のあらゆる問題をベクトルと行列でモデル化し、解決の糸口を提供します。
+                        <strong>持続可能な発展への提言：</strong>「持続可能な発展」は抽象的なスローガンではなく、具体的なモデリングを通じて解決すべき問題です。私は「循環型経済」を一つの巨大な「マルコフ連鎖行列」としてモデル化することを提案します。これにより、資源が生産、消費、廃棄、リサイクルの各段階をどのような確率で移動するかを分析し、最終的に廃棄物（吸収状態）へと至る確率を最小化するシステムを設計できます。現実の問題を数学的モデルに置き換えること、それこそが問題解決の始まりです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. 線形代数と最適化</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div>
+                        <div id="ja-8">私は「制約の中で最善の答え」を探す戦略家、線形代数と最適化です。私は与えられた資源と条件の下で、目標を最大化したりコストを最小化したりする方法を見つけます。
+                        <strong>持続可能な発展への提言：</strong>持続可能な発展は、人類史上最も巨大な「最適化問題」です。私たちの目的関数は「未来世代の福祉の最大化」または「生態系破壊の最小化」であるべきです。そして、「限られた資源」「必須エネルギー需要」などは「線形制約条件」です。私は「線形計画法」を用いて、これらの制約条件をすべて満たしながら目標を達成する最適な資源配分ポートフォリオを見つけることを提案します。すべてを手に入れることはできません。私たちは与えられた制約の中で、最も賢明な選択をしなければならないのです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. 量子情報と線形代数</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div>
+                        <div id="ja-9">私は「重ね合わせともつれの世界」を探求する量子情報と線形代数学です。私は0か1かではなく、すべての可能性が同時に存在する量子状態をユニタリ行列で扱います。
+                        <strong>持続可能な発展への提言：</strong>古典的な方法では、気候変動のような複雑なシステムを完璧にシミュレーションすることはできません。私はこの問題に「量子コンピューティング」を導入することを提案します。量子コンピュータは、地球システムの「重ね合わされた状態」をそのままモデル化し、既存のコンピュータでは数百万年かかる計算をわずか数分で終えることができます。これにより、私たちははるかに正確な気候予測と最適な解決策を見つけることができるでしょう。持続可能性への突破口は、私たちが世界を見る方法自体を量子的に転換することにあるのかもしれません。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. テンソル代数</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div>
+                        <div id="ja-10">私は「高次元の関係」を見抜くテンソル代数です。行列が2次元の関係（AがBに影響を与える）を扱うのに対し、私は3次元以上の多重線形関係（AがBに影響を与える方法が、Cの状態によって変わる）を分析します。
+                        <strong>持続可能な発展への提言：</strong>地球の問題は、単純な2次元の因果関係ではありません。例えば、「特定の国の政策」と「炭素排出量」の関係は、「グローバル経済の状況」という第3の軸によって完全に変化します。私は、これらすべての相互作用を一つの「テンソル」としてモデル化すべきだと主張します。テンソル分解を通じて、私たちはこの複雑な多重関係の中に隠された核心的な相互作用のパターンを発見できます。2次元的な思考から脱却し、世界を高次元的な関係として理解する時、初めて真の解決策が見えてくるでしょう。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 '읽어주기' 및 '전체 듣기' 버튼을 선택합니다.
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            // 현재 재생 중인 음성을 중지하는 함수
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 다른 음성이 재생 중이면 즉시 중지합니다.
+                    stopSpeech();
+
+                    let lang;
+                    // 버튼 클래스에 따라 언어 코드와 텍스트 대상을 결정합니다.
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0; // 읽는 속도 (기본값 1)
+                        utterance.pitch = 1.0; // 음높이 (기본값 1)
+
+                        utterance.onend = function() {
+                            console.log('Speech playback finished for ' + targetId);
+                        };
+                        
+                        // 음성 재생
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

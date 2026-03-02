@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『구운몽』 인물들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #6f42c1;
+            border-radius: 5px;
+            background-color: #fcfbff;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『구운몽』 인물들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 꿈과 현실의 경계를 넘어, 소설 『구운몽』의 저자와 주요 인물들을 모시고 '지구의 지속가능 발전'이라는 현실의 문제에 대한 고견을 듣고자 합니다.</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 김만중 (저자)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">나는 어머님의 시름을 덜어드리고자 하룻밤의 꿈 이야기를 지었소. 인간 세상의 부귀영화가 한바탕 꿈과 같음을 보여주고 싶었지. 지금 인류는 '무한한 성장'이라는 거대한 꿈에 취해 있소이다. 이 꿈은 달콤하지만, 언젠가는 깨어나야 할 꿈이오. 지속가능 발전이란, 이 꿈에서 깨어나 무엇이 진정으로 가치 있는 것인지 되묻는 과정이오. 꿈속의 부귀를 좇아 현실의 자연을 파괴하는 어리석음을 멈추고, 우리 모두가 함께 꿀 수 있는 새로운 꿈을 이야기해야 할 때요.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 성진 (수행승)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">소승은 한순간의 세속적 욕망으로 큰 깨달음의 길을 돌아가야 했습니다. 제 마음속 작은 욕망이 양소유의 파란만장한 일생이라는 거대한 꿈을 만들었지요. 지금 지구가 겪는 위기는 인류의 끝없는 물질적 욕망이 만들어낸 거대한 현실입니다. 지속가능 발전은 이 '욕망'을 다스리는 수행에서 시작되어야 합니다. 더 많이 소유하고 더 많이 소비하려는 마음을 내려놓고, 자연과 조화롭게 살아가는 삶에서 참된 즐거움을 찾는 것입니다. 모든 고통은 욕망에서 비롯됨을 잊지 말아야 합니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 양소유 (성진의 꿈)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">나는 인간 세상에서 부귀공명과 여덟 아내의 사랑까지, 모든 것을 누려본 사람이오. 그 모든 것이 내 손안에 영원할 줄 알았지만, 결국 한바탕 꿈이었지. 내가 깨달은 것은, 진정한 행복은 소유의 크기가 아니라 관계의 깊이에 있다는 것이었소. 지금 인류는 더 많은 것을 소유하기 위해 숲을 베고 바다를 오염시키고 있소. 이는 결국 공허한 꿈을 위해 현실의 터전을 파괴하는 것과 같소. 지속가능 발전이란, '성공'의 의미를 재정의하는 것이오. 더 높은 지위가 아니라 더 깊은 조화를, 더 많은 소유가 아니라 더 풍부한 관계를 추구해야 하오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 팔선녀 (여덟 아내)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">저희는 양소유의 삶을 가장 화려하게 수놓았던 기쁨과 미덕의 상징입니다. 저희는 결코 부귀영화를 부정하지 않습니다. 아름다운 시와 음악, 사랑과 풍요로운 삶은 인간에게 주어진 축복입니다. 하지만 그 모든 것은 '조화' 안에서 이루어질 때 진정한 가치를 지닙니다. 지속가능 발전은 파괴가 아닌 '창조'의 길이어야 합니다. 자연을 훼손하여 얻는 풍요는 진정한 풍요가 아닙니다. 저희가 각기 다른 개성으로 양소유의 삶을 풍성하게 했듯, 인류도 자연의 다양성을 존중하고 함께 어우러지는 예술적인 삶을 가꾸어 나가야 합니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 육관대사 (스승)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">나는 성진에게 꿈을 통해 인생의 본질이 공(空)함을 가르쳐주었노라. 지금 인류는 '성장'이라는 허상에 집착하여 스스로를 얽매고 있구나. 너희가 이룬 물질문명은 결국 변하고 사라질 것들이다. 지속가능 발전은 이 '공'의 도리를 깨닫는 데서 출발해야 한다. 비어 있기에 무엇이든 담을 수 있듯, 우리는 무한한 성장의 욕심을 비워내야 비로소 지속가능한 미래를 담을 수 있다. 꿈에서 깨어나 본래의 자리로 돌아가라. 너희가 돌아가야 할 본래의 자리는 바로 자연과 하나 된 소박한 삶이다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 이생 (세속의 친구)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">나는 양소유의 벗으로서, 그가 입신양명하여 가문을 빛내기를 바랐네. 그것이 세상의 이치 아니겠는가. 지속가능 발전도 좋지만, 당장 우리 백성들이 먹고사는 문제를 외면할 수는 없지. 나는 '현실적인 대안'을 찾아야 한다고 보네. 환경을 보호하면서도 경제를 성장시킬 수 있는 '녹색 기술'에 투자하고, 새로운 일자리를 만드는 것이 중요하네. 너무 이상적인 이야기만 하다가는, 저잣거리의 백성들은 굶주리게 될 것이야. 꿈과 현실 사이에서, 우리는 백성의 삶을 먼저 생각해야 하네.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 왕모 (하늘의 여신)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">나는 성진과 팔선녀의 작은 욕망을 꾸짖고 그들에게 깨달음의 기회를 주었노라. 지금 인류의 오만함은 하늘에 닿으려 하고 있구나. 너희는 자연의 순리를 거스르고, 모든 생명의 조화를 어지럽히고 있다. 가뭄과 홍수, 역병은 나의 작은 경고일 뿐이다. 지속가능 발전은 선택이 아니라, 너희가 마땅히 따라야 할 '우주의 법칙'이다. 스스로의 잘못을 뉘우치고 자연의 질서로 돌아오라. 그렇지 않으면, 너희에게는 성진의 꿈보다 더 길고 고통스러운 윤회의 시간이 기다리고 있을 것이다.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. Transcending the boundaries of dream and reality, we have gathered the author and main characters of "The Cloud Dream of the Nine" to hear their valuable opinions on the real-world problem of 'sustainable development for the Earth.'</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. Kim Man-jung (Author)</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I wrote the story of a single night's dream to console my mother's worries, wanting to show that all the wealth and glory of the human world are like a dream. Humanity today is intoxicated by the grand dream of 'infinite growth.' This dream is sweet, but it is one from which we must eventually awaken. Sustainable development is the process of waking from this dream and asking what is truly valuable. It is time to stop the folly of destroying real nature in pursuit of dreamlike riches and to start talking about a new dream that we can all dream together.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. Seong-jin (The Monk)</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">For a fleeting worldly desire, I had to take a long detour on the path to great enlightenment. A small desire in my heart created the vast dream of Yang So-yu's eventful life. The crisis the Earth faces today is the immense reality created by humanity's endless material desires. Sustainable development must begin with the spiritual practice of taming this 'desire.' We must let go of the mind that wants to possess more and consume more, and find true joy in a life harmonized with nature. We must not forget that all suffering originates from desire.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. Yang So-yu (Seong-jin's Dream)</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">I am one who enjoyed everything in the human world—wealth, fame, and the love of eight wives. I believed it would all be mine forever, but it was, in the end, just a dream. What I realized is that true happiness lies not in the size of one's possessions, but in the depth of one's relationships. Humanity is now cutting down forests and polluting oceans to possess more. This is like destroying one's real home for a hollow dream. Sustainable development is about redefining the meaning of 'success.' We must pursue not a higher status but a deeper harmony, not more possessions but richer relationships.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. The Eight Fairies (The Wives)</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">We are the symbols of joy and virtue that most beautifully adorned Yang So-yu's life. We by no means deny wealth and glory. Beautiful poetry, music, love, and a prosperous life are blessings given to humankind. However, they all find their true value only when achieved within 'harmony.' Sustainable development must be a path of 'creation,' not destruction. Prosperity gained by harming nature is not true prosperity. Just as we, with our different personalities, enriched Yang So-yu's life, humanity must also respect the diversity of nature and cultivate an artistic life in harmony with it.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. Master Yukgwan (The Teacher)</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">I taught Seong-jin through a dream that the essence of life is emptiness (Śūnyatā). Humanity now is entangling itself, obsessed with the illusion of 'growth.' The material civilization you have built will all eventually change and disappear. Sustainable development must begin with realizing this doctrine of 'emptiness.' Just as emptiness can hold anything, we must empty our greed for infinite growth to be able to hold a sustainable future. Wake up from the dream and return to your original place. The original place you must return to is a simple life, one with nature.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. Friend Lee (The Worldly Friend)</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">As Yang So-yu's friend, I wished for him to achieve high office and bring glory to his family. Is that not the way of the world? Sustainable development is fine, but we cannot ignore the immediate problem of feeding our people. I believe we must find 'realistic alternatives.' It is important to invest in 'green technology' that can grow the economy while protecting the environment and to create new jobs. If we only talk of ideals, the common people in the marketplace will starve. Between dream and reality, we must first think of the people's livelihood.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. The Queen Mother (The Celestial Goddess)</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">I reprimanded the small desires of Seong-jin and the eight fairies and gave them a chance for enlightenment. Now, the arrogance of humanity is reaching for the heavens. You are going against the course of nature and disturbing the harmony of all life. The droughts, floods, and plagues are but my small warnings. Sustainable development is not a choice; it is the 'law of the cosmos' that you must follow. Repent your misdeeds and return to the order of nature. Otherwise, a cycle of rebirth, longer and more painful than Seong-jin's dream, awaits you.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。夢と現実の境界を越え、小説『九雲夢』の作者と主要登場人物の皆様をお招きし、「地球の持続可能な発展」という現実の問題についてのご意見を伺いたいと思います。</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 金萬重 (キム・マンジュン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私は母の憂いを晴らすため、一夜の夢物語を紡ぎました。人間の世の富貴栄華が、束の間の夢のようなものであることを示したかったのです。今、人類は「無限の成長」という壮大な夢に酔いしれています。この夢は甘美ですが、いつかは覚めなければならない夢です。持続可能な発展とは、この夢から覚め、何が本当に価値あるものかを問い直す過程です。夢の中の富貴を追い求めて現実の自然を破壊する愚かさを止め、私たち皆が共に見られる新しい夢を語り合うべき時です。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 性眞 (ソンジン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">小僧は一瞬の世俗的な欲望のために、大いなる悟りへの道を遠回りせねばなりませんでした。私の心の中の小さな欲望が、楊少游の波乱万丈な一生という壮大な夢を生み出したのです。今、地球が経験している危機は、人類の尽きることのない物質的欲望が生み出した巨大な現実です。持続可能な発展は、この「欲望」を治める修行から始めなければなりません。より多くを所有し、より多くを消費しようとする心を捨て、自然と調和して生きる生活の中に真の楽しみを見出すことです。すべての苦しみは欲望から生じることを忘れてはなりません。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 楊少游 (ヤン・ソユ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">私は人間の世で富貴功名と八人の妻の愛まで、すべてを享受した男だ。そのすべてが私の手の中で永遠であると信じていたが、結局は束の間の夢だった。私が悟ったのは、真の幸福は所有の大きさではなく、関係の深さにあるということだ。今、人類はより多くを所有するために森を伐り、海を汚している。これは結局、空虚な夢のために現実の基盤を破壊するのと同じことだ。持続可能な発展とは、「成功」の意味を再定義することだ。より高い地位ではなく、より深い調和を、より多くの所有ではなく、より豊かな関係を追求すべきなのだ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 八仙女 (はっせんにょ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">私たちは楊少游の人生を最も華やかに彩った喜びと美徳の象徴です。私たちは決して富貴栄華を否定しません。美しい詩や音楽、愛と豊かな生活は人間に与えられた祝福です。しかし、そのすべては「調和」の中で成し遂げられる時に真の価値を持ちます。持続可能な発展は、破壊ではなく「創造」の道であるべきです。自然を損なって得る豊かさは、真の豊かさではありません。私たちがそれぞれ異なる個性で楊少游の人生を豊かにしたように、人類も自然の多様性を尊重し、共に調和する芸術的な生活を育んでいくべきです。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 六観大師 (ユクカンだいし)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私は性眞に夢を通じて、人生の本質が空であることを教えた。今、人類は「成長」という虚像に執着し、自らを縛り付けている。お前たちが築き上げた物質文明は、結局は変わり、消え去るものだ。持続可能な発展は、この「空」の道理を悟ることから出発せねばならぬ。空であるからこそ何でも容れられるように、我々は無限の成長への欲望を空にしてこそ、持続可能な未来を容れることができる。夢から覚め、本来の場所へ戻れ。お前たちが帰るべき本来の場所とは、まさに自然と一つになった素朴な生活なのだ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 李生 (イセン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は楊少游の友として、彼が立身出世し家名を輝かすことを願っていた。それが世の常ではないか。持続可能な発展も良いが、目先の民の生活の問題を無視することはできない。私は「現実的な代替案」を見つけるべきだと考える。環境を保護しながらも経済を成長させることができる「グリーン技術」に投資し、新しい雇用を創出することが重要だ。あまりに理想的な話ばかりしていては、市井の民は飢えることになるだろう。夢と現実の間で、我々はまず民の生活を考えねばならない。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 王母 (おうぼ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私は性眞と八仙女の小さな欲望を叱責し、彼らに悟りの機会を与えました。今、人類の傲慢さは天に届こうとしています。あなたたちは自然の摂理に逆らい、すべての生命の調和を乱しています。干ばつや洪水、疫病は私の小さな警告に過ぎません。持続可能な発展は選択ではなく、あなたたちが当然従うべき「宇宙の法則」です。自らの過ちを悔い改め、自然の秩序に戻りなさい。さもなくば、あなたたちには性眞の夢よりも長く苦しい輪廻の時が待っているでしょう。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

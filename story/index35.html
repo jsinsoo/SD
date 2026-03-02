@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『춘추』 7인 현자들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #8B4513;
+            border-radius: 5px;
+            background-color: #fffaf6;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『춘추』 7인 현자들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 춘추의 시대를 이끌었던 일곱 분의 현자를 모시고, '지구의 지속가능 발전'이라는 새로운 시대의 과제에 대한 고견을 듣고자 합니다.</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 공자 (孔子)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">나는 무너진 예(禮)를 바로 세우고 인(仁)의 정치를 실현하고자 『춘추』를 지었소. 지금 지구가 병든 것은, 하늘과 땅, 그리고 인간 사이의 예가 무너졌기 때문이오. 인간이 자연을 함부로 대하는 것은 자식이 부모를 공경하지 않는 것과 같은 무례함이오. 지속가능 발전이란, 바로 이 어지러운 이름을 바로잡는 '정명(正名)'에서 시작해야 하오. 자연을 '자원'이 아닌 '어버이'로 그 이름을 바로 부르고, 공경과 감사의 예를 갖추어야 하오. 하늘의 뜻(天命)을 두려워하고 만물을 사랑하는 인의 마음을 회복할 때, 천하는 저절로 평안해질 것이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 노장공 (魯莊公)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">과인은 『춘추』의 첫머리를 장식한 군주요. 모든 역사는 첫 기록에서 시작되는 법이지. 내가 즉위한 해부터 역사의 기록이 시작되었듯, 지구의 지속가능성 역시 '정확한 기록'에서 시작되어야 하오. 지금 당장 전 세계 모든 국가의 탄소 배출량과 자원 소비량을 한 치의 오차도 없이 기록하고 공개해야 하오. 이 명확한 기록이야말로 미래 세대가 우리 시대를 평가할 '춘추필법'의 근거가 될 것이오. 부끄러운 기록을 남기지 않기 위해서라도, 군주들은 스스로를 경계하게 될 것이 아니겠소?</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 노애공 (魯哀公)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">과인의 시대에 공자께서 기린의 죽음을 보고 『춘추』의 붓을 꺾으셨으니, 내 이름(哀公)처럼 슬픈 일이오. 상서로운 기린마저 살 수 없는 난세였던 게지. 지금 지구에서 수많은 생명이 사라져가는 것은, 바로 '기린의 죽음'과 같소. 이는 우리 시대가 도덕과 조화를 잃어버렸다는 가장 슬픈 징조요. 지속가능 발전이란, 더 이상 기린이 죽지 않는 세상을 만드는 것이오. 생명의 가치를 최우선으로 여기고, 가장 약한 존재마저 평화롭게 살 수 있는 환경을 만들지 못한다면, 우리의 발전은 슬픔의 기록으로만 남게 될 것이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 제환공 (齊桓公)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">나는 춘추시대의 첫 패자(覇者)로서 흩어진 제후들을 모아 천하의 질서를 바로 세웠소. '존왕양이(尊王攘夷)'의 기치 아래 힘으로 평화를 이끌었지. 지구의 지속가능성 문제도 강력한 '패자'의 리더십이 필요하오. 지금처럼 각국이 제 이익만 따져서는 오합지졸에 불과하오. 가장 강력한 국가가 먼저 '탄소중립'을 선언하고, 압도적인 '녹색 기술'로 다른 나라들을 이끌어야 하오. 그리고 국제적인 환경 규약을 따르지 않는 나라에 대해서는 강력한 무역 제재를 가해서라도 질서를 세워야 하오. 명분만으로는 천하를 구할 수 없소.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 관중 (管仲)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">저는 환공을 도와 제나라를 부강하게 만든 재상 관중입니다. 제가 말했지요. "창고가 가득 차야 예절을 알고, 먹고 입는 것이 풍족해야 명예와 치욕을 안다." 환경 보호도 마찬가지입니다. 당장 먹고 살기 힘든 백성에게 환경을 생각하라는 것은 공허한 소리입니다. 지속가능 발전은 '녹색 산업'을 통해 나라의 창고를 먼저 채우는 일에서 시작되어야 합니다. 친환경 기술로 새로운 부를 창출하고, 그 부를 백성에게 공평하게 나누어 모두의 삶이 풍족해질 때, 비로소 사람들은 자발적으로 환경을 아끼고 미래를 생각하게 될 것입니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 진문공 (晉文公)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">과인은 19년간의 망명 생활 끝에 군주가 되어 인의(仁義)로써 나라를 다스렸소. 나는 힘으로 제후들을 억누르기보다, 신의를 지켜 그들의 마음을 얻었소. 지속가능 발전을 위한 국제 협력도 '신의'가 바탕이 되어야 하오. 강대국들이 먼저 약속한 기후 기금을 성실히 내놓고, 기술 이전을 투명하게 실행하여 약소국들의 믿음을 얻어야 하오. 눈앞의 이익 때문에 약속을 저버리는 것은 패자의 도리가 아니오. 비록 시간이 걸리더라도, 진심과 신의를 바탕으로 국제 사회의 신뢰를 쌓는 것이야말로 가장 튼튼한 지속가능성의 기반이 될 것이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 초장왕 (楚莊王)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">나는 즉위 후 3년간 날지도 울지도 않으며 때를 기다렸소. 그리고 한번 날갯짓을 하자 하늘을 찔렀지. '일명경인(一鳴驚人)'이 바로 나를 두고 한 말이오. 지금 지구의 위기 앞에서 너무 서두르거나 절망해서는 안 되오. 우리는 지금이 바로 '날지도 울지도 않는' 준비의 시간임을 알아야 하오. 겉으로는 조용해 보여도, 내부적으로는 다음 세대를 위한 교육 시스템을 개혁하고, 50년, 100년 뒤를 내다보는 혁신적인 친환경 기술을 묵묵히 개발해야 하오. 그리고 모든 준비가 끝났을 때, 단 한 번의 날갯짓으로 세상을 놀라게 할 지속가능한 문명으로 비상해야 할 것이오.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered seven wise figures who led the Spring and Autumn Period to hear their valuable opinions on the new challenge of our era, 'sustainable development for the Earth.'</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. Confucius</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I compiled the "Spring and Autumn Annals" to restore the collapsed rites (Li) and to realize a politics of benevolence (Ren). The Earth is ailing today because the rites between Heaven, Earth, and Humanity have crumbled. For humans to treat nature with contempt is a discourtesy akin to a child not honoring their parents. Sustainable development must begin with the 'Rectification of Names' (Zhengming). We must call nature by its proper name, not 'resource' but 'parent,' and show it the rites of reverence and gratitude. When we fear the Mandate of Heaven and recover the benevolent heart that loves all things, all under Heaven will find peace on its own.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. Duke Zhuang of Lu</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">I am the ruler who marks the opening of the "Spring and Autumn Annals." All history begins with the first record. Just as the recording of history began with the year of my accession, the sustainability of the Earth must also begin with 'accurate records.' We must immediately record and disclose the carbon emissions and resource consumption of every nation in the world without the slightest error. This clear record will be the basis for the 'Spring and Autumn historiography' by which future generations will judge our era. To avoid leaving a shameful record, will not the rulers keep themselves in check?</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. Duke Ai of Lu</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">In my time, Confucius laid down his brush for the "Annals" upon seeing the death of a Qilin, a sad event befitting my name (Ai, "lamentation"). It was a chaotic age where even an auspicious beast could not live. The vanishing of countless species on Earth today is just like the 'death of the Qilin.' It is the saddest omen that our era has lost morality and harmony. Sustainable development is about creating a world where no more Qilins die. If we fail to prioritize the value of life and create an environment where even the weakest can live in peace, our development will be remembered only as a record of sorrow.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. Duke Huan of Qi</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">As the first Hegemon of the Spring and Autumn period, I gathered the scattered feudal lords and restored order to the world. Under the banner of 'revering the king and expelling the barbarians,' I led with strength to achieve peace. The issue of global sustainability also requires the leadership of a strong 'Hegemon.' A disorderly rabble is what you are if each state only pursues its own interests. The most powerful nation must first declare 'carbon neutrality' and lead other nations with overwhelming 'green technology.' And for those nations that do not comply with international environmental regulations, order must be established even through strong trade sanctions. Justifications alone cannot save the world.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. Guan Zhong</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">I am Guan Zhong, the chancellor who helped Duke Huan make the state of Qi prosperous. As I said, "Only when the granaries are full will the people understand propriety; only when they are well-fed and well-clothed will they know honor and shame." The same applies to environmental protection. It is an empty cry to ask people who are struggling to survive to think about the environment. Sustainable development must begin with filling the nation's granaries through 'green industries.' When we create new wealth with eco-friendly technology and distribute that wealth fairly among the people, they will voluntarily care for the environment and think about the future.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. Duke Wen of Jin</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">After nineteen years in exile, I became a ruler and governed my state with benevolence and righteousness (Ren-Yi). Rather than suppressing the feudal lords with force, I won their hearts by keeping my faith. International cooperation for sustainable development must also be based on 'good faith.' The powerful nations must first earn the trust of weaker nations by sincerely delivering the climate funds they promised and transparently implementing technology transfers. Abandoning a promise for short-term gain is not the way of a true leader. Building trust in the international community based on sincerity and good faith, though it may take time, is the most solid foundation for sustainability.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. King Zhuang of Chu</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">For three years after my accession, I neither flew nor chirped, but waited for the right moment. And when I finally took flight, I pierced the heavens. The saying 'to astound the world with a single cry' was made for me. We must neither rush nor despair in the face of the Earth's current crisis. We must recognize that now is the time of 'neither flying nor chirping'—a time for preparation. Though we may seem quiet on the outside, we must internally reform our education systems for the next generation and silently develop innovative green technologies that look 50, 100 years ahead. And when all preparations are complete, we shall soar into a sustainable civilization that will astound the world with a single flap of its wings.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。春秋の時代を導いた七賢人の皆様をお招きし、「地球の持続可能な発展」という新しい時代の課題についてのご意見を伺いたいと思います。</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 孔子 (こうし)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私は崩れた礼を正し、仁の政治を実現するために『春秋』を編纂しました。今、地球が病んでいるのは、天と地、そして人間の間の礼が崩れたからです。人間が自然をぞんざいに扱うのは、子が親を敬わないのと同じ無礼です。持続可能な発展とは、まさにこの乱れた名を正す「正名」から始めなければなりません。自然を「資源」ではなく「親」としてその名を正しく呼び、敬いと感謝の礼を尽くすべきです。天命を畏れ、万物を愛する仁の心を取り戻す時、天下は自ずと平安になるでしょう。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 魯の荘公 (ろのそうこう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">私は『春秋』の冒頭を飾った君主です。すべての歴史は最初の記録から始まります。私が即位した年から歴史の記録が始まったように、地球の持続可能性もまた「正確な記録」から始めるべきです。今すぐ全世界のすべての国家の炭素排出量と資源消費量を寸分の誤差なく記録し、公開すべきです。この明確な記録こそ、未来の世代が我々の時代を評価する「春秋の筆法」の根拠となるでしょう。恥ずべき記録を残さないためにも、君主たちは自らを戒めるようになるのではありませんか。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 魯の哀公 (ろのあいこう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">私の時代に孔子様が麒麟の死を見て『春秋』の筆を折られたとは、私の名（哀公）の通り、悲しいことです。瑞獣である麒麟さえ生きられない乱世だったのです。今、地球から数多の命が消え去っているのは、まさに「麒麟の死」と同じです。これは我々の時代が道徳と調和を失ったという最も悲しい兆候です。持続可能な発展とは、これ以上麒麟が死なない世を作ることです。生命の価値を最優先に考え、最も弱い存在さえも平和に暮らせる環境を作れなければ、我々の発展は悲しみの記録としてのみ残るでしょう。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 斉の桓公 (せいのかんこう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">私は春秋時代の最初の覇者として、散らばった諸侯を集め、天下の秩序を正しました。「尊王攘夷」の旗印の下、力をもって平和を導きました。地球の持続可能性問題にも、強力な「覇者」のリーダーシップが必要です。今のように各国が自国の利益ばかりを追求していては、烏合の衆に過ぎません。最も強力な国家がまず「カーボンニュートラル」を宣言し、圧倒的な「グリーン技術」で他国を導くべきです。そして、国際的な環境規約に従わない国に対しては、強力な貿易制裁を加えてでも秩序を打ち立てるべきです。名分だけでは天下は救えません。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 管仲 (かんちゅう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私は桓公を補佐し、斉を富強にした宰相、管仲です。私が言いました。「倉廩満ちて礼節を知り、衣食足りて栄辱を知る」と。環境保護も同じです。今日明日を生きるのが精一杯の民に環境を考えろというのは、空虚な響きです。持続可能な発展は、「グリーン産業」を通じて国の倉をまず満たすことから始めるべきです。環境に優しい技術で新たな富を創出し、その富を民に公平に分配し、皆の生活が豊かになる時、初めて人々は自発的に環境を大切にし、未来を考えるようになるでしょう。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 晋の文公 (しんのぶんこう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は19年間の亡命生活の末に君主となり、仁義をもって国を治めました。私は力で諸侯を抑えつけるより、信義を守って彼らの心を得ました。持続可能な発展のための国際協力も、「信義」が土台となるべきです。大国がまず約束した気候基金を誠実に拠出し、技術移転を透明に実行して、小国たちの信頼を得なければなりません。目先の利益のために約束を破るのは覇者の道ではありません。時間はかかっても、真心と信義を基に国際社会の信頼を築くことこそが、最も強固な持続可能性の基盤となるでしょう。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 楚の荘王 (そのそうおう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私は即位後三年間、飛ばず鳴かずして時を待ちました。そして一度羽ばたくと、天を突きました。「一鳴驚人」とは、まさに私のことです。今、地球の危機の前に、あまりに焦ったり絶望したりしてはなりません。私たちは今がまさに「飛ばず鳴かず」の準備の時であることを知るべきです。表向きは静かに見えても、内部では次世代のための教育システムを改革し、50年、100年先を見据えた革新的な環境技術を黙々と開発すべきです。そして、すべての準備が整った時、一度の羽ばたきで世界を驚かす、持続可能な文明へと飛翔すべきなのです。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

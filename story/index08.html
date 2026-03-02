@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지속 가능한 지구를 위한 지질시대 대토론회</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f4f1ea;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #5d4037;
+            border-bottom: 2px solid #795548;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #795548;
+            border-bottom: none;
+        }
+        .speech-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 5px solid #795548;
+            background-color: #efebe9;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+        .speech-block:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .era-intro {
+            font-style: italic;
+            color: #4e342e;
+            background-color: #d7ccc8;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+            background: #795548;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-left: 10px;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background: #5d4037;
+        }
+        .full-listen-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .full-listen-buttons button {
+            background-color: #007bff;
+            padding: 10px 15px;
+            font-size: 1em;
+            margin: 5px;
+        }
+        .full-listen-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .chairperson {
+            background-color: #f5f5f5;
+            border-left-color: #616161;
+        }
+        .chairperson h3 {
+            color: #616161;
+        }
+    </style>
+    <script>
+        function speak(text, lang) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // 기존 음성출력 중지
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = lang;
+                utterance.rate = 0.95;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('죄송합니다. 이 브라우저에서는 음성 합성을 지원하지 않습니다.');
+            }
+        }
+
+        // 개별 듣기 버튼용 함수
+        function speakText(buttonElement) {
+            const textToSpeak = buttonElement.nextElementSibling.textContent;
+            const langClass = buttonElement.parentElement.className;
+            let langCode = '';
+            if (langClass.includes('lang-ko')) langCode = 'ko-KR';
+            else if (langClass.includes('lang-en')) langCode = 'en-US';
+            else if (langClass.includes('lang-ja')) langCode = 'ja-JP';
+            speak(textToSpeak, langCode);
+        }
+
+        // 전체 듣기 버튼용 함수
+        function listenToAll(langClass, langCode) {
+            const textElements = document.querySelectorAll(`.${langClass} span`);
+            let fullTextArray = [];
+            textElements.forEach(span => {
+                fullTextArray.push(span.textContent);
+            });
+            const fullText = fullTextArray.join('.\n\n');
+            speak(fullText, langCode);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>지속 가능한 지구를 위한 지질시대 대토론회</h1>
+
+        <div class="full-listen-buttons">
+            <button onclick="listenToAll('lang-ko', 'ko-KR')">🇰🇷 한국어 전체 듣기</button>
+            <button onclick="listenToAll('lang-en', 'en-US')">🇬🇧 영어 전체 듣기</button>
+            <button onclick="listenToAll('lang-ja', 'ja-JP')">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 선캄브리아대의 발언</h3>
+            <div class="era-intro">
+                나는 모든 시간의 시작, 선캄브리아대입니다. 40억 년이 넘는 나의 시간 동안, 나는 뜨거운 용암 덩어리였던 이 행성에 바다를 만들고, 대륙을 빚었으며, 최초의 생명을 잉태했습니다. 내 시대의 증인은, 광합성을 통해 이 행성에 산소를 선물한 최초의 생명체, **남세균(시아노박테리아)**입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>여러분은 너무 조급합니다. 나와 나의 작은 남세균들이 20억 년에 걸쳐 조금씩 만들어낸 이 산소 대기를, 여러분은 불과 200년 만에 망가뜨리고 있습니다. 지속가능성이란, 시간의 무게를 이해하는 것입니다. 생명이 살 수 있는 환경 하나를 만드는 데 수십억 년이 걸렸다는 사실을 기억해야 합니다. 여러분이 내뿜는 탄소는 단순히 공기를 더럽히는 것이 아니라, 수십억 년의 역사를 거슬러 지구를 원시 상태로 되돌리려는 위험한 시도입니다. 부디, 내가 아주 오랜 시간에 걸쳐 쌓아 올린 이 생명의 기반을 존중해주십시오.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>You are all too hasty. This oxygen-rich atmosphere, which my little cyanobacteria and I spent over 2 billion years creating bit by bit, you have damaged in merely 200 years. Sustainability is about understanding the weight of time. You must remember that it took billions of years to create an environment where life could exist. The carbon you emit is not just polluting the air; it is a dangerous attempt to reverse billions of years of history and return the Earth to its primitive state. Please, respect this foundation of life that I have built up over such a long, long time.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>あなたたちはあまりにも性急です。私と私の小さなシアノバクテリアが20億年以上かけて少しずつ作り上げたこの酸素大気を、あなたたちはわずか200年で台無しにしています。持続可能性とは、時間の重みを理解することです。生命が生きられる環境一つを作るのに何十億年もかかったという事実を記憶しなければなりません。あなたたちが吐き出す炭素は、単に空気を汚すだけでなく、何十億年もの歴史を遡って地球を原始状態に戻そうとする危険な試みです。どうか、私が非常に長い時間をかけて築き上げたこの生命の基盤を尊重してください。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>고생대의 발언</h3>
+            <div class="era-intro">
+                나는 '고대 생물의 시대', 고생대입니다. 나의 바다에서는 생명의 폭발이 일어났고, 식물과 동물이 처음으로 육지에 발을 디뎠습니다. 내 시대의 주인공은, 온 바다를 누비던 **삼엽충**입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>나의 증인, 삼엽충은 3억 년 가까이 이 행성의 주인이었습니다. 영원할 것 같았지요. 하지만 나의 시대가 끝날 무렵, 지구 역사상 가장 거대한 대멸종이 닥쳤고, 바다와 육지의 생물 95%가 사라졌습니다. 삼엽충도 그저 화석으로만 남았지요. 지속가능성이란, '영원한 지배자는 없다'는 것을 깨닫는 것입니다. 지금 여러분이 누리는 번영이 당연하고 영원할 것이라 착각해서는 안 됩니다. 생물 다양성이 무너지는 것은 대멸종의 전조입니다. 내 시대의 끝자락처럼, 텅 빈 바다와 침묵의 숲을 마주하고 싶지 않다면, 지금 당장 모든 생명과의 공존을 시작해야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>My witness, the trilobite, was the master of this planet for nearly 300 million years. It seemed eternal. But near the end of my era, the largest mass extinction in Earth's history occurred, and 95% of marine and terrestrial life vanished. The trilobite, too, was left only as a fossil. Sustainability is realizing that 'no ruler is eternal.' You must not delude yourselves into thinking that the prosperity you enjoy now is natural and everlasting. The collapse of biodiversity is a precursor to mass extinction. If you do not wish to face empty seas and silent forests like the end of my era, you must begin to coexist with all life, right now.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の証人である三葉虫は、3億年近くこの惑星の主でした。永遠に続くかと思われました。しかし、私の時代の終わり頃、地球史上最大の大絶滅が訪れ、海と陸の生物の95%が姿を消しました。三葉虫もまた、化石としてのみ残りました。持続可能性とは、「永遠の支配者はいない」と悟ることです。今あなたたちが享受している繁栄が、当然で永遠のものだと錯覚してはなりません。生物多様性が崩れることは、大絶滅の前兆です。私の時代の終わりのように、空っぽの海と沈黙の森に直面したくないのであれば、今すぐすべての生命との共存を始めなければなりません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>중생대의 발언</h3>
+            <div class="era-intro">
+                나는 '파충류의 시대', 중생대다! 하늘과 땅, 바다를 호령했던 공룡들의 시대지. 나의 상징은 두말할 필요 없이, 폭군 도마뱀의 왕, **티라노사우루스**다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>우리 공룡들은 1억 5천만 년 넘게 이 행성을 지배했다. 우리보다 강한 생물은 없었지. 우리의 시대가 끝날 것이라고는 상상조차 못 했다. 하지만 하늘에서 떨어진 거대한 운석 하나가 모든 것을 끝내버렸다. 지속가능성이란, '외부의 위협에 항상 대비해야 한다'는 교훈이다. 너희 인류에게 기후 변화는 바로 하늘에서 떨어지는 운석과 같다. 다만, 너희의 운석은 외부가 아니라 너희 스스로가 쏘아 올리고 있다는 점이 다를 뿐. 우리의 멸종은 선택의 여지가 없었지만, 너희의 멸종은 너희 손에 달려있다. 그 운석의 궤도를 바꿀 수 있는 마지막 기회를 놓치지 마라.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>We dinosaurs ruled this planet for over 150 million years. There were no creatures stronger than us. We couldn't even imagine that our era would end. But a single great meteorite from the sky ended everything. Sustainability is the lesson that 'you must always be prepared for external threats.' For you humans, climate change is just like that meteorite falling from the sky. The only difference is that your meteorite is being launched not by an external force, but by yourselves. Our extinction was not a choice, but yours is in your hands. Do not miss the last chance to change the trajectory of that meteorite.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>我々恐竜は1億5千万年以上、この惑星を支配した。我々より強い生物はいなかった。我々の時代が終わるとは想像すらできなかった。しかし、空から落ちてきた一つの巨大な隕石がすべてを終わらせた。持続可能性とは、「外部の脅威に常に備えなければならない」という教訓だ。お前たち人類にとって、気候変動はまさに空から落ちてくる隕石と同じだ。ただし、お前たちの隕石は外部からではなく、お前たち自身が打ち上げているという点が違うだけだ。我々の絶滅には選択の余地がなかったが、お前たちの絶滅はお前たちの手にかかっている。その隕石の軌道を変える最後の機会を逃すな。</span></p>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>폐회 발언: 신생대 (홀로세)의 목소리</h3>
+            <div class="era-intro">
+                나는 '포유류의 시대'이자 '인류의 시대', 신생대입니다. 공룡이 사라진 자리를 채우며 다양한 포유류가 번성했지요. 나의 친구, 빙하기를 함께 견뎠던 **매머드**는 여러분의 조상 때문에 사라졌습니다. 그리고 지금, 나는 나의 가장 마지막 시기인 '홀로세'의 이름으로, 그리고 인류의 이름으로 말합니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>선캄브리아대가 수십억 년에 걸쳐 만든 공기, 고생대가 폭발시켰던 생명의 다양성, 중생대의 거인들이 남긴 경고를, 인류는 나의 시대, 특히 홀로세에 들어와서 모두 잊었습니다. 저는 이전 시대들과는 다른 특별한 존재를 키워냈습니다. 바로 자신의 행동이 행성 전체에 영향을 미친다는 것을 '아는' 최초의 종, 인류입니다. 지속가능성이란 바로 이 '앎'을 '책임'으로 바꾸는 것입니다. 여러분은 더 이상 지구의 수많은 자식 중 하나가 아닙니다. 이 행성의 미래를 결정할 키를 쥔 유일한 존재가 되었습니다. 여러분이 쓰는 이 시대의 이름이 '인류세(Anthropocene)', 즉 '인류에 의한 파괴의 시대'로 기록되지 않기를 간절히 바랍니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>The air that the Precambrian created over billions of years, the diversity of life that the Paleozoic exploded, the warning left by the giants of the Mesozoic—humanity has forgotten them all upon entering my era, especially the Holocene. I nurtured a special being unlike any from previous eras: humanity, the first species to 'know' that its actions affect the entire planet. Sustainability is turning this 'knowledge' into 'responsibility.' You are no longer just one of Earth's many children. You have become the sole beings holding the key to this planet's future. I earnestly hope that the name you write for this era is not recorded as the 'Anthropocene,' the 'era of destruction by humankind.'</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>先カンブリア時代が何十億年もかけて作り出した空気、古生代が爆発させた生命の多様性、中生代の巨人たちが残した警告を、人類は私の時代、特に完新世に入ってすべて忘れました。私は以前の時代とは違う特別な存在を育て上げました。それは、自らの行動が惑星全体に影響を及ぼすことを「知っている」最初の種、人類です。持続可能性とは、まさにこの「知」を「責任」に変えることです。あなたたちはもはや地球の数多の子どもの一人ではありません。この惑星の未来を決定する鍵を握る唯一の存在となりました。あなたたちが記すこの時代の名が、「人新世(アントロポセン)」、すなわち「人類による破壊の時代」として記録されないことを切に願います。</span></p>
+        </div>
+
+    </div>
+</body>
+</html>

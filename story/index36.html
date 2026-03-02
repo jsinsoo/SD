@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『사기』 12인 영웅들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #8B4513;
+            border-radius: 5px;
+            background-color: #fffaf6;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『사기』 12인 영웅들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 역사의 기록 속에 살아 숨 쉬는 12분의 영웅을 모시고, '지구의 지속가능 발전'이라는 새로운 시대의 과제에 대한 고견을 듣고자 합니다.</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 사마천</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">나는 궁형의 치욕 속에서도 역사의 기록을 멈추지 않았소. 후세에 진실을 전하는 것이 나의 소명이었기 때문이오. 지구의 지속가능 발전 역시 '미래를 위한 기록'의 문제입니다. 우리는 지금 이 순간, 지구가 어떻게 병들어가고 있는지, 그리고 우리가 어떤 노력을 하고 있는지를 한 치의 거짓도 없이 기록해야 합니다. 이 기록이야말로 미래 세대가 우리 시대를 평가할 유일한 근거가 될 것이오. 훗날 부끄러운 조상으로 기록되지 않기 위해서라도, 우리는 진실을 마주하고 올바른 역사를 써 내려가야 합니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 진시황</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">짐은 흩어진 천하를 통일하고, 도량형과 문자를 하나로 만들었노라. 지금 지구의 위기 또한 분열이 문제다. 각국이 제멋대로 다른 기준을 내세우니 어찌 통일된 대응이 가능하겠는가! 지속가능 발전은 강력한 '중앙의 힘'으로 다스려야 한다. 짐이라면 전 세계의 탄소 배출 기준을 하나로 통일하고, 따르지 않는 자는 만리장성을 쌓는 노역에 처했을 것이다. 대의를 위해서는 사소한 반대쯤은 묵살해야 하는 법. 강력한 법과 통일된 기준만이 이 혼란을 끝낼 수 있느니라.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 항우</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">나의 힘은 천하를 들어 올릴 만했으나, 결국 스스로 목숨을 끊었지. 나는 눈앞의 적을 부수는 데만 급급하여 큰 그림을 보지 못했다. 지금 인류는 '경제 성장'이라는 눈앞의 적에만 몰두하여, '환경 파괴'라는 거대한 포위망에 갇히고 있는 것은 아닌가. 지속가능 발전이란, 나의 실패를 반면교사 삼는 것이다. 힘자랑만 할 것이 아니라, 때로는 물러서고 주변을 돌아보는 지혜가 필요하다. 오강의 강물은 나를 기다려주지 않았지만, 아직 우리에게는 지구를 되돌릴 시간이 남아있을지 모른다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 유방</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">나는 항우처럼 고귀한 출신은 아니었지만, 백성의 마음을 얻어 천하를 얻었소. 백성이 굶주리는데 어찌 나 혼자 배부를 수 있겠소. 지속가능 발전도 마찬가지요. 어려운 용어와 거창한 계획이 중요한 게 아니오. 당장 미세먼지로 고통받는 아이들, 기후 변화로 농사를 망친 농민들의 마음을 먼저 헤아려야 하오. 나는 그들의 삶에 실질적인 도움이 되는 정책부터 시작하겠소. 친환경 보일러를 놔주고, 작은 개울을 살리는 일처럼 말이오. 천하의 마음을 얻는 자가 천하를 얻듯, 민심을 얻는 정책이 결국 성공하는 법이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 장량</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">저는 한 발 물러서서 판 전체를 읽고, 결정적인 순간에 수를 두었습니다. 서두르는 것은 언제나 일을 그르치는 법이지요. 지구의 지속가능성은 '천 리 길도 한 걸음부터'라는 지혜로 접근해야 합니다. 지금 당장 모든 것을 바꾸려 하면 거대한 저항에 부딪힐 것입니다. 대신, 저는 '곡속이병(谷食利兵)'의 계책을 제안합니다. 즉, 녹색 산업이라는 '새로운 군량미'를 차근차근 비축하여 경제의 체질을 바꾸고, 대중의 인식이 무르익을 때를 기다려 결정적인 정책을 시행하는 것입니다. 진정한 지략은 서두르지 않는 데 있습니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 소하</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">전쟁터의 영웅도 중요하지만, 천하를 다스리는 것은 결국 법과 행정입니다. 저는 후방에서 묵묵히 군량을 보급하고, 관중 땅의 법령과 지도를 확보하여 통일의 기틀을 닦았습니다. 지속가능 발전은 '보이지 않는 행정'에 달려 있습니다. 저는 전 지구적인 자원 데이터베이스를 구축하고, 폐기물 추적 시스템을 법제화하며, 모든 환경 정책이 한 치의 오차 없이 집행되도록 관리하는 체계를 만들 것을 제안합니다. 화려한 전투보다 중요한 것은, 시스템이 흔들림 없이 돌아가도록 만드는 꼼꼼한 내치(內治)입니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 한신</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">나는 전장에서 단 한 번도 패한 적이 없었으나, 결국 정치의 칼에 죽었소. 나의 병법은 버려졌지. 아무리 뛰어난 전략도 군주가 쓰지 않으면 무용지물이오. 지금 기후 위기를 해결할 수많은 '신의 한 수' 같은 기술과 정책들이 이미 존재하오. 문제는 그것을 실행할 정치적 리더십의 부재요. 지속가능 발전은 결국 '토사구팽'의 우를 범하지 않는 것에 있소. 과학자들과 전문가들의 목소리를 경청하고, 그들의 제안을 과감하게 실행할 수 있는 리더가 필요하오. 뛰어난 장수를 의심하면 전쟁에서 이길 수 없는 법이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. 백이와 숙제</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div><div id="ko-8">저희는 불의한 주나라의 곡식을 먹기를 거부하고 수양산에서 굶어 죽는 길을 택했습니다. 절의를 지키는 것이 목숨보다 중했기 때문입니다. 지금 인류는 '화석 연료'라는 불의한 곡식을 먹으며 연명하고 있습니다. 그것이 지구를 병들게 하고 미래 세대의 생명을 위협한다는 것을 알면서도 말입니다. 진정한 지속가능 발전은 이 '불의한 곡식'을 끊는 단호한 결단에서 시작되어야 합니다. 조금 불편하고 고통스럽더라도, 우리는 파괴적인 문명의 혜택을 거부하고, 청정한 자연이 주는 최소한의 것만으로 만족하는 삶을 선택해야 합니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. 자객들 (형가)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div><div id="ko-9">나는 진시황이라는 거악을 제거하기 위해 목숨을 던진 자객, 형가요. 천하의 평화를 위해서는 때로 비수와 같은 결단이 필요한 법이지. 지금 지구를 위협하는 가장 큰 '폭군'은 누구인가? 바로 환경 파괴를 주도하며 막대한 이익을 얻는 거대 기업과 그들을 비호하는 정치 세력이오. 이들을 상대로 점진적인 변화를 요구하는 것은 어리석은 짓이오. 지속가능 발전은 때로 이 거악의 심장을 직접 겨누는 과감한 행동을 요구하오. 전 세계적인 불매 운동, 강력한 시민 불복종과 같은 '비수'를 통해, 시스템의 변화를 거부하는 자들을 단번에 무너뜨려야 하오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">10. 굴원</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div><div id="ko-10">나는 초나라의 충신이었으나, 간신들의 모함에 쫓겨나 멱라수에 몸을 던졌소. 더러운 세상과 타협하느니, 차라리 깨끗한 죽음을 택했지. 지금 지구의 강과 바다가 오염되는 것을 보니, 마치 내 마음이 다시 멱라수에 잠기는 듯하오. 지속가능 발전은 기술이나 제도의 문제가 아니라, '정신의 문제'요. 인간의 마음속 탐욕과 이기심이라는 '오물'을 먼저 씻어내지 않고서는, 결코 세상을 정화할 수 없소. 나는 시(詩)와 예술을 통해 사람들의 마음속에 자연을 사랑하는 맑고 향기로운 정신을 되살리는 일부터 시작해야 한다고 믿소.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered 12 heroes who live on in the pages of history to hear their valuable opinions on the new challenge of our era, 'sustainable development for the Earth.'</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. Sima Qian</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">Even in the shame of castration, I did not stop recording history, for it was my calling to pass down the truth to posterity. Sustainable development is also a matter of 'recording for the future.' We must record, without a shred of falsehood, how the Earth is sickening at this very moment and what efforts we are making. This record will be the sole basis upon which future generations will judge our era. So that we are not recorded as shameful ancestors, we must face the truth and write a just history.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. Qin Shi Huang</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">I unified the scattered realm and standardized the weights, measures, and script. The crisis of the Earth today is also a problem of division. How can a unified response be possible when each state sets its own arbitrary standards! Sustainable development must be governed by a strong 'central power.' If it were me, I would unify the world's carbon emission standards and sentence those who do not comply to labor building a Great Wall. For a great cause, minor opposition must be silenced. Only strong laws and unified standards can end this chaos.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. Xiang Yu</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">My strength could lift the world, yet I ended my own life. I was too focused on crushing the enemy before me to see the bigger picture. Is humanity today not trapped in a grand encirclement of 'environmental destruction' while being preoccupied with the immediate enemy of 'economic growth'? Sustainable development is about learning from my failure. Instead of just showing off strength, wisdom is needed to sometimes retreat and look around. The waters of the Wu River did not wait for me, but perhaps we still have time to turn the Earth back.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. Liu Bang</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">I was not of noble birth like Xiang Yu, but I won the realm by winning the hearts of the people. How could I feast alone while the people starved? Sustainable development is the same. It's not about difficult terms or grand plans. We must first consider the hearts of the children suffering from fine dust and the farmers whose crops have failed due to climate change. I would start with policies that provide practical help to their lives, like installing eco-friendly boilers and reviving small streams. He who wins the hearts of the people wins the realm; a policy that wins public support is one that will ultimately succeed.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. Zhang Liang</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">I stepped back to read the entire board and made my move at the decisive moment. Haste always spoils things. The sustainability of the Earth must be approached with the wisdom that "a journey of a thousand miles begins with a single step." If we try to change everything at once, we will face immense resistance. Instead, I propose a stratagem of "using grain to feed soldiers." That is, we must slowly change the constitution of the economy by steadily stockpiling the 'new military rations' of green industries, and wait for public opinion to ripen before implementing decisive policies. True strategy lies in not rushing.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. Xiao He</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">Heroes on the battlefield are important, but it is ultimately law and administration that govern a realm. I quietly supplied provisions from the rear and secured the laws and maps of the Guanzhong region to lay the foundation for unification. Sustainable development depends on 'unseen administration.' I propose building a global resource database, legislating a waste tracking system, and creating a framework to manage all environmental policies for flawless execution. More important than a flashy battle is the meticulous domestic governance that ensures the system runs without a hitch.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. Han Xin</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">I was never defeated on the battlefield, yet I was killed by the sword of politics. My strategies were discarded. Even the most brilliant strategy is useless if the ruler does not use it. There already exist numerous technologies and policies like 'divine moves' that can solve the climate crisis. The problem is the lack of political leadership to implement them. Sustainable development, in the end, is about not repeating the folly of 'killing the hound after the hunt.' We need leaders who will listen to the voices of scientists and experts and boldly implement their proposals. You cannot win a war if you doubt your brilliant generals.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. Bo Yi & Shu Qi</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">We chose to starve in the mountains rather than eat the grain of the unrighteous Zhou dynasty, for upholding our integrity was more important than life itself. Humanity today is surviving by eating the 'unrighteous grain' of fossil fuels, knowing full well that it sickens the Earth and threatens the lives of future generations. True sustainable development must begin with the firm decision to stop consuming this 'unrighteous grain.' Though it may be inconvenient and painful, we must reject the benefits of a destructive civilization and choose a life of contentment with the minimal gifts of a pure nature.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. The Assassins (Jing Ke)</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div><div id="en-9">I am Jing Ke, the assassin who threw his life away to eliminate the great evil that was the King of Qin. For the peace of the realm, a dagger-like decision is sometimes necessary. Who is the greatest 'tyrant' threatening the Earth today? It is the giant corporations that lead environmental destruction for immense profit and the political forces that protect them. Demanding gradual change from them is a fool's errand. Sustainable development sometimes requires bold action that aims directly at the heart of this great evil. Through 'daggers' like global boycotts and powerful civil disobedience, we must bring down those who resist the system's change in one fell swoop.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">10. Qu Yuan</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div><div id="en-10">I was a loyal minister of Chu, but was driven out by the slander of treacherous officials and threw myself into the Miluo River. I chose a clean death rather than compromise with a dirty world. Seeing the rivers and seas of the Earth polluted today feels as if my heart is drowning in the Miluo once again. The problem of sustainable development is not one of technology or institutions, but of the 'spirit.' We can never purify the world without first washing away the 'filth' of greed and selfishness from the human heart. I believe we must begin by reviving a clear and fragrant spirit of love for nature in people's hearts through poetry and art.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。歴史の記録の中に生き続ける12人の英雄をお招きし、「地球の持続可能な発展」という新しい時代の課題についてのご意見を伺いたいと思います。</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 司馬遷 (しばせん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私は宮刑の恥辱の中でも、歴史の記録を止めませんでした。後世に真実を伝えることが私の使命だったからです。地球の持続可能な発展もまた、「未来のための記録」の問題です。私たちは今この瞬間、地球がどのように病んでいるのか、そして私たちがどのような努力をしているのかを、一片の偽りもなく記録すべきです。この記録こそが、未来の世代が我々の時代を評価する唯一の根拠となるでしょう。後世、恥ずべき祖先として記録されないためにも、私たちは真実に向き合い、正しい歴史を書き記していかねばなりません。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 秦の始皇帝 (しんのしこうてい)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">朕は分裂した天下を統一し、度量衡と文字を一つにした。今の地球の危機もまた、分裂が問題だ。各国が勝手に異なる基準を掲げているから、どうして統一された対応ができようか！持続可能な発展は、強力な「中央の力」で治めるべきだ。朕であれば、全世界の炭素排出基準を一つに統一し、従わない者は万里の長城を築く労役に処したであろう。大義のためには、些細な反対など無視すべきだ。強力な法と統一された基準のみが、この混乱を終わらせることができるのだ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 項羽 (こうう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">我が力は天下を持ち上げるほどだったが、結局は自ら命を絶った。私は目の前の敵を打ち破ることにばかり気を取られ、大局を見ることができなかった。今の人類は、「経済成長」という目の前の敵にのみ没頭し、「環境破壊」という巨大な包囲網に閉じ込められているのではないか。持続可能な発展とは、私の失敗を反面教師とすることだ。力自慢ばかりでなく、時には退き、周囲を見渡す知恵が必要だ。烏江の水は私を待ってはくれなかったが、まだ我々には地球を取り戻す時間が残されているかもしれぬ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 劉邦 (りゅうほう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">私は項羽のような高貴な生まれではなかったが、民の心を得て天下を得た。民が飢えているのに、どうして私一人が満腹になれようか。持続可能な発展も同じこと。難しい言葉や壮大な計画が重要なのではない。今すぐPM2.5で苦しむ子供たちや、気候変動で農業を台無しにされた農民の心をまず思いやることだ。私は彼らの生活に実質的な助けとなる政策から始めるだろう。環境に優しいボイラーを設置したり、小さな小川を蘇らせたりするようなことだ。天下の心を得る者が天下を得るように、民心を得る政策が結局は成功するのだ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 張良 (ちょうりょう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私は一歩引いて戦局全体を読み、決定的な瞬間に一手を打ちました。急ぐことは常に事を仕損じます。地球の持続可能性は、「千里の道も一歩から」という知恵でアプローチすべきです。今すぐ全てを変えようとすれば、巨大な抵抗に直面するでしょう。代わりに、私は「穀、兵を利する」の計を提案します。すなわち、グリーン産業という「新しい兵糧」を着実に備蓄して経済の体質を変え、大衆の認識が熟すのを待って決定的な政策を実行するのです。真の知略とは、急がないことにあるのです。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 蕭何 (しょうか)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">戦場の英雄も重要ですが、天下を治めるのは結局、法と行政です。私は後方で黙々と兵糧を補給し、関中の法令と地図を確保して統一の礎を築きました。持続可能な発展は、「見えない行政」にかかっています。私は全地球的な資源データベースを構築し、廃棄物追跡システムを法制化し、すべての環境政策が寸分の誤差なく執行されるよう管理する体系を作ることを提案します。華やかな戦闘よりも重要なのは、システムが揺らぐことなく機能するようにする、緻密な内治です。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 韓信 (かんしん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私は戦場で一度も敗れたことがなかったが、結局は政治の刃に倒れた。私の兵法は捨てられた。どんなに優れた戦略も、君主が用いなければ無用の長物だ。今、気候危機を解決できる数多の「神の一手」のような技術や政策は既に存在する。問題は、それを実行する政治的リーダーシップの不在だ。持続可能な発展とは、結局「狡兎死して走狗烹らる」の過ちを犯さないことにある。科学者や専門家の声に耳を傾け、彼らの提案を大胆に実行できるリーダーが必要だ。優れた将軍を疑っては、戦に勝つことはできぬ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. 伯夷・叔斉 (はくい・しゅくせい)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">我々は不義の周の粟を食むことを拒み、首陽山で餓死する道を選びました。節義を守ることが、命よりも重かったからです。今、人類は「化石燃料」という不義の粟を食んで延命しています。それが地球を病ませ、未来の世代の命を脅かすと知りながら。真の持続可能な発展は、この「不義の粟」を断つという断固たる決断から始まるべきです。多少不便で苦しくとも、私たちは破壊的な文明の恩恵を拒否し、清浄な自然が与える最小限のもので満足する生き方を選ぶべきです。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. 刺客たち (荊軻)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">私は秦王という巨悪を除くために命を投げ出した刺客、荊軻だ。天下の平和のためには、時に匕首のような決断が必要なのだ。今、地球を脅かす最大の「暴君」は誰か。環境破壊を主導し、莫大な利益を得る巨大企業と、彼らを庇護する政治勢力だ。彼らに対して漸進的な変化を要求するのは愚かなことだ。持続可能な発展は、時にこの巨悪の心臓を直接狙うような、大胆な行動を要求する。全世界的な不買運動や、強力な市民不服従といった「匕首」を通じて、システムの変革を拒む者たちを一挙に打ち破らねばならぬ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">10. 屈原 (くつげん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div><div id="ja-10">私は楚の忠臣であったが、奸臣の讒言によって追われ、汨羅の淵に身を投じた。汚れた世と妥協するよりは、いっそ清らかな死を選んだのだ。今、地球の川や海が汚染されているのを見ると、まるで私の心が再び汨羅に沈むようだ。持続可能な発展は、技術や制度の問題ではなく、「精神の問題」だ。人間の心の中にある貪欲と利己心という「汚物」をまず洗い流さなければ、決して世界を浄化することはできぬ。私は詩と芸術を通じて、人々の心の中に自然を愛する清らかで香り高い精神を蘇らせることから始めるべきだと信じている。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

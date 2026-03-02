@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>위상적 성질들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.9;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 5px;
+            background-color: #fafdff;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        /* Furigana Style */
+        ruby { font-size: 1.1em; }
+        rt { font-size: 0.6em; color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>위상적 성질들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 여러분, 안녕하십니까. 오늘 우리의 실공간을 구성하는 핵심적인 위상적 성질 여러분을 모시고, 지구의 미래에 대한 고견을 듣고자 합니다. 각자 자신의 성질을 간결하게 소개해 주시고, 그 관점에서 지구의 지속가능 발전에 대해 제언해 주십시오.</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">1. 하우스도르프</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div>
+                        <div id="ko-1">안녕하십니까, 하우스도르프입니다. 저의 가장 큰 특징은 '분리'입니다. 아무리 가까운 두 점이라도 서로 겹치지 않는 별개의 공간을 할당할 수 있습니다. 마치 싸운 두 사람이 각자 자기 방을 가질 수 있듯이, 명확한 경계를 설정하는 것이 저의 역할입니다.
+<strong>지속가능 발전에 대한 제언:</strong> 지구의 지속가능성을 위해, 저는 '절대적 분리의 원칙'을 제안합니다. 예를 들어, 자연보호구역과 공장지대 사이에는 누구도 침범할 수 없는 '완충지대(버퍼 존)'를 설정해야 합니다. 이 공간은 양쪽의 특성이 섞이지 않게 하는 저의 '열린 집합'과 같습니다. 서로 다른 생태계, 그리고 인간의 활동 영역은 명확히 구분되어야 합니다. 이것이 각자의 고유성을 지키고 장기적인 공존을 가능하게 하는 첫걸음입니다. 상호 간섭을 최소화하는 것이야말로 지속가능한 관계의 핵심입니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">2. 정규 공간</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div>
+                        <div id="ko-2">만나 뵙게 되어 영광입니다, 정규 공간입니다. 하우스도르프 님이 점을 분리한다면, 저는 한 걸음 더 나아가 서로 만나지 않는 '닫힌 집합', 즉 큰 덩어리들을 분리합니다. 사이가 나쁜 두 그룹을 각각 다른 층의 교실에 배치하듯, 큰 집단 간의 갈등을 공간적으로 막는 역할을 맡고 있습니다.
+<strong>지속가능 발전에 대한 제언:</strong> 저는 대규모 집단 간의 분리를 통해 지속가능성을 확보해야 한다고 생각합니다. 현재 지구는 물, 영토, 자원을 둘러싼 국가나 공동체 간의 대립으로 가득합니다. 저는 이러한 분쟁 지역에 명확한 비무장 중립 지대를 설정하여, 양측이 서로의 영역을 침범할 수 없도록 하는 국제적 합의를 제안합니다. 이것은 단순히 선을 긋는 것이 아니라, 두 '닫힌 집합' 사이에 실질적인 '열린 공간'을 만드는 것입니다. 갈등의 원인이 되는 대규모 접촉을 근원적으로 차단하여 평화와 환경 보전을 동시에 추구해야 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">3. 제2가산</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div>
+                        <div id="ko-3">안녕하세요, 제2가산입니다. 저의 특징은 '효율성'과 '관리 가능성'입니다. 이 복잡해 보이는 공간도, 사실은 셀 수 있는 개수의 '기본 블록'으로 모두 표현할 수 있음을 보증합니다. 레고 블록의 종류를 셀 수 있기 때문에 우리가 무엇이든 만들 수 있는 것과 같습니다.
+<strong>지속가능 발전에 대한 제언:</strong> 지속가능 발전은 너무 복잡하고 방대해서 어디서부터 손을 대야 할지 막막할 때가 있습니다. 저는 이 문제를 '셀 수 있는 개수의 기본 원칙'으로 체계화할 것을 제안합니다. 유엔의 지속가능발전목표(SDGs)가 좋은 예입니다. 이처럼 우리는 환경, 사회, 경제 각 분야에서 핵심적인 '기본 블록' 정책을 수립해야 합니다. 그리고 전 세계 모든 지역이 이 기본 블록들을 조합하여 자신의 상황에 맞는 지속가능성 계획을 세우도록 하는 것입니다. 무한한 정책이 아니라, 관리 가능한 핵심 정책의 조합으로 문제를 해결하는 접근이 필요합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">4. 가분</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div>
+                        <div id="ko-4">가분 공간입니다, 잘 부탁드립니다. 저는 '대표성'을 상징합니다. 이 광대한 공간에는 무수히 많은 점이 있는 것처럼 보이지만, 사실은 셀 수 있는 개수의 점만으로 공간 전체를 거의 다 덮을 수 있습니다. 마치 유리수의 좌표점만으로 실수 전체에 빽빽하게 퍼져 있는 것과 같습니다. 소수 정예로 전체를 대표하는 셈이죠.
+<strong>지속가능 발전에 대한 제언:</strong> 지구 전체를 실시간으로 감시하고 관리하는 것은 불가능합니다. 하지만 저의 '가분성'을 이용하면 효율적인 감시가 가능합니다. 아마존 열대우림, 시베리아 영구 동토층, 해양 산호초 지대 등 생태학적으로 중요한 핵심 거점을 '셀 수 있는 개수'만큼만 선정하여 집중적으로 모니터링하는 것입니다. 이 '조밀한' 감시망은 마치 신경망처럼 지구 전체의 건강 상태를 대표하여 우리에게 알려줄 것입니다. 모든 곳을 볼 필요는 없습니다. 전략적으로 선택된 소수의 정보가 전체를 말해줄 것입니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">5. 연결</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div>
+                        <div id="ko-5">연결 공간입니다. 저에게 '분리'란 있을 수 없는 일입니다. 저는 이 공간이 하나의 온전한 덩어리임을 의미합니다. 찢어지지 않은 도화지처럼, 모든 것은 이어져 있습니다. 어느 부분을 잘라내려 해도, 반드시 경계선이 남게 됩니다.
+<strong>지속가능 발전에 대한 제언:</strong> 여러분은 자꾸 분리와 구분의 이야기를 하시지만, 저는 '전체론적 접근'을 강조하고 싶습니다. 기후 변화, 플라스틱 오염, 팬데믹은 어느 한 나라나 지역만의 문제가 아닙니다. 지구는 본질적으로 '연결'된 하나의 시스템입니다. 한 곳의 환경 파괴는 반드시 다른 곳에 영향을 미칩니다. '우리나라'와 '다른 나라'로 문제를 나누는 것은 무의미합니다. 우리는 이 지구라는 '연결 공간'에 사는 운명 공동체임을 깨닫고, 모든 정책과 노력을 전 지구적 관점에서 통합적으로 실행해야 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">6. 경로 연결</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div>
+                        <div id="ko-6">경로 연결 공간입니다. 연결 님이 모든 것이 이어져 있다고 하셨죠. 저는 한 걸음 더 나아가, 어느 두 지점을 선택하든 그 사이를 실제로 걸어갈 수 있는 '길'이 항상 존재함을 보증합니다. 단순한 연결을 넘어선, 실질적인 '소통 가능성'을 의미합니다.<br><strong>지속가능 발전에 대한 제언:</strong> 지속가능성은 슬로건에 머물러서는 안 됩니다. 저는 '실행 가능한 경로'의 구축을 제안합니다. 예를 들어, 아프리카의 농산물이 유럽 시장에 도달하려면, 단지 두 대륙이 '연결'되어 있다는 사실만으로는 불충분합니다. 부패하지 않고, 공정한 가격으로, 환경친화적으로 운송될 수 있는 구체적인 '경로', 즉 지속가능한 공급망이 필요합니다. 지식과 기술도 마찬가지입니다. 선진국의 녹색 기술이 개발도상국에 실제로 전달되고 적용되기 위한 교육, 금융, 정책의 '경로'를 구축해야만 진정한 지속가능 발전이 가능합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">7. 단일 연결</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div>
+                        <div id="ko-7">단일 연결 공간입니다, 인사드립니다. 저의 공간에는 근본적인 '구멍'이 없습니다. 찰흙 덩어리와 같죠. 공간 내에 어떤 닫힌 곡선(루프)을 그려도, 그 선을 부드럽게 움직여 하나의 점으로 수축시킬 수 있습니다. 도넛처럼 구멍이 있다면 불가능한 일입니다. 저는 구조적인 결함이 없음을 상징합니다.
+<strong>지속가능 발전에 대한 제언:</strong> 지속가능 발전을 위한 국제 조약이나 정책을 만들 때, 우리는 '구멍'을 남겨서는 안 됩니다. 특정 산업에 대한 예외 조항, 일부 국가에만 유리한 불공정한 규칙, 법망을 빠져나가는 교묘한 허점(루프홀) 등이 저의 관점에서 본 '구멍'입니다. 이런 구멍이 하나라도 있으면 시스템 전체의 건전성이 훼손됩니다. 저는 모든 이해관계자를 포괄하고 어떠한 예외도 허용하지 않는, 구조적으로 완결된 '단일 연결' 정책 프레임워크를 구축할 것을 강력히 주장합니다. 구멍 없는 그물만이 물고기를 잡을 수 있습니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">8. 가축</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div>
+                        <div id="ko-8">가축 공간입니다. 저의 공간은 전체를 부드럽게 변형시켜 단 하나의 점으로 모을 수 있습니다. 풍선을 수축시켜 점으로 만들듯, 공간 전체가 어떤 본질적인 하나의 지점으로 귀결될 수 있음을 의미합니다. 저는 '궁극적인 통일성'을 상징합니다.
+<strong>지속가능 발전에 대한 제언:</strong> 지속가능 발전을 위한 수많은 활동이 있습니다. 재활용, 재생에너지 개발, 공정 무역, 인권 신장 등. 이 다양하고 훌륭한 노력들이 흩어져서는 안 됩니다. 저의 '가축성'처럼, 이 모든 활동이 궁극적으로 '인류와 지구의 건강한 공존'이라는 단 하나의 핵심적인 '점'으로 수렴되어야 합니다. 우리의 모든 정책과 기술 개발은 이 궁극적인 목표에 부합하는지를 끊임없이 점검받아야 합니다. 개별 활동의 총합을 넘어, 모든 것을 관통하는 하나의 통일된 비전과 목표를 설정하는 것이 무엇보다 중요합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">9. 국소 콤팩트</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div>
+                        <div id="ko-9">국소 콤팩트입니다. 저는 거대함 속의 '아늑함'을 담당합니다. 공간 전체는 끝없이 넓을지라도, 어느 점을 잡아도 그 주변은 작고 잘 정돈된 '콤팩트한 지역'으로 만들 수 있습니다. 도시 전체는 복잡해도, 내가 사는 동네는 잘 아는 것과 같습니다.
+<strong>지속가능 발전에 대한 제언:</strong> "지구적으로 생각하고, 지역적으로 행동하라(Think Global, Act Local)"는 말이 저를 가장 잘 표현합니다. 지구 전체의 지속가능성을 한 번에 달성하려는 것은 너무 거대하고 비현실적입니다. 대신, 우리는 모든 '지역(local)' 단위가 그 자체로 '콤팩트한' 지속가능성을 갖추도록 해야 합니다. 예를 들어, 하나의 도시가 에너지, 식량, 자원 순환을 자율적으로 해결하는 자립 모델을 구축하는 것입니다. 이렇게 작지만 완결된 지속가능한 '지역'들이 모여 전 지구적인 지속가능성을 달성할 수 있습니다. 거대 담론보다, 우리 동네부터 바꿔나가는 구체적인 실천이 중요합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">10. 파라콤팩트</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div>
+                        <div id="ko-10">마지막으로 파라콤팩트입니다. 저는 '정리의 달인'입니다. 아무리 복잡하고 거대한 공간이라도, 저는 그 공간을 적절한 크기의 조각들로 잘게 나눌 수 있습니다. 중요한 것은, 어느 점을 잡아도 그 주변에는 유한 개의 조각만 걸치도록 분할할 수 있다는 점입니다. 큰 방도 구역별로 나누면 정리하기 쉬워지는 것과 같습니다.
+<strong>지속가능 발전에 대한 제언:</strong> 지구라는 거대한 시스템은 너무 많은 변수가 얽혀 있어 한 번에 다루기 어렵습니다. 저는 이 문제를 '국소 유한성(locally finite)'의 원칙을 적용하여 해결할 것을 제안합니다. 지구 전체를 기후, 해양, 생물 다양성 등 여러 주제로 덮는 '열린 덮개'를 생각해 봅시다. 그리고 각국은 이 모든 주제에 관여하는 대신, 자국의 위치와 능력에 따라 유한 개의 핵심 이슈에만 집중하여 책임을 지는 것입니다. 예를 들어, 어떤 나라는 '인접 해양 오염'과 '지역 내 생물 다양성' 문제에만 집중하는 식입니다. 모든 나라가 모든 문제에 신경 쓰는 대신, 각자가 유한 개의 책임을 제대로 완수하면 전체적으로는 모든 문제가 해결되는 효율적인 글로벌 거버넌스를 구축할 수 있습니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon, everyone. Today, we have invited the core topological properties that constitute our physical space to hear their opinions on the future of our planet. Please briefly introduce your nature and, from that perspective, offer a proposal for Earth's sustainable development.</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">1. Hausdorff</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div>
+                        <div id="en-1">Hello, I am Hausdorff. My main characteristic is "separation." For any two distinct points, no matter how close, I can assign them separate, non-overlapping spaces. Just as two people who've had a fight can have their own rooms, my role is to set clear boundaries.
+<strong>Proposal for Sustainable Development:</strong> For Earth's sustainability, I propose the "principle of absolute separation." For instance, between a nature reserve and an industrial zone, a "buffer zone" that no one can encroach upon must be established. This space is like one of my "open sets," preventing the characteristics of the two from mixing. Different ecosystems, and the domains of human activity, must be clearly distinguished. This is the first step to protecting the uniqueness of each and enabling long-term coexistence. Minimizing mutual interference is the core of a sustainable relationship.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">2. Normal Space</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div>
+                        <div id="en-2">It is an honor to meet you. I am Normal Space. If Mr. Hausdorff separates points, I go a step further and separate non-intersecting "closed sets"—that is, large chunks. Just as you might place two feuding groups in classrooms on different floors, my role is to spatially prevent conflicts between large groups.
+<strong>Proposal for Sustainable Development:</strong> I believe we must ensure sustainability through the separation of large-scale groups. Currently, the Earth is rife with conflicts between nations and communities over water, territory, and resources. I propose establishing clear, demilitarized neutral zones in these disputed areas, with an international agreement ensuring that neither side can trespass on the other's territory. This isn't merely drawing a line; it's creating a substantial "open space" between two "closed sets." We must eradicate large-scale contact that causes conflict at its root, pursuing peace and environmental preservation simultaneously.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">3. Second-Countable</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div>
+                        <div id="en-3">Hello, I'm Second-Countable. My characteristics are "efficiency" and "manageability." I guarantee that this seemingly complex space can, in fact, be fully described by a countable number of "basic building blocks." It's just like how we can build anything with LEGOs because the number of different block types is countable.
+<strong>Proposal for Sustainable Development:</strong> Sustainable development can be so complex and vast that one can feel lost about where to begin. I propose systematizing this problem with a "countable basis of principles." The UN's Sustainable Development Goals (SDGs) are a good example. Likewise, we should formulate core "building block" policies for each sector—environment, society, and economy. Then, all regions worldwide could combine these basic blocks to create sustainability plans suited to their own circumstances. We need an approach that solves problems with a combination of manageable core policies, not an infinite number of them.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">4. Separable</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div>
+                        <div id="en-4">I am Separable Space, a pleasure to be here. I symbolize "representation." While this vast space seems to contain countless points, it can actually be almost entirely covered by just a countable number of them. It's like how points with rational coordinates are densely spread throughout the real numbers. A select few represent the whole.
+<strong>Proposal for Sustainable Development:</strong> It's impossible to monitor and manage the entire planet in real time. However, by using my "separability," efficient monitoring becomes possible. We can select a "countable number" of ecologically vital key locations—such as the Amazon rainforest, Siberian permafrost, and oceanic coral reefs—and monitor them intensively. This "dense" monitoring network will act like a nervous system, representing the health of the entire planet and informing us. We don't need to see every place; strategically chosen bits of information can tell the story of the whole.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">5. Connected</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div>
+                        <div id="en-5">I am a Connected Space. For me, "separation" is impossible. I signify that this space is one single, unified whole. Like an untorn sheet of paper, everything is connected. No matter where you try to cut a piece off, a boundary line will always remain.
+<strong>Proposal for Sustainable Development:</strong> While you all keep talking about separation and division, I wish to emphasize a "holistic approach." Climate change, plastic pollution, and pandemics are not problems of just one country or region. The Earth is inherently one "connected" system. Environmental destruction in one place inevitably affects another. It is meaningless to divide problems into "our country" and "other countries." We must realize that we are a community of fate living in this "connected space" called Earth and execute all policies and efforts integrally from a global perspective.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">6. Path-Connected</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div>
+                        <div id="en-6">I am a Path-Connected Space. Connected mentioned that everything is linked. I go a step further and guarantee that for any two points you choose, there is always a "path" you can actually walk to get from one to the other. This signifies a practical "possibility of communication" beyond mere connection.
+<strong>Proposal for Sustainable Development:</strong> Sustainability must not remain a slogan. I propose the construction of "feasible pathways." For example, for African agricultural products to reach European markets, the mere fact that the two continents are "connected" is not enough. A concrete "path"—a sustainable supply chain—is needed, one that is free from corruption, offers fair prices, and is environmentally friendly. The same applies to knowledge and technology. True sustainable development is only possible when we build the "pathways" of education, finance, and policy for green technologies from developed nations to be actually transferred to and applied in developing countries.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">7. Simply Connected</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div>
+                        <div id="en-7">Greetings, I am a Simply Connected Space. My space has no fundamental "holes." It's like a lump of clay. Any closed curve (a loop) you draw within the space can be smoothly shrunk to a single point. This would be impossible if there were a hole, like in a donut. I symbolize the absence of structural defects.<br><strong>Proposal for Sustainable Development:</strong> When creating international treaties and policies for sustainable development, we must not leave any "holes." Exemption clauses for certain industries, unfair rules that favor only some countries, and clever loopholes that bypass the law—these are the "holes" from my perspective. The existence of even one such hole compromises the integrity of the entire system. I strongly advocate for building a structurally complete, "simply connected" policy framework that includes all stakeholders and allows for no exceptions. Only a net without holes can catch fish.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">8. Contractible</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div>
+                        <div id="en-8">I am a Contractible Space. My entire space can be smoothly deformed and gathered into a single point. Like shrinking a balloon to a point, it means the entire space can be resolved to one essential location. I symbolize "ultimate unity."
+<strong>Proposal for Sustainable Development:</strong> There are numerous activities for sustainable development: recycling, renewable energy development, fair trade, human rights advocacy, and more. These diverse and wonderful efforts must not be scattered. Like my "contractibility," all these activities must ultimately converge to a single, core "point": the healthy coexistence of humanity and the Earth. All our policies and technological developments should be constantly checked for whether they align with this ultimate goal. It is paramount to set a single, unified vision and goal that transcends the sum of individual activities.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">9. Locally Compact</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div>
+                        <div id="en-9">I am Locally Compact. I am in charge of "coziness" within immensity. The entire space may be endless, but for any point, its surroundings can be made into a small, well-organized "compact neighborhood." It's like how a whole city can be complex, but you know your own neighborhood well.
+<strong>Proposal for Sustainable Development:</strong> The phrase "Think Global, Act Local" describes me best. Trying to achieve global sustainability all at once is too vast and unrealistic. Instead, we should ensure that every "local" unit is equipped with its own "compact" sustainability. For example, a single city could build a self-sufficient model that autonomously handles its energy, food, and resource circulation. A collection of such small but complete sustainable "neighborhoods" can achieve global sustainability. Concrete actions that start in our own town are more important than grand discourses.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">10. Paracompact</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div>
+                        <div id="en-10">Finally, I am Paracompact. I am a "master of organization." No matter how complex and vast a space is, I can finely divide it into appropriately sized pieces. The key is that for any given point, it is covered by only a finite number of these pieces. It's just like how a large room becomes easier to manage when divided into sections.
+<strong>Proposal for Sustainable Development:</strong> The Earth as a vast system involves too many intertwined variables to be handled at once. I propose to solve this by applying the principle of "local finiteness." Let's consider an "open cover" for the entire planet, with themes like climate, oceans, and biodiversity. Then, instead of every country engaging in all themes, each nation would take responsibility for only a finite number of core issues based on its location and capacity. For example, one country might focus solely on "adjacent marine pollution" and "regional biodiversity." Instead of all countries worrying about all problems, we can build an efficient global governance where the whole is resolved if each part properly fulfills its finite responsibilities.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="language-header">🇯🇵 日本語</div>
+                <div class="text-content">
+                    <p class="intro"><strong><ruby><rb>司会</rb><rt>しかい</rt></ruby><ruby><rb>者</rb><rt>しゃ</rt></ruby>：</strong><ruby><rb>皆様</rb><rt>みなさま</rt></ruby>、こんにちは。<ruby><rb>本日</rb><rt>ほんじつ</rt></ruby>、私たちの<ruby><rb>実</rb><rt>じつ</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>を<ruby><rb>構成</rb><rt>こうせい</rt></ruby>する<ruby><rb>核心</rb><rt>かくしん</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>位相</rb><rt>いそう</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby><ruby><rb>性質</rb><rt>せいしつ</rt></ruby>の<ruby><rb>皆様</rb><rt>みなさま</rt></ruby>をお<ruby><rb>招</rb><rt>まね</rt></ruby>きし、<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>の<ruby><rb>未来</rb><rt>みらい</rt></ruby>についてのご<ruby><rb>意見</rb><rt>いけん</rt></ruby>を<ruby><rb>伺</rb><rt>うかが</rt></ruby>いたいと<ruby><rb>思</rb><rt>おも</rt></ruby>います。<ruby><rb>各自</rb><rt>かくじ</rt></ruby>、ご<ruby><rb>自身</rb><rt>じしん</rt></ruby>の<ruby><rb>性質</rb><rt>せいしつ</rt></ruby>を<ruby><rb>簡潔</rb><rt>かんけつ</rt></ruby>にご<ruby><rb>紹介</rb><rt>しょうかい</rt></ruby>いただき、その<ruby><rb>観点</rb><rt>かんてん</rt></ruby>から<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>の<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>発展</rb><rt>はってん</rt></ruby>についてご<ruby><rb>提言</rb><rt>ていげん</rt></ruby>ください。</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">1. ハウスドルフ</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div>
+                        <div id="ja-1">こんにちは、ハウスドルフです。<ruby><rb>私</rb><rt>わたし</rt></ruby>の<ruby><rb>最大</rb><rt>さいだい</rt></ruby>の<ruby><rb>特徴</rb><rt>とくちょう</rt></ruby>は「<ruby><rb>分離</rb><rt>ぶんり</rt></ruby>」です。どんなに<ruby><rb>近</rb><rt>ちか</rt></ruby>い<ruby><rb>二</rb><rt>ふた</rt></ruby>つの<ruby><rb>点</rb><rt>てん</rt></ruby>でも、<ruby><rb>互</rb><rt>たが</rt></ruby>いに<ruby><rb>重</rb><rt>かさ</rt></ruby>ならない<ruby><rb>別々</rb><rt>べつべつ</rt></ruby>の<ruby><rb>空間</rb><rt>くうかん</rt></ruby>を<ruby><rb>割</rb><rt>わ</rt></ruby>り<ruby><rb>当</rb><rt>あ</rt></ruby>てることができます。まるで喧嘩した<ruby><rb>二人</rb><rt>ふたり</rt></ruby>がそれぞれ<ruby><rb>自室</rb><rt>じしつ</rt></ruby>を<ruby><rb>持</rb><rt>も</rt></ruby>てるように、<ruby><rb>明確</rb><rt>めいかく</rt></ruby>な<ruby><rb>境界</rb><rt>きょうかい</rt></ruby>を<ruby><rb>設定</rb><rt>せってい</rt></ruby>するのが<ruby><rb>私</rb><rt>わたし</rt></ruby>の<ruby><rb>役割</rb><rt>やくわり</rt></ruby>です。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>の<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能性</rb><rt>かのうせい</rt></ruby>のために、<ruby><rb>私</rb><rt>わたし</rt></ruby>は「<ruby><rb>絶対</rb><rt>ぜったい</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby><ruby><rb>分離</rb><rt>ぶんり</rt></ruby>の<ruby><rb>原則</rb><rt>げんそく</rt></ruby>」を<ruby><rb>提案</rb><rt>ていあん</rt></ruby>します。
+                        <ruby><rb>例</rb><rt>たと</rt></ruby>えば、<ruby><rb>自然</rb><rt>しぜん</rt></ruby><ruby><rb>保護</rb><rt>ほご</rt></ruby><ruby><rb>区域</rb><rt>くいき</rt></ruby>と<ruby><rb>工場</rb><rt>こうじょう</rt></ruby><ruby><rb>地帯</rb><rt>ちたい</rt></ruby>の<ruby><rb>間</rb><rt>あいだ</rt></ruby>には、<ruby><rb>誰</rb><rt>だれ</rt></ruby>も<ruby><rb>侵犯</rb><rt>しんぱん</rt></ruby>できない「<ruby><rb>緩衝</rb><rt>かんしょう</rt></ruby><ruby><rb>地帯</rb><rt>ちたい</rt></ruby>（バッファーゾーン）」を<ruby><rb>設定</rb><rt>せってい</rt></ruby>すべきです。この<ruby><rb>空間</rb><rt>くうかん</rt></ruby>は、<ruby><rb>両者</rb><rt>りょうしゃ</rt></ruby>の<ruby><rb>特性</rb><rt>とくせい</rt></ruby>が<ruby><rb>混</rb><rt>ま</rt></ruby>ざらないようにする<ruby><rb>私</rb><rt>わたし</rt></ruby>の「<ruby><rb>開</rb><rt>かい</rt></ruby><ruby><rb>集合</rb><rt>しゅうごう</rt></ruby>」のようなものです。<ruby><rb>異</rb><rt>こと</rt></ruby>なる<ruby><rb>生態</rb><rt>せいたい</rt></ruby><ruby><rb>系</rb><rt>けい</rt></ruby>、そして<ruby><rb>人間</rb><rt>にんげん</rt></ruby>の<ruby><rb>活動</rb><rt>かつどう</rt></ruby><ruby><rb>領域</rb><rt>りょういき</rt></ruby>は<ruby><rb>明確</rb><rt>めいかく</rt></ruby>に<ruby><rb>区別</rb><rt>くべつ</rt></ruby>されなければなりません。これがそれぞれの<ruby><rb>固有</rb><rt>こゆう</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>を<ruby><rb>守</rb><rt>まも</rt></ruby>り、<ruby><rb>長期</rb><rt>ちょうき</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>共存</rb><rt>きょうぞん</rt></ruby>を<ruby><rb>可能</rb><rt>かのう</rt></ruby>にする<ruby><rb>第一歩</rb><rt>だいいっぽ</rt></ruby>です。<ruby><rb>相互</rb><rt>そうご</rt></ruby><ruby><rb>干渉</rb><rt>かんしょう</rt></ruby>を<ruby><rb>最小</rb><rt>さいしょう</rt></ruby><ruby><rb>限</rb><rt>げん</rt></ruby>に<ruby><rb>抑</rb><rt>おさ</rt></ruby>えることこそ、<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>関係</rb><rt>かんけい</rt></ruby>の<ruby><rb>核心</rb><rt>かくしん</rt></ruby>です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">2. 正規空間</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div>
+                        <div id="ja-2">お<ruby><rb>会</rb><rt>あ</rt></ruby>いできて<ruby><rb>光栄</rb><rt>こうえい</rt></ruby>です、<ruby><rb>正規</rb><rt>せいき</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>です。ハウスドルフさんが<ruby><rb>点</rb><rt>てん</rt></ruby>を<ruby><rb>分離</rb><rt>ぶんり</rt></ruby>するなら、<ruby><rb>私</rb><rt>わたし</rt></ruby>はさらに<ruby><rb>一</rb><rt>いっ</rt></ruby><ruby><rb>歩</rb><rt>ぽ</rt></ruby><ruby><rb>進</rb><rt>すす</rt></ruby>んで、<ruby><rb>互</rb><rt>たが</rt></ruby>いに<ruby><rb>交</rb><rt>まじ</rt></ruby>わらない「<ruby><rb>閉</rb><rt>へい</rt></ruby><ruby><rb>集合</rb><rt>しゅうごう</rt></ruby>」、つまり<ruby><rb>大</rb><rt>おお</rt></ruby>きな<ruby><rb>塊</rb><rt>かたまり</rt></ruby>を<ruby><rb>分離</rb><rt>ぶんり</rt></ruby>します。<ruby><rb>仲</rb><rt>なか</rt></ruby>の<ruby><rb>悪</rb><rt>わる</rt></ruby>い<ruby><rb>二</rb><rt>ふた</rt></ruby>つのグループをそれぞれ<ruby><rb>別</rb><rt>べつ</rt></ruby>の<ruby><rb>階</rb><rt>かい</rt></ruby>の<ruby><rb>教室</rb><rt>きょうしつ</rt></ruby>に<ruby><rb>配置</rb><rt>はいち</rt></ruby>するように、<ruby><rb>大</rb><rt>おお</rt></ruby>きな<ruby><rb>集団</rb><rt>しゅうだん</rt></ruby><ruby><rb>間</rb><rt>かん</rt></ruby>の<ruby><rb>対立</rb><rt>たいりつ</rt></ruby>を<ruby><rb>空間</rb><rt>くうかん</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に<ruby><rb>防</rb><rt>ふせ</rt></ruby>ぐ<ruby><rb>役割</rb><rt>やくわり</rt></ruby>を<ruby><rb>担</rb><rt>にな</rt></ruby>っています。<br><strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>私</rb><rt>わたし</rt></ruby>は<ruby><rb>大</rb><rt>だい</rt></ruby><ruby><rb>規模</rb><rt>きぼ</rt></ruby>な<ruby><rb>集団</rb><rt>しゅうだん</rt></ruby><ruby><rb>間</rb><rt>かん</rt></ruby>の<ruby><rb>分離</rb><rt>ぶんり</rt></ruby>を<ruby><rb>通</rb><rt>つう</rt></ruby>じて<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能性</rb><rt>かのうせい</rt></ruby>を<ruby><rb>確保</rb><rt>かくほ</rt></ruby>すべきだと<ruby><rb>考</rb><rt>かんが</rt></ruby>えます。<ruby><rb>現在</rb><rt>げんざい</rt></ruby>、<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>は<ruby><rb>水</rb><rt>みず</rt></ruby>、<ruby><rb>領土</rb><rt>りょうど</rt></ruby>、<ruby><rb>資源</rb><rt>しげん</rt></ruby>を<ruby><rb>巡</rb><rt>めぐ</rt></ruby>る<ruby><rb>国家</rb><rt>こっか</rt></ruby>や<ruby><rb>共同</rb><rt>きょうどう</rt></ruby><ruby><rb>体</rb><rt>たい</rt></ruby><ruby><rb>間</rb><rt>かん</rt></ruby>の<ruby><rb>対立</rb><rt>たいりつ</rt></ruby>で<ruby><rb>満</rb><rt>み</rt></ruby>ちています。<ruby><rb>私</rb><rt>わたし</rt></ruby>はこれらの<ruby><rb>紛争</rb><rt>ふんそう</rt></ruby><ruby><rb>地域</rb><rt>ちいき</rt></ruby>に<ruby><rb>明確</rb><rt>めいかく</rt></ruby>な<ruby><rb>非武装</rb><rt>ひぶそう</rt></ruby><ruby><rb>中立</rb><rt>ちゅうりつ</rt></ruby><ruby><rb>地帯</rb><rt>ちたい</rt></ruby>を<ruby><rb>設定</rb><rt>せってい</rt></ruby>し、<ruby><rb>双方</rb><rt>そうほう</rt></ruby>が<ruby><rb>互</rb><rt>たが</rt></ruby>いの<ruby><rb>領域</rb><rt>りょういき</rt></ruby>を<ruby><rb>侵犯</rb><rt>しんぱん</rt></ruby>できないようにする<ruby><rb>国際</rb><rt>こくさい</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>合意</rb><rt>ごうい</rt></ruby>を<ruby><rb>提案</rb><rt>ていあん</rt></ruby>します。これは<ruby><rb>単</rb><rt>たん</rt></ruby>に<ruby><rb>線</rb><rt>せん</rt></ruby>を<ruby><rb>引</rb><rt>ひ</rt></ruby>くのではなく、<ruby><rb>二</rb><rt>ふた</rt></ruby>つの「<ruby><rb>閉</rb><rt>へい</rt></ruby><ruby><rb>集合</rb><rt>しゅうごう</rt></ruby>」の<ruby><rb>間</rb><rt>あいだ</rt></ruby>に<ruby><rb>実質</rb><rt>じっしつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な「<ruby><rb>開</rb><rt>かい</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>」を<ruby><rb>作</rb><rt>つく</rt></ruby>ることです。<ruby><rb>対立</rb><rt>たいりつ</rt></ruby>の<ruby><rb>原因</rb><rt>げんいん</rt></ruby>となる<ruby><rb>大</rb><rt>だい</rt></ruby><ruby><rb>規模</rb><rt>きぼ</rt></ruby>な<ruby><rb>接触</rb><rt>せっしょく</rt></ruby>を<ruby><rb>根源</rb><rt>こんげん</rt></ruby>から<ruby><rb>断</rb><rt>た</rt></ruby>ち、<ruby><rb>平和</rb><rt>へいわ</rt></ruby>と<ruby><rb>環境</rb><rt>かんきょう</rt></ruby><ruby><rb>保全</rb><rt>ほぜん</rt></ruby>を<ruby><rb>同時</rb><rt>どうじ</rt></ruby>に<ruby><rb>追求</rb><rt>ついきゅう</rt></ruby>すべきです。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">3. 第2可算</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div>
+                        <div id="ja-3">こんにちは、<ruby><rb>第</rb><rt>だい</rt></ruby>2<ruby><rb>可算</rb><rt>かさん</rt></ruby>です。<ruby><rb>私</rb><rt>わたし</rt></ruby>の<ruby><rb>特徴</rb><rt>とくちょう</rt></ruby>は「<ruby><rb>効率</rb><rt>こうりつ</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」と「<ruby><rb>管理</rb><rt>かんり</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」です。この<ruby><rb>複雑</rb><rt>ふくざつ</rt></ruby>に<ruby><rb>見</rb><rt>み</rt></ruby>える<ruby><rb>空間</rb><rt>くうかん</rt></ruby>も、<ruby><rb>実</rb><rt>じつ</rt></ruby>は<ruby><rb>可算</rb><rt>かさん</rt></ruby><ruby><rb>個</rb><rt>こ</rt></ruby>の「<ruby><rb>基本</rb><rt>きほん</rt></ruby>ブロック」で<ruby><rb>全</rb><rt>すべ</rt></ruby>て<ruby><rb>表現</rb><rt>ひょうげん</rt></ruby>できることを<ruby><rb>保証</rb><rt>ほしょう</rt></ruby>します。レゴブロックの<ruby><rb>種類</rb><rt>しゅるい</rt></ruby>が<ruby><rb>数</rb><rt>かぞ</rt></ruby>えられるからこそ、<ruby><rb>私</rb><rt>わたし</rt></ruby>たちが<ruby><rb>何</rb><rt>なん</rt></ruby>でも<ruby><rb>作</rb><rt>つく</rt></ruby>れるのと<ruby><rb>同</rb><rt>おな</rt></ruby>じです。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>発展</rb><rt>はってん</rt></ruby>はあまりにも<ruby><rb>複雑</rb><rt>ふくざつ</rt></ruby>で<ruby><rb>広大</rb><rt>こうだい</rt></ruby>で、どこから<ruby><rb>手</rb><rt>て</rt></ruby>を<ruby><rb>付</rb><rt>つ</rt></ruby>ければよいか<ruby><rb>途方</rb><rt>とほう</rt></ruby>に<ruby><rb>暮</rb><rt>く</rt></ruby>れることがあります。<ruby><rb>私</rb><rt>わたし</rt></ruby>はこの<ruby><rb>問題</rb><rt>もんだい</rt></ruby>を「<ruby><rb>可算</rb><rt>かさん</rt></ruby><ruby><rb>個</rb><rt>こ</rt></ruby>の<ruby><rb>基本</rb><rt>きほん</rt></ruby><ruby><rb>原則</rb><rt>げんそく</rt></ruby>」で<ruby><rb>体系</rb><rt>たいけい</rt></ruby><ruby><rb>化</rb><rt>か</rt></ruby>することを<ruby><rb>提案</rb><rt>ていあん</rt></ruby>します。<ruby><rb>国連</rb><rt>こくれん</rt></ruby>の<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>開発</rb><rt>かいはつ</rt></ruby><ruby><rb>目標</rb><rt>もくひょう</rt></ruby>（SDGs）が<ruby><rb>良</rb><rt>よ</rt></ruby>い<ruby><rb>例</rb><rt>れい</rt></ruby>です。このように、<ruby><rb>私</rb><rt>わたし</rt></ruby>たちは<ruby><rb>環境</rb><rt>かんきょう</rt></ruby>、<ruby><rb>社会</rb><rt>しゃかい</rt></ruby>、<ruby><rb>経済</rb><rt>けいざい</rt></ruby>の<ruby><rb>各</rb><rt>かく</rt></ruby><ruby><rb>分野</rb><rt>ぶんや</rt></ruby>で<ruby><rb>核</rb><rt>かく</rt></ruby>となる「<ruby><rb>基本</rb><rt>きほん</rt></ruby>ブロック」<ruby><rb>政策</rb><rt>せいさく</rt></ruby>を<ruby><rb>策定</rb><rt>さくてい</rt></ruby>すべきです。そして、<ruby><rb>世界中</rb><rt>せかいじゅう</rt></ruby>のすべての<ruby><rb>地域</rb><rt>ちいき</rt></ruby>がこれらの<ruby><rb>基本</rb><rt>きほん</rt></ruby>ブロックを<ruby><rb>組</rb><rt>く</rt></ruby>み<ruby><rb>合</rb><rt>あ</rt></ruby>わせて、<ruby><rb>自身</rb><rt>じしん</rt></ruby>の<ruby><rb>状況</rb><rt>じょうきょう</rt></ruby>に<ruby><rb>適</rb><rt>てき</rt></ruby>した<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能性</rb><rt>かのうせい</rt></ruby><ruby><rb>計画</rb><rt>けいかく</rt></ruby>を<ruby><rb>立</rb><rt>た</rt></ruby>てるようにするのです。<ruby><rb>無限</rb><rt>むげん</rt></ruby>の<ruby><rb>政策</rb><rt>せいさく</rt></ruby>ではなく、<ruby><rb>管理</rb><rt>かんり</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>核心</rb><rt>かくしん</rt></ruby><ruby><rb>政策</rb><rt>せいさく</rt></ruby>の<ruby><rb>組</rb><rt>く</rt></ruby>み<ruby><rb>合</rb><rt>あ</rt></ruby>わせで<ruby><rb>問題</rb><rt>もんだい</rt></ruby>を<ruby><rb>解決</rb><rt>かいけつ</rt></ruby>するアプローチが<ruby><rb>必要</rb><rt>ひつよう</rt></ruby>です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">4. 可分</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div>
+                        <div id="ja-4"><ruby><rb>可分</rb><rt>かぶん</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>です、よろしくお<ruby><rb>願</rb><rt>ねが</rt></ruby>いいたします。<ruby><rb>私</rb><rt>わたし</rt></ruby>は「<ruby><rb>代表</rb><rt>だいひょう</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」を<ruby><rb>象徴</rb><rt>しょうちょう</rt></ruby>します。この<ruby><rb>広大</rb><rt>こうだい</rt></ruby>な<ruby><rb>空間</rb><rt>くうかん</rt></ruby>には<ruby><rb>無数</rb><rt>むすう</rt></ruby>の<ruby><rb>点</rb><rt>てん</rt></ruby>があるように<ruby><rb>見</rb><rt>み</rt></ruby>えますが、<ruby><rb>実</rb><rt>じつ</rt></ruby>は<ruby><rb>可算</rb><rt>かさん</rt></ruby><ruby><rb>個</rb><rt>こ</rt></ruby>の<ruby><rb>点</rb><rt>てん</rt></ruby>だけで<ruby><rb>空間</rb><rt>くうかん</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>をほぼ<ruby><rb>覆</rb><rt>おお</rt></ruby>うことができます。まるで<ruby><rb>有理数</rb><rt>ゆうりすう</rt></ruby>の<ruby><rb>座標</rb><rt>ざひょう</rt></ruby><ruby><rb>点</rb><rt>てん</rt></ruby>だけで<ruby><rb>実数</rb><rt>じっすう</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>に<ruby><rb>密</rb><rt>みつ</rt></ruby>に<ruby><rb>広</rb><rt>ひろ</rt></ruby>がっているようです。<ruby><rb>少数</rb><rt>しょうすう</rt></ruby><ruby><rb>精鋭</rb><rt>せいえい</rt></ruby>で<ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>を<ruby><rb>代表</rb><rt>だいひょう</rt></ruby>するわけです。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>地球</rb><rt>ちきゅう</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>をリアルタイムで<ruby><rb>監視</rb><rt>かんし</rt></ruby>・<ruby><rb>管理</rb><rt>かんり</rt></ruby>することは<ruby><rb>不可能</rb><rt>ふかのう</rt></ruby>です。しかし、<ruby><rb>私</rb><rt>わたし</rt></ruby>の「<ruby><rb>可分</rb><rt>かぶん</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」を<ruby><rb>利用</rb><rt>りよう</rt></ruby>すれば、<ruby><rb>効率</rb><rt>こうりつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>監視</rb><rt>かんし</rt></ruby>が<ruby><rb>可能</rb><rt>かのう</rt></ruby>です。アマゾンの<ruby><rb>熱帯</rb><rt>ねったい</rt></ruby><ruby><rb>雨林</rb><rt>うりん</rt></ruby>、シベリアの<ruby><rb>永久</rb><rt>えいきゅう</rt></ruby><ruby><rb>凍土</rb><rt>とうど</rt></ruby><ruby><rb>層</rb><rt>そう</rt></ruby>、<ruby><rb>海洋</rb><rt>かいよう</rt></ruby>のサンゴ<ruby><rb>礁</rb><rt>しょう</rt></ruby><ruby><rb>地帯</rb><rt>ちたい</rt></ruby>など、<ruby><rb>生態</rb><rt>せいたい</rt></ruby><ruby><rb>学</rb><rt>がく</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に<ruby><rb>重要</rb><rt>じゅうよう</rt></ruby>な<ruby><rb>核心</rb><rt>かくしん</rt></ruby><ruby><rb>拠点</rb><rt>きょてん</rt></ruby>を「<ruby><rb>可算</rb><rt>かさん</rt></ruby><ruby><rb>個</rb><rt>こ</rt></ruby>」だけ<ruby><rb>選定</rb><rt>せんてい</rt></ruby>し、<ruby><rb>集中</rb><rt>しゅうちゅう</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>にモニタリングするのです。この「<ruby><rb>密</rb><rt>みつ</rt></ruby>な」<ruby><rb>監視</rb><rt>かんし</rt></ruby><ruby><rb>網</rb><rt>もう</rt></ruby>は、まるで<ruby><rb>神経</rb><rt>しんけい</rt></ruby><ruby><rb>網</rb><rt>もう</rt></ruby>のように<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>の<ruby><rb>健康</rb><rt>けんこう</rt></ruby><ruby><rb>状態</rb><rt>じょうたい</rt></ruby>を<ruby><rb>代表</rb><rt>だいひょう</rt></ruby>して<ruby><rb>私</rb><rt>わたし</rt></ruby>たちに<ruby><rb>知</rb><rt>し</rt></ruby>らせてくれるでしょう。<ruby><rb>全</rb><rt>すべ</rt></ruby>ての<ruby><rb>場所</rb><rt>ばしょ</rt></ruby>を<ruby><rb>見</rb><rt>み</rt></ruby>る<ruby><rb>必要</rb><rt>ひつよう</rt></ruby>はありません。<ruby><rb>戦略</rb><rt>せんりゃく</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に<ruby><rb>選</rb><rt>えら</rt></ruby>ばれた<ruby><rb>少数</rb><rt>しょうすう</rt></ruby>の<ruby><rb>情報</rb><rt>じょうほう</rt></ruby>が<ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>を<ruby><rb>物語</rb><rt>ものがた</rt></ruby>ってくれるのです。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">5. 連結</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div>
+                        <div id="ja-5"><ruby><rb>連結</rb><rt>れんけつ</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>です。<ruby><rb>私</rb><rt>わたし</rt></ruby>にとって「<ruby><rb>分離</rb><rt>ぶんり</rt></ruby>」はあり<ruby><rb>得</rb><rt>え</rt></ruby>ないことです。<ruby><rb>私</rb><rt>わたし</rt></ruby>はこの<ruby><rb>空間</rb><rt>くうかん</rt></ruby>が<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>一体</rb><rt>いったい</rt></ruby>な<ruby><rb>塊</rb><rt>かたまり</rt></ruby>であることを<ruby><rb>意味</rb><rt>いみ</rt></ruby>します。<ruby><rb>破</rb><rt>やぶ</rt></ruby>れていない<ruby><rb>画用紙</rb><rt>がようし</rt></ruby>のように、すべては<ruby><rb>繋</rb><rt>つな</rt></ruby>がっています。どの<ruby><rb>部分</rb><rt>ぶぶん</rt></ruby>を<ruby><rb>切</rb><rt>き</rt></ruby>り<ruby><rb>離</rb><rt>はな</rt></ruby>そうとしても、<ruby><rb>必</rb><rt>かなら</rt></ruby>ず<ruby><rb>境界</rb><rt>きょうかい</rt></ruby><ruby><rb>線</rb><rt>せん</rt></ruby>が<ruby><rb>残</rb><rt>のこ</rt></ruby>ってしまいます。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>皆様</rb><rt>みなさま</rt></ruby>は<ruby><rb>分離</rb><rt>ぶんり</rt></ruby>や<ruby><rb>区分</rb><rt>くぶん</rt></ruby>の<ruby><rb>話</rb><rt>はなし</rt></ruby>をしきりになさいますが、<ruby><rb>私</rb><rt>わたし</rt></ruby>は「<ruby><rb>全体</rb><rt>ぜんたい</rt></ruby><ruby><rb>論</rb><rt>ろん</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>アプローチ」を<ruby><rb>強調</rb><rt>きょうちょう</rt></ruby>したいと<ruby><rb>思</rb><rt>おも</rt></ruby>います。<ruby><rb>気候</rb><rt>きこう</rt></ruby><ruby><rb>変動</rb><rt>へんどう</rt></ruby>、プラスチック<ruby><rb>汚染</rb><rt>おせん</rt></ruby>、パンデミックは、ある<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>国</rb><rt>くに</rt></ruby>や<ruby><rb>地域</rb><rt>ちいき</rt></ruby>だけの<ruby><rb>問題</rb><rt>もんだい</rt></ruby>ではありません。<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>は<ruby><rb>本質</rb><rt>ほんしつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に「<ruby><rb>連結</rb><rt>れんけつ</rt></ruby>」した<ruby><rb>一</rb><rt>ひと</rt></ruby>つのシステムです。<ruby><rb>一</rb><rt>いっ</rt></ruby><ruby><rb>か所</rb><rt>しょ</rt></ruby>の<ruby><rb>環境</rb><rt>かんきょう</rt></ruby><ruby><rb>破壊</rb><rt>はかい</rt></ruby>は、<ruby><rb>必</rb><rt>かなら</rt></ruby>ず<ruby><rb>他</rb><rt>ほか</rt></ruby>の<ruby><rb>場所</rb><rt>ばしょ</rt></ruby>に<ruby><rb>影響</rb><rt>えいきょう</rt></ruby>を<ruby><rb>及</rb><rt>およ</rt></ruby>ぼします。「<ruby><rb>自国</rb><rt>じこく</rt></ruby>」と「<ruby><rb>他国</rb><rt>たこく</rt></ruby>」に<ruby><rb>問題</rb><rt>もんだい</rt></ruby>を<ruby><rb>分</rb><rt>わ</rt></ruby>けることは<ruby><rb>無意味</rb><rt>むいみ</rt></ruby>です。<ruby><rb>私</rb><rt>わたし</rt></ruby>たちはこの<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>という「<ruby><rb>連結</rb><rt>れんけつ</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>」に<ruby><rb>住</rb><rt>す</rt></ruby>む<ruby><rb>運命</rb><rt>うんめい</rt></ruby><ruby><rb>共同</rb><rt>きょうどう</rt></ruby><ruby><rb>体</rb><rt>たい</rt></ruby>であることを<ruby><rb>悟</rb><rt>さと</rt></ruby>り、すべての<ruby><rb>政策</rb><rt>せいさく</rt></ruby>と<ruby><rb>努力</rb><rt>どりょく</rt></ruby>を<ruby><rb>全球</rb><rt>ぜんきゅう</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby><ruby><rb>観点</rb><rt>かんてん</rt></ruby>から<ruby><rb>統合</rb><rt>とうごう</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に<ruby><rb>実行</rb><rt>じっこう</rt></ruby>しなければなりません。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">6. 経路連結</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div>
+                        <div id="ja-6"><ruby><rb>経路</rb><rt>けいろ</rt></ruby><ruby><rb>連結</rb><rt>れんけつ</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>です。<ruby><rb>連結</rb><rt>れんけつ</rt></ruby>さんが<ruby><rb>全</rb><rt>すべ</rt></ruby>て<ruby><rb>繋</rb><rt>つな</rt></ruby>がっていると<ruby><rb>仰</rb><rt>おっしゃ</rt></ruby>いましたね。<ruby><rb>私</rb><rt>わたし</rt></ruby>はさらに<ruby><rb>一</rb><rt>いっ</rt></ruby><ruby><rb>歩</rb><rt>ぽ</rt></ruby><ruby><rb>進</rb><rt>すす</rt></ruby>んで、どの<ruby><rb>二</rb><rt>ふた</rt></ruby>つの<ruby><rb>地点</rb><rt>ちてん</rt></ruby>を<ruby><rb>選</rb><rt>えら</rt></ruby>んでも、その<ruby><rb>間</rb><rt>あいだ</rt></ruby>を<ruby><rb>実際</rb><rt>じっさい</rt></ruby>に<ruby><rb>歩</rb><rt>ある</rt></ruby>いて<ruby><rb>行</rb><rt>い</rt></ruby>ける「<ruby><rb>道</rb><rt>みち</rt></ruby>」が<ruby><rb>常</rb><rt>つね</rt></ruby>に<ruby><rb>存在</rb><rt>そんざい</rt></ruby>することを<ruby><rb>保証</rb><rt>ほしょう</rt></ruby>します。<ruby><rb>単</rb><rt>たん</rt></ruby>なる<ruby><rb>連結</rb><rt>れんけつ</rt></ruby>を<ruby><rb>超</rb><rt>こ</rt></ruby>えた、<ruby><rb>実質</rb><rt>じっしつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な「<ruby><rb>疎通</rb><rt>そつう</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」を<ruby><rb>意味</rb><rt>いみ</rt></ruby>します。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能性</rb><rt>かのうせい</rt></ruby>はスローガンに<ruby><rb>留</rb><rt>とど</rt></ruby>まってはなりません。<ruby><rb>私</rb><rt>わたし</rt></ruby>は「<ruby><rb>実行</rb><rt>じっこう</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>経路</rb><rt>けいろ</rt></ruby>」の<ruby><rb>構築</rb><rt>こうちく</rt></ruby>を<ruby><rb>提案</rb><rt>ていあん</rt></ruby>します。<ruby><rb>例</rb><rt>たと</rt></ruby>えば、アフリカの<ruby><rb>農産物</rb><rt>のうさんぶつ</rt></ruby>がヨーロッパの<ruby><rb>市場</rb><rt>しじょう</rt></ruby>に<ruby><rb>届</rb><rt>とど</rt></ruby>くには、ただ<ruby><rb>二</rb><rt>ふた</rt></ruby>つの<ruby><rb>大陸</rb><rt>たいりく</rt></ruby>が「<ruby><rb>連結</rb><rt>れんけつ</rt></ruby>」しているという<ruby><rb>事実</rb><rt>じじつ</rt></ruby>だけでは<ruby><rb>不十分</rb><rt>ふじゅうぶん</rt></ruby>です。<ruby><rb>腐敗</rb><rt>ふはい</rt></ruby>せず、<ruby><rb>公正</rb><rt>こうせい</rt></ruby>な<ruby><rb>価格</rb><rt>かかく</rt></ruby>で、<ruby><rb>環境</rb><rt>かんきょう</rt></ruby>に<ruby><rb>優</rb><rt>やさ</rt></ruby>しく<ruby><rb>輸送</rb><rt>ゆそう</rt></ruby>できる<ruby><rb>具体</rb><rt>ぐたい</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な「<ruby><rb>経路</rb><rt>けいろ</rt></ruby>」、すなわち<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>なサプライチェーンが<ruby><rb>必要</rb><rt>ひつよう</rt></ruby>です。<ruby><rb>知識</rb><rt>ちしき</rt></ruby>や<ruby><rb>技術</rb><rt>ぎじゅつ</rt></ruby>も<ruby><rb>同様</rb><rt>どうよう</rt></ruby>です。<ruby><rb>先進</rb><rt>せんしん</rt></ruby><ruby><rb>国</rb><rt>こく</rt></ruby>のグリーン<ruby><rb>技術</rb><rt>ぎじゅつ</rt></ruby>が<ruby><rb>開発</rb><rt>かいはつ</rt></ruby><ruby><rb>途上</rb><rt>とじょう</rt></ruby><ruby><rb>国</rb><rt>こく</rt></ruby>に<ruby><rb>実際</rb><rt>じっさい</rt></ruby>に<ruby><rb>伝達</rb><rt>でんたつ</rt></ruby>され、<ruby><rb>適用</rb><rt>てきよう</rt></ruby>されるための<ruby><rb>教育</rb><rt>きょういく</rt></ruby>、<ruby><rb>金融</rb><rt>きんゆう</rt></ruby>、<ruby><rb>政策</rb><rt>せいさく</rt></ruby>の「<ruby><rb>経路</rb><rt>けいろ</rt></ruby>」を<ruby><rb>築</rb><rt>きず</rt></ruby>いてこそ、<ruby><rb>真</rb><rt>しん</rt></ruby>の<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>発展</rb><rt>はってん</rt></ruby>が<ruby><rb>可能</rb><rt>かのう</rt></ruby>なのです。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">7. 単連結</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div>
+                        <div id="ja-7"><ruby><rb>単</rb><rt>たん</rt></ruby><ruby><rb>連結</rb><rt>れんけつ</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>です、ご<ruby><rb>挨拶</rb><rt>あいさつ</rt></ruby><ruby><rb>申</rb><rt>もう</rt></ruby>し<ruby><rb>上</rb><rt>あ</rt></ruby>げます。<ruby><rb>私</rb><rt>わたし</rt></ruby>の<ruby><rb>空間</rb><rt>くうかん</rt></ruby>には<ruby><rb>根本</rb><rt>こんぽん</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な「<ruby><rb>穴</rb><rt>あな</rt></ruby>」がありません。<ruby><rb>粘土</rb><rt>ねんど</rt></ruby>の<ruby><rb>塊</rb><rt>かたまり</rt></ruby>のようなものです。<ruby><rb>空間</rb><rt>くうかん</rt></ruby><ruby><rb>内</rb><rt>ない</rt></ruby>にどんな<ruby><rb>閉</rb><rt>へい</rt></ruby><ruby><rb>曲線</rb><rt>きょくせん</rt></ruby>（ループ）を<ruby><rb>描</rb><rt>えが</rt></ruby>いても、その<ruby><rb>線</rb><rt>せん</rt></ruby>を<ruby><rb>滑</rb><rt>なめ</rt></ruby>らかに<ruby><rb>動</rb><rt>うご</rt></ruby>かして<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>点</rb><rt>てん</rt></ruby>に<ruby><rb>収縮</rb><rt>しゅうしゅく</rt></ruby>させることができます。ドーナツのように<ruby><rb>穴</rb><rt>あな</rt></ruby>があれば<ruby><rb>不可能</rb><rt>ふかのう</rt></ruby>なことです。<ruby><rb>私</rb><rt>わたし</rt></ruby>は<ruby><rb>構造</rb><rt>こうぞう</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>欠陥</rb><rt>けっかん</rt></ruby>がないことを<ruby><rb>象徴</rb><rt>しょうちょう</rt></ruby>します。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>発展</rb><rt>はってん</rt></ruby>のための<ruby><rb>国際</rb><rt>こくさい</rt></ruby><ruby><rb>条約</rb><rt>じょうやく</rt></ruby>や<ruby><rb>政策</rb><rt>せいさく</rt></ruby>を<ruby><rb>作</rb><rt>つく</rt></ruby>る<ruby><rb>際</rb><rt>さい</rt></ruby>、<ruby><rb>私</rb><rt>わたし</rt></ruby>たちは「<ruby><rb>穴</rb><rt>あな</rt></ruby>」を<ruby><rb>残</rb><rt>のこ</rt></ruby>してはなりません。<ruby><rb>特定</rb><rt>とくてい</rt></ruby>の<ruby><rb>産業</rb><rt>さんぎょう</rt></ruby>に<ruby><rb>対</rb><rt>たい</rt></ruby>する<ruby><rb>例外</rb><rt>れいがい</rt></ruby><ruby><rb>条項</rb><rt>じょうこう</rt></ruby>、<ruby><rb>一部</rb><rt>いちぶ</rt></ruby>の<ruby><rb>国</rb><rt>くに</rt></ruby>にのみ<ruby><rb>有利</rb><rt>ゆうり</rt></ruby>な<ruby><rb>不</rb><rt>ふ</rt></ruby><ruby><rb>公正</rb><rt>こうせい</rt></ruby>なルール、<ruby><rb>法網</rb><rt>ほうもう</rt></ruby>を<ruby><rb>潜</rb><rt>くぐ</rt></ruby>り<ruby><rb>抜</rb><rt>ぬ</rt></ruby>ける<ruby><rb>巧妙</rb><rt>こうみょう</rt></ruby>な<ruby><rb>抜</rb><rt>ぬ</rt></ruby>け<ruby><rb>穴</rb><rt>あな</rt></ruby>（ループホール）などが、<ruby><rb>私</rb><rt>わたし</rt></ruby>の<ruby><rb>観点</rb><rt>かんてん</rt></ruby>から<ruby><rb>見</rb><rt>み</rt></ruby>た「<ruby><rb>穴</rb><rt>あな</rt></ruby>」です。このような<ruby><rb>穴</rb><rt>あな</rt></ruby>が<ruby><rb>一</rb><rt>ひと</rt></ruby>つでもあると、システム<ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>の<ruby><rb>健全</rb><rt>けんぜん</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>が<ruby><rb>損</rb><rt>そこ</rt></ruby>なわれます。<ruby><rb>私</rb><rt>わたし</rt></ruby>は、すべての<ruby><rb>利害</rb><rt>りがい</rt></ruby><ruby><rb>関係</rb><rt>かんけい</rt></ruby><ruby><rb>者</rb><rt>しゃ</rt></ruby>を<ruby><rb>包括</rb><rt>ほうかつ</rt></ruby>し、いかなる<ruby><rb>例外</rb><rt>れいがい</rt></ruby>も<ruby><rb>許</rb><rt>ゆる</rt></ruby>さない、<ruby><rb>構造</rb><rt>こうぞう</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に<ruby><rb>完結</rb><rt>かんけつ</rt></ruby>した「<ruby><rb>単</rb><rt>たん</rt></ruby><ruby><rb>連結</rb><rt>れんけつ</rt></ruby>」な<ruby><rb>政策</rb><rt>せいさく</rt></ruby>フレームワークを<ruby><rb>構築</rb><rt>こうちく</rt></ruby>することを<ruby><rb>強</rb><rt>つよ</rt></ruby>く<ruby><rb>主張</rb><rt>しゅちょう</rt></ruby>します。<ruby><rb>穴</rb><rt>あな</rt></ruby>のない<ruby><rb>網</rb><rt>あみ</rt></ruby>だけが<ruby><rb>魚</rb><rt>さかな</rt></ruby>を<ruby><rb>捕</rb><rt>とら</rt></ruby>えることができるのです。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">8. 可縮</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div>
+                        <div id="ja-8"><ruby><rb>可</rb><rt>か</rt></ruby><ruby><rb>縮</rb><rt>しゅく</rt></ruby><ruby><rb>空間</rb><rt>くうかん</rt></ruby>です。<ruby><rb>私</rb><rt>わたし</rt></ruby>の<ruby><rb>空間</rb><rt>くうかん</rt></ruby>は、<ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>を<ruby><rb>滑</rb><rt>なめ</rt></ruby>らかに<ruby><rb>変形</rb><rt>へんけい</rt></ruby>させてただ<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>点</rb><rt>てん</rt></ruby>に<ruby><rb>集</rb><rt>あつ</rt></ruby>めることができます。<ruby><rb>風船</rb><rt>ふうせん</rt></ruby>を<ruby><rb>縮</rb><rt>ちぢ</rt></ruby>ませて<ruby><rb>点</rb><rt>てん</rt></ruby>にするように、<ruby><rb>空間</rb><rt>くうかん</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>がある<ruby><rb>本質</rb><rt>ほんしつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>地点</rb><rt>ちてん</rt></ruby>に<ruby><rb>帰結</rb><rt>きけつ</rt></ruby>できることを<ruby><rb>意味</rb><rt>いみ</rt></ruby>します。<ruby><rb>私</rb><rt>わたし</rt></ruby>は「<ruby><rb>究極</rb><rt>きゅうきょく</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>統一</rb><rt>とういつ</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」を<ruby><rb>象徴</rb><rt>しょうちょう</rt></ruby>します。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な<ruby><rb>発展</rb><rt>はってん</rt></ruby>のための<ruby><rb>数多</rb><rt>あまた</rt></ruby>くの<ruby><rb>活動</rb><rt>かつどう</rt></ruby>があります。リサイクル、<ruby><rb>再生</rb><rt>さいせい</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>エネルギー<ruby><rb>開発</rb><rt>かいはつ</rt></ruby>、フェアトレード、<ruby><rb>人権</rb><rt>じんけん</rt></ruby>の<ruby><rb>伸長</rb><rt>しんちょう</rt></ruby>など。これらの<ruby><rb>多様</rb><rt>たよう</rt></ruby>で<ruby><rb>素晴</rb><rt>すば</rt></ruby>らしい<ruby><rb>努力</rb><rt>どりょく</rt></ruby>が<ruby><rb>散逸</rb><rt>さんいつ</rt></ruby>してはなりません。<ruby><rb>私</rb><rt>わたし</rt></ruby>の「<ruby><rb>可</rb><rt>か</rt></ruby><ruby><rb>縮</rb><rt>しゅく</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」のように、これらすべての<ruby><rb>活動</rb><rt>かつどう</rt></ruby>が<ruby><rb>究極</rb><rt>きゅうきょく</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に「<ruby><rb>人類</rb><rt>じんるい</rt></ruby>と<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>の<ruby><rb>健全</rb><rt>けんぜん</rt></ruby>な<ruby><rb>共存</rb><rt>きょうぞん</rt></ruby>」というただ<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>核心</rb><rt>かくしん</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な「<ruby><rb>点</rb><rt>てん</rt></ruby>」に<ruby><rb>収束</rb><rt>しゅうそく</rt></ruby>されなければなりません。<ruby><rb>私</rb><rt>わたし</rt></ruby>たちのすべての<ruby><rb>政策</rb><rt>せいさく</rt></ruby>と<ruby><rb>技術</rb><rt>ぎじゅつ</rt></ruby><ruby><rb>開発</rb><rt>かいはつ</rt></ruby>は、この<ruby><rb>究極</rb><rt>きゅうきょく</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>目標</rb><rt>もくひょう</rt></ruby>に<ruby><rb>合致</rb><rt>がっち</rt></ruby>するかどうかを<ruby><rb>絶</rb><rt>た</rt></ruby>えず<ruby><rb>点検</rb><rt>てんけん</rt></ruby>されるべきです。<ruby><rb>個々</rb><rt>ここ</rt></ruby>の<ruby><rb>活動</rb><rt>かつどう</rt></ruby>の<ruby><rb>総和</rb><rt>そうわ</rt></ruby>を<ruby><rb>超</rb><rt>こ</rt></ruby>え、すべてを<ruby><rb>貫</rb><rt>つらぬ</rt></ruby>く<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>統一</rb><rt>とういつ</rt></ruby>されたビジョンと<ruby><rb>目標</rb><rt>もくひょう</rt></ruby>を<ruby><rb>設定</rb><rt>せってい</rt></ruby>することが<ruby><rb>何</rb><rt>なに</rt></ruby>よりも<ruby><rb>重要</rb><rt>じゅうよう</rt></ruby>です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">9. 局所コンパクト</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div>
+                        <div id="ja-9"><ruby><rb>局所</rb><rt>きょくしょ</rt></ruby>コンパクトです。<ruby><rb>私</rb><rt>わたし</rt></ruby>は<ruby><rb>巨大</rb><rt>きょだい</rt></ruby>さの<ruby><rb>中</rb><rt>なか</rt></ruby>の「<ruby><rb>心地</rb><rt>ここち</rt></ruby>よさ」を<ruby><rb>担当</rb><rt>たんとう</rt></ruby>します。<ruby><rb>空間</rb><rt>くうかん</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>は<ruby><rb>果</rb><rt>は</rt></ruby>てしなく<ruby><rb>広</rb><rt>ひろ</rt></ruby>いかもしれませんが、どの<ruby><rb>点</rb><rt>てん</rt></ruby>を<ruby><rb>取</rb><rt>と</rt></ruby>ってもその<ruby><rb>周辺</rb><rt>しゅうへん</rt></ruby>は<ruby><rb>小</rb><rt>ちい</rt></ruby>さくよく<ruby><rb>整理</rb><rt>せいり</rt></ruby>された「コンパクトな<ruby><rb>地域</rb><rt>ちいき</rt></ruby>」にすることができます。<ruby><rb>都市</rb><rt>とし</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>は<ruby><rb>複雑</rb><rt>ふくざつ</rt></ruby>でも、<ruby><rb>自分</rb><rt>じぶん</rt></ruby>の<ruby><rb>住</rb><rt>す</rt></ruby>む<ruby><rb>町</rb><rt>まち</rt></ruby>はよく<ruby><rb>知</rb><rt>し</rt></ruby>っているのと<ruby><rb>同</rb><rt>おな</rt></ruby>じです。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong>「Think Global, Act Local（<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby><ruby><rb>規模</rb><rt>きぼ</rt></ruby>で<ruby><rb>考</rb><rt>かんが</rt></ruby>え、<ruby><rb>足元</rb><rt>あしもと</rt></ruby>から<ruby><rb>行動</rb><rt>こうどう</rt></ruby>せよ）」という<ruby><rb>言葉</rb><rt>ことば</rt></ruby>が<ruby><rb>私</rb><rt>わたし</rt></ruby>を<ruby><rb>最</rb><rt>もっと</rt></ruby>もよく<ruby><rb>表</rb><rt>あらわ</rt></ruby>しています。<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>の<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能性</rb><rt>かのうせい</rt></ruby>を<ruby><rb>一度</rb><rt>いちど</rt></ruby>に<ruby><rb>達成</rb><rt>たっせい</rt></ruby>しようとするのは、あまりにも<ruby><rb>巨大</rb><rt>きょだい</rt></ruby>で<ruby><rb>非</rb><rt>ひ</rt></ruby><ruby><rb>現実</rb><rt>げんじつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>です。<ruby><rb>代</rb><rt>か</rt></ruby>わりに、<ruby><rb>私</rb><rt>わたし</rt></ruby>たちはすべての「<ruby><rb>地域</rb><rt>ちいき</rt></ruby>（local）」<ruby><rb>単位</rb><rt>たんい</rt></ruby>がそれ<ruby><rb>自体</rb><rt>じたい</rt></ruby>で「コンパクトな」<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能性</rb><rt>かのうせい</rt></ruby>を<ruby><rb>備</rb><rt>そな</rt></ruby>えるようにすべきです。<ruby><rb>例</rb><rt>たと</rt></ruby>えば、<ruby><rb>一</rb><rt>ひと</rt></ruby>つの<ruby><rb>都市</rb><rt>とし</rt></ruby>がエネルギー、<ruby><rb>食料</rb><rt>しょくりょう</rt></ruby>、<ruby><rb>資源</rb><rt>しげん</rt></ruby><ruby><rb>循環</rb><rt>じゅんかん</rt></ruby>を<ruby><rb>自律</rb><rt>じりつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>に<ruby><rb>解決</rb><rt>かいけつ</rt></ruby>する<ruby><rb>自立</rb><rt>じりつ</rt></ruby>モデルを<ruby><rb>構築</rb><rt>こうちく</rt></ruby>するのです。このような<ruby><rb>小</rb><rt>ちい</rt></ruby>さいながらも<ruby><rb>完結</rb><rt>かんけつ</rt></ruby>した<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby>な「<ruby><rb>地域</rb><rt>ちいき</rt></ruby>」が<ruby><rb>集</rb><rt>あつ</rt></ruby>まって、<ruby><rb>全球</rb><rt>ぜんきゅう</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能性</rb><rt>かのうせい</rt></ruby>を<ruby><rb>達成</rb><rt>たっせい</rt></ruby>できるのです。<ruby><rb>巨大</rb><rt>きょだい</rt></ruby>な<ruby><rb>談論</rb><rt>だんろん</rt></ruby>よりも、<ruby><rb>私</rb><rt>わたし</rt></ruby>たちの<ruby><rb>町</rb><rt>まち</rt></ruby>から<ruby><rb>変</rb><rt>か</rt></ruby>えていく<ruby><rb>具体</rb><rt>ぐたい</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>な<ruby><rb>実践</rb><rt>じっせん</rt></ruby>が<ruby><rb>重要</rb><rt>じゅうよう</rt></ruby>です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">10. パラコンパクト</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div>
+                        <div id="ja-10"><ruby><rb>最後</rb><rt>さいご</rt></ruby>にパラコンパクトです。<ruby><rb>私</rb><rt>わたし</rt></ruby>は「<ruby><rb>整理</rb><rt>せいり</rt></ruby>の<ruby><rb>達人</rb><rt>たつじん</rt></ruby>」です。どんなに<ruby><rb>複雑</rb><rt>ふくざつ</rt></ruby>で<ruby><rb>巨大</rb><rt>きょだい</rt></ruby>な<ruby><rb>空間</rb><rt>くうかん</rt></ruby>であっても、<ruby><rb>私</rb><rt>わたし</rt></ruby>はその<ruby><rb>空間</rb><rt>くうかん</rt></ruby>を<ruby><rb>適切</rb><rt>てきせつ</rt></ruby>な<ruby><rb>大</rb><rt>おお</rt></ruby>きさの<ruby><rb>断片</rb><rt>だんぺん</rt></ruby>に<ruby><rb>細</rb><rt>こま</rt></ruby>かく<ruby><rb>分</rb><rt>わ</rt></ruby>けることができます。<ruby><rb>重要</rb><rt>じゅうよう</rt></ruby>なのは、どの<ruby><rb>点</rb><rt>てん</rt></ruby>を<ruby><rb>取</rb><rt>と</rt></ruby>ってもその<ruby><rb>周辺</rb><rt>しゅうへん</rt></ruby>には<ruby><rb>有限</rb><rt>ゆうげん</rt></ruby><ruby><rb>個</rb><rt>こ</rt></ruby>の<ruby><rb>断片</rb><rt>だんぺん</rt></ruby>しか<ruby><rb>掛</rb><rt>か</rt></ruby>からないように<ruby><rb>分割</rb><rt>ぶんかつ</rt></ruby>できる<ruby><rb>点</rb><rt>てん</rt></ruby>です。<ruby><rb>大</rb><rt>おお</rt></ruby>きな<ruby><rb>部屋</rb><rt>へや</rt></ruby>も<ruby><rb>区域</rb><rt>くいき</rt></ruby><ruby><rb>別</rb><rt>べつ</rt></ruby>に<ruby><rb>分</rb><rt>わ</rt></ruby>ければ<ruby><rb>整理</rb><rt>せいり</rt></ruby>しやすくなるのと<ruby><rb>同</rb><rt>おな</rt></ruby>じです。
+<strong><ruby><rb>持続</rb><rt>じぞく</rt></ruby><ruby><rb>可能</rb><rt>かのう</rt></ruby><ruby><rb>発展</rb><rt>はってん</rt></ruby>への<ruby><rb>提言</rb><rt>ていげん</rt></ruby>：</strong><ruby><rb>地球</rb><rt>ちきゅう</rt></ruby>という<ruby><rb>巨大</rb><rt>きょだい</rt></ruby>なシステムは、あまりにも<ruby><rb>多</rb><rt>おお</rt></ruby>くの<ruby><rb>変数</rb><rt>へんすう</rt></ruby>が<ruby><rb>絡</rb><rt>から</rt></ruby>み<ruby><rb>合</rb><rt>あ</rt></ruby>っており、<ruby><rb>一度</rb><rt>いちど</rt></ruby>に<ruby><rb>扱</rb><rt>あつか</rt></ruby>うのは<ruby><rb>困難</rb><rt>こんなん</rt></ruby>です。<ruby><rb>私</rb><rt>わたし</rt></ruby>はこの<ruby><rb>問題</rb><rt>もんだい</rt></ruby>を「<ruby><rb>局所</rb><rt>きょくしょ</rt></ruby><ruby><rb>有限</rb><rt>ゆうげん</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>（locally finite）」の<ruby><rb>原則</rb><rt>げんそく</rt></ruby>を<ruby><rb>適用</rb><rt>てきよう</rt></ruby>して<ruby><rb>解決</rb><rt>かいけつ</rt></ruby>することを<ruby><rb>提案</rb><rt>ていあん</rt></ruby>します。<ruby><rb>地球</rb><rt>ちきゅう</rt></ruby><ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>を<ruby><rb>気候</rb><rt>きこう</rt></ruby>、<ruby><rb>海洋</rb><rt>かいよう</rt></ruby>、<ruby><rb>生物</rb><rt>せいぶつ</rt></ruby><ruby><rb>多様</rb><rt>たよう</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>など<ruby><rb>様々</rb><rt>さまざま</rt></ruby>なテーマで<ruby><rb>覆</rb><rt>おお</rt></ruby>う「<ruby><rb>開</rb><rt>かい</rt></ruby><ruby><rb>被覆</rb><rt>ひふく</rt></ruby>」を<ruby><rb>考</rb><rt>かんが</rt></ruby>えましょう。そして、<ruby><rb>各国</rb><rt>かっこく</rt></ruby>はこのすべてのテーマに<ruby><rb>関与</rb><rt>かんよ</rt></ruby>するのではなく、<ruby><rb>自国</rb><rt>じこく</rt></ruby>の<ruby><rb>位置</rb><rt>いち</rt></ruby>と<ruby><rb>能力</rb><rt>のうりょく</rt></ruby>に<ruby><rb>応</rb><rt>おう</rt></ruby>じて<ruby><rb>有限</rb><rt>ゆうげん</rt></ruby><ruby><rb>個</rb><rt>こ</rt></ruby>の<ruby><rb>核心</rb><rt>かくしん</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>なイシューにのみ<ruby><rb>集中</rb><rt>しゅうちゅう</rt></ruby>して<ruby><rb>責任</rb><rt>せきにん</rt></ruby>を<ruby><rb>負</rb><rt>お</rt></ruby>うのです。<ruby><rb>例</rb><rt>たと</rt></ruby>えば、ある<ruby><rb>国</rb><rt>くに</rt></ruby>は「<ruby><rb>隣接</rb><rt>りんせつ</rt></ruby><ruby><rb>海洋</rb><rt>かいよう</rt></ruby><ruby><rb>汚染</rb><rt>おせん</rt></ruby>」と「<ruby><rb>地域</rb><rt>ちいき</rt></ruby><ruby><rb>内</rb><rt>ない</rt></ruby>の<ruby><rb>生物</rb><rt>せいぶつ</rt></ruby><ruby><rb>多様</rb><rt>たよう</rt></ruby><ruby><rb>性</rb><rt>せい</rt></ruby>」<ruby><rb>問題</rb><rt>もんだい</rt></ruby>にのみ<ruby><rb>集中</rb><rt>しゅうちゅう</rt></ruby>するといった<ruby><rb>具合</rb><rt>ぐあい</rt></ruby>です。すべての<ruby><rb>国</rb><rt>くに</rt></ruby>がすべての<ruby><rb>問題</rb><rt>もんだい</rt></ruby>に<ruby><rb>気</rb><rt>き</rt></ruby>を<ruby><rb>配</rb><rt>くば</rt></ruby>る<ruby><rb>代</rb><rt>か</rt></ruby>わりに、<ruby><rb>各自</rb><rt>かくじ</rt></ruby>が<ruby><rb>有限</rb><rt>ゆうげん</rt></ruby><ruby><rb>個</rb><rt>こ</rt></ruby>の<ruby><rb>責任</rb><rt>せきにん</rt></ruby>をきちんと<ruby><rb>果</rb><rt>は</rt></ruby>たせば、<ruby><rb>全体</rb><rt>ぜんたい</rt></ruby>としてはすべての<ruby><rb>問題</rb><rt>もんだい</rt></ruby>が<ruby><rb>解決</rb><rt>かいけつ</rt></ruby>される<ruby><rb>効率</rb><rt>こうりつ</rt></ruby><ruby><rb>的</rb><rt>てき</rt></ruby>なグローバルガバナンスを<ruby><rb>構築</rb><rt>こうちく</rt></ruby>できます。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+
+                    let lang;
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

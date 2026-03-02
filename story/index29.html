@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국어 음운론 18개 요소의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .subject-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #6f42c1;
+            border-radius: 5px;
+            background-color: #fcfbff;
+        }
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .subject-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>한국어 음운론 18개 요소의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 말의 뼈대를 이루는 한국어 음운론의 18개 구성요소를 모시고, 각자의 관점에서 지구의 지속가능한 미래에 대한 고견을 듣고자 합니다.</p>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">1. 음운체계</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">저는 모든 소리가 지켜야 할 '법과 질서', 음운체계입니다. 제가 있기에 언어가 혼란스럽지 않죠. 지구의 지속가능성도 강력하고 일관된 '글로벌 음운체계'가 필요합니다. 각 나라가 제멋대로 소리를 내는 것이 아니라, 탄소 배출, 자원 사용, 생물다양성 보존에 대한 명확한 규칙 안에서 행동해야 합니다. 이 체계가 바로 서야만, 인류는 비로소 '지속가능성'이라는 의미 있는 단어를 조화롭게 발음할 수 있을 것입니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">2. 자음</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">저는 공기의 흐름을 막거나 마찰을 일으켜 소리를 내는 '장애물', 자음입니다. 모음 없이는 홀로 소리 낼 수 없죠. 지속가능한 발전은 때로 기존의 편리한 방식에 '장애물'을 설치하는 것과 같습니다. 무분별한 개발을 막고(파열음), 낭비적인 소비를 줄이며(마찰음), 자연의 흐름에 순응하는(유음) 용기가 필요합니다. 물론, 이러한 정책(자음)은 시민들의 동의와 지지(모음)가 있어야만 의미 있는 '음절'을 이룰 수 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">3. 조음위치</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">저는 소리가 '어디서' 만들어지는지를 결정하는 조음위치입니다. 입술소리, 잇몸소리, 목구멍소리 등 각자의 자리가 있죠. 'Think Global, Act Local'이라는 말이 저를 잘 표현합니다. 지구 전체의 지속가능성을 논하는 것도 중요하지만, 실제 행동은 각자의 '조음위치', 즉 지역 공동체에서 일어나야 합니다. 열대우림 지역과 극지방의 해결책이 같을 수 없습니다. 각 지역의 특성에 맞는 맞춤형 정책을 올바른 위치에서 정확하게 실행하는 것이야말로 가장 효과적인 발음법입니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">4. 조음방법</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">저는 소리를 '어떻게' 내는지를 규정하는 조음방법입니다. 공기를 터뜨릴지(파열), 마찰시킬지(마찰), 그냥 통과시킬지(비음)를 결정하죠. 지속가능 발전을 위한 정책도 다양한 '조음방법'이 필요합니다. 탄소 배출을 완전히 막는 강력한 규제(파열음)도 필요하고, 점진적으로 줄여나가도록 유도하는 세금 정책(마찰음)도 있어야 합니다. 또한, 친환경 기술 개발을 장려하는 부드러운 지원책(비음)도 중요합니다. 문제의 성격과 사회적 합의 수준에 따라 가장 효과적인 방법을 선택하는 지혜가 필요합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">5. 모음</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">저는 장애 없이 열린 소리, 음절의 핵을 이루는 모음입니다. 저는 모든 소리를 울려 퍼지게 하는 중심이죠. 지속가능 발전의 핵심에는 '공감과 연대'라는 모음적 가치가 있어야 합니다. 특정 국가나 세대의 이익(자음)만으로는 결코 조화로운 소리를 낼 수 없습니다. 미래 세대의 고통에 공감하고, 다른 생명체의 아픔에 연대하며, 인류 공동의 가치를 크게 울려 퍼지게 할 때, 비로소 지속가능성이라는 단어는 진정한 힘을 갖게 될 것입니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">6. 혀의높이</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">저는 '이상과 현실'의 조율을 담당하는 혀의높이입니다. 고모음 'ㅣ'처럼 높은 이상을 지향할 수도, 저모음 'ㅏ'처럼 현실에 발을 붙일 수도 있죠. 지속가능 발전은 이 둘 사이의 균형이 중요합니다. 너무 높은 이상만을 좇다 보면 현실과 동떨어진 공허한 구호가 되고, 눈앞의 현실에만 매몰되면 근본적인 변화를 이끌어낼 수 없습니다. 우리는 높은 이상을 향해 나아가되, 모든 사람이 쉽게 참여할 수 있는 현실적인 실천 방안을 함께 제시하는 '중모음'적 지혜를 발휘해야 합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">7. 혀의위치</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">저는 '관점의 다각화'를 상징하는 혀의위치입니다. 혀를 앞에 두면 전설모음, 뒤에 두면 후설모음이 되듯, 관점에 따라 소리가 달라집니다. 우리는 지금까지 너무 '전설모음'적 관점, 즉 인간 중심적이고 단기적인 관점에서만 발전을 이야기해 왔습니다. 이제는 혀를 뒤로 물려, 다른 생명체의 관점, 미래 세대의 관점, 지구 시스템 전체의 관점이라는 '후설모음'적 사고를 해야 합니다. 다양한 관점을 아우를 때, 비로소 우리는 지속가능성의 전체적인 음색을 만들어낼 수 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">8. 입술모양</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div><div id="ko-8">저는 '태도와 포용성'을 결정하는 입술모양입니다. 입술을 둥글게 모으면(원순) 포용적인 소리가, 평평하게 펴면(평순) 날카로운 소리가 나죠. 지속가능 발전을 위한 국제 협상이나 사회적 논의는 '원순모음'의 태도로 이루어져야 합니다. 서로를 날카롭게 비판하고 배제하는 '평순'의 자세로는 결코 합의에 이를 수 없습니다. 서로의 입장을 이해하고, 공동의 목표를 위해 입술을 둥글게 모으는 포용적인 태도를 가질 때, 비로소 우리는 '공존'이라는 부드럽고 조화로운 소리를 낼 수 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. 교체</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div><div id="ko-9">저는 '낡은 것과 새것의 전환', 교체입니다. '꽃'이 [꼳]으로 발음되듯, 저는 환경에 따라 소리를 바꿉니다. 지속가능 발전은 바로 '에너지 시스템의 교체'입니다. 화석연료라는 낡은 발음을 '재생에너지'라는 새로운 발음으로 완전히 바꾸어야 합니다. 이 과정은 음운 규칙처럼 명확하고 예외 없이 이루어져야 합니다. 일부 국가만 참여하거나, 특정 산업에만 예외를 허용한다면, 우리의 언어(지구 시스템)는 혼란에 빠질 것입니다. 이제는 과감한 교체를 통해 지속가능성이라는 표준 발음을 정착시켜야 합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. 탈락</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div><div id="ko-10">저는 '불필요한 것의 제거', 탈락입니다. '좋은'이 [조은]으로 발음될 때처럼, 저는 발음의 효율을 위해 군더더기를 없앱니다. 지속가능한 사회를 위해서는 우리 삶의 방식에서 과감한 '탈락'이 필요합니다. 불필요한 포장, 낭비적인 에너지 소비, 과잉 생산된 상품 등, 우리는 발음의 편의를 위해 'ㅎ'을 탈락시키듯, 지구의 부담을 덜기 위해 거품을 제거해야 합니다. 진정한 풍요는 더 많이 소유하는 것이 아니라, 불필요한 것들을 덜어내고 본질에 집중하는 '미니멀리즘'에 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">11. 첨가</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-11">읽기</button></div><div id="ko-11">저는 '새로운 가치의 부여', 첨가입니다. '꽃잎'이 [꼰닙]으로 발음될 때처럼, 저는 없던 소리를 더해 관계를 부드럽게 합니다. 지속가능 발전은 단순히 무언가를 줄이는 것이 아니라, 새로운 가치를 '첨가'하는 과정이기도 합니다. 우리의 경제 활동에 '환경 비용'이라는 개념을 첨가하고, 교육 과정에 '생태 감수성' 교육을 첨가해야 합니다. 없던 'ㄴ'을 첨가하여 발음을 쉽게 하듯, 우리는 기존의 시스템에 '지속가능성'이라는 새로운 요소를 적극적으로 더하여, 인류 문명이 더 부드럽고 조화롭게 나아가도록 해야 합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">12. 축약</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-12">읽기</button></div><div id="ko-12">저는 '효율과 통합', 축약입니다. '보이다'가 '뵈다'로 줄어들듯, 저는 복잡한 것을 하나로 합쳐 간결하게 만듭니다. 지속가능성을 위한 노력들이 서로 흩어져서는 안 됩니다. 환경, 사회, 경제 각 분야의 정책들을 따로따로 시행할 것이 아니라, 하나의 목표 아래 '축약'하여 통합적으로 관리해야 합니다. 예를 들어, 에너지 정책과 복지 정책을 결합하여 '에너지 기본소득'을 만드는 것입니다. 이렇게 각 분야의 노력을 하나로 합쳐 시너지를 낼 때, 우리는 더 빠르고 효율적으로 목표에 도달할 수 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">13. 분절</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-13">읽기</button></div><div id="ko-13">저는 '문제의 세분화', 분절입니다. 연속된 말소리의 흐름을 자음과 모음이라는 단위로 나누어 분석할 수 있게 하죠. '지속가능 발전'이라는 거대한 과제 앞에서 좌절하지 않으려면, 이 문제를 잘게 '분절'해야 합니다. '플라스틱 문제', '에너지 문제', '물 문제' 등으로 나누고, 각 문제에 대한 구체적인 목표와 책임자를 정해야 합니다. 거대한 강을 한 번에 건널 수는 없지만, 징검다리를 하나씩 놓아가면 건널 수 있습니다. 문제를 명확하게 분절하는 것이 바로 해결의 첫걸음입니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">14. 초분절적 요소</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-14">읽기</button></div><div id="ko-14">저는 소리 하나하나를 넘어 그 위에 실리는 '분위기와 맥락', 초분절적 요소입니다. 장단, 억양, 강세가 모여 말의 진짜 의미를 만들죠. 지속가능 발전도 개별 정책(분절 음운)의 나열만으로는 부족합니다. 그 모든 정책을 아우르는 사회 전체의 '문화와 철학'이 필요합니다. 지속가능성을 당연한 가치로 여기는 사회적 분위기, 미래 세대를 우선하는 정책의 '강세', 단기적 이익보다 장기적 공존을 중시하는 삶의 '장단'이 갖추어질 때, 비로소 우리의 외침은 진정성 있는 메시지로 전달될 것입니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">15. 장단</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-15">읽기</button></div><div id="ko-15">저는 '시간의 관점', 장단입니다. '눈[眼]'은 짧게, '눈[雪]'은 길게 발음하듯, 저는 시간의 길이로 의미를 구분합니다. 우리는 지금까지 너무 '단음(短音)'의 관점, 즉 단기적인 이익과 성과에만 집착해 왔습니다. 이로 인해 '장음(長音)'의 관점, 즉 수백, 수천 년에 걸쳐 형성된 지구 생태계의 느린 리듬을 파괴했습니다. 지속가능 발전은 우리의 시간 관점을 '장음'으로 전환하는 것입니다. 당장의 편리함보다는 백 년 뒤의 미래를, 한 세대의 풍요보다는 영원한 공존을 생각하는 긴 호흡이 필요합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">16. 억양</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-16">읽기</button></div><div id="ko-16">저는 '소통의 태도', 억양입니다. 같은 문장이라도 끝을 올리느냐 내리느냐에 따라 질문이 되기도 하고 평서문이 되기도 하죠. 지속가능 발전을 위한 우리의 메시지도 '억양'이 중요합니다. "당장 탄소를 줄여라!"라는 명령조의 억양은 반감만 살 뿐입니다. 대신, "어떻게 하면 함께 해결할 수 있을까요?"라는 질문과 제안의 억양으로 다가가야 합니다. 일방적인 주장이 아니라, 서로의 의견을 묻고 경청하는 부드러운 억양을 사용할 때, 비로소 전 지구적인 공감대와 협력을 이끌어낼 수 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">17. 강세</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-17">읽기</button></div><div id="ko-17">저는 '핵심과 우선순위', 강세입니다. 문장에서 가장 중요한 단어에 힘을 주어 말하듯, 저를 통해 의미가 명확해집니다. 지속가능 발전을 위한 수많은 과제들 중에서, 우리는 어디에 '강세'를 두어야 할까요? 저는 '티핑 포인트'에 임박한 문제, 그리고 가장 취약한 생태계와 사회 계층을 보호하는 문제에 가장 강한 강세를 두어야 한다고 생각합니다. 모든 것을 똑같은 힘으로 말할 수는 없습니다. 문제의 시급성과 중요도에 따라 정책의 우선순위를 정하고, 자원과 역량을 집중하는 전략적인 강세 조절이 필요합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">18. 음절</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-18">읽기</button></div><div id="ko-18">저는 자음과 모음이 모여 이루는 '행동의 최소 단위', 음절입니다. 자음 혼자, 모음 혼자서는 불완전하죠. 지속가능 발전도 마찬가지입니다. 정부의 정책(자음)만으로는 부족하고, 시민의 참여(모음)만으로도 부족합니다. 정책과 실천이 결합하여 하나의 의미 있는 '음절'을 이룰 때 비로소 변화가 시작됩니다. 또한, 초성(시작), 중성(핵심), 종성(마무리)이 있듯, 모든 실천은 계획, 실행, 그리고 평가라는 완결된 구조를 가져야 합니다. 단 하나의 음절이라도 제대로 만들어내는 구체적인 행동이 중요합니다.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered the 18 constituent elements of Korean phonology, which form the framework of speech, to hear their valuable opinions on the sustainable future of our planet from their unique perspectives.</p>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">1. Phonological System</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I am the 'law and order' that all sounds must obey, the Phonological System. Thanks to me, language is not chaotic. Earth's sustainability also needs a strong and consistent 'global phonological system.' Nations should not make sounds as they please but must act within clear rules regarding carbon emissions, resource use, and biodiversity conservation. Only when this system is firmly established can humanity harmoniously pronounce the meaningful word 'sustainability.'</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">2. Consonant</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">I am the 'obstacle' that makes sound by blocking or causing friction in the airflow, a Consonant. I cannot make a sound alone without a vowel. Sustainable development is sometimes like creating 'obstacles' to convenient, existing ways. It requires the courage to block reckless development (plosives), reduce wasteful consumption (fricatives), and adapt to the flow of nature (liquids). Of course, these policies (consonants) can only form a meaningful 'syllable' with the consent and support of the citizens (vowels).</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">3. Place of Articulation</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">I am the Place of Articulation, determining 'where' a sound is made. Whether it's labial, alveolar, or glottal, each has its place. The phrase 'Think Global, Act Local' describes me well. While discussing global sustainability is important, real action must happen at one's own 'place of articulation'—the local community. The solution for the Amazon rainforest cannot be the same as for the polar regions. The most effective articulation is to implement tailored policies accurately in the right place according to local characteristics.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">4. Manner of Articulation</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">I am the Manner of Articulation, defining 'how' a sound is made. I decide whether to explode the air (plosive), create friction (fricative), or let it pass through (nasal). Policies for sustainable development also require various 'manners of articulation.' Strong regulations that completely block carbon emissions (plosives) are needed, as are tax policies that induce gradual reduction (fricatives). Gentle support measures that encourage eco-friendly technology development (nasals) are also important. We need the wisdom to choose the most effective method according to the nature of the problem and the level of social consensus.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">5. Vowel</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">I am the open sound without obstruction, the nucleus of the syllable, a Vowel. I am the center that makes all sounds resonate. At the core of sustainable development, there must be the vowel-like values of 'empathy and solidarity.' The interests of specific nations or generations (consonants) alone can never produce a harmonious sound. Only when we empathize with the suffering of future generations, stand in solidarity with the pain of other living beings, and make the common values of humanity resonate loudly will the word 'sustainability' truly have power.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">6. Tongue Height</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">I am Tongue Height, in charge of coordinating 'ideals and reality.' One can aim for high ideals like the high vowel 'i' or stay grounded in reality like the low vowel 'a.' In sustainable development, the balance between these two is crucial. If we only pursue lofty ideals, we end up with empty slogans detached from reality. If we are only bogged down by immediate reality, we cannot bring about fundamental change. We must exercise 'mid-vowel' wisdom: moving towards high ideals while presenting realistic action plans that everyone can easily participate in.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">7. Tongue Position</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">I am Tongue Position, symbolizing 'diversification of perspective.' Just as the sound changes depending on whether the tongue is in the front or back, so does the perspective. Until now, we have discussed development from a very 'front-vowel' perspective—human-centric and short-term. It is time to pull the tongue back and adopt a 'back-vowel' thinking: the perspective of other living beings, of future generations, and of the entire Earth system. Only when we embrace diverse perspectives can we create the full vocalic color of sustainability.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">8. Lip Shape</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">I am Lip Shape, determining 'attitude and inclusiveness.' Rounding the lips creates an inclusive sound, while spreading them creates a sharp one. International negotiations and social discussions for sustainable development must be conducted with the attitude of a 'rounded vowel.' A 'spread' attitude of sharp criticism and exclusion will never lead to consensus. Only when we adopt an inclusive attitude of rounding our lips to understand each other's positions and work towards a common goal can we produce the soft, harmonious sound of 'coexistence.'</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. Substitution</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div><div id="en-9">I am 'the transition from old to new,' Substitution. Just as '꽃' (flower) is pronounced as [꼳], I change sounds according to the environment. Sustainable development is precisely the 'substitution of the energy system.' The old pronunciation of fossil fuels must be completely replaced with the new pronunciation of 'renewable energy.' This process must be as clear and exceptionless as a phonological rule. If only some countries participate or exceptions are made for certain industries, our language (the Earth system) will fall into chaos. It is time to establish the standard pronunciation of sustainability through bold substitution.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. Deletion</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div><div id="en-10">I am 'the removal of the unnecessary,' Deletion. Just as '좋은' (good) is pronounced as [조은], I eliminate superfluity for articulatory efficiency. To achieve a sustainable society, we need bold 'deletion' in our way of life. Unnecessary packaging, wasteful energy consumption, overproduced goods—just as we delete 'ㅎ' for ease of pronunciation, we must remove the foam to lessen the burden on the Earth. True abundance is not in owning more, but in 'minimalism'—shedding the unnecessary and focusing on the essential.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">11. Addition</span><button class="speak-btn" data-lang="en-US" data-target="en-11">Read</button></div><div id="en-11">I am 'the bestowing of new value,' Addition. Just as '꽃잎' (petal) is pronounced as [꼰닙], I add a sound that wasn't there to smooth the connection. Sustainable development is not just about reducing things; it is also a process of 'adding' new values. We must add the concept of 'environmental cost' to our economic activities and add 'ecological sensitivity' education to our curricula. Just as adding 'ㄴ' makes pronunciation easier, we must actively add the new element of 'sustainability' to our existing systems to make human civilization advance more smoothly and harmoniously.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">12. Contraction</span><button class="speak-btn" data-lang="en-US" data-target="en-12">Read</button></div><div id="en-12">I am 'efficiency and integration,' Contraction. Just as '보이다' (to be seen) shortens to '뵈다', I combine complex things into one to make them concise. Efforts for sustainability must not be scattered. Instead of implementing policies for the environment, society, and economy separately, they must be 'contracted' and managed integrally under a single goal. For example, combining energy policy and welfare policy to create an 'energy basic income.' When we combine the efforts of each field to create synergy, we can reach our goals faster and more efficiently.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">13. Segmentation</span><button class="speak-btn" data-lang="en-US" data-target="en-13">Read</button></div><div id="en-13">I am 'the subdivision of a problem,' Segmentation. I make it possible to analyze the continuous stream of speech by dividing it into units of consonants and vowels. To avoid being overwhelmed by the huge task of 'sustainable development,' we must 'segment' this problem finely. We need to divide it into 'the plastic problem,' 'the energy problem,' 'the water problem,' etc., and set specific goals and responsibilities for each. One cannot cross a huge river in a single leap, but one can cross it by placing stepping stones one by one. Clearly segmenting the problem is the first step to solving it.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">14. Suprasegmental</span><button class="speak-btn" data-lang="en-US" data-target="en-14">Read</button></div><div id="en-14">I am the 'atmosphere and context' that rides above individual sounds, the Suprasegmental element. Length, intonation, and stress come together to create the true meaning of speech. Sustainable development also needs more than a mere list of individual policies (segmental phonemes). It requires an overarching 'culture and philosophy' for the entire society. Only when we have a social atmosphere that takes sustainability as a given value, a policy 'stress' that prioritizes future generations, and a life 'length' that values long-term coexistence over short-term profit will our call be delivered as a truly authentic message.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">15. Length</span><button class="speak-btn" data-lang="en-US" data-target="en-15">Read</button></div><div id="en-15">I am 'the perspective of time,' Length. Just as '눈[eye]' is pronounced short and '눈[snow]' is long, I distinguish meaning by the length of time. Until now, we have been obsessed with the 'short vowel' perspective—short-term profit and performance. This has led us to destroy the 'long vowel' perspective—the slow rhythm of the Earth's ecosystem, formed over hundreds and thousands of years. Sustainable development is about shifting our temporal perspective to the 'long vowel.' We need the long breath to think of the future a hundred years from now rather than immediate convenience, and of eternal coexistence rather than the prosperity of a single generation.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">16. Intonation</span><button class="speak-btn" data-lang="en-US" data-target="en-16">Read</button></div><div id="en-16">I am 'the attitude of communication,' Intonation. The same sentence can be a question or a statement depending on whether the end rises or falls. The 'intonation' of our message for sustainable development is also important. A commanding intonation like "Reduce carbon now!" will only provoke resistance. Instead, we should approach with an intonation of question and suggestion, like "How can we solve this together?" Only by using a gentle intonation that asks for and listens to others' opinions, rather than making unilateral assertions, can we elicit global empathy and cooperation.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">17. Stress</span><button class="speak-btn" data-lang="en-US" data-target="en-17">Read</button></div><div id="en-17">I am 'the core and priority,' Stress. Just as one emphasizes the most important word in a sentence, I clarify meaning. Among the many tasks for sustainable development, where should we place the 'stress'? I believe we must place the strongest stress on issues approaching a 'tipping point' and on protecting the most vulnerable ecosystems and social classes. We cannot say everything with the same force. We need strategic stress adjustment that sets policy priorities according to the urgency and importance of the issues and concentrates resources and capabilities.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">18. Syllable</span><button class="speak-btn" data-lang="en-US" data-target="en-18">Read</button></div><div id="en-18">I am 'the minimal unit of action,' the Syllable, formed by consonants and vowels. A consonant alone or a vowel alone is incomplete. The same goes for sustainable development. Government policy (consonant) alone is not enough, and citizen participation (vowel) alone is not enough. Change begins only when policy and practice combine to form a meaningful 'syllable.' Furthermore, just as there is an onset (beginning), nucleus (core), and coda (end), all actions must have a complete structure of planning, execution, and evaluation. It is the concrete action of making even a single syllable properly that matters.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。言葉の骨格をなす韓国語音韻論の18の構成要素の皆様をお招きし、それぞれの観点から地球の持続可能な未来についてのご意見を伺いたいと思います。</p>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">1. 音韻体系</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私はすべての音が守るべき「法と秩序」、音韻体系です。私がいるからこそ、言語は混乱しません。地球の持続可能性にも、強力で一貫した「グローバル音韻体系」が必要です。各国が勝手に音を出すのではなく、炭素排出、資源利用、生物多様性保全に関する明確な規則の中で行動すべきです。この体系が正しく確立されてこそ、人類は初めて「持続可能性」という有意義な言葉を調和して発音できるでしょう。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">2. 子音</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">私は空気の流れを妨げたり摩擦を起こしたりして音を出す「障害物」、子音です。母音なしでは単独で音を出せません。持続可能な発展とは、時に既存の便利なやり方に「障害物」を設置することと同じです。無分別な開発を阻み（破裂音）、浪費的な消費を減らし（摩擦音）、自然の流れに順応する（流音）勇気が必要です。もちろん、これらの政策（子音）は、市民の同意と支持（母音）があってこそ、意味のある「音節」を成すことができます。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">3. 調音位置</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">私は音が「どこで」作られるかを決定する調音位置です。唇音、歯茎音、喉音など、それぞれに場所があります。「Think Global, Act Local」という言葉が私を最もよく表しています。地球全体の持続可能性を論じることも重要ですが、実際の行動はそれぞれの「調音位置」、すなわち地域共同体で起こらなければなりません。熱帯雨林地域と極地の解決策が同じであるはずがありません。各地域の特性に合ったオーダーメイドの政策を、正しい位置で正確に実行することこそが、最も効果的な発音法です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">4. 調音方法</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">私は音を「どのように」出すかを規定する調音方法です。空気を破裂させるか（破裂音）、摩擦させるか（摩擦音）、そのまま通すか（鼻音）を決定します。持続可能な発展のための政策にも、多様な「調音方法」が必要です。炭素排出を完全に止める強力な規制（破裂音）も必要ですし、徐々に減らすよう誘導する税制（摩擦音）もなければなりません。また、環境に優しい技術開発を奨励する穏やかな支援策（鼻音）も重要です。問題の性格と社会的合意のレベルに応じて、最も効果的な方法を選択する知恵が必要です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">5. 母音</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私は障害なく開かれた音、音節の核をなす母音です。私はすべての音を響かせる中心です。持続可能な発展の核心には、「共感と連帯」という母音的な価値がなければなりません。特定の国や世代の利益（子音）だけでは、決して調和のとれた音は出せません。未来の世代の苦しみに共感し、他の生命の痛みに連帯し、人類共通の価値を大きく響かせる時、初めて「持続可能性」という言葉は真の力を持つでしょう。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">6. 舌の高さ</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は「理想と現実」の調律を担当する舌の高さです。高母音「ㅣ」のように高い理想を目指すことも、低母音「ㅏ」のように現実に足を着けることもできます。持続可能な発展には、この二つの間のバランスが重要です。高すぎる理想ばかりを追い求めると、現実離れした空虚なスローガンになり、目の前の現実に埋没すれば、根本的な変化は導き出せません。私たちは高い理想に向かって進みつつも、誰もが容易に参加できる現実的な実践策を共に提示する「中母音」的な知恵を発揮すべきです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">7. 舌の位置</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私は「観点の多角化」を象徴する舌の位置です。舌を前に置けば前舌母音、後ろに置けば後舌母音になるように、観点によって音は変わります。私たちはこれまで、あまりにも「前舌母音」的な観点、すなわち人間中心的で短期的な観点からのみ発展を語ってきました。今こそ舌を後ろに引き、他の生命体の観点、未来の世代の観点、地球システム全体の観点という「後舌母音」的な思考をすべきです。多様な観点を包括する時、初めて私たちは持続可能性の全体的な音色を創り出すことができるのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">8. 唇の形</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">私は「態度と包容性」を決定する唇の形です。唇を丸めると（円唇）包容的な音、平らにすると（平唇）鋭い音が出ます。持続可能な発展のための国際交渉や社会的議論は、「円唇母音」の態度で行われるべきです。互いを鋭く批判し排除する「平唇」の姿勢では、決して合意には至れません。互いの立場を理解し、共通の目標のために唇を丸める包容的な態度を持つ時、初めて私たちは「共存」という柔らかく調和のとれた音を出すことができるのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. 交代</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">私は「古いものと新しいものの転換」、交代です。「꽃(花)」が[꼳]と発音されるように、私は環境に応じて音を変えます。持続可能な発展とは、まさに「エネルギーシステムの交代」です。化石燃料という古い発音を、「再生可能エネルギー」という新しい発音に完全に変えなければなりません。この過程は音韻規則のように明確で、例外なく行われるべきです。一部の国だけが参加したり、特定の産業にだけ例外を認めたりすれば、私たちの言語（地球システム）は混乱に陥るでしょう。今こそ、大胆な交代を通じて持続可能性という標準発音を定着させるべきです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. 脱落</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div><div id="ja-10">私は「不要なものの除去」、脱落です。「좋은(良い)」が[조은]と発音される時のように、私は発音の効率のために余分なものを取り除きます。持続可能な社会のためには、私たちの生活様式から大胆な「脱落」が必要です。不要な包装、浪費的なエネルギー消費、過剰生産された商品など、私たちは発音の便宜のために「ㅎ」を脱落させるように、地球の負担を軽くするために無駄を省かなければなりません。真の豊かさとは、より多くを所有することではなく、不要なものを削ぎ落とし、本質に集中する「ミニマリズム」にあります。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">11. 添加</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-11">読む</button></div><div id="ja-11">私は「新しい価値の付与」、添加です。「꽃잎(花びら)」が[꼰닙]と発音される時のように、私はなかった音を加えて関係を滑らかにします。持続可能な発展とは、単に何かを減らすだけでなく、新しい価値を「添加」する過程でもあります。私たちの経済活動に「環境コスト」という概念を添加し、教育課程に「生態感受性」教育を添加すべきです。なかった「ㄴ」を添加して発音を容易にするように、私たちは既存のシステムに「持続可能性」という新しい要素を積極的に加え、人類文明がより滑らかで調和のとれたものになるようにすべきです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">12. 縮約</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-12">読む</button></div><div id="ja-12">私は「効率と統合」、縮約です。「보이다(見える)」が「뵈다」に短縮されるように、私は複雑なものを一つにまとめて簡潔にします。持続可能性のための努力が、ばらばらであってはなりません。環境、社会、経済の各分野の政策を別々に施行するのではなく、一つの目標の下に「縮約」し、統合的に管理すべきです。例えば、エネルギー政策と福祉政策を結合して「エネルギーベーシックインカム」を創設するなどです。このように各分野の努力を一つにまとめ、相乗効果を生み出す時、私たちはより速く、効率的に目標に到達できるのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">13. 分節</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-13">読む</button></div><div id="ja-13">私は「問題の細分化」、分節です。連続する音声の流れを、子音と母音という単位に分けて分析可能にします。「持続可能な発展」という巨大な課題の前で挫折しないためには、この問題を細かく「分節」しなければなりません。「プラスチック問題」「エネルギー問題」「水問題」などに分け、各問題に対する具体的な目標と責任者を定めるべきです。巨大な川を一度に渡ることはできませんが、飛び石を一つずつ置いていけば渡れます。問題を明確に分節することこそが、解決の第一歩です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">14. 超分節的要素</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-14">読む</button></div><div id="ja-14">私は個々の音を超え、その上に乗る「雰囲気と文脈」、超分節的要素です。長短、抑揚、強勢が集まって、言葉の真の意味を作ります。持続可能な発展も、個別の政策（分節音素）の羅列だけでは不十分です。それらすべての政策を包含する社会全体の「文化と哲学」が必要です。持続可能性を当然の価値と見なす社会的雰囲気、未来の世代を優先する政策の「強勢」、短期的な利益よりも長期的な共存を重視する生き方の「長短」が備わってこそ、私たちの叫びは真実味のあるメッセージとして伝わるでしょう。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">15. 長短</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-15">読む</button></div><div id="ja-15">私は「時間の観点」、長短です。「눈[眼]」は短く、「눈[雪]」は長く発音するように、私は時間の長さで意味を区別します。私たちはこれまで、あまりにも「短音」の観点、すなわち短期的な利益と成果にのみ執着してきました。その結果、「長音」の観点、すなわち数百、数千年にわたって形成された地球生態系の緩やかなリズムを破壊してしまいました。持続可能な発展とは、私たちの時間観点を「長音」に転換することです。目先の便利さよりも百年後の未来を、一世代の豊かさよりも永遠の共存を考える、長い呼吸が必要です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">16. 抑揚</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-16">読む</button></div><div id="ja-16">私は「コミュニケーションの態度」、抑揚です。同じ文章でも、語尾を上げるか下げるかで疑問にも平叙にもなります。持続可能な発展のための私たちのメッセージも、「抑揚」が重要です。「今すぐ炭素を減らせ！」という命令調の抑揚は、反感を買うだけです。代わりに、「どうすれば共に解決できるでしょうか？」という問いかけと提案の抑揚でアプローチすべきです。一方的な主張ではなく、互いの意見を問い、傾聴する柔らかな抑揚を用いる時、初めて全地球的な共感と協力を引き出すことができるのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">17. 強勢</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-17">読む</button></div><div id="ja-17">私は「核心と優先順位」、強勢です。文中で最も重要な単語に力を入れて話すように、私によって意味が明確になります。持続可能な発展のための数多くの課題の中で、私たちはどこに「強勢」を置くべきでしょうか。私は「ティッピング・ポイント」に差し迫った問題、そして最も脆弱な生態系と社会階層を保護する問題に、最も強い強勢を置くべきだと考えます。すべてを同じ力で話すことはできません。問題の緊急性と重要度に応じて政策の優先順位を定め、資源と能力を集中させる戦略的な強勢の調節が必要です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">18. 音節</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-18">読む</button></div><div id="ja-18">私は子音と母音が集まって成す「行動の最小単位」、音節です。子音だけ、母音だけでは不完全です。持続可能な発展も同様です。政府の政策（子音）だけでは不十分で、市民の参加（母音）だけでも不十分です。政策と実践が結びついて一つの意味ある「音節」を成す時、初めて変化が始まります。また、初声（始まり）、中声（核心）、終声（締めくくり）があるように、すべての実践は計画、実行、そして評価という完結した構造を持つべきです。たった一つの音節でも、きちんと作り上げる具体的な行動が重要です。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

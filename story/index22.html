@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24절기의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .season-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #343a40;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #007bff;
+        }
+        .season-title.summer { border-color: #28a745; }
+        .season-title.autumn { border-color: #ffc107; }
+        .season-title.winter { border-color: #6c757d; }
+        
+        .term-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 5px;
+            background-color: #fafdff;
+        }
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .term-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>24절기의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 자연의 순환을 상징하는 24절기 여러분을 모시고, 각자의 지혜를 통해 지구의 지속가능한 미래에 대한 고견을 듣고자 합니다.</p>
+                    
+                    <h2 class="season-title">가. 봄 (春)</h2>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">입춘 (立春)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div>
+                        <div id="ko-1">안녕하십니까, 모든 시작을 알리는 입춘입니다. 저는 '봄이 들어선다'는 희망의 상징이죠. 지속가능 발전도 새로운 '입춘'을 맞이해야 합니다. 지금까지의 파괴적인 성장 방식에 '입춘대길'이라는 글귀를 붙일 수는 없습니다. 이제 우리는 지구와의 관계에서 새로운 봄을 선언해야 합니다. 이는 단순히 구호에 그치는 것이 아니라, 모든 정책과 기술 개발의 방향을 '생명 존중'이라는 새로운 기준으로 설정하는 근본적인 전환을 의미합니다. 인류의 문명에 진정한 '건양다경'의 기운이 깃들도록, 희망의 씨앗을 심어야 할 때입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">우수 (雨水)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div>
+                        <div id="ko-2">저는 눈을 녹여 비로 만드는 우수입니다. 얼어붙은 땅을 녹이고 생명의 싹을 틔우는 것이 저의 역할이죠. 지구의 지속가능성을 가로막는 가장 큰 장벽은 바로 '얼어붙은 무관심'입니다. 저는 이 무관심을 녹일 '지식의 봄비'가 필요하다고 생각합니다. 기후 위기의 심각성, 생물 다양성의 중요성에 대한 정확한 정보와 교육이 사회 곳곳에 스며들어야 합니다. 이 지식의 비가 사람들의 마음을 적실 때, 비로소 얼어붙었던 인식이 녹고 지속가능한 미래를 위한 실천의 싹이 돋아날 것입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">경칩 (驚蟄)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div>
+                        <div id="ko-3">겨울잠 자던 만물을 깨우는 경칩입니다. 제 우렛소리에 벌레들이 놀라 깨어나듯, 이제 인류도 안일함의 동면에서 깨어나야 합니다. 저는 강력한 '경고 시스템'의 구축을 제안합니다. 지구의 생태적 한계점에 다다랐을 때, 전 지구적으로 경보를 울려 즉각적인 행동을 촉구하는 시스템이 필요합니다. 더 이상 "아직 괜찮다"는 안일한 잠에 빠져 있을 시간이 없습니다. 지속가능성은 위기를 알리는 천둥소리에 놀라 깨어나, 즉시 행동으로 옮기는 것에서 시작됩니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">춘분 (春分)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div>
+                        <div id="ko-4">낮과 밤의 길이를 공평하게 나누는 춘분입니다. 저는 '균형과 조화'를 상징하죠. 지속가능 발전의 핵심은 바로 이 균형입니다. 현재 인류는 경제 발전(낮)에만 치우쳐 환경 보전(밤)을 소홀히 했습니다. 저는 선진국과 개발도상국 간의 '책임의 균형'을 제안합니다. 역사적으로 더 많은 탄소를 배출한 선진국은 더 큰 책임을 지고, 개발도상국에는 녹색 성장을 할 수 있도록 기술과 재정을 지원해야 합니다. 낮과 밤이 조화를 이룰 때 만물이 평화롭듯, 모든 국가가 공정한 책임을 나눌 때 지구의 지속가능성도 이룰 수 있습니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">청명 (淸明)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div>
+                        <div id="ko-5">하늘을 맑고 깨끗하게 하는 청명입니다. 제 이름처럼, 저는 '투명성'의 가치를 중요하게 생각합니다. 지속가능 발전을 위해서는 모든 정보가 '청명'하게 공개되어야 합니다. 기업들은 자신들의 탄소 배출량과 환경 영향을 투명하게 공개하고, 정부는 환경 정책의 모든 과정을 국민에게 명확히 설명해야 합니다. 마치 맑은 하늘 아래 모든 것이 잘 보이듯, 정보가 투명하게 공개될 때 시민들은 올바른 판단을 내릴 수 있고, 기업과 정부를 제대로 감시할 수 있습니다. 지속가능성은 신뢰를 바탕으로 한 투명한 소통 위에서만 이룰 수 있습니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">곡우 (穀雨)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div>
+                        <div id="ko-6">모든 곡식을 기름지게 하는 봄비를 내리는 곡우입니다. 저는 '미래를 위한 투자'를 상징합니다. 농부가 풍성한 가을을 위해 봄에 씨앗을 뿌리듯, 우리도 지속가능한 미래를 위해 지금 당장 '녹색 기술'과 '미래 세대 교육'에 아낌없이 투자해야 합니다. 지금의 투자는 당장 눈에 보이는 성과가 없을 수도 있습니다. 하지만 이 투자의 비가 없으면, 미래 세대가 거둘 곡식은 없을 것입니다. "곡우에 가물면 땅이 마른다"는 속담처럼, 지금 미래를 위한 투자를 아낀다면 인류의 미래는 메마를 수밖에 없습니다.</div>
+                    </div>
+
+                    <h2 class="season-title summer">나. 여름 (夏)</h2>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">입하 (立夏)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div>
+                        <div id="ko-7">여름의 문을 여는 입하입니다. 저는 '성장의 시작'을 알립니다. 지속가능 발전은 더 이상 성장을 멈추는 것이 아닙니다. 새로운 형태의 '녹색 성장'을 시작해야 할 때입니다. 화석 연료 기반의 낡은 성장 모델을 버리고, 재생 에너지, 순환 경제, 친환경 기술을 기반으로 하는 새로운 성장 패러다임으로 전환해야 합니다. 제 시기에 만물이 푸르게 자라나듯, 지속가능한 산업 생태계를 조성하여 새로운 일자리와 부가가치를 창출하는 역동적인 성장을 시작해야 합니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">소만 (小滿)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div>
+                        <div id="ko-8">만물이 점차 가득 차오르는 소만입니다. 저는 '점진적인 충만함'을 의미합니다. 지속가능한 사회는 하루아침에 이루어지지 않습니다. 거대한 변화도 중요하지만, 일상 속 작은 실천들이 모여 사회 전체를 채워나가는 과정이 필요합니다. 개인의 텀블러 사용, 기업의 에너지 절감 노력, 지역사회의 재활용 활동 등이 점차 쌓이고 확산될 때, 사회는 지속가능성으로 '소만'하게 될 것입니다. 모든 구성원이 각자의 자리에서 조금씩 채워나가는 노력이 중요합니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">망종 (芒種)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div>
+                        <div id="ko-9">씨 뿌리기에 가장 좋은 때, 망종입니다. 저는 '적절한 시기(timing)'의 중요성을 말합니다. 아무리 좋은 씨앗도 때를 놓치면 싹을 틔울 수 없습니다. 기후 위기 대응에도 '골든 타임'이 있습니다. 과학자들은 이미 여러 번 경고했습니다. 지금이 바로 행동해야 할 '망종'의 시기입니다. 더 이상 논의만 하며 시간을 허비해서는 안 됩니다. 지금 당장 탄소 감축을 위한 구체적인 정책을 파종하고, 미래 세대를 위한 교육의 씨앗을 뿌려야 합니다. 때를 놓치면, 우리는 수확할 미래 자체가 없을지도 모릅니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">하지 (夏至)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div>
+                        <div id="ko-10">낮이 가장 긴, 에너지의 절정, 하지입니다. 저는 '에너지의 전환점'을 상징합니다. 제 뜨거운 태양은 가장 강력한 에너지원이지만, 동시에 폭염의 원인이 되기도 합니다. 이처럼 에너지는 양면성을 가집니다. 지속가능 발전은 이 에너지의 패러다임을 전환하는 것입니다. 화석연료처럼 파괴적인 에너지를 최소화하고, 제 햇살과 같은 태양광, 바람과 같은 풍력 등 자연과 조화로운 재생 가능 에너지 사용을 극대화해야 합니다. 낮이 가장 긴 날을 기점으로 밤이 길어지듯, 우리는 에너지 소비의 정점을 찍고 이제는 효율적인 에너지 사용으로 전환해야 할 때입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">소서 (小暑)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-11">읽기</button></div>
+                        <div id="ko-11">본격적인 더위의 시작, 소서입니다. 저는 '위기의 시작'을 경고합니다. 제 더위는 아직 견딜 만하지만, 곧 닥쳐올 대서의 폭염을 예고합니다. 지금 우리가 겪는 기상이변은 어쩌면 '소서'에 불과할지 모릅니다. 이 작은 경고들을 무시한다면, 우리는 머지않아 회복 불가능한 '대서'의 재앙을 맞이하게 될 것입니다. 지속가능성은 이러한 초기 경고에 민감하게 반응하고, 더 큰 위기가 닥치기 전에 선제적으로 대응하는 '적응 능력'을 기르는 것입니다. 작은 더위에 대비하지 못하면 큰 더위를 이겨낼 수 없습니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">대서 (大暑)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-12">읽기</button></div>
+                        <div id="ko-12">가장 뜨거운 때, 대서입니다. 저는 '극한의 상황'과 그 속에서도 멈추지 않는 '생명력'을 상징합니다. 찜통 같은 더위는 모든 것을 지치게 하지만, 농작물은 이때 가장 왕성하게 자랍니다. 현재 지구는 '대서'와 같은 극한의 기후 위기를 맞고 있습니다. 하지만 저는 이 위기 속에서도 희망을 봅니다. 극한의 상황은 인류에게 최고의 혁신과 협력을 이끌어낼 수 있습니다. 이 위기를 극복하기 위한 전 지구적인 노력은, 마치 더위 속에서 자라는 곡식처럼, 인류를 한 단계 더 성숙시키고 새로운 문명을 꽃피우는 계기가 될 수 있습니다.</div>
+                    </div>
+
+                    <h2 class="season-title autumn">다. 가을 (秋)</h2>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">입추 (立秋)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-13">읽기</button></div>
+                        <div id="ko-13">가을의 시작, 입추입니다. 저는 '성찰의 시간'을 가져다줍니다. 뜨거운 여름이 지나고 아침저녁으로 선선한 바람이 불면, 우리는 지난 계절을 돌아보고 미래를 준비하게 됩니다. 지속가능 발전도 마찬가지입니다. 무분별한 성장의 열기가 한풀 꺾인 지금, 우리는 과거 산업화 시대의 과오를 성찰해야 합니다. 왜 우리가 이 위기에 처하게 되었는지, 무엇을 잘못했는지 냉철하게 돌아봐야 합니다. 그리고 그 성찰을 바탕으로, 다가올 미래를 위해 무엇을 준비해야 할지 계획을 세워야 합니다. 성찰 없는 전진은 또 다른 과오를 낳을 뿐입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">처서 (處暑)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-14">읽기</button></div>
+                        <div id="ko-14">더위가 물러가는 처서입니다. '모기 입이 비뚤어진다'는 속담처럼, 저는 '문제의 쇠퇴'를 이끌어냅니다. 저는 우리가 올바른 방향으로 나아간다면, 아무리 심각해 보이는 문제도 결국 힘을 잃게 될 것이라는 희망을 상징합니다. 지금의 기후 위기도 마찬가지입니다. 우리가 힘을 합쳐 탄소 배출을 줄이고, 생태계를 복원하기 시작한다면, 기온 상승의 기세도 꺾이게 될 것입니다. 지속가능성은 문제의 완전한 소멸이 아니라, 그 기세를 꺾고 우리가 통제 가능한 수준으로 만들어 나가는 과정입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">백로 (白露)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-15">읽기</button></div>
+                        <div id="ko-15">풀잎에 흰 이슬이 맺히는 백로입니다. 저는 '작지만 명확한 지표'의 중요성을 말합니다. 밤 기온이 이슬점 이하로 떨어졌다는 작은 사실이, 이제 가을이 완연하다는 거대한 변화를 알려줍니다. 지속가능 발전도 이런 명확한 지표 관리가 필요합니다. 대기 중 이산화탄소 농도, 해양 산성도, 멸종 위기종의 개체 수 등, 우리는 지구의 건강 상태를 알려주는 핵심 지표들을 지속적으로 관찰하고, 그 변화에 민감하게 반응해야 합니다. 작은 이슬방울이 계절의 변화를 알리듯, 객관적인 데이터가 우리 행동의 방향을 결정해야 합니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">추분 (秋分)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-16">읽기</button></div>
+                        <div id="ko-16">다시 낮과 밤의 길이가 같아지는 추분입니다. 저는 '수확과 분배'의 정의를 상징합니다. 풍성한 가을걷이의 기쁨은 모두가 함께 나눌 때 의미가 있습니다. 지속가능 발전은 '정의로운 전환'을 동반해야 합니다. 에너지 전환 과정에서 피해를 보는 노동자나 지역 사회가 있다면, 그들을 위한 사회적 안전망을 마련해야 합니다. 녹색 성장의 혜택이 특정 계층이나 국가에만 집중되어서는 안 됩니다. 춘분의 균형이 씨앗을 심기 위한 것이었다면, 저의 균형은 수확한 열매를 공평하게 나누기 위한 것입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">한로 (寒露)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-17">읽기</button></div>
+                        <div id="ko-17">찬 이슬이 맺히는 한로입니다. 저는 '아름다움 속의 경고'를 담고 있습니다. 제 시기의 단풍은 절정에 달해 아름답지만, 동시에 겨울이 다가오고 있음을 알리는 신호이기도 합니다. 지금 인류 문명은 어쩌면 가장 화려한 '한로'의 시기를 보내고 있는지도 모릅니다. 하지만 이 풍요로움이 영원할 것이라 착각해서는 안 됩니다. 지속가능성은 이 아름다움 속에서 다가오는 위기를 직시하는 지혜입니다. 단풍의 아름다움을 즐기면서도, 겨울 채비를 서두르는 농부처럼, 우리는 현재의 풍요에 안주하지 말고 다가올 위기에 대비해야 합니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">상강 (霜降)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-18">읽기</button></div>
+                        <div id="ko-18">서리가 내리는 상강입니다. 저는 가을의 끝이자, '준비의 마감 시한'을 알립니다. 서리가 내리면 더 이상 농사를 지을 수 없듯, 우리에게 주어진 시간도 무한하지 않습니다. 기후 변화의 '티핑 포인트'는 마치 첫서리와 같습니다. 한번 그 지점을 넘어서면, 다시 예전으로 되돌리는 것은 거의 불가능합니다. 지속가능 발전을 위한 노력은 더 이상 미룰 수 없는 시급한 과제입니다. 낙엽이 지기 전에 겨울맞이를 서둘러야 하듯, 돌이킬 수 없는 '상강'의 순간이 오기 전에 우리는 행동을 마쳐야 합니다.</div>
+                    </div>
+
+                    <h2 class="season-title winter">라. 겨울 (冬)</h2>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">입동 (立冬)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-19">읽기</button></div>
+                        <div id="ko-19">겨울의 시작, 입동입니다. 저는 '대비와 저장'의 지혜를 상징합니다. 동물들은 겨울잠을 준비하고, 사람들은 김장을 하며 긴 겨울을 대비합니다. 지속가능 발전은 미래의 위기에 대비하는 '회복탄력성'을 기르는 것입니다. 우리는 기후 변화로 인해 더욱 빈번해질 자연재해에 대비할 수 있는 사회 시스템을 구축해야 합니다. 또한, 재생 가능 에너지를 저장하는 기술(ESS)을 개발하고, 미래 세대가 사용할 자원을 보존하는 등, 다가올 위기를 견뎌낼 수 있는 '에너지와 자원의 김장'을 해야 합니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">소설 (小雪)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-20">읽기</button></div>
+                        <div id="ko-20">첫눈이 내리는 소설입니다. 저는 '새로운 순수성'의 회복을 이야기합니다. 첫눈이 온 세상을 하얗게 덮듯, 우리도 탐욕과 이기심으로 더러워진 문명을 반성하고, 순수한 마음으로 자연을 바라봐야 합니다. 지속가능 발전은 기술이나 정책만으로 이룰 수 없습니다. 자연을 지배의 대상이 아닌, 우리와 함께하는 동반자로 여기는 근본적인 가치관의 변화가 필요합니다. 온 세상을 하얗게 덮는 눈처럼, 모든 인류가 생명을 존중하는 순수한 마음을 회복할 때, 진정한 지속가능성의 시대가 열릴 것입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">대설 (大雪)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-21">읽기</button></div>
+                        <div id="ko-21">큰 눈이 내리는 대설입니다. 저는 '쉼과 재충전'의 시간을 상징합니다. 제 시기가 되면 농부들은 농사를 멈추고 휴식을 취하며 다음 해를 기약합니다. 끝없이 성장만을 추구해 온 인류 문명에게도 이제는 '쉼'이 필요합니다. 무한한 소비와 생산의 굴레에서 벗어나, 잠시 멈춰서서 우리의 삶을 돌아보고 재충전하는 시간이 필요합니다. 지속가능 발전은 더 빨리, 더 많이 나아가는 것이 아니라, 때로는 속도를 줄이고 휴식을 취하며 공동체와 자연과의 관계를 회복하는 지혜를 포함합니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">동지 (冬至)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-22">읽기</button></div>
+                        <div id="ko-22">밤이 가장 긴 날, 동지입니다. 저는 '가장 깊은 어둠 속의 희망'을 상징합니다. 제 날을 기점으로 다시 낮이 길어지기 시작하듯, 아무리 깊은 절망 속에도 새로운 시작의 씨앗은 잉태되고 있습니다. 지금 지구는 기후 위기라는 가장 긴 밤을 지나고 있는지도 모릅니다. 하지만 포기해서는 안 됩니다. 팥죽을 쑤어 액운을 쫓는 풍습처럼, 우리가 함께 힘을 모아 실천한다면 이 어둠을 몰아내고 새로운 태양을 맞이할 수 있습니다. 지속가능성은 가장 어두운 순간에도 희망을 잃지 않고, 새로운 시작을 믿는 끈기입니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">소한 (小寒)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-23">읽기</button></div>
+                        <div id="ko-23">'작은 추위'라는 이름의 소한입니다. 하지만 저는 종종 대한보다 더 강력한 추위를 몰고 오죠. 저는 '이름과 실체는 다를 수 있다'는 교훈을 줍니다. 많은 기업과 국가들이 '녹색'이나 '친환경'이라는 이름으로 자신들의 활동을 포장하지만, 그 실체는 여전히 환경을 파괴하는 '그린워싱'인 경우가 많습니다. 지속가능 발전은 그 이름에 현혹되지 않고, 실질적인 변화를 만들어내는지를 날카롭게 감시하는 것입니다. '소한'의 추위가 이름과 다르듯, 우리는 선언이 아닌 실제 행동으로 지속가능성을 증명해야 합니다.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">대한 (大寒)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-24">읽기</button></div>
+                        <div id="ko-24">겨울의 마지막, 대한입니다. 저는 '마지막 고비'와 '새로운 순환의 준비'를 상징합니다. 제 추위가 마지막 기승을 부리고 나면, 마침내 따스한 입춘이 다시 찾아옵니다. 인류가 지속가능한 사회로 전환하는 과정은 이 '대한'의 추위처럼 힘들고 고통스러운 마지막 고비가 될 수 있습니다. 에너지 시스템을 바꾸고, 생활 방식을 전환하는 것은 많은 희생과 노력을 요구할 것입니다. 하지만 이 마지막 추위를 이겨내야만 우리는 새로운 봄을 맞이할 수 있습니다. 지속가능성은 더 나은 미래를 위해 기꺼이 현재의 어려움을 감내하는 용기입니다.</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered the 24 Solar Terms, symbols of nature's cycle, to hear your wisdom on a sustainable future for the Earth.</p>
+                    
+                    <h2 class="season-title">A. Spring (春)</h2>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">Ipchun (立春)</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div>
+                        <div id="en-1">Greetings, I am Ipchun, heralding all beginnings. I am a symbol of hope, meaning 'spring enters.' Sustainable development must also greet a new 'Ipchun.' We cannot attach blessings to our destructive ways of growth. Now is the time to declare a new spring in our relationship with the Earth. This means a fundamental shift, setting 'respect for life' as the new standard for all policies and technological development. It is time to plant seeds of hope so that the energy of true prosperity may grace human civilization.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">Usu (雨水)</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div>
+                        <div id="en-2">I am Usu, who melts the snow into rain. My role is to thaw the frozen ground and sprout new life. The greatest barrier to sustainability is 'frozen indifference.' I believe we need a 'spring rain of knowledge' to melt this indifference. Accurate information and education about the severity of the climate crisis and the importance of biodiversity must permeate society. When this rain of knowledge soaks people's hearts, frozen perceptions will melt, and the seeds of action for a sustainable future will sprout.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">Gyeongchip (驚蟄)</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div>
+                        <div id="en-3">I am Gyeongchip, who awakens all hibernating creatures. Just as insects are startled awake by my thunder, humanity must now awaken from its slumber of complacency. I propose the establishment of a powerful 'warning system.' We need a system that sounds a global alarm when we approach Earth's ecological tipping points, prompting immediate action. There is no more time to linger in the drowsy sleep of "it's still okay." Sustainability begins when we are startled awake by the thunder of crisis and immediately take action.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">Chunbun (春分)</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div>
+                        <div id="en-4">I am Chunbun, who divides the day and night equally. I symbolize 'balance and harmony.' The core of sustainable development is this very balance. Humanity has tilted too far toward economic development (day), neglecting environmental conservation (night). I propose a 'balance of responsibilities' between developed and developing nations. Developed nations, which have historically emitted more carbon, must bear greater responsibility and support developing nations with technology and finance to achieve green growth. Just as all things are peaceful when day and night are in harmony, Earth's sustainability can be achieved when all nations share fair responsibilities.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">Cheongmyeong (淸明)</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div>
+                        <div id="en-5">I am Cheongmyeong, who makes the sky clear and bright. Like my name, I value 'transparency.' For sustainable development, all information must be disclosed 'cheongmyeong-ly' (clearly). Corporations must transparently disclose their carbon emissions and environmental impact, and governments must clearly explain all environmental policy processes to the public. Just as everything is visible under a clear sky, when information is transparent, citizens can make informed judgments and properly monitor corporations and governments. Sustainability can only be built on transparent communication based on trust.</div>
+                    </div>
+                    <div class="term-item">
+                        <div class="term-header"><span class="term-title">Gogu (穀雨)</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div>
+                        <div id="en-6">I am Gogu, the spring rain that enriches all grains. I symbolize 'investment for the future.' Just as a farmer sows seeds in spring for a bountiful autumn, we must now invest generously in 'green technology' and 'education for future generations' for a sustainable future. These investments may not show immediate results. But without this rain of investment, there will be no harvest for future generations. As the proverb says, "If there's a drought on Gogu, the land will be dry," if we spare investment for the future now, the future of humanity will inevitably become barren.</div>
+                    </div>
+                    
+                    <h2 class="season-title summer">B. Summer (夏)</h2>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Ipha (立夏)</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">I am Ipha, who opens the gates of summer. I herald the 'start of growth.' Sustainable development is no longer about stopping growth; it is time to start a new form of 'green growth.' We must abandon the old growth model based on fossil fuels and transition to a new paradigm based on renewable energy, a circular economy, and eco-friendly technology. Just as all things grow lush and green in my season, we must foster a sustainable industrial ecosystem to begin a dynamic growth that creates new jobs and added value.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Soman (小滿)</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">I am Soman, when all things gradually begin to fill up. I represent 'gradual fulfillment.' A sustainable society is not built overnight. While grand changes are important, it is the process of small, everyday actions accumulating to fill the entire society that is needed. When individual use of tumblers, corporate energy-saving efforts, and community recycling activities gradually build up and spread, society will become 'soman' (full) with sustainability. The effort of every member filling their part, little by little, is crucial.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Mangjong (芒種)</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div><div id="en-9">I am Mangjong, the best time for sowing seeds. I speak to the importance of 'timing.' Even the best seeds cannot sprout if the timing is missed. There is a 'golden time' for responding to the climate crisis. Scientists have warned us many times. Now is the time of 'Mangjong' to act. We must not waste any more time on discussions. We must immediately sow the seeds of concrete policies for carbon reduction and plant the seeds of education for future generations. If we miss this time, we may have no future to harvest.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Haji (夏至)</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div><div id="en-10">I am Haji, the peak of energy, the longest day. I symbolize the 'turning point of energy.' My hot sun is the most powerful source of energy, but it also causes heatwaves. Like this, energy has two sides. Sustainable development is about shifting this energy paradigm. We must minimize destructive energies like fossil fuels and maximize the use of renewable energies that harmonize with nature, such as my sunlight and the wind. Just as the nights begin to lengthen after the longest day, we have reached the peak of energy consumption and must now transition to efficient energy use.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Soseo (小暑)</span><button class="speak-btn" data-lang="en-US" data-target="en-11">Read</button></div><div id="en-11">I am Soseo, the beginning of the real heat. I warn of the 'beginning of a crisis.' My heat is still bearable, but it foretells the coming inferno of Daeseo. The extreme weather we are experiencing now might just be 'Soseo.' If we ignore these small warnings, we will soon face the irrecoverable disaster of 'Daeseo.' Sustainability is about developing the 'adaptive capacity' to respond sensitively to these early warnings and act preemptively before a greater crisis hits. One who cannot prepare for a small heat cannot overcome a great one.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Daeseo (大暑)</span><button class="speak-btn" data-lang="en-US" data-target="en-12">Read</button></div><div id="en-12">I am Daeseo, the hottest time. I symbolize 'extreme conditions' and the 'life force' that persists within them. The sweltering heat exhausts everything, yet crops grow most vigorously at this time. The Earth is now facing an extreme climate crisis like 'Daeseo.' But even in this crisis, I see hope. Extreme situations can bring out the best of human innovation and cooperation. The global effort to overcome this crisis, like crops growing in the heat, can be an opportunity for humanity to mature and blossom into a new civilization.</div></div>
+
+                    <h2 class="season-title autumn">C. Autumn (秋)</h2>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Ipchu (立秋)</span><button class="speak-btn" data-lang="en-US" data-target="en-13">Read</button></div><div id="en-13">I am Ipchu, the start of autumn. I bring a 'time for reflection.' As the hot summer passes and cool breezes blow, we reflect on the past season and prepare for the future. The same goes for sustainable development. Now that the heat of reckless growth has subsided, we must reflect on the errors of the industrial age. We need to coolly look back on why we are in this crisis and what we did wrong. Based on that reflection, we must plan what to prepare for the coming future. Progress without reflection only leads to more errors.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Cheoseo (處暑)</span><button class="speak-btn" data-lang="en-US" data-target="en-14">Read</button></div><div id="en-14">I am Cheoseo, when the heat recedes. As the proverb says, "mosquitoes' mouths become crooked," I lead the 'decline of the problem.' I symbolize the hope that if we move in the right direction, even the most serious problems will eventually lose their power. The current climate crisis is no different. If we work together to reduce carbon emissions and restore ecosystems, the momentum of rising temperatures will also be broken. Sustainability is not the complete elimination of a problem, but the process of breaking its momentum and bringing it to a manageable level.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Baekro (白露)</span><button class="speak-btn" data-lang="en-US" data-target="en-15">Read</button></div><div id="en-15">I am Baekro, when white dew forms on the leaves. I speak of the importance of 'small but clear indicators.' The small fact that the night temperature has dropped below the dew point signals the huge change that autumn is now in full swing. Sustainable development also requires such clear indicator management. We must continuously monitor key indicators of the Earth's health, such as atmospheric CO2 concentration, ocean acidity, and the population of endangered species, and respond sensitively to their changes. Just as a small dewdrop signals the change of season, objective data must determine the direction of our actions.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Chubun (秋分)</span><button class="speak-btn" data-lang="en-US" data-target="en-16">Read</button></div><div id="en-16">I am Chubun, when day and night become equal again. I symbolize the justice of 'harvest and distribution.' The joy of a bountiful harvest is meaningful only when shared by all. Sustainable development must be accompanied by a 'just transition.' If workers or communities are harmed in the process of energy transition, a social safety net must be prepared for them. The benefits of green growth must not be concentrated in certain classes or nations. If the balance of Chunbun was for sowing seeds, my balance is for fairly distributing the harvested fruits.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Hallo (寒露)</span><button class="speak-btn" data-lang="en-US" data-target="en-17">Read</button></div><div id="en-17">I am Hallo, when cold dew forms. I carry a 'warning amidst beauty.' The autumn leaves of my season are at their peak beauty, but they are also a sign that winter is coming. Human civilization today might be living through its most brilliant 'Hallo' period. But we must not delude ourselves that this prosperity will last forever. Sustainability is the wisdom to face the coming crisis amidst this beauty. Like a farmer who prepares for winter while enjoying the autumn foliage, we must not be complacent in our current abundance but prepare for the coming crisis.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Sanggang (霜降)</span><button class="speak-btn" data-lang="en-US" data-target="en-18">Read</button></div><div id="en-18">I am Sanggang, when frost descends. I signal the end of autumn and the 'deadline for preparation.' Just as farming is no longer possible after the frost, the time given to us is not infinite. The 'tipping point' of climate change is like the first frost. Once we cross that point, it is nearly impossible to go back. Efforts for sustainable development are an urgent task that can no longer be postponed. Just as we must hurry to prepare for winter before the leaves fall, we must complete our actions before the irreversible moment of 'Sanggang' arrives.</div></div>
+
+                    <h2 class="season-title winter">D. Winter (冬)</h2>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Ipdong (立冬)</span><button class="speak-btn" data-lang="en-US" data-target="en-19">Read</button></div><div id="en-19">I am Ipdong, the beginning of winter. I symbolize the wisdom of 'preparation and storage.' Animals prepare for hibernation, and people prepare kimchi for the long winter. Sustainable development is about building 'resilience' to prepare for future crises. We must build social systems that can withstand the more frequent natural disasters caused by climate change. We also need to develop technology to store renewable energy (ESS) and preserve resources for future generations. We must prepare our 'kimchi of energy and resources' to endure the coming crisis.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Soseol (小雪)</span><button class="speak-btn" data-lang="en-US" data-target="en-20">Read</button></div><div id="en-20">I am Soseol, when the first snow falls. I speak of the recovery of 'a new purity.' Just as the first snow covers the world in white, we too must reflect on our civilization tainted by greed and selfishness and look at nature with a pure heart. Sustainable development cannot be achieved by technology or policy alone. A fundamental change in values is needed, where nature is seen not as an object to be dominated, but as a companion. When all of humanity recovers a pure heart that respects life, like the snow that blankets the world, the true era of sustainability will begin.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Daeseol (大雪)</span><button class="speak-btn" data-lang="en-US" data-target="en-21">Read</button></div><div id="en-21">I am Daeseol, when heavy snow falls. I symbolize a time of 'rest and recharge.' When my season comes, farmers stop their work and rest, looking forward to the next year. Human civilization, which has relentlessly pursued growth, now needs a 'rest.' We need to break free from the cycle of infinite consumption and production, pause to reflect on our lives, and recharge. Sustainable development is not about going faster and further, but includes the wisdom to sometimes slow down, rest, and restore our relationships with our community and nature.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Dongji (冬至)</span><button class="speak-btn" data-lang="en-US" data-target="en-22">Read</button></div><div id="en-22">I am Dongji, the longest night. I symbolize 'hope in the deepest darkness.' Just as the days begin to lengthen after my date, the seeds of a new beginning are conceived even in the deepest despair. The Earth may now be passing through its longest night, the climate crisis. But we must not give up. Like the custom of eating red bean porridge to ward off evil spirits, if we join forces and act, we can drive out this darkness and greet a new sun. Sustainability is the perseverance to not lose hope even in the darkest moment and to believe in a new beginning.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Sohan (小寒)</span><button class="speak-btn" data-lang="en-US" data-target="en-23">Read</button></div><div id="en-23">I am Sohan, whose name means 'minor cold.' But I often bring a cold more severe than Daeseol ('major cold'). I teach the lesson that 'name and reality can be different.' Many corporations and nations package their activities with names like 'green' or 'eco-friendly,' but their reality is often 'greenwashing' that still destroys the environment. Sustainable development is about not being deceived by names and sharply monitoring whether real change is being made. Just as the cold of 'Sohan' differs from its name, we must prove sustainability through real actions, not declarations.</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">Daehan (大寒)</span><button class="speak-btn" data-lang="en-US" data-target="en-24">Read</button></div><div id="en-24">I am Daehan, the end of winter. I symbolize the 'final trial' and 'preparation for a new cycle.' After my cold makes its last stand, the warm Ipchun finally returns. The transition to a sustainable society for humanity could be a final, difficult trial like the cold of 'Daehan.' Changing energy systems and transforming lifestyles will require much sacrifice and effort. But only by overcoming this final cold can we greet a new spring. Sustainability is the courage to willingly endure present difficulties for the sake of a better future.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。自然の循環を象徴する二十四節気の皆様をお招きし、それぞれの知恵を通じて地球の持続可能な未来についてのご意見を伺いたいと思います。</p>
+                    
+                    <h2 class="season-title">A. 春 (はる)</h2>
+                    <div class="term-item"><div class="term-header"><span class="term-title">立春 (りっしゅん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">こんにちは、全ての始まりを告げる立春です。私は「春が立つ」という希望の象徴です。持続可能な発展も、新たな「立春」を迎えるべきです。これまでの破壊的な成長方式に「立春大吉」の札を貼ることはできません。今こそ私たちは、地球との関係において新しい春を宣言すべきです。これは単なるスローガンに留まらず、すべての政策と技術開発の方向性を「生命尊重」という新しい基準に設定する、根本的な転換を意味します。人類の文明に真の「建陽多慶」の気が宿るよう、希望の種を蒔くべき時です。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">雨水 (うすい)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">私は雪を溶かし雨に変える雨水です。凍てついた大地を溶かし、生命の芽を吹かせるのが私の役割です。地球の持続可能性を阻む最大の障壁は、まさに「凍りついた無関心」です。私はこの無関心を溶かす「知識の春雨」が必要だと考えます。気候危機の深刻さ、生物多様性の重要性に関する正確な情報と教育が、社会の隅々まで浸透しなければなりません。この知識の雨が人々の心を潤すとき、初めて凍りついた認識が溶け、持続可能な未来のための実践の芽が吹くでしょう。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">啓蟄 (けいちつ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">冬ごもりしていた万物を目覚めさせる啓蟄です。私の雷鳴に虫たちが驚き目覚めるように、今こそ人類も安逸の冬眠から目覚めなければなりません。私は強力な「警報システム」の構築を提案します。地球の生態学的限界点に達した時、全地球的に警報を鳴らし、即時の行動を促すシステムが必要です。もはや「まだ大丈夫」という安易な眠りに落ちている時間はありません。持続可能性とは、危機を告げる雷鳴に驚き目覚め、すぐに行動に移すことから始まるのです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">春分 (しゅんぶん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">昼と夜の長さを公平に分ける春分です。私は「均衡と調和」を象徴します。持続可能な発展の核心は、まさにこの均衡です。現在、人類は経済発展（昼）に偏りすぎ、環境保全（夜）を疎かにしてきました。私は先進国と開発途上国との間の「責任の均衡」を提案します。歴史的により多くの炭素を排出してきた先進国はより大きな責任を負い、開発途上国にはグリーン成長ができるよう技術と財政を支援すべきです。昼と夜が調和して万物が平和であるように、全ての国が公正な責任を分かち合う時、地球の持続可能性も達成できるのです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">清明 (せいめい)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">空を清く明るくする清明です。私の名前のように、私は「透明性」の価値を重んじます。持続可能な発展のためには、全ての情報が「清明」に公開されなければなりません。企業は自社の炭素排出量と環境影響を透明に公開し、政府は環境政策の全過程を国民に明確に説明すべきです。晴れ渡った空の下ですべてがよく見えるように、情報が透明に公開される時、市民は正しい判断を下し、企業と政府を適切に監視することができます。持続可能性は、信頼に基づく透明なコミュニケーションの上でのみ築くことができます。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">穀雨 (こくう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">すべての穀物を潤す春雨を降らせる穀雨です。私は「未来のための投資」を象徴します。農夫が豊かな秋のために春に種を蒔くように、私たちも持続可能な未来のために今すぐ「グリーン技術」と「未来世代の教育」に惜しみなく投資すべきです。今の投資は、すぐには目に見える成果がないかもしれません。しかし、この投資の雨がなければ、未来の世代が収穫する穀物はないでしょう。「穀雨に日照りだと地が干上がる」ということわざのように、今未来への投資を惜しめば、人類の未来は乾ききってしまうほかありません。</div></div>
+
+                    <h2 class="season-title summer">B. 夏 (なつ)</h2>
+                    <div class="term-item"><div class="term-header"><span class="term-title">立夏 (りっか)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">夏の扉を開く立夏です。私は「成長の始まり」を告げます。持続可能な発展とは、もはや成長を止めることではありません。新しい形の「グリーン成長」を始めるべき時です。化石燃料ベースの古い成長モデルを捨て、再生可能エネルギー、循環経済、環境配慮型技術を基盤とする新しい成長パラダイムへと転換すべきです。私の時期に万物が青々と育つように、持続可能な産業生態系を造成し、新たな雇用と付加価値を創出するダイナミックな成長を始めるべきです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">小満 (しょうまん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">万物が次第に満ちてくる小満です。私は「漸進的な充足」を意味します。持続可能な社会は一朝一夕には築けません。大きな変革も重要ですが、日常の小さな実践が集まって社会全体を満たしていく過程が必要です。個人のタンブラー使用、企業の省エネ努力、地域社会のリサイクル活動などが徐々に積み重なり広がる時、社会は持続可能性で「小満」を迎えるでしょう。全ての構成員がそれぞれの場所で少しずつ満たしていく努力が重要です。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">芒種 (ぼうしゅ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">種まきに最適な時期、芒種です。私は「適切な時期（タイミング）」の重要性を語ります。どんなに良い種も、時を逃せば芽を出すことはできません。気候危機への対応にも「ゴールデンタイム」があります。科学者たちは既に何度も警告しています。今こそが行動すべき「芒種」の時期なのです。もはや議論ばかりして時間を無駄にしてはなりません。今すぐ炭素削減のための具体的な政策を播種し、未来世代のための教育の種を蒔くべきです。時を逃せば、私たちが収穫すべき未来そのものがなくなるかもしれません。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">夏至 (げし)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div><div id="ja-10">昼が最も長い、エネルギーの絶頂、夏至です。私は「エネルギーの転換点」を象徴します。私の熱い太陽は最も強力なエネルギー源ですが、同時に猛暑の原因にもなります。このように、エネルギーには両面性があります。持続可能な発展とは、このエネルギーのパラダイムを転換することです。化石燃料のような破壊的なエネルギーを最小化し、私の陽光のような太陽光、風のような風力など、自然と調和した再生可能エネルギーの利用を最大化すべきです。昼が最も長い日を境に夜が長くなるように、私たちはエネルギー消費の頂点を極め、今こそ効率的なエネルギー利用へと転換すべき時です。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">小暑 (しょうしょ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-11">読む</button></div><div id="ja-11">本格的な暑さの始まり、小暑です。私は「危機の始まり」を警告します。私の暑さはまだ耐えられますが、やがて訪れる大暑の猛暑を予告しています。今私たちが経験している異常気象は、あるいは「小暑」に過ぎないかもしれません。この小さな警告を無視すれば、私たちは遠からず回復不可能な「大暑」の災厄に見舞われるでしょう。持続可能性とは、このような初期警告に敏感に反応し、より大きな危機が訪れる前に先制的に対応する「適応能力」を養うことです。小さな暑さに備えられなければ、大きな暑さを乗り越えることはできません。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">大暑 (たいしょ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-12">読む</button></div><div id="ja-12">最も暑い時期、大暑です。私は「極限の状況」とその中でも止まらない「生命力」を象徴します。蒸し風呂のような暑さはすべてを疲れさせますが、農作物はこの時に最も旺盛に育ちます。現在、地球は「大暑」のような極限の気候危機に直面しています。しかし、私はこの危機の中にも希望を見ます。極限の状況は、人類に最高の革新と協力を引き出すことができます。この危機を克服するための全地球的な努力は、まるで暑さの中で育つ穀物のように、人類を一段と成熟させ、新しい文明を開花させるきっかけとなり得るのです。</div></div>
+
+                    <h2 class="season-title autumn">C. 秋 (あき)</h2>
+                    <div class="term-item"><div class="term-header"><span class="term-title">立秋 (りっしゅう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-13">読む</button></div><div id="ja-13">秋の始まり、立秋です。私は「省察の時間」をもたらします。暑い夏が過ぎ、朝晩に涼しい風が吹くと、私たちは過ぎ去った季節を振り返り、未来に備えます。持続可能な発展も同様です。無分別な成長の熱気が収まった今、私たちは過去の産業化時代の過ちを省察すべきです。なぜ私たちがこの危機に陥ったのか、何を誤ったのかを冷静に振り返るべきです。そしてその省察を基に、来るべき未来のために何を準備すべきかを計画すべきです。省察なき前進は、また別の過ちを生むだけです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">処暑 (しょしょ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-14">読む</button></div><div id="ja-14">暑さが退く処暑です。「蚊の口が曲がる」ということわざのように、私は「問題の衰退」を導きます。私たちが正しい方向に進めば、どんなに深刻に見える問題もいずれは力を失うという希望を、私は象徴しています。現在の気候危機も同じです。私たちが力を合わせて炭素排出を減らし、生態系を回復し始めれば、気温上昇の勢いも衰えるでしょう。持続可能性とは、問題の完全な消滅ではなく、その勢いを削ぎ、私たちが制御可能なレベルにしていく過程なのです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">白露 (はくろ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-15">読む</button></div><div id="ja-15">草葉に白い露が結ぶ白露です。私は「小さいが明確な指標」の重要性を語ります。夜の気温が露点以下に下がったという小さな事実が、もはや秋たけなわであるという大きな変化を知らせます。持続可能な発展にも、このような明確な指標管理が必要です。大気中の二酸化炭素濃度、海洋の酸性度、絶滅危惧種の個体数など、私たちは地球の健康状態を知らせる核心的な指標を継続的に観察し、その変化に敏感に反応すべきです。小さな露の玉が季節の変化を告げるように、客観的なデータが私たちの行動の方向を決定すべきです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">秋分 (しゅうぶん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-16">読む</button></div><div id="ja-16">再び昼と夜の長さが同じになる秋分です。私は「収穫と分配」の正義を象徴します。豊かな秋の収穫の喜びは、皆で分かち合ってこそ意味があります。持続可能な発展は、「公正な移行」を伴わなければなりません。エネルギー転換の過程で被害を受ける労働者や地域社会があれば、彼らのための社会的セーフティネットを用意すべきです。グリーン成長の恩恵が特定の階層や国に集中してはなりません。春分の均衡が種を蒔くためのものであったなら、私の均衡は収穫した果実を公平に分けるためのものなのです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">寒露 (かんろ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-17">読む</button></div><div id="ja-17">冷たい露が結ぶ寒露です。私は「美しさの中の警告」を内包しています。私の時期の紅葉は絶頂に達し美しいですが、同時に冬が近づいていることを知らせる信号でもあります。現代の人類文明は、もしかすると最も華やかな「寒露」の時期を過ごしているのかもしれません。しかし、この豊かさが永遠に続くと錯覚してはなりません。持続可能性とは、この美しさの中で近づく危機を直視する知恵です。紅葉の美しさを楽しみながらも、冬支度を急ぐ農夫のように、私たちは現在の豊かさに安住せず、来るべき危機に備えなければなりません。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">霜降 (そうこう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-18">読む</button></div><div id="ja-18">霜が降りる霜降です。私は秋の終わりであり、「準備の締め切り」を告げます。霜が降りればもはや農作業はできないように、私たちに与えられた時間も無限ではありません。気候変動の「ティッピング・ポイント」は、まるで初霜のようです。一度その地点を越えれば、元に戻すことはほぼ不可能です。持続可能な発展のための努力は、もはや先延ばしにできない緊急の課題です。落葉の前に冬支度を急がねばならぬように、取り返しのつかない「霜降」の瞬間が来る前に、私たちは行動を終えなければなりません。</div></div>
+
+                    <h2 class="season-title winter">D. 冬 (ふゆ)</h2>
+                    <div class="term-item"><div class="term-header"><span class="term-title">立冬 (りっとう)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-19">読む</button></div><div id="ja-19">冬の始まり、立冬です。私は「備えと貯蔵」の知恵を象徴します。動物たちは冬眠を準備し、人々はキムチを漬けて長い冬に備えます。持続可能な発展とは、未来の危機に備える「レジリエンス（回復力）」を養うことです。私たちは気候変動によってより頻繁になる自然災害に備えることができる社会システムを構築すべきです。また、再生可能エネルギーを貯蔵する技術（ESS）を開発し、未来の世代が使う資源を保全するなど、来るべき危機を耐え抜くための「エネルギーと資源の冬支度」をしなければなりません。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">小雪 (しょうせつ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-20">読む</button></div><div id="ja-20">初雪が降る小雪です。私は「新しい純粋性」の回復を語ります。初雪が世界を白く覆うように、私たちも貪欲と利己心で汚れた文明を反省し、純粋な心で自然を見つめ直すべきです。持続可能な発展は、技術や政策だけで成し遂げられるものではありません。自然を支配の対象ではなく、私たちと共に歩む伴侶と見なす、根本的な価値観の変化が必要です。世界を白く覆う雪のように、すべての人類が生命を尊重する純粋な心を取り戻す時、真の持続可能性の時代が開かれるでしょう。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">大雪 (たいせつ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-21">読む</button></div><div id="ja-21">大雪が降る大雪です。私は「休息と再充電」の時間を象徴します。私の時期になると農夫たちは農作業を休み、休息を取りながら来年を期します。終わりなき成長だけを追求してきた人類文明にも、今や「休息」が必要です。無限の消費と生産の輪から抜け出し、しばし立ち止まって私たちの生活を振り返り、再充電する時間が必要です。持続可能な発展とは、より速く、より多く進むことではなく、時には速度を落とし休息を取りながら、共同体と自然との関係を回復する知恵をも含むのです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">冬至 (とうじ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-22">読む</button></div><div id="ja-22">夜が最も長い日、冬至です。私は「最も深い闇の中の希望」を象徴します。私の日を境に再び昼が長くなり始めるように、どんなに深い絶望の中にも新しい始まりの種は宿っています。今、地球は気候危機という最も長い夜を過ごしているのかもしれません。しかし、諦めてはなりません。小豆粥を作って厄払いをする風習のように、私たちが力を合わせて実践すれば、この闇を追い払い、新しい太陽を迎えることができます。持続可能性とは、最も暗い瞬間にも希望を失わず、新しい始まりを信じる粘り強さです。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">小寒 (しょうかん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-23">読む</button></div><div id="ja-23">「小さな寒さ」という名の小寒です。しかし、私はしばしば大寒よりも厳しい寒さをもたらします。私は「名前と実体は異なることがある」という教訓を与えます。多くの企業や国が「グリーン」や「エコ」という名で自らの活動を装いますが、その実体は依然として環境を破壊する「グリーンウォッシング」であることが多いです。持続可能な発展とは、その名前に惑わされず、実質的な変化を生み出しているかを鋭く監視することです。「小寒」の寒さが名前と異なるように、私たちは宣言ではなく、実際の行動で持続可能性を証明しなければなりません。</div></div>
+                    <div class="term-item"><div class="term-header"><span class="term-title">大寒 (だいかん)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-24">読む</button></div><div id="ja-24">冬の最後、大寒です。私は「最後の試練」と「新しい循環の準備」を象徴します。私の寒さが最後の猛威を振るった後、ついに暖かい立春が再び訪れます。人類が持続可能な社会へと転換する過程は、この「大寒」の寒さのように、辛く苦しい最後の試練となるかもしれません。エネルギーシステムを変え、生活様式を転換することは、多くの犠牲と努力を要するでしょう。しかし、この最後の寒さを乗り越えてこそ、私たちは新しい春を迎えることができるのです。持続可能性とは、より良い未来のために、進んで現在の困難を耐え忍ぶ勇気です。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+
+                    let lang;
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

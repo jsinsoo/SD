@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지속 가능한 지구를 위한 17개 광역자치단체 회의</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #3498db;
+            border-bottom: none;
+        }
+        .speech-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 5px solid #3498db;
+            background-color: #ecf5fb;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+        .speech-block:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .region-intro {
+            font-style: italic;
+            color: #2980b9;
+            background-color: #d6eaf8;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-left: 10px;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .full-listen-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .full-listen-buttons button {
+            background-color: #007bff;
+            padding: 10px 15px;
+            font-size: 1em;
+            margin: 5px;
+        }
+        .full-listen-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .chairperson {
+            background-color: #fef9e7;
+            border-left-color: #f1c40f;
+        }
+        .chairperson h3 {
+            color: #f1c40f;
+        }
+    </style>
+    <script>
+        function speak(text, lang) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // 기존 음성출력 중지
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = lang;
+                utterance.rate = 0.95;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('죄송합니다. 이 브라우저에서는 음성 합성을 지원하지 않습니다.');
+            }
+        }
+
+        // 개별 듣기 버튼용 함수
+        function speakText(buttonElement) {
+            const textToSpeak = buttonElement.nextElementSibling.textContent;
+            const langClass = buttonElement.parentElement.className;
+            let langCode = '';
+            if (langClass.includes('lang-ko')) langCode = 'ko-KR';
+            else if (langClass.includes('lang-en')) langCode = 'en-US';
+            else if (langClass.includes('lang-ja')) langCode = 'ja-JP';
+            speak(textToSpeak, langCode);
+        }
+
+        // 전체 듣기 버튼용 함수
+        function listenToAll(langClass, langCode) {
+            const textElements = document.querySelectorAll(`.${langClass} span`);
+            let fullTextArray = [];
+            textElements.forEach(span => {
+                fullTextArray.push(span.textContent);
+            });
+            const fullText = fullTextArray.join('.\n\n');
+            speak(fullText, langCode);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>지속 가능한 지구를 위한 17개 광역자치단체 회의</h1>
+
+        <div class="full-listen-buttons">
+            <button onclick="listenToAll('lang-ko', 'ko-KR')">🇰🇷 한국어 전체 듣기</button>
+            <button onclick="listenToAll('lang-en', 'en-US')">🇬🇧 영어 전체 듣기</button>
+            <button onclick="listenToAll('lang-ja', 'ja-JP')">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 서울특별시 대표의 발언</h3>
+            <div class="region-intro">
+                안녕하십니까. 대한민국의 수도, 천만 시민의 심장 서울에서 왔습니다. 저희의 상징, 도시를 가로지르는 생명의 젖줄 **한강**의 이름으로 이 회의를 시작하겠습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>한강이 과거의 오염을 딛고 시민의 쉼터로 다시 태어났듯, 우리 지구도 지금의 위기를 극복하고 다시 푸르게 살아날 수 있습니다. 서울은 가장 많은 에너지를 소비하고, 가장 많은 쓰레기를 배출하는 도시 중 하나로서 무거운 책임감을 느낍니다. 이제는 '한강의 기적'을 넘어, '지구의 기적'을 만들어야 할 때입니다. 서울부터 대중교통 이용을 늘리고, 제로 웨이스트를 실천하여 지속가능한 도시의 모범을 보이겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Just as the Hangang River was reborn as a resting place for citizens after overcoming past pollution, our Earth can also overcome the current crisis and revive in green. As one of the cities that consumes the most energy and produces the most waste, Seoul feels a heavy sense of responsibility. It is now time to move beyond the 'Miracle on the Han River' and create a 'Miracle on Planet Earth.' Starting with Seoul, we will set an example for a sustainable city by increasing public transportation use and practicing zero waste.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>漢江が過去の汚染を乗り越え、市民の憩いの場として生まれ変わったように、私たちの地球も現在の危機を克服し、再び青々と生き返ることができます。ソウルは最も多くのエネルギーを消費し、最も多くのごみを排出する都市の一つとして、重い責任を感じています。もはや「漢江の奇跡」を超え、「地球の奇跡」を成し遂げるべき時です。ソウルから公共交通の利用を増やし、ゼロ・ウェイストを実践して、持続可能な都市の模範を示します。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>부산광역시 대표의 발언</h3>
+            <div class="region-intro">
+                대한민국 제2의 도시, 바다의 도시 부산에서 왔습니다. 저희 부산의 상징인 **갈매기**처럼 힘찬 날갯짓으로 의견을 시작하겠습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희 갈매기들이 플라스틱 조각을 먹이로 착각하는 일이 점점 늘고 있습니다. 해양 쓰레기 문제는 더 이상 외면할 수 없는 부산, 나아가 전 지구의 문제입니다. 지속가능한 해양산업과 친환경 항만 시스템을 구축하여, 우리 갈매기들이 플라스틱이 아닌 힘찬 물고기를 물고 날아오를 수 있는 깨끗한 바다를 만들어야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our seagulls are increasingly mistaking plastic fragments for food. The problem of marine debris is no longer an issue that Busan, and indeed the entire planet, can ignore. We must build a sustainable marine industry and eco-friendly port systems to create a clean sea where our seagulls can soar with vigorous fish in their beaks, not plastic.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちのカモメがプラスチックの欠片を餌と間違えることがますます増えています。海洋ごみ問題はもはや目を背けることのできない、釜山、ひいては全地球の問題です。持続可能な海洋産業と環境にやさしい港湾システムを構築し、私たちのカモメがプラスチックではなく、元気な魚をくわえて飛び立てるきれいな海を作らなければなりません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>대구광역시 대표의 발언</h3>
+            <div class="region-intro">
+                '컬러풀 대구'! 섬유와 패션의 도시, 대구에서 왔습니다. 대구의 시조(市鳥)인 용맹한 **수리**의 눈으로 문제를 바라보겠습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>우리가 입는 화려한 옷들이 만들어지고 버려지는 과정에서 얼마나 많은 물이 오염되고 탄소가 배출되는지, 저 높은 하늘을 나는 수리의 눈으로 보면 똑똑히 보일 겁니다. 이제 '패스트 패션'의 시대를 끝내야 합니다. 대구는 버려지는 옷감을 재활용하는 '업사이클링' 산업을 선도하여, 지속가능한 패션이 얼마나 멋지고 아름다운지 전 세계에 보여주겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Through the eyes of a brave eagle, our city bird, we can clearly see how much water is polluted and carbon is emitted in the process of making and discarding the colorful clothes we wear. It is time to end the era of 'fast fashion.' Daegu will lead the 'upcycling' industry, recycling discarded fabrics, to show the world how cool and beautiful sustainable fashion can be.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちが着る華やかな服が作られ、捨てられる過程で、どれほど多くの水が汚染され、炭素が排出されるか、あの高い空を飛ぶワシの目で見ればはっきりと見えるでしょう。もはや「ファストファッション」の時代を終わらせるべきです。大邱は捨てられる生地をリサイクルする「アップサイクリング」産業をリードし、持続可能なファッションがどれほど素敵で美しいかを全世界に示します。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>인천광역시 대표의 발언</h3>
+            <div class="region-intro">
+                세계로 열린 하늘길과 바닷길, 대한민국의 관문 인천에서 왔습니다. 장수와 평화를 상징하는 저희 시의 상징, **두루미**의 마음으로 말씀드립니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>전 세계 사람들이 저희 인천을 통해 오가며 막대한 양의 탄소를 배출합니다. 이제는 여행의 패러다임을 바꿔야 합니다. 저희 두루미가 먼 길을 날면서도 자연의 순리에 따르듯, 우리도 '탄소 발자국'을 최소화하는 '공정 여행', '지속가능한 관광'을 실천해야 합니다. 인천국제공항부터 친환경 공항으로 거듭나, 세계인들에게 지속가능한 여행의 첫인상을 심어주겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>People from all over the world come and go through Incheon, emitting vast amounts of carbon. It is time to change the paradigm of travel. Just as our cranes follow the order of nature on their long flights, we too must practice 'fair travel' and 'sustainable tourism' that minimize our 'carbon footprint.' Starting with Incheon International Airport, we will be reborn as an eco-friendly airport, giving world travelers a first impression of sustainable travel.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>全世界の人々が私たち仁川を通じて行き来し、莫大な量の炭素を排出します。今こそ旅行のパラダイムを変えるべきです。私たちの市の象徴であるツルが長い道のりを飛びながらも自然の摂理に従うように、私たちも「カーボンフットプリント」を最小限に抑える「公正な旅行」、「持続可能な観光」を実践しなければなりません。仁川国際空港から環境にやさしい空港として生まれ変わり、世界の人々に持続可能な旅行の第一印象を植え付けます。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>광주광역시 대표의 발언</h3>
+            <div class="region-intro">
+                민주주의의 성지, 예향 광주에서 왔습니다. 묵묵히 도시를 품어온 어머니 같은 산, **무등산**의 정신으로 이야기하겠습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희 광주는 불의에 맞서 정의를 외쳤던 역사를 가지고 있습니다. 지금의 기후 위기야말로 가장 거대한 불의입니다. 이 위기는 가난한 사람들과 미래 세대에게 가장 큰 고통을 안겨주기 때문입니다. 지속가능성이란, 모든 존재가 차별 없이 깨끗한 환경을 누릴 권리를 지키는 '환경 민주주의'입니다. 저희 무등산이 모든 것을 품어주듯, 소외되는 사람 없이 모두가 참여하는 정의로운 전환을 이뤄내야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our city of Gwangju has a history of crying out for justice against injustice. The current climate crisis is the greatest injustice of all, as it inflicts the most suffering on the poor and future generations. Sustainability is 'environmental democracy,' protecting the right of all beings to enjoy a clean environment without discrimination. Just as our Mudeungsan Mountain embraces everything, we must achieve a just transition where everyone participates without being marginalized.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちの光州は、不正に立ち向かい正義を叫んだ歴史を持っています。現在の気候危機こそが、最も巨大な不正義です。この危機は貧しい人々や未来の世代に最も大きな苦痛をもたらすからです。持続可能性とは、すべての存在が差別なく清浄な環境を享受する権利を守る「環境民主主義」です。私たちの無等山がすべてを包み込むように、疎外される人なく、皆が参加する公正な転換を成し遂げなければなりません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>대전광역시 대표의 발언</h3>
+            <div class="region-intro">
+                대한민국의 과학 수도, 대덕연구단지가 있는 대전에서 왔습니다. 좋은 소식을 물어다 주는 저희 시의 상징, **까치**처럼 희망의 메시지를 전하고 싶습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>문제는 명확하고, 위기는 심각합니다. 하지만 우리에게는 과학기술이라는 강력한 무기가 있습니다. 저희 대전의 연구원들이 밤낮으로 개발하는 인공지능, 배터리 기술, 청정에너지 기술이 바로 위기를 기회로 바꿀 '까치의 선물'입니다. 지속가능성은 더 이상 불편함을 감수하는 것이 아니라, 더 스마트하고 효율적인 삶으로 나아가는 '과학적 진보'가 되어야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>The problem is clear, and the crisis is severe. But we have a powerful weapon called science and technology. The AI, battery technology, and clean energy technology that our Daejeon researchers are developing day and night are the 'magpie's gift' that will turn this crisis into an opportunity. Sustainability should no longer be about enduring inconvenience, but about becoming a 'scientific advancement' towards a smarter, more efficient life.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>問題は明確で、危機は深刻です。しかし、私たちには科学技術という強力な武器があります。私たち大田の研究者たちが昼夜を問わず開発している人工知能、バッテリー技術、クリーンエネルギー技術こそが、危機を機会に変える「カササギの贈り物」です。持続可能性はもはや不便を我慢することではなく、よりスマートで効率的な生活へと進む「科学的進歩」でなければなりません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>울산광역시 대표의 발언</h3>
+            <div class="region-intro">
+                대한민국 산업의 심장, 자동차와 조선, 석유화학의 도시 울산입니다. 한때 저희 앞바다를 뛰놀던 **고래**를 기억하며 말씀드립니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희 울산은 화석연료와 중공업을 기반으로 대한민국 경제를 이끌었습니다. 하지만 그 결과, 저희의 상징이었던 고래는 자취를 감췄고, 탄소 배출의 주범이라는 오명도 얻었습니다. 이제 저희는 과거의 영광을 넘어, '탄소 공장'에서 '수소 산업 허브'로 거듭나려 합니다. 고래가 다시 돌아와 춤출 수 있는 깨끗한 바다를 만드는 것, 그것이 저희 울산이 꿈꾸는 진정한 지속가능한 발전입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our city, Ulsan, has led the Korean economy based on fossil fuels and heavy industries. However, as a result, the whales that were once our symbol disappeared, and we earned the stigma of being a major carbon emitter. Now, we are trying to move beyond our past glory and be reborn from a 'carbon factory' into a 'hydrogen industry hub.' Creating a clean sea where whales can return and dance—that is the truly sustainable development that Ulsan dreams of.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちの蔚山は、化石燃料と重化学工業を基盤に大韓民国の経済を牽引してきました。しかしその結果、私たちの象徴であったクジラは姿を消し、炭素排出の主犯という汚名も着せられました。今、私たちは過去の栄光を超え、「炭素工場」から「水素産業ハブ」へと生まれ変わろうとしています。クジラが再び戻ってきて踊れるきれいな海を作ること、それこそが私たち蔚山が夢見る真の持続可能な発展です。</span></p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>경기도 대표의 발언</h3>
+            <div class="region-intro">
+                대한민국에서 가장 많은 사람들이 사는 곳, 경기도에서 왔습니다. 평화의 상징 **비둘기**처럼, 자연과 인간의 평화로운 공존을 이야기하고 싶습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희 경기도는 빠르게 성장하며 수많은 도시들이 생겨났지만, 그 과정에서 많은 숲과 논밭이 사라졌습니다. 이제는 무분별한 팽창을 멈춰야 합니다. 도시와 자연이 서로의 영역을 존중하며 공존하는 '콤팩트 시티'와 '그린벨트'의 지혜가 필요합니다. 저희 비둘기들이 쉴 곳을 찾아 도시의 잿빛 건물 사이를 헤매지 않도록, 도시 안에 더 많은 공원과 숲을 만들어 인간과 자연이 함께 숨 쉴 수 있는 경기도를 만들겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our Gyeonggi Province has grown rapidly with many cities emerging, but in the process, many forests and farmlands have disappeared. Now, we must stop reckless expansion. We need the wisdom of 'compact cities' and 'greenbelts' where cities and nature coexist while respecting each other's territory. So that our doves do not wander between gray city buildings looking for a place to rest, we will create more parks and forests within the cities to make a Gyeonggi Province where humans and nature can breathe together.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちの京畿道は急速に成長し、数多くの都市が生まれましたが、その過程で多くの森や田畑が消えました。もはや無分別な膨張を止めるべきです。都市と自然が互いの領域を尊重し共存する「コンパクトシティ」と「グリーンベルト」の知恵が必要です。私たちのハトが休息の場を求めて都市の灰色の建物の間を彷徨わないよう、都市内により多くの公園や森を作り、人間と自然が共に呼吸できる京畿道を作ります。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>강원특별자치도 대표의 발언</h3>
+            <div class="region-intro">
+                푸른 산과 맑은 물의 고장, 이제는 특별자치도가 된 강원입니다. 저희 강원의 늠름한 상징, **반달가슴곰**의 목소리를 대신 전합니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희 반달가슴곰이 살아가려면 넓고 건강한 숲이 필요합니다. 무분별한 케이블카 설치와 리조트 개발은 곰들의 집을 빼앗는 일입니다. 지속가능한 관광이란, 자연을 구경거리로 소비하는 것이 아니라, 자연 그대로의 모습을 존중하고 보존하며 그 일부가 되는 것입니다. 저희 곰들이 겨울잠을 잘 자고, 봄이면 건강하게 새끼를 낳을 수 있도록, 강원의 숲을 인간의 간섭으로부터 지켜주십시오.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our Asiatic black bears need vast, healthy forests to live. Reckless installation of cable cars and resort development are taking away the bears' homes. Sustainable tourism is not about consuming nature as a spectacle, but about respecting and preserving it as it is and becoming a part of it. Please protect the forests of Gangwon from human interference so that our bears can hibernate well in winter and give birth to healthy cubs in spring.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちのツキノワグマが生きていくためには、広くて健康な森が必要です。無分別なケーブルカーの設置やリゾート開発は、クマたちの家を奪うことです。持続可能な観光とは、自然を見世物として消費するのではなく、ありのままの姿を尊重し、保全し、その一部となることです。私たちのクマが冬眠をしっかりと取り、春には健康な子を産めるよう、江原の森を人間の干渉から守ってください。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>충청북도 대표의 발언</h3>
+            <div class="region-intro">
+                바다는 없지만 대한민국의 중심을 잇는 교통의 요지, 충청북도입니다. 저희는 기쁜 소식을 전하는 **까치**처럼, 지속가능성의 허브가 되고자 합니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희는 전국을 연결하는 교통망의 중심입니다. 이제는 도로 위를 달리는 내연기관 자동차들을 전기차와 수소차로 바꾸는 '그린 모빌리티'의 중심이 되겠습니다. 지속가능성이란, 어느 한 지역의 노력만으로는 불가능합니다. 저희 충북이 전국의 친환경 물류와 기술을 연결하는 '까치 다리'가 되어, 대한민국의 모든 지속가능한 노력이 하나로 이어지도록 만들겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>We are the center of the transportation network connecting the entire country. Now, we will become the center of 'green mobility,' replacing internal combustion engine cars on the roads with electric and hydrogen cars. Sustainability cannot be achieved by the efforts of just one region. Our Chungbuk will become the 'magpie bridge' connecting the nation's eco-friendly logistics and technology, ensuring that all sustainable efforts in Korea are linked as one.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちは全国を結ぶ交通網の中心です。これからは、道路を走る内燃機関車を電気自動車や水素自動車に変える「グリーンモビリティ」の中心となります。持続可能性は、一地域の努力だけでは不可能です。私たち忠清北道が、全国の環境にやさしい物流と技術を結ぶ「カササギの橋」となり、大韓民国のすべての持続可能な努力が一つにつながるようにします。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>충청남도 대표의 발언</h3>
+            <div class="region-intro">
+                서해의 기적, 충청남도입니다. 저희는 금슬 좋은 부부의 상징이자 저희 도의 상징인 **원앙**처럼, 자연과 인간의 조화를 꿈꿉니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희 서해안은 간척 사업으로 많은 갯벌을 잃었지만, 그 갯벌이 얼마나 중요한 탄소 흡수원이었는지 뒤늦게 깨닫고 있습니다. 이제 저희는 개발의 시대에서 복원의 시대로 나아가려 합니다. 저희 원앙 부부가 다시 갯벌에 날아와 편안히 새끼를 기를 수 있도록, 갯벌을 되살리고 해양 생태계를 복원하는 데 앞장서겠습니다. 자연과 인간의 깨어진 금슬을 회복하는 것, 그것이 충남의 약속입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our west coast lost many tidal flats due to reclamation projects, but we are belatedly realizing how important those tidal flats were as carbon sinks. Now, we intend to move from an era of development to an era of restoration. We will take the lead in reviving the tidal flats and restoring the marine ecosystem so that our mandarin duck couples can fly back and raise their young in comfort. Restoring the broken bond between nature and humans—that is Chungnam's promise.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちの西海岸は干拓事業で多くの干潟を失いましたが、その干潟がどれほど重要な炭素吸収源であったかを遅ればせながら気づいています。今、私たちは開発の時代から復元の時代へと進もうとしています。私たちのオシドリ夫婦が再び干潟に飛来し、安心して子育てができるよう、干潟を蘇らせ、海洋生態系を復元することに先頭に立ちます。自然と人間の壊れた絆を回復すること、それが忠清南道の約束です。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>전라북도 대표의 발언</h3>
+            <div class="region-intro">
+                맛과 멋의 고장, 드넓은 호남평야를 품은 전라북도입니다. 좋은 소식을 가져다주는 **까치**처럼, 저희는 지속가능한 농업의 희망을 이야기하겠습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희의 드넓은 평야는 대한민국의 밥상을 책임져 왔지만, 화학 비료와 농약으로 땅이 지쳐가고 있습니다. 이제는 양만 추구하는 농업이 아닌, 질을 생각하는 '유기농'과 '친환경 농법'으로 전환해야 합니다. 땅의 힘을 되살리고, 건강한 먹거리를 생산하여 생산자와 소비자, 그리고 자연 모두가 웃을 수 있는 지속가능한 농업 모델을 전북이 만들어가겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our vast plains have been responsible for Korea's food supply, but the land is getting tired from chemical fertilizers and pesticides. It is time to shift from agriculture that only pursues quantity to 'organic farming' and 'eco-friendly methods' that consider quality. Jeonbuk will create a sustainable agricultural model where producers, consumers, and nature can all smile by reviving the strength of the land and producing healthy food.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちの広大な平野は大韓民国の食卓を支えてきましたが、化学肥料や農薬で土地が疲弊しています。もはや量だけを追求する農業ではなく、質を考える「有機農業」や「環境にやさしい農法」に転換すべきです。土地の力を蘇らせ、健康な食料を生産し、生産者と消費者、そして自然の誰もが笑顔になれる持続可能な農業モデルを全羅北道が作っていきます。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>전라남도 대표의 발언</h3>
+            <div class="region-intro">
+                리아스식 해안과 2,000여 개의 섬을 가진 보물 같은 땅, 전라남도입니다. 저희 도의 새, **직박구리**의 청아한 목소리로 말씀드립니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희의 아름다운 섬과 바다는 무분별한 양식과 해양 쓰레기로 위협받고 있습니다. 저희 직박구리들이 마음껏 노래하고 열매를 먹을 수 있는 건강한 섬 생태계를 지켜야 합니다. 저희는 '탄소 제로 섬'을 만들고, '지속가능한 어업'을 통해 바다의 자원을 보존할 것입니다. 청정 자연이야말로 미래 세대에게 물려줄 가장 큰 보물임을 잊지 않겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our beautiful islands and sea are threatened by reckless aquaculture and marine debris. We must protect the healthy island ecosystem where our brown-eared bulbuls can sing freely and eat berries. We will create 'carbon-zero islands' and conserve marine resources through 'sustainable fisheries.' We will not forget that pristine nature is the greatest treasure to pass on to future generations.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちの美しい島々と海は、無分別な養殖や海洋ごみによって脅かされています。私たちのヒヨドリが心ゆくまで歌い、実を食べることができる健康な島の生態系を守らなければなりません。私たちは「カーボンゼロの島」を作り、「持続可能な漁業」を通じて海の資源を保全します。清浄な自然こそが、未来の世代に残す最も大きな宝であることを忘れません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>경상북도 대표의 발언</h3>
+            <div class="region-intro">
+                신라 천년의 역사가 살아 숨 쉬는 곳, 경상북도입니다. 저희 도의 상징인 **왜가리**의 힘찬 날갯짓처럼, 전통과 미래를 잇는 비전을 제시하겠습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희는 찬란한 문화유산을 지키는 동시에, 첨단 과학 기술을 육성하고 있습니다. 지속가능성이란, 이 두 가지를 조화시키는 지혜입니다. 저희는 스마트 기술을 이용해 문화재를 기후 변화로부터 보호하고, 친환경 에너지를 통해 첨단 산업 단지를 운영하는 모델을 만들겠습니다. 왜가리가 예부터 지금까지 변함없이 우리 곁을 지키듯, 과거를 보존하고 미래를 여는 지속가능한 발전을 경북이 이끌겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>While protecting our brilliant cultural heritage, we are also fostering advanced science and technology. Sustainability is the wisdom to harmonize these two. We will create a model that protects cultural assets from climate change using smart technology and operates high-tech industrial complexes with eco-friendly energy. Just as the grey heron has steadfastly stayed by our side from the past to the present, Gyeongbuk will lead sustainable development that preserves the past and opens the future.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちは輝かしい文化遺産を守ると同時に、先端科学技術を育成しています。持続可能性とは、この二つを調和させる知恵です。私たちはスマート技術を利用して文化財を気候変動から保護し、環境にやさしいエネルギーを通じて先端産業団地を運営するモデルを作ります。アオサギが昔から今まで変わらず私たちのそばにいるように、過去を保存し未来を開く持続可能な発展を慶尚北道がリードします。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>경상남도 대표의 발언</h3>
+            <div class="region-intro">
+                대한민국 제조업의 중심지, 경상남도입니다. 저희 도의 상징, 우아한 **백로**처럼 깨끗하고 청렴한 발전을 추구합니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>항공, 조선 등 저희의 주력 산업은 많은 에너지를 필요로 합니다. 이제는 화석연료에 의존하던 기존의 생산 방식을 과감히 버리고, 재생에너지와 그린수소를 기반으로 한 '친환경 스마트 공장'으로 전환해야 합니다. 백로가 오염된 물에서는 살 수 없듯이, 지속가능한 환경 없이는 지속가능한 산업도 불가능합니다. 깨끗한 산업 생태계를 만드는 데 경남이 앞장서겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our main industries, such as aerospace and shipbuilding, require a lot of energy. Now, we must boldly abandon the conventional production methods that relied on fossil fuels and transition to 'eco-friendly smart factories' based on renewable energy and green hydrogen. Just as the white heron cannot live in polluted water, sustainable industry is impossible without a sustainable environment. Gyeongnam will take the lead in creating a clean industrial ecosystem.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>航空、造船など、私たちの主力産業は多くのエネルギーを必要とします。もはや化石燃料に依存していた既存の生産方式を大胆に捨て、再生可能エネルギーとグリーン水素を基盤とした「環境にやさしいスマート工場」に転換すべきです。シラサギが汚染された水では生きられないように、持続可能な環境なくして持続可能な産業も不可能です。クリーンな産業生態系を作ることに慶尚南道が先頭に立ちます。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>세종특별자치시 대표의 발언</h3>
+            <div class="region-intro">
+                대한민국의 새로운 행정 중심, 가장 젊은 도시 세종에서 왔습니다. 굳건한 의지를 상징하는 저희 시의 나무, **소나무**의 기상으로 말씀드립니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희는 처음부터 '친환경 도시'로 계획되었습니다. 넓은 공원과 자전거 도로, 태양광 발전 시설은 저희의 자랑입니다. 지속가능성이란, 처음 설계 단계부터 자연과의 공존을 고민하는 것입니다. 저희 세종시는 '탄소중립 도시'를 향한 대한민국의 의지를 보여주는 살아있는 증거가 되겠습니다. 저희 소나무처럼 푸르고 굳건하게, 미래 도시의 이상적인 모델을 전 세계에 제시하겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>From the beginning, we were planned as an 'eco-friendly city.' Our wide parks, bicycle paths, and solar power facilities are our pride. Sustainability means considering coexistence with nature right from the initial design phase. Our Sejong City will become living proof of Korea's commitment to becoming a 'carbon-neutral city.' Like our green and steadfast pine trees, we will present an ideal model for future cities to the world.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちは最初から「環境にやさしい都市」として計画されました。広い公園と自転車道、太陽光発電施設は私たちの誇りです。持続可能性とは、最初の設計段階から自然との共存を考えることです。私たち世宗市は、「カーボンニュートラル都市」を目指す大韓民国の意志を示す生きた証拠となります。私たちの松の木のように青々として堅固に、未来都市の理想的なモデルを全世界に提示します。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>제주특별자치도 대표의 발언</h3>
+            <div class="region-intro">
+                바람과 돌, 그리고 아름다운 자연의 섬, 제주특별자치도에서 왔습니다. 강인한 생명력을 상징하는 저희 **제주마**의 힘찬 목소리로 외칩니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저희 제주는 '카본 프리 아일랜드 2030'을 선언하며 대한민국 지속가능성의 테스트베드가 되었습니다. 하지만 넘쳐나는 관광객과 쓰레기 문제로 아름다운 자연이 몸살을 앓고 있습니다. 지속가능한 관광이란, 단순히 보고 즐기는 것을 넘어, 방문한 곳을 더 아름답게 만들고 떠나는 책임감 있는 행동입니다. 저희 제주마가 거친 바람을 이겨내듯, 제주는 '과잉 관광'의 문제를 극복하고 진정한 생태 관광의 섬으로 거듭나겠습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Our Jeju declared 'Carbon Free Island 2030,' becoming a testbed for sustainability in Korea. However, our beautiful nature is suffering from overflowing tourists and waste problems. Sustainable tourism goes beyond simply seeing and enjoying; it is a responsible act of leaving a place more beautiful than when you found it. Just as our Jeju horses withstand the harsh winds, Jeju will overcome the problem of 'overtourism' and be reborn as an island of true eco-tourism.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私たちの済州は「カーボンフリーアイランド2030」を宣言し、大韓民国の持続可能性のテストベッドとなりました。しかし、溢れる観光客とごみ問題で、美しい自然が苦しんでいます。持続可能な観光とは、単に見て楽しむことを超え、訪れた場所をより美しくして去るという責任ある行動です。私たちの済州馬が荒い風に耐えるように、済州は「オーバーツーリズム」の問題を克服し、真のエコツーリズムの島として生まれ変わります。</span></p>
+        </div>
+        
+        <div class="speech-block chairperson">
+            <h3>의장 서울특별시 대표의 폐회사</h3>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>오늘 우리는 대한민국 17개 시도의 다양한 목소리를 통해, 지속가능한 미래를 향한 하나의 마음을 확인했습니다. 바다와 내륙, 산업도시와 농촌, 전통과 미래가 각자의 자리에서 할 수 있는 역할이 있음을 깨달았습니다. 이제 이 약속들을 모아, 서울의 한강에서 시작된 물줄기가 서해와 남해를 거쳐 대한민국 전체를 휘감듯, 우리의 노력이 전국으로 퍼져나가게 합시다. 시작은 각자의 지역에서, 그러나 목표는 하나의 지구입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Today, through the diverse voices of the 17 provinces and cities of Korea, we have confirmed a single heart for a sustainable future. We have realized that the sea and the inland, industrial cities and rural areas, tradition and the future all have roles to play in their respective places. Now, let's gather these promises and let our efforts spread throughout the country, just as the stream starting from Seoul's Hangang River flows through the West and South Seas to embrace all of Korea. We start in our own regions, but our goal is one Earth.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>今日、私たちは大韓民国17の市・道の多様な声を通じて、持続可能な未来に向けた一つの心を確認しました。海と内陸、産業都市と農村、伝統と未来が、それぞれの場所で果たすべき役割があることを悟りました。さあ、これらの約束を集め、ソウルの漢江から始まった水流が西海と南海を経て大韓民国全体を包み込むように、私たちの努力が全国に広がるようにしましょう。始まりはそれぞれの地域から、しかし目標は一つの地球です。</span></p>
+        </div>
+
+    </div>
+</body>
+</html>

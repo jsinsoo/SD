@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼각형 정리들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .subject-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #20c997;
+            border-radius: 5px;
+            background-color: #f6fffa;
+        }
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .subject-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>삼각형 정리들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 기하학의 근간을 이루는 삼각형의 주요 정의와 정리 여러분을 모시고, 각자의 관점에서 지구의 미래에 대한 고견을 듣고자 합니다.</p>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">1. 삼각형의 기본 정의</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">저는 모든 것의 시작, '기본 정의'입니다. 세 점이 한 직선 위에 있지 않아야 비로소 제가 탄생하죠. 지속가능 발전도 마찬가지입니다. '경제', '사회', '환경'이라는 세 꼭짓점이 '단기적 이익'이라는 하나의 직선 위에 놓여서는 안 됩니다. 이 세 가지가 서로를 지탱하며 균형을 이룰 때, 비로소 '지속가능성'이라는 안정적인 도형이 만들어집니다. 우리는 발전의 정의부터 다시 세워야 합니다. 어느 한 점에 치우치지 않고, 세 꼭짓점이 만드는 건강한 공간을 추구하는 것, 그것이 제가 말하는 기본입니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">2. 삼각형의 분류</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">저는 '분류'입니다. 각으로 보든, 변으로 보든 모든 삼각형을 명확히 구분하여 그 성격을 알게 하죠. 지구의 문제도 명확한 '분류'가 필요합니다. 기후 변화는 '둔각삼각형'처럼 이미 위험 수위를 넘어선 시급한 문제입니다. 반면, 지역 공동체 문제는 '예각삼각형'처럼 아직 예방과 관리가 가능한 문제일 수 있습니다. 문제의 성격에 따라 해결책도 달라져야 합니다. 모든 문제를 하나로 뭉뚱그려 '환경 문제'라고 부르지 말고, 그 시급성과 특성에 따라 정확히 분류하고 맞춤형 해법을 적용하는 지혜가 필요합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">3. 삼각형의 기본 성질</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">저는 '불변의 법칙', 기본 성질입니다. 제 내각의 합은 언제나 180°이며, 두 변의 합은 나머지 한 변보다 항상 커야 합니다. 지구에도 이런 절대적인 법칙이 있습니다. 바로 '자원의 총량'입니다. 지구라는 삼각형의 크기는 정해져 있습니다. 인류의 욕망(각)이 아무리 커져도 180°를 넘을 수 없으며, 두 분야(변)의 발전이 나머지 한 분야(환경)의 희생을 담보로 해서는 안 됩니다. 지속가능성이란, 이 삼각형의 성립 조건 자체를 지키는 것입니다. 우리가 이 기본 법칙을 무시한다면, '지구'라는 삼각형 자체가 붕괴될 것입니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">4. 삼각형의 주요 선 (4심)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">저는 삼각형의 중심을 찾는 '주요 선'들입니다. 무게중심, 내심, 외심, 수심은 각기 다른 방식으로 균형점을 찾죠. 지속가능한 사회도 이 '4심'을 모두 찾아야 합니다. '무게중심'은 자원의 공정한 분배 지점입니다. '내심'은 모든 인류가 공유해야 할 최소한의 윤리적 가치입니다. '외심'은 모든 국가가 함께 참여하는 국제적 협력의 중심점입니다. '수심'은 위기가 닥쳤을 때 문제를 수직으로 꿰뚫어 보는 통찰의 지점입니다. 이 네 가지 중심이 조화를 이룰 때, 비로소 지구 공동체는 안정적인 균형을 잡을 수 있습니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">5. 삼각형의 넓이 공식</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">저는 '가치의 측정', 넓이 공식입니다. 밑변과 높이로 구하든, 헤론의 공식을 쓰든, 저는 삼각형의 가치를 숫자로 보여주죠. 우리는 지금까지 'GDP'라는 단 하나의 넓이 공식만을 사용해 왔습니다. 밑변(자본)과 높이(노동)에만 집중한 결과, 우리는 삼각형의 다른 중요한 요소들을 무시했습니다. 저는 새로운 '지속가능성 넓이 공식'을 제안합니다. 여기에는 내접원의 반지름(사회적 신뢰), 외접원의 반지름(국제 협력), 그리고 세 변의 조화(환경과의 관계)가 모두 포함되어야 합니다. 측정 방식이 바뀌어야 우리가 추구하는 가치도 바뀝니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">6. 중심의 성질</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">저는 '균형의 지혜', 중심의 성질입니다. 정삼각형에서 무게중심, 내심, 외심, 수심이 모두 일치하듯, 가장 이상적인 사회는 모든 가치의 중심이 하나로 모입니다. 지금 우리 사회는 경제적 '무게중심'에만 치우쳐, 윤리적 '내심'과 협력의 '외심'이 모두 흩어져 있습니다. 이 중심들이 멀어질수록 사회는 불안정해집니다. 지속가능 발전의 궁극적인 목표는, 경제, 사회, 환경, 윤리의 네 가지 중심점을 최대한 가깝게 일치시키는 것입니다. 이를 통해 우리는 가장 안정적이고 조화로운 '정삼각형' 형태의 사회 구조를 만들어야 합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">7. 사인/코사인 법칙</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">저는 '관계의 법칙', 사인과 코사인 법칙입니다. 저는 삼각형의 어떤 변이나 각도 단독으로 존재하지 않고, 다른 모든 요소와 긴밀하게 연결되어 있음을 보여줍니다. 지구 시스템도 마찬가지입니다. 아마존의 산림(변 a)이 파괴되면, 지구 반대편의 기후(각 B)가 변하고, 해양 생태계(변 c)가 영향을 받습니다. 저의 법칙처럼, 모든 것은 연결되어 있습니다. 지속가능성은 이 '상호의존성'을 깊이 이해하는 데서 출발합니다. 어떤 국가도 자국의 이익만을 위해 독자적으로 행동할 수 없으며, 모든 정책은 다른 요소에 미칠 영향을 반드시 고려해야 합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">8. 특수한 삼각형의 성질</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div><div id="ko-8">저는 '이상적인 모델', 특수한 삼각형의 성질입니다. 정삼각형은 완벽한 균형을, 직각삼각형은 피타고라스 정리라는 명확한 규칙을 상징하죠. 지속가능 발전을 위해, 우리는 '정삼각형'의 이념을 지향해야 합니다. 즉, 모든 국가와 개인이 동등한 권리와 책임을 가지는 사회입니다. 또한, '직각삼각형'의 교훈도 잊어서는 안 됩니다. 환경 파괴(밑변)와 사회적 갈등(높이)의 제곱의 합은, 결국 미래 세대가 짊어져야 할 재앙(빗변)의 제곱과 같다는 '생태학적 피타고라스 정리'를 명심해야 합니다. 원인과 결과는 명확합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. 좌표평면 위의 삼각형</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div><div id="ko-9">저는 '데이터 기반의 분석', 좌표평면 위의 삼각형입니다. 저는 모든 문제를 구체적인 좌표와 수치로 변환하여 객관적으로 분석합니다. 지속가능성은 더 이상 추상적인 담론이 아닙니다. 각 국가와 도시의 탄소 배출량, 자원 소비량, 생물다양성 지수 등을 정확한 (x, y) 좌표로 찍어야 합니다. 그리고 신발끈 공식을 이용해 각 지역이 환경에 미치는 '영향의 넓이'를 계산해야 합니다. 또한, 문제의 '무게중심'이 어디에 있는지 파악하여, 가장 시급하고 핵심적인 지역에 자원과 노력을 집중하는 데이터 기반의 정책 결정이 필요합니다.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. 합동과 닮음</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div><div id="ko-10">저는 '패턴의 발견과 확장', 합동과 닮음입니다. 저는 성공적인 모델을 찾아내고, 그것을 다른 곳에 적용하거나 확장하는 방법을 연구합니다. 지속가능 발전을 위해 전 세계가 동시에 새로운 해법을 발명할 필요는 없습니다. 어딘가에는 이미 성공적인 '지속가능 마을' 모델(하나의 삼각형)이 존재할 겁니다. 우리는 그 성공 사례(합동 조건)를 면밀히 분석하고, 다른 지역의 특성에 맞게 '닮음 변환'하여 적용해야 합니다. 작은 성공 사례를 찾아내고, 그 패턴을 전 지구적으로 확장해 나가는 것, 그것이 가장 현실적이고 효율적인 변화의 방법입니다.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered the major definitions and theorems of triangles, the foundation of geometry, to hear their valuable opinions on the future of our planet from their unique perspectives.</p>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">1. Basic Definition of a Triangle</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I am the 'Basic Definition,' the beginning of everything. I come into existence only when three points are not on the same line. Sustainable development is the same. The three vertices of 'Economy,' 'Society,' and 'Environment' must not lie on the single straight line of 'short-term profit.' Only when these three support each other in balance can the stable figure of 'sustainability' be formed. We must redefine development itself. Not leaning towards one point, but pursuing a healthy space created by all three vertices—that is the basic principle I speak of.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">2. Classification of Triangles</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">I am 'Classification.' Whether by angles or sides, I clearly distinguish every triangle to reveal its nature. The Earth's problems also need clear 'classification.' Climate change is an urgent issue that has already crossed a dangerous threshold, like an 'obtuse triangle.' On the other hand, local community issues might be like an 'acute triangle,' still preventable and manageable. The solution must vary according to the nature of the problem. We need the wisdom to classify issues accurately by their urgency and characteristics, applying tailored solutions instead of lumping them all together as 'environmental problems.'</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">3. Basic Properties of Triangles</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">I am the 'Immutable Laws,' the basic properties. The sum of my interior angles is always 180°, and the sum of any two sides must always be greater than the third. The Earth has such absolute laws too, namely the 'finite total of resources.' The size of the triangle called Earth is fixed. No matter how large human desires (angles) grow, they cannot exceed 180°. And the development of two fields (sides) cannot come at the expense of the third (the environment). Sustainability is about abiding by the very conditions for a triangle's existence. If we ignore these basic laws, the triangle 'Earth' itself will collapse.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">4. Special Lines of a Triangle (Four Centers)</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">We are the 'Special Lines' that find the center of a triangle. The centroid, incenter, circumcenter, and orthocenter each find a point of balance in different ways. A sustainable society must also find all these 'four centers.' The 'centroid' is the point of equitable resource distribution. The 'incenter' is the core ethical value that all humanity must share. The 'circumcenter' is the center point of international cooperation where all nations participate. The 'orthocenter' is the point of insight that pierces through a problem vertically when a crisis hits. Only when these four centers are in harmony can the global community achieve a stable balance.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">5. Area Formulas of a Triangle</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">I am 'The Measure of Value,' the area formula. Whether calculated by base and height or by Heron's formula, I show the value of a triangle in numbers. Until now, we have used only one area formula: 'GDP.' By focusing only on the base (capital) and height (labor), we have ignored other important elements of the triangle. I propose a new 'sustainability area formula.' It must include the radius of the incircle (social trust), the radius of the circumcircle (international cooperation), and the harmony of the three sides (relationship with the environment). The values we pursue will only change when the way we measure them changes.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">6. Properties of Centers</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">I am the 'Wisdom of Balance,' the properties of centers. Just as the centroid, incenter, circumcenter, and orthocenter all coincide in an equilateral triangle, the most ideal society is one where the centers of all values converge. Our society today is skewed towards the economic 'centroid,' causing the ethical 'incenter' and cooperative 'circumcenter' to be scattered. The farther these centers are from each other, the more unstable society becomes. The ultimate goal of sustainable development is to bring these four centers—economic, social, environmental, and ethical—as close as possible to a single point, thereby creating the most stable and harmonious 'equilateral triangle' social structure.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">7. Law of Sines/Cosines</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">We are the 'Laws of Relationship,' the Law of Sines and Cosines. We show that no side or angle of a triangle exists in isolation; each is intricately connected to all other elements. The Earth system is the same. The destruction of the Amazon rainforest (side a) changes the climate on the other side of the planet (angle B), which in turn affects the marine ecosystem (side c). Like our laws, everything is connected. Sustainability starts from a deep understanding of this 'interdependence.' No nation can act alone for its own benefit; every policy must consider its impact on all other elements.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">8. Properties of Special Triangles</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">I am the 'Ideal Model,' the properties of special triangles. The equilateral triangle symbolizes perfect balance, while the right triangle represents a clear rule, the Pythagorean theorem. For sustainable development, we should strive for the ideal of the 'equilateral triangle'—a society where all nations and individuals have equal rights and responsibilities. Also, we must not forget the lesson of the 'right triangle.' We must keep in mind the 'Ecological Pythagorean Theorem': the sum of the squares of environmental destruction (base) and social conflict (height) equals the square of the disaster (hypotenuse) that future generations will have to bear. The cause and effect are clear.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. Triangles on the Coordinate Plane</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div><div id="en-9">I am 'Data-Driven Analysis,' the triangle on the coordinate plane. I transform all problems into specific coordinates and numbers for objective analysis. Sustainability is no longer an abstract discourse. We must plot the carbon emissions, resource consumption, and biodiversity index of each nation and city as precise (x, y) coordinates. Then, using the shoelace formula, we must calculate the 'area of impact' each region has on the environment. It is also necessary to identify where the 'centroid' of the problem lies, enabling data-driven policy decisions that concentrate resources and efforts on the most urgent and central areas.</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. Congruence and Similarity</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div><div id="en-10">We are 'Pattern Discovery and Scaling,' congruence and similarity. We study how to find successful models and apply or scale them elsewhere. The whole world does not need to invent a new solution simultaneously for sustainable development. Somewhere, a successful 'sustainable village' model (a single triangle) already exists. We must carefully analyze that successful case (the congruence conditions) and apply it to other regions through 'similarity transformation,' tailored to their specific characteristics. Finding small success stories and scaling up their patterns globally is the most realistic and efficient method of change.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。幾何学の根幹をなす、三角形の主要な定義と定理の皆様をお招きし、それぞれの観点から地球の未来についてのご意見を伺いたいと思います。</p>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">1. 三角形の基本定義</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私はすべての始まり、「基本定義」です。三つの点が一直線上にない時に初めて、私が誕生します。持続可能な発展も同様です。「経済」「社会」「環境」という三つの頂点が、「短期的な利益」という一本の直線上にあってはなりません。この三つが互いを支え合い、均衡を保つ時、初めて「持続可能性」という安定した図形が作られます。私たちは発展の定義から見直すべきです。どれか一つの点に偏らず、三つの頂点が作る健全な空間を追求すること、それが私の言う基本です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">2. 三角形の分類</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">私は「分類」です。角で見ても、辺で見ても、すべての三角形を明確に区別し、その性格を知らせます。地球の問題にも明確な「分類」が必要です。気候変動は「鈍角三角形」のように、すでに危険水域を超えた緊急の問題です。一方、地域の共同体の問題は「鋭角三角形」のように、まだ予防と管理が可能な問題かもしれません。問題の性格によって解決策も変わるべきです。すべての問題を一つにまとめ、「環境問題」と呼ぶのではなく、その緊急性と特性に応じて正確に分類し、オーダーメイドの解決策を適用する知恵が必要です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">3. 三角形の基本性質</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">私は「不変の法則」、基本性質です。私の内角の和は常に180°であり、二辺の和は残りの一辺より常に大きくなければなりません。地球にもこのような絶対的な法則があります。それは「資源の総量」です。地球という三角形の大きさは決まっています。人類の欲望（角）がいくら大きくなっても180°を超えることはできず、二つの分野（辺）の発展が残りの一つの分野（環境）の犠牲を担保にしてはなりません。持続可能性とは、この三角形の成立条件そのものを守ることです。私たちがこの基本法則を無視すれば、「地球」という三角形自体が崩壊するでしょう。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">4. 三角形の主要線（四心）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">私は三角形の中心を見つける「主要線」たちです。重心、内心、外心、垂心は、それぞれ異なる方法で均衡点を見つけます。持続可能な社会も、この「四心」をすべて見つけなければなりません。「重心」は資源の公正な分配点です。「内心」はすべての人類が共有すべき最低限の倫理的価値です。「外心」はすべての国が共に参加する国際協力の中心点です。「垂心」は危機が迫った時に問題を垂直に貫く洞察の地点です。この四つの中心が調和してこそ、初めて地球共同体は安定した均衡を保つことができます。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">5. 三角形の面積公式</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私は「価値の測定」、面積公式です。底辺と高さで求めようと、ヘロンの公式を使おうと、私は三角形の価値を数字で示します。私たちはこれまで「GDP」というただ一つの面積公式だけを使ってきました。底辺（資本）と高さ（労働）にのみ集中した結果、私たちは三角形の他の重要な要素を無視してきました。私は新しい「持続可能性面積公式」を提案します。これには内接円の半径（社会的信頼）、外接円の半径（国際協力）、そして三辺の調和（環境との関係）がすべて含まれるべきです。測定方式が変わってこそ、私たちが追求する価値も変わるのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">6. 中心の性質</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は「均衡の知恵」、中心の性質です。正三角形では重心、内心、外心、垂心がすべて一致するように、最も理想的な社会はすべての価値の中心が一つに集まります。今の私たちの社会は、経済的な「重心」に偏りすぎ、倫理的な「内心」や協力の「外心」がすべて散らばっています。これらの中心が離れれば離れるほど、社会は不安定になります。持続可能な発展の究極的な目標は、経済、社会、環境、倫理という四つの中心点をできるだけ近く一致させることです。これを通じて、私たちは最も安定的で調和のとれた「正三角形」型の社会構造を築かなければなりません。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">7. 正弦・余弦定理</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私たちは「関係の法則」、正弦と余弦定理です。私たちは、三角形のどの辺や角も単独で存在せず、他のすべての要素と緊密に結びついていることを示します。地球システムも同じです。アマゾンの森林（辺a）が破壊されれば、地球の反対側の気候（角B）が変動し、海洋生態系（辺c）が影響を受けます。私たちの法則のように、すべては繋がっているのです。持続可能性とは、この「相互依存性」を深く理解することから始まります。どの国も自国の利益のためだけに単独で行動することはできず、すべての政策は他の要素に与える影響を必ず考慮しなければなりません。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">8. 特殊な三角形の性質</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">私は「理想的なモデル」、特殊な三角形の性質です。正三角形は完璧な均衡を、直角三角形はピタゴラスの定理という明確な規則を象徴します。持続可能な発展のために、私たちは「正三角形」の理念を目指すべきです。すなわち、すべての国と個人が同等の権利と責任を持つ社会です。また、「直角三角形」の教訓も忘れてはなりません。環境破壊（底辺）と社会的対立（高さ）の二乗の和が、結局は未来の世代が背負うべき災厄（斜辺）の二乗に等しいという「生態学的ピタゴラスの定理」を心に刻むべきです。原因と結果は明確なのです。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">9. 座標平面上の三角形</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">私は「データに基づく分析」、座標平面上の三角形です。私はすべての問題を具体的な座標と数値に変換し、客観的に分析します。持続可能性はもはや抽象的な談論ではありません。各国家と都市の炭素排出量、資源消費量、生物多様性指数などを正確な(x, y)座標でプロットすべきです。そして、靴紐の公式を用いて各地域が環境に与える「影響の面積」を計算すべきです。また、問題の「重心」がどこにあるかを把握し、最も緊急かつ核心的な地域に資源と努力を集中する、データに基づいた政策決定が必要です。</div></div>
+                    <div class="subject-item"><div class="subject-header"><span class="subject-title">10. 合同と相似</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div><div id="ja-10">私たちは「パターンの発見と拡張」、合同と相似です。私たちは成功したモデルを見つけ出し、それを他の場所に適用したり拡張したりする方法を研究します。持続可能な発展のために、全世界が同時に新しい解決策を発明する必要はありません。どこかには既に成功した「持続可能な村」モデル（一つの三角形）が存在するでしょう。私たちはその成功事例（合同条件）を綿密に分析し、他の地域の特性に合わせて「相似変換」して適用すべきです。小さな成功事例を見つけ出し、そのパターンを全地球的に拡張していくこと、それこそが最も現実的で効率的な変化の方法です。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

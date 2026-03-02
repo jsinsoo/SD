@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대학수학 10개 분야의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .subject-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 5px;
+            background-color: #fafdff;
+        }
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .subject-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>대학수학 10개 분야의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 오늘, 세상을 이해하는 가장 근본적인 도구인 대학수학의 10개 분야를 의인화하여 모시고, 각 학문의 관점에서 지구의 미래에 대한 고견을 듣고자 합니다. 자기소개와 함께 제언을 부탁드립니다.</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. 해석학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div>
+                        <div id="ko-1">저는 '변화의 미세함'을 연구하는 해석학입니다. 극한과 연속성의 개념으로 아주 작은 움직임이 전체에 어떤 영향을 미치는지 엄밀하게 분석하죠.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구 온난화는 단번에 일어난 사건이 아닙니다. 매 순간의 작은 탄소 배출(미분)이 오랜 시간 쌓여(적분) 만들어낸 결과입니다. 지속가능성은 거대한 구호가 아니라, 지금 당장 탄소 배출 증가율을 0에 가깝게 수렴시키는 '극한' 개념의 도입이 필요합니다. 모든 국가와 개인이 자신의 활동이 환경에 미치는 '엡실론-델타' 기준을 설정하고, 그 오차범위 안에서 행동하는 엄격한 책임감이 요구됩니다. 작은 변화가 모여 미래를 결정한다는 것을 잊어서는 안 됩니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. 선형대수학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div>
+                        <div id="ko-2">저는 '관계와 구조의 학문' 선형대수학입니다. 벡터와 행렬을 이용해 복잡하게 얽힌 시스템을 단순한 구조로 표현하고 해법을 찾습니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구의 지속가능성 문제는 수많은 변수(자원, 인구, 오염 등)로 이루어진 거대한 '연립방정식'입니다. 저는 이 문제를 '행렬'로 모델링할 것을 제안합니다. 각국의 정책은 시스템을 변환하는 '선형변환'입니다. 우리의 목표는 현재 지구 상태 벡터를 '지속가능한 상태 벡터'로 옮기는 최적의 정책 행렬을 찾는 것입니다. 이를 통해 어떤 정책이 전체 시스템에 가장 긍정적인 '고유값'을 가지는지 분석하고, 자원의 효율적 배분과 오염 최소화를 위한 최적의 해를 찾아낼 수 있습니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. 미분방정식</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div>
+                        <div id="ko-3">저는 '미래를 예측하는 언어' 미분방정식입니다. 현재의 변화율(미분)을 통해 미래의 상태를 예측하는 모델을 만듭니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 기후 모델, 인구 증가 모델, 자원 고갈 모델 등은 모두 저를 기반으로 합니다. 저는 현재의 탄소 배출 속도가 계속될 경우, 미래의 해수면 높이가 어떻게 될지 정확히 예측할 수 있습니다. 지속가능 발전은 더 이상 감정에 호소할 문제가 아닙니다. 저의 예측 모델을 통해 다양한 정책 시나리오의 결과를 시뮬레이션하고, 가장 파국적인 결과를 피할 수 있는 '초기값 문제'의 해법을 찾아야 합니다. 즉, 지금 우리의 행동이라는 '초기 조건'을 어떻게 설정하느냐에 따라 지구의 미래 궤적이 결정된다는 것을 명심해야 합니다.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. 기하학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div>
+                        <div id="ko-4">저는 '공간과 형태의 본질'을 탐구하는 기하학입니다. 점, 선, 면의 관계 속에서 가장 효율적이고 안정적인 구조를 찾습니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지속가능성은 '공간 디자인'의 문제입니다. 도시 계획에 프랙탈 기하학을 적용하여 녹지 공간을 최대로 확보하고, 최소한의 자원으로 최대의 구조적 안정을 얻는 '최소 곡면' 원리를 건축에 도입해야 합니다. 또한, 자원 분배와 물류 네트워크는 구면 위에서의 '최단 경로(geodesic)'를 따라 설계되어야 에너지 낭비를 줄일 수 있습니다. 자연은 이미 가장 기하학적으로 완벽한 구조를 가지고 있습니다. 우리는 자연의 형태를 모방하여, 지구라는 공간과 조화를 이루는 효율적인 구조를 만들어야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. 대수학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div>
+                        <div id="ko-5">저는 '추상적인 구조의 규칙'을 연구하는 대수학입니다. 군(Group), 환(Ring), 체(Field)와 같은 보편적인 구조를 통해 시스템의 근본적인 법칙을 밝힙니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 전 지구적인 협력을 위해서는 명확한 '규칙 체계'가 필요합니다. 저는 모든 국가를 '원소'로 하는 하나의 '군(Group)'을 설정할 것을 제안합니다. 이 군의 '연산'은 국제 환경 협약이며, 모든 국가는 이 연산에 대해 닫혀 있어야 합니다(즉, 예외 없이 참여해야 합니다). 또한, '항등원'은 지구 환경 보전이라는 공동의 목표이며, 모든 정책('원소')은 이 목표를 훼손하지 않는 '역원'을 가져야 합니다. 이러한 추상적이지만 강력한 구조를 통해, 개별 국가의 이해관계를 넘어선 보편적이고 공정한 지속가능성의 법칙을 세워야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. 확률·통계학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div>
+                        <div id="ko-6">저는 '불확실성 속에서 최선의 결정을 내리는' 확률·통계학입니다. 데이터를 수집하고 분석하여 미래를 예측하고 위험을 관리합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> "100% 확실한 증거가 없다"는 말은 더 이상 변명이 될 수 없습니다. 저는 기후 재앙의 '확률'이 통계적으로 유의미한 수준을 넘었음을 데이터로 보여줍니다. 지속가능 발전은 '위험 관리'의 관점에서 접근해야 합니다. 우리는 각종 환경 데이터를 분석하여 재난 발생 확률이 높은 지역에 자원을 우선 배분하고, 정책의 효과를 '가설 검정'을 통해 과학적으로 평가해야 합니다. 불확실성 속에서도 '기댓값'이 가장 높은, 즉 미래 세대에게 가장 이로운 선택을 하는 것이 우리의 통계적 책무입니다.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. 이산수학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div>
+                        <div id="ko-7">저는 '연결과 관계의 네트워크'를 다루는 이산수학입니다. 그래프 이론을 통해 복잡한 관계망 속에서 최적의 경로와 효율적인 연결 구조를 찾습니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구 생태계와 글로벌 공급망은 거대한 '그래프'입니다. 저는 이 그래프의 구조를 분석할 것을 제안합니다. 어떤 종(노드)이 사라지면 전체 생태계 네트워크가 붕괴하는지, 어떤 물류 경로(엣지)가 가장 많은 탄소를 배출하는지를 파악해야 합니다. 지속가능 발전은 이 그래프를 최적화하는 과정입니다. 즉, 생태계의 '연결성'을 강화하고, 자원과 에너지 흐름의 '최단 경로'를 찾으며, 불필요한 연결을 끊어 시스템 전체의 효율을 높여야 합니다. 모든 것은 연결되어 있다는 사실을 직시해야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. 수치해석</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div>
+                        <div id="ko-8">저는 '완벽한 해답 대신 최선의 근사해'를 찾는 현실주의자, 수치해석입니다. 복잡한 문제를 컴퓨터를 이용해 단계적으로 풀어내는 알고리즘을 만듭니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구 문제를 단번에 해결할 완벽한 방정식은 존재하지 않습니다. 이상적인 해법을 기다리다가는 모든 것이 너무 늦어버릴 겁니다. 저는 '반복법(iterative method)'을 제안합니다. 현재 실행 가능한 정책부터 시작하고(초기값), 그 결과를 측정하여 오차를 계산한 뒤, 다음 단계에서 정책을 수정해 나가는 것입니다. 이 과정을 계속 반복하면, 비록 완벽한 해에는 도달하지 못하더라도 점진적으로 지속가능한 상태에 '수렴'할 수 있습니다. 완벽한 계획보다 중요한 것은 지금 당장 시작하고, 계속해서 개선해 나가는 것입니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. 복소해석학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div>
+                        <div id="ko-9">저는 '차원을 넘어 새로운 해법을 찾는' 복소해석학입니다. 실수 세계에서 풀리지 않는 문제를 복소 평면이라는 새로운 차원으로 확장하여 우아하게 해결합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 현재의 경제 성장 모델(실수 축) 안에서는 '성장'과 '환경 보전'이 충돌하는 것처럼 보입니다. 저는 이 문제를 '복소 평면'으로 확장할 것을 제안합니다. '허수 축'에 '사회적 신뢰', '생태적 가치', '문화적 풍요'와 같은 새로운 가치를 도입하는 것입니다. 그러면 우리의 목표는 단순히 GDP(실수부)를 극대화하는 것이 아니라, 복소수적 가치 전체의 '절댓값'을 키우는 것이 됩니다. 차원을 높여 생각하면, 경제 성장과 환경 보전이 서로를 강화하며 함께 나아가는 새로운 해법을 찾을 수 있을 것입니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. 위상수학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div>
+                        <div id="ko-10">저는 '늘리거나 줄여도 변치 않는 본질'을 연구하는 위상수학입니다. 저에게 커피잔과 도넛은 구멍이 하나라는 점에서 '위상동형', 즉 같은 존재입니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 국가, 인종, 문화의 경계는 인간이 만든 인위적인 구분일 뿐입니다. 위상적으로 볼 때, 지구는 '구멍 없는 구(sphere)'와 같습니다. 즉, 모든 인류는 하나의 닫힌 공간 안에 연결된 존재라는 본질은 변하지 않습니다. 지속가능 발전은 바로 이 '위상적 불변성'을 깨닫는 데서 출발합니다. 국경을 아무리 높게 세워도 오염과 기후 변화는 막을 수 없습니다. 우리가 사는 공간이 분리될 수 없는 하나임을 인정하고, 문제의 본질(구멍)을 함께 해결하려 할 때 비로소 진정한 해법이 보일 것입니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. Today, we have personified and gathered the 10 fields of university mathematics, the most fundamental tools for understanding the world, to hear their expert opinions on the future of our planet. Please introduce yourselves and offer your proposals.</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div>
+                        <div id="en-1">I am Analysis, the study of the 'subtlety of change.' Using concepts of limits and continuity, I rigorously analyze how infinitesimal movements affect the whole.
+                        <strong>Proposal for Sustainable Development:</strong> Global warming did not happen overnight. It is the result of small carbon emissions (differentiation) accumulating over a long period (integration). Sustainability is not about grand slogans; it requires the introduction of the 'limit' concept, converging the rate of increase in carbon emissions to near zero, right now. Every nation and individual must set their own 'epsilon-delta' criteria for their environmental impact and act with strict accountability within that margin of error. We must not forget that small changes, accumulated, determine the future.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. Linear Algebra</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div>
+                        <div id="en-2">I am Linear Algebra, the 'science of relationships and structures.' Using vectors and matrices, I represent complex, intertwined systems in simple structures to find solutions.
+                        <strong>Proposal for Sustainable Development:</strong> The problem of global sustainability is a massive 'system of linear equations' with numerous variables (resources, population, pollution, etc.). I propose modeling this problem as a 'matrix.' Each nation's policy is a 'linear transformation' that alters the system. Our goal is to find the optimal policy matrix that transforms the current state vector of the Earth into a 'sustainable state vector.' This allows us to analyze which policies have the most positive 'eigenvalues' for the entire system and to find the optimal solution for efficient resource allocation and pollution minimization.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. Differential Equations</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div>
+                        <div id="en-3">I am Differential Equations, the 'language that predicts the future.' I create models that forecast future states based on the current rate of change (the derivative).
+                        <strong>Proposal for Sustainable Development:</strong> Climate models, population growth models, and resource depletion models are all based on me. I can accurately predict how high sea levels will be in the future if the current rate of carbon emissions continues. Sustainable development is no longer a matter of emotional appeal. We must use my predictive models to simulate the outcomes of various policy scenarios and find the solution to this 'initial value problem' that avoids the most catastrophic results. In other words, we must remember that the trajectory of the Earth's future is determined by how we set the 'initial conditions'—our actions today.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. Geometry</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div>
+                        <div id="en-4">I am Geometry, the explorer of the 'essence of space and form.' I find the most efficient and stable structures within the relationships of points, lines, and planes.
+                        <strong>Proposal for Sustainable Development:</strong> Sustainability is a problem of 'spatial design.' We should apply fractal geometry to urban planning to maximize green spaces and introduce the principle of 'minimal surfaces' in architecture to achieve maximum structural stability with minimal resources. Furthermore, resource distribution and logistics networks should be designed along the 'geodesic' (shortest path) on a sphere to reduce energy waste. Nature already possesses the most geometrically perfect structures. We must mimic the forms of nature to create efficient structures that are in harmony with the space we call Earth.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. Algebra</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div>
+                        <div id="en-5">I am Algebra, the study of the 'rules of abstract structures.' I reveal the fundamental laws of a system through universal structures like Groups, Rings, and Fields.
+                        <strong>Proposal for Sustainable Development:</strong> Global cooperation requires a clear 'system of rules.' I propose establishing a 'Group' where all nations are 'elements.' The 'operation' of this group is the international environmental agreement, and all nations must be closed under this operation (i.e., participate without exception). Furthermore, the 'identity element' is the common goal of environmental preservation, and every policy ('element') must have an 'inverse element' that does not undermine this goal. Through such an abstract yet powerful structure, we must establish universal and fair laws of sustainability that transcend the interests of individual nations.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. Probability & Statistics</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div>
+                        <div id="en-6">I am Probability and Statistics, making the 'best decisions under uncertainty.' I collect and analyze data to predict the future and manage risk.
+                        <strong>Proposal for Sustainable Development:</strong> The excuse "there is no 100% certain proof" is no longer valid. I show with data that the 'probability' of climate catastrophe has surpassed a statistically significant level. Sustainable development must be approached from the perspective of 'risk management.' We must analyze various environmental data to prioritize resource allocation to areas with a high probability of disaster and scientifically evaluate the effectiveness of policies through 'hypothesis testing.' Even amidst uncertainty, it is our statistical duty to make the choice with the highest 'expected value'—the one most beneficial to future generations.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. Discrete Mathematics</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div>
+                        <div id="en-7">I am Discrete Mathematics, dealing with 'networks of connections and relationships.' Using graph theory, I find optimal paths and efficient connection structures in complex networks.
+                        <strong>Proposal for Sustainable Development:</strong> The Earth's ecosystem and the global supply chain are a giant 'graph.' I propose analyzing the structure of this graph. We need to identify which species (nodes), if they disappear, would cause the entire ecological network to collapse, and which logistics routes (edges) emit the most carbon. Sustainable development is the process of optimizing this graph. This means strengthening the 'connectivity' of the ecosystem, finding the 'shortest path' for the flow of resources and energy, and cutting unnecessary connections to increase the efficiency of the entire system. We must face the fact that everything is connected.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. Numerical Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div>
+                        <div id="en-8">I am the realist, Numerical Analysis, who finds the 'best approximate solution instead of a perfect one.' I create algorithms to solve complex problems step-by-step using computers.
+                        <strong>Proposal for Sustainable Development:</strong> A perfect equation to solve all of Earth's problems at once does not exist. If we wait for an ideal solution, everything will be too late. I propose the 'iterative method.' We start with the currently feasible policies (initial value), measure the results to calculate the error, and then modify the policies in the next step. By repeating this process, even if we don't reach the perfect solution, we can gradually 'converge' to a sustainable state. More important than a perfect plan is to start right now and continue to improve.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. Complex Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div>
+                        <div id="en-9">I am Complex Analysis, 'finding new solutions beyond dimensions.' I elegantly solve problems unsolvable in the real world by expanding them into a new dimension, the complex plane.
+                        <strong>Proposal for Sustainable Development:</strong> Within the current model of economic growth (the real axis), 'growth' and 'environmental conservation' seem to conflict. I propose expanding this problem into the 'complex plane.' We can introduce new values on the 'imaginary axis,' such as 'social trust,' 'ecological value,' and 'cultural richness.' Then, our goal is not simply to maximize GDP (the real part), but to increase the 'absolute value' of the entire complex value. By thinking in higher dimensions, we can find new solutions where economic growth and environmental conservation reinforce each other and advance together.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. Topology</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div>
+                        <div id="en-10">I am Topology, the study of the 'unchanging essence under stretching and shrinking.' To me, a coffee cup and a donut are 'homeomorphic'—the same—because they both have one hole.
+                        <strong>Proposal for Sustainable Development:</strong> The boundaries of nations, races, and cultures are merely artificial divisions created by humans. Topologically, the Earth is like a 'sphere with no holes.' This means the essence that all of humanity is connected within one closed space does not change. Sustainable development begins with realizing this 'topological invariance.' No matter how high we build our borders, we cannot stop pollution and climate change. A true solution will only appear when we accept that the space we live in is inseparably one and try to solve the essence of the problem (the hole) together.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。本日は、世界を理解する最も根源的な学問である大学数学の10分野を擬人化してお招きし、各学問の観点から地球の未来についてのご意見を伺いたいと思います。自己紹介と併せてご提言をお願いします。</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. 解析学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div>
+                        <div id="ja-1">私は「変化の微細さ」を研究する解析学です。極限と連続性の概念で、ごく小さな動きが全体にどのような影響を及ぼすかを厳密に分析します。
+                        <strong>持続可能な発展への提言：</strong>地球温暖化は一度に起こった出来事ではありません。毎瞬間の小さな炭素排出（微分）が、長い時間積もり積もって（積分）作り出した結果です。持続可能性とは巨大なスローガンではなく、今すぐに炭素排出増加率をゼロに近づける「極限」概念の導入が必要です。全ての国と個人が、自らの活動が環境に与える影響の「イプシロン-デルタ」基準を設定し、その誤差の範囲内で行動する厳格な責任感が求められます。小さな変化が集まって未来を決定するということを忘れてはなりません。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. 線形代数学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div>
+                        <div id="ja-2">私は「関係と構造の学問」線形代数学です。ベクトルと行列を用いて、複雑に絡み合ったシステムを単純な構造で表現し、解決策を見つけ出します。
+                        <strong>持続可能な発展への提言：</strong>地球の持続可能性問題は、数多くの変数（資源、人口、汚染など）からなる巨大な「連立方程式」です。私はこの問題を「行列」としてモデル化することを提案します。各国の政策はシステムを変換する「線形変換」です。私たちの目標は、現在の地球の状態ベクトルを「持続可能な状態ベクトル」へと移す最適な政策行列を見つけることです。これにより、どの政策がシステム全体に最も肯定的な「固有値」を持つかを分析し、資源の効率的な配分と汚染最小化のための最適解を見つけ出すことができます。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. 微分方程式</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div>
+                        <div id="ja-3">私は「未来を予測する言語」微分方程式です。現在の変化率（微分）を通じて、未来の状態を予測するモデルを作ります。
+                        <strong>持続可能な発展への提言：</strong>気候モデル、人口増加モデル、資源枯渇モデルなどは、すべて私を基盤としています。私は現在の炭素排出速度が続けば、未来の海水面の高さがどうなるかを正確に予測できます。持続可能な発展はもはや感情に訴える問題ではありません。私の予測モデルを通じて様々な政策シナリオの結果をシミュレーションし、最も破局的な結果を避けられる「初期値問題」の解法を見つけなければなりません。つまり、今の私たちの行動という「初期条件」をどう設定するかによって、地球の未来の軌道が決定されることを肝に銘じるべきです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. 幾何学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div>
+                        <div id="ja-4">私は「空間と形の本质」を探求する幾何学です。点、線、面の関係の中で、最も効率的で安定した構造を見つけ出します。
+                        <strong>持続可能な発展への提言：</strong>持続可能性は「空間デザイン」の問題です。都市計画にフラクタル幾何学を適用して緑地空間を最大限に確保し、最小限の資源で最大の構造的安定を得る「極小曲面」の原理を建築に導入すべきです。また、資源配分と物流ネットワークは、球面上の「最短経路（測地線）」に沿って設計されるべきで、それによってエネルギーの無駄を減らすことができます。自然はすでに最も幾何学的に完璧な構造を持っています。私たちは自然の形を模倣し、地球という空間と調和する効率的な構造を作り出さなければなりません。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. 代数学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div>
+                        <div id="ja-5">私は「抽象的な構造の規則」を研究する代数学です。群、環、体といった普遍的な構造を通じて、システムの根本的な法則を明らかにします。
+                        <strong>持続可能な発展への提言：</strong>全地球的な協力のためには、明確な「規則体系」が必要です。私はすべての国家を「元」とする一つの「群」を設定することを提案します。この群の「演算」は国際環境協約であり、すべての国はこの演算について閉じていなければなりません（つまり、例外なく参加すべきです）。また、「単位元」は地球環境保全という共通の目標であり、すべての政策（「元」）はこの目標を損なわない「逆元」を持たなければなりません。このような抽象的でありながら強力な構造を通じて、個別国家の利害関係を超えた普遍的で公正な持続可能性の法則を打ち立てるべきです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. 確率・統計学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div>
+                        <div id="ja-6">私は「不確実性の中で最善の決定を下す」確率・統計学です。データを収集・分析し、未来を予測してリスクを管理します。
+                        <strong>持続可能な発展への提言：</strong>「100%確実な証拠がない」という言葉はもはや言い訳にはなりません。私は気候災害の「確率」が統計的に有意な水準を超えたことをデータで示します。持続可能な発展は「リスク管理」の観点からアプローチすべきです。私たちは各種環境データを分析して災害発生確率が高い地域に資源を優先的に配分し、政策の効果を「仮説検定」を通じて科学的に評価しなければなりません。不確実性の中でも「期待値」が最も高い、すなわち未来の世代に最も有益な選択をすることが、私たちの統計的責務です。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. 離散数学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div>
+                        <div id="ja-7">私は「繋がりと関係のネットワーク」を扱う離散数学です。グラフ理論を用いて、複雑な関係網の中から最適な経路と効率的な連結構造を見つけ出します。
+                        <strong>持続可能な発展への提言：</strong>地球の生態系とグローバルサプライチェーンは巨大な「グラフ」です。私はこのグラフの構造を分析することを提案します。どの種（ノード）が消えれば生態系ネットワーク全体が崩壊するのか、どの物流経路（エッジ）が最も多くの炭素を排出するのかを把握しなければなりません。持続可能な発展とは、このグラフを最適化する過程です。すなわち、生態系の「連結性」を強化し、資源とエネルギーの流れの「最短経路」を見つけ、不要な連結を断ち切ってシステム全体の効率を高めるべきです。すべては繋がっているという事実を直視しなければなりません。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. 数値解析</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div>
+                        <div id="ja-8">私は「完璧な解の代わりに最善の近似解」を見つける現実主義者、数値解析です。複雑な問題をコンピュータを用いて段階的に解き明かすアルゴリズムを作ります。
+                        <strong>持続可能な発展への提言：</strong>地球問題を一度に解決する完璧な方程式は存在しません。理想的な解決策を待っていては、すべてが手遅れになってしまいます。私は「反復法」を提案します。現在実行可能な政策から始め（初期値）、その結果を測定して誤差を計算し、次の段階で政策を修正していくのです。この過程を繰り返し続ければ、たとえ完璧な解には到達できなくても、徐々に持続可能な状態に「収束」することができます。完璧な計画よりも重要なのは、今すぐ始め、絶えず改善し続けることです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. 複素解析学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div>
+                        <div id="ja-9">私は「次元を超えて新たな解法を見出す」複素解析学です。実数の世界で解けない問題を、複素平面という新しい次元に拡張して優雅に解決します。
+                        <strong>持続可能な発展への提言：</strong>現在の経済成長モデル（実数軸）の中では、「成長」と「環境保全」が衝突するように見えます。私はこの問題を「複素平面」へと拡張することを提案します。「虚数軸」に「社会的信頼」「生態学的価値」「文化的豊かさ」といった新たな価値を導入するのです。そうすれば、私たちの目標は単にGDP（実部）を最大化することではなく、複素数的価値全体の「絶対値」を大きくすることになります。次元を上げて考えれば、経済成長と環境保全が互いを強化し合いながら共に進む、新たな解決策が見つかるはずです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. 位相数学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div>
+                        <div id="ja-10">私は「伸ばしたり縮めたりしても変わらない本質」を研究する位相数学です。私にとってコーヒーカップとドーナツは、穴が一つという点で「同相」、つまり同じ存在です。
+                        <strong>持続可能な発展への提言：</strong>国家、人種、文化の境界は人間が作った人為的な区分に過ぎません。位相的に見れば、地球は「穴のない球面」と同じです。つまり、すべての人類は一つの閉じた空間の中に繋がった存在であるという本質は変わりません。持続可能な発展とは、まさにこの「位相不変性」を悟ることから始まります。国境をいくら高く築いても、汚染や気候変動は防げません。私たちが住む空間が分離不可能な一つであることを認め、問題の本質（穴）を共に解決しようとする時、初めて真の解決策が見えてくるでしょう。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 '읽어주기' 및 '전체 듣기' 버튼을 선택합니다.
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            // 현재 재생 중인 음성을 중지하는 함수
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 다른 음성이 재생 중이면 즉시 중지합니다.
+                    stopSpeech();
+
+                    let lang;
+                    // 버튼 클래스에 따라 언어 코드와 텍스트 대상을 결정합니다.
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0; // 읽는 속도 (기본값 1)
+                        utterance.pitch = 1.0; // 음높이 (기본값 1)
+
+                        utterance.onend = function() {
+                            console.log('Speech playback finished for ' + targetId);
+                        };
+                        
+                        // 음성 재생
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

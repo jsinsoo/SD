@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소년이 온다: 기억과 지속 가능한 미래를 위한 대화</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', sans-serif;
+            line-height: 1.9;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #4a4a4a;
+            border-bottom: 2px solid #6c757d;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-left: 5px solid #6c757d;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .card h2 {
+            margin-top: 0;
+            color: #343a40;
+            font-size: 1.8em;
+        }
+        .lang-section {
+            margin-top: 15px;
+            padding-left: 15px;
+            border-left: 3px solid #f1f3f5;
+        }
+        .lang-section h3 {
+            font-size: 1.2em;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+        p {
+            margin: 8px 0;
+            text-align: justify;
+        }
+        button {
+            cursor: pointer;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 16px;
+            margin-left: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+            vertical-align: middle;
+        }
+        button:hover {
+            background-color: #495057;
+            transform: scale(1.1);
+        }
+        .controls {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .controls button {
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>소년이 온다: 기억과 지속 가능한 미래를 위한 대화</h1>
+
+    <div class="controls">
+        <button onclick="speakAll('ko')">전체 듣기 (한국어)</button>
+        <button onclick="speakAll('ja')">全体を聞く (日本語)</button>
+        <button onclick="speakAll('en')">Listen to All (English)</button>
+    </div>
+
+    <!-- 1. 동호 -->
+    <div class="card">
+        <h2>동호</h2>
+        <div class="lang-section">
+            <h3>[한국어]</h3>
+            <p class="korean-text">저는... 친구의 손을 놓쳤습니다. 그 차가운 주검들 사이에서 촛불을 갈아 끼우던 기억이 아직도 선명합니다. 저는 그저 목격자였습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">지구의 지속 가능성도 마찬가지 아닐까요. 우리는 지금 지구의 죽음을 목격하고 있습니다. 빙하가 녹고 숲이 사라지는 것을 보면서도, 많은 이들이 저처럼 그저 바라만 보고 있습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">우리는 더 이상 목격자에 머물러서는 안 됩니다. 사라져가는 생명들의 이름을 불러주고, 그들의 마지막을 기록해야 합니다. 모든 생명은 존엄하며, 그 죽음이 헛되지 않도록 기억하는 것에서부터 책임이 시작됩니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">지속 가능한 발전이란, 파괴의 현장에서 도망치지 않고 그 참상을 똑똑히 마주 보는 용기에서 출발해야 합니다. 죽어가는 것들의 곁을 지키고, 그들을 위한 애도의 촛불을 꺼뜨리지 않는 것입니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">그 기억의 힘만이 우리를 행동하게 만들고, 같은 비극이 반복되는 것을 막을 수 있을 겁니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[日本語]</h3>
+            <p class="japanese-text">僕は…友達の手を離してしまいました。冷たい亡骸の間でろうそくを替え続けた記憶が、今も鮮明です。僕はただの目撃者でした。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">地球の持続可能性も同じではないでしょうか。私たちは今、地球の死を目撃しています。氷河が溶け、森が消えていくのを見ながら、多くの人々が僕のようにただ傍観しているだけです。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">私たちはもはや目撃者にとどまっていてはなりません。消えゆく命の名前を呼び、その最期を記録しなければなりません。すべての命は尊厳であり、その死が無駄にならないように記憶することから責任は始まります。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">持続可能な発展とは、破壊の現場から逃げずにその惨状にまっすぐ向き合う勇気から始まるべきです。死にゆくもののそばに寄り添い、彼らを追悼するろうそくの火を消さないことです。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">その記憶の力だけが、私たちを行動させ、同じ悲劇が繰り返されるのを防ぐことができるでしょう。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[English]</h3>
+            <p class="english-text">I... I let go of my friend's hand. The memory of replacing candles among the cold corpses is still vivid. I was merely a witness.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Isn't the sustainability of our planet the same? We are now witnessing the death of the Earth. While watching glaciers melt and forests disappear, many, like me, are just watching.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">We must no longer remain as witnesses. We must call the names of the disappearing lives and record their final moments. All life has dignity, and responsibility begins with remembering so their deaths are not in vain.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Sustainable development must start with the courage to face the devastation head-on, without running away from the scene of destruction. It is about staying by the side of the dying and keeping the candles of mourning lit for them.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Only the power of that memory can make us act and prevent the same tragedy from being repeated.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+        </div>
+    </div>
+    
+    <!-- 2. 정대 -->
+    <div class="card">
+        <h2>정대</h2>
+        <div class="lang-section">
+            <h3>[한국어]</h3>
+            <p class="korean-text">나는 왜 죽어야 했을까요. 애국가를 불렀는데, 총알이 날아왔습니다. 내 영혼은 오랫동안 그곳을 떠돌았습니다. 썩어가는 육신들 사이에서 인간의 존엄성이란 무엇인지 물었습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">지금 지구도 똑같이 묻고 있습니다. 왜 파헤쳐지고 불태워져야 하는지. 왜 수많은 생명들이 아무런 이유 없이 사라져야 하는지. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">지속 가능한 발전은 경제 성장이나 기술 개발 이전에, 가장 근본적인 질문에 답하는 것이어야 합니다. 바로 ‘인간은 왜 존엄한가’, ‘생명은 왜 소중한가’ 라는 질문입니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">인간의 존엄성을 아무렇지 않게 짓밟는 사회가 어떻게 자연의 생명을 존중할 수 있겠습니까. 모든 폭력은 연결되어 있습니다. 사람에 대한 폭력, 자연에 대한 폭력은 결국 같은 뿌리에서 나옵니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">그러므로 진정한 지속 가능성은 비폭력의 원칙 위에 세워져야 합니다. 나와 다른 존재를 해치지 않고, 약한 것을 착취하지 않겠다는 약속이 모든 정책의 시작이 되어야 합니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[日本語]</h3>
+            <p class="japanese-text">なぜ僕は死ななければならなかったのでしょうか。愛国歌を歌ったのに、銃弾が飛んできました。僕の魂は長い間、そこをさまよっていました。腐りゆく肉体の間で、人間の尊厳とは何かを問い続けました。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">今、地球も同じことを問いかけています。なぜ掘り返され、燃やされなければならないのか。なぜ数多くの命が何の理由もなく消えなければならないのか。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">持続可能な発展は、経済成長や技術開発の前に、最も根本的な問いに答えることでなければなりません。すなわち、「人間はなぜ尊厳なのか」「命はなぜ大切なのか」という問いです。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">人間の尊厳を平気で踏みにじる社会が、どうして自然の命を尊重できるでしょうか。すべての暴力はつながっています。人への暴力、自然への暴力は、結局同じ根から生じています。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">したがって、真の持続可能性は非暴力の原則の上に築かれなければなりません。自分と異なる存在を傷つけず、弱いものを搾取しないという約束が、すべての政策の始まりとなるべきです。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[English]</h3>
+            <p class="english-text">Why did I have to die? I sang the national anthem, but bullets flew. My soul wandered that place for a long time. Among the decaying bodies, I asked what human dignity was.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">The Earth is asking the same question now. Why must it be dug up and burned? Why must countless lives disappear for no reason?<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Before economic growth or technological development, sustainable development must be about answering the most fundamental questions: 'Why is humanity dignified?' and 'Why is life precious?'<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">How can a society that casually tramples on human dignity respect the life of nature? All violence is connected. Violence against people and violence against nature ultimately stem from the same root.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Therefore, true sustainability must be built on the principle of non-violence. The promise not to harm beings different from myself, not to exploit the weak, must be the starting point of all policies.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+        </div>
+    </div>
+    
+    <!-- 3. 은숙 -->
+    <div class="card">
+        <h2>은숙</h2>
+        <div class="lang-section">
+            <h3>[한국어]</h3>
+            <p class="korean-text">저는 살아남았습니다. 하지만 살아남았다는 게 무엇인지 아직도 잘 모르겠습니다. 그날 이후, 제 시간은 온전하게 흐르지 못했습니다. 몸에 새겨진 상처는 제 영혼을 계속해서 붙잡았습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">우리 사회와 지구도 마찬가지입니다. 과거의 폭력과 착취로 깊은 상처를 입었습니다. 이제 와서 ‘지속 가능한 성장’을 말하지만, 이미 병든 몸으로는 제대로 나아갈 수 없습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">가장 먼저 해야 할 일은 ‘치유’입니다. 상처를 정직하게 드러내고, 고통받은 이들의 목소리를 듣는 것입니다. 오염된 강과 대지, 파괴된 숲의 신음을 들어야 합니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">진정한 지속 가능성은 성장이 아니라 회복에 초점을 맞춰야 합니다. 망가진 생태계를 복원하고, 사회적 약자들의 상처를 보듬는 ‘돌봄의 경제’로 전환해야 합니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">성장의 속도를 늦추더라도, 함께 치유하며 천천히 걸어가는 것. 그것만이 죽은 자들과 살아남은 우리 모두에게 부끄럽지 않은 유일한 길입니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[日本語]</h3>
+            <p class="japanese-text">私は生き残りました。しかし、生き残ったということが何なのか、まだよく分かりません。あの日以来、私の時間はまともに流れることができませんでした。体に刻まれた傷が、私の魂を捉え続けています。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">私たちの社会も地球も同じです。過去の暴力と搾取によって深い傷を負いました。今になって「持続可能な成長」を語りますが、すでに病んだ体では、まともに進むことはできません。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">最初にすべきことは「癒し」です。傷を正直にさらし、苦しんだ人々の声に耳を傾けることです。汚染された川や大地、破壊された森のうめき声を聞かなければなりません。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">真の持続可能性は、成長ではなく回復に焦点を合わせるべきです。壊れた生態系を復元し、社会的弱者の傷を癒す「ケアの経済」に転換しなければなりません。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">成長の速度を落としてでも、共に癒し、ゆっくりと歩んでいくこと。それだけが、死者と生き残った私たち全員にとって、恥ずかしくない唯一の道です。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[English]</h3>
+            <p class="english-text">I survived. But I still don't really know what it means to have survived. Since that day, my time has never flowed properly. The scars etched on my body continuously held my soul captive.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Our society and our planet are the same. They have been deeply wounded by past violence and exploitation. Now we talk about 'sustainable growth,' but a sick body cannot move forward properly.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">The first thing we must do is 'heal.' We must honestly expose the wounds and listen to the voices of those who have suffered. We must hear the groans of polluted rivers and lands, of destroyed forests.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">True sustainability must focus on recovery, not growth. We must transition to an 'economy of care' that restores broken ecosystems and embraces the wounds of the socially vulnerable.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Slowing the pace of growth, to heal together and walk slowly. That is the only path that is not shameful to both the dead and to us, the survivors.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+        </div>
+    </div>
+    
+    <!-- 4. 김진수 & 선주 -->
+    <div class="card">
+        <h2>김진수 & 선주</h2>
+        <div class="lang-section">
+            <h3>[한국어]</h3>
+            <p class="korean-text">(진수) 저는 살아남은 죄책감 때문에 오랫동안 말할 수 없었습니다. 그 기억을 꺼내는 것 자체가 사치처럼 느껴졌습니다. (선주) 저 또한 마찬가지입니다. 제 고통을 말하는 것이 누구에게 또 다른 상처가 될까 두려웠습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">우리가 침묵하는 사이, 세상은 왜곡된 기록을 진실로 믿어버렸습니다. 지금 지구의 위기도 마찬가지입니다. 과학자들은 수십 년간 경고했지만, 그 목소리는 경제 성장의 소음에 묻혀버렸습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">지속 가능한 발전은 ‘말하기’와 ‘듣기’의 문제입니다. 진실을 말할 용기가 필요하고, 그 불편한 진실을 들을 사회적 책임감이 필요합니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">우리는 기후 위기의 최전선에 있는 사람들, 원주민, 가난한 나라의 농부들처럼 목소리를 빼앗긴 이들에게 마이크를 넘겨주어야 합니다. 그들의 증언 속에 지속 가능성의 해법이 있습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">더는 침묵해서는 안 됩니다. 우리 각자의 자리에서 진실을 증언하고, 그 목소리들이 모여 거대한 합창이 될 때, 비로소 세상은 변하기 시작할 것입니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[日本語]</h3>
+            <p class="japanese-text">（ジンス）私は生き残った罪悪感から、長い間話すことができませんでした。その記憶を口にすること自体が贅沢のように感じられました。（ソンジュ）私も同じです。私の苦しみを話すことが、誰かにとってまた別の傷になるのではないかと恐れていました。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">私たちが沈黙している間に、世界は歪められた記録を真実だと信じてしまいました。今の地球の危機も同じです。科学者たちは何十年も警告してきましたが、その声は経済成長の騒音にかき消されてしまいました。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">持続可能な発展は、「話すこと」と「聞くこと」の問題です。真実を話す勇気が必要であり、その不都合な真実を聞く社会的責任感が必要です。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">私たちは、気候危機の最前線にいる人々、先住民、貧しい国の農民たちのように、声を奪われた人々にマイクを渡さなければなりません。彼らの証言の中に、持続可能性の解決策があります。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">もはや沈黙してはなりません。私たち一人一人がそれぞれの場所で真実を証言し、その声が集まって巨大な合唱となるとき、初めて世界は変わり始めるでしょう。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[English]</h3>
+            <p class="english-text">(Jin-su) For a long time, I couldn't speak because of the guilt of surviving. Even bringing up the memory felt like a luxury. (Seon-ju) It was the same for me. I was afraid that speaking of my pain would become another wound for someone else.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">While we were silent, the world came to believe a distorted record as the truth. The current crisis of the Earth is the same. Scientists have warned for decades, but their voices were drowned out by the noise of economic growth.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Sustainable development is a matter of 'speaking' and 'listening.' It requires the courage to speak the truth and the social responsibility to listen to that inconvenient truth.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">We must pass the microphone to those whose voices have been taken away, like the people on the front lines of the climate crisis, indigenous peoples, and farmers in poor countries. The solutions for sustainability lie in their testimonies.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">We must not be silent any longer. When each of us testifies to the truth from our own places, and those voices gather to become a great chorus, only then will the world begin to change.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+        </div>
+    </div>
+    
+    <!-- 5. 동호의 어머니 -->
+    <div class="card">
+        <h2>동호 어머니</h2>
+        <div class="lang-section">
+            <h3>[한국어]</h3>
+            <p class="korean-text">내 아들은 돌아왔지만, 예전의 아들이 아니었습니다. 나는 평생을 그 아이의 밥을 차려주면서, 그날 아들을 혼자 내보낸 나를 용서할 수 없었습니다. 남겨진 자의 삶이란 그런 것입니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">우리는 지금 미래 세대에게 그런 삶을 남겨주려 하고 있습니다. 아름다운 자연을 파괴하고, 그들이 짊어져야 할 빚과 고통을 남겨두고 있습니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">지속 가능한 발전이란 다른 것이 아닙니다. 다음 세대의 밥상에 깨끗한 물과 안전한 음식을 올려줄 수 있는가, 그들이 숨 쉴 깨끗한 공기를 남겨줄 수 있는가 하는 것입니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">어머니의 마음으로 세상을 봐야 합니다. 내 아이가 살아갈 세상을 위해 오늘의 불편함을 기꺼이 감수하는 마음. 내 욕심 때문에 미래의 아이들이 고통받게 하지 않겠다는 단호한 결심. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+            <p class="korean-text">모든 정책과 개발은 단 하나의 질문으로 평가받아야 합니다. ‘이것이 우리 아이들의 미래를 더 안전하고 평화롭게 만드는가?’ 그 질문에 ‘예’라고 답할 수 있을 때, 우리는 비로소 지속 가능한 길을 걷고 있는 것입니다. <button onclick="speak(this.previousElementSibling.textContent, 'ko-KR')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[日本語]</h3>
+            <p class="japanese-text">息子は帰ってきましたが、以前の息子ではありませんでした。私は一生、あの子にご飯を作りながら、あの日、息子を一人で行かせた自分を許すことができませんでした。残された者の人生とは、そういうものです。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">私たちは今、未来の世代にそのような人生を残そうとしています。美しい自然を破壊し、彼らが背負わなければならない負債と苦痛を残しています。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">持続可能な発展とは、他でもありません。次の世代の食卓にきれいな水と安全な食べ物を乗せられるか、彼らが呼吸するきれいな空気を残せるか、ということです。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">母親の心で世界を見なければなりません。我が子が生きる世界のために、今日の不便を喜んで受け入れる心。自分の欲望のために未来の子供たちが苦しむことのないようにするという、断固たる決意。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+            <p class="japanese-text">すべての政策と開発は、ただ一つの問いによって評価されるべきです。「これは私たちの子供たちの未来を、より安全で平和にするか？」その問いに「はい」と答えられるとき、私たちは初めて持続可能な道を歩んでいるのです。<button onclick="speak(this.previousElementSibling.textContent, 'ja-JP')">🔊</button></p>
+        </div>
+        <div class="lang-section">
+            <h3>[English]</h3>
+            <p class="english-text">My son returned, but he was not the son he used to be. For my entire life, as I prepared his meals, I could never forgive myself for letting him go out alone that day. Such is the life of the one left behind.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">We are now trying to leave such a life for future generations. We are destroying beautiful nature, leaving behind debts and suffering for them to bear.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">Sustainable development is nothing else but this: Can we put clean water and safe food on the table for the next generation? Can we leave them clean air to breathe?<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">We must see the world with a mother's heart. A heart willing to endure today's inconveniences for the world our children will live in. A firm resolve not to let future children suffer because of my greed.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+            <p class="english-text">All policies and developments must be judged by a single question: 'Does this make our children's future safer and more peaceful?' When we can answer 'yes' to that question, only then are we truly walking the path of sustainability.<button onclick="speak(this.previousElementSibling.textContent, 'en-US')">🔊</button></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function speak(text, lang) {
+        if ('speechSynthesis' in window) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang;
+            utterance.rate = 0.95; // Adjust rate for clarity
+            speechSynthesis.cancel(); // Stop any previous speech
+            speechSynthesis.speak(utterance);
+        } else {
+            alert('Sorry, your browser does not support text-to-speech.');
+        }
+    }
+
+    function speakAll(lang) {
+        let textClass = '';
+        let langCode = '';
+        if (lang === 'ko') {
+            textClass = '.korean-text';
+            langCode = 'ko-KR';
+        } else if (lang === 'ja') {
+            textClass = '.japanese-text';
+            langCode = 'ja-JP';
+        } else if (lang === 'en') {
+            textClass = '.english-text';
+            langCode = 'en-US';
+        }
+
+        const paragraphs = document.querySelectorAll(textClass);
+        const fullText = Array.from(paragraphs).map(p => p.textContent).join(' ');
+        speak(fullText, langCode);
+    }
+</script>
+
+</body>
+</html>
