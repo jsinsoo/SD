@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지속 가능한 지구를 위한 동물 환경 회의</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #007bff;
+            border-bottom: 1px dotted #007bff;
+        }
+        .speech-block {
+            margin-bottom: 30px;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            background-color: #e9f5ff;
+            border-radius: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        button {
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .chairperson {
+            background-color: #fff3cd;
+            border-left-color: #ffc107;
+        }
+    </style>
+    <script>
+        function speak(text, lang) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = lang;
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('죄송합니다. 이 브라우저에서는 음성 합성을 지원하지 않습니다.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>제1회 동물 환경 회의: 지속 가능한 지구</h1>
+
+        <div class="speech-block chairperson">
+            <h3>의장 코끼리의 개회사</h3>
+            <p>
+                <strong>[한국어]</strong><button onclick="speak('존경하는 동료 동물 여러분, 이 자리에 모여주셔서 감사합니다. 저는 오늘 회의의 의장을 맡은 코끼리입니다. 우리는 각자 다른 환경에서 살아가지만, 지금 우리 모두는 하나의 거대한 위기에 직면해 있습니다. 바로 우리 유일한 보금자리인 지구가 병들어가고 있다는 사실입니다. 더 이상 침묵할 수 없습니다. 오늘 우리는 종의 경계를 넘어, 지혜를 모아 지속 가능한 미래를 위한 첫걸음을 내딛어야 합니다.', 'ko-KR')">🔊</button>
+
+                존경하는 동료 동물 여러분, 이 자리에 모여주셔서 감사합니다. 저는 오늘 회의의 의장을 맡은 코끼리입니다. 우리는 각자 다른 환경에서 살아가지만, 지금 우리 모두는 하나의 거대한 위기에 직면해 있습니다. 바로 우리 유일한 보금자리인 지구가 병들어가고 있다는 사실입니다. 더 이상 침묵할 수 없습니다. 오늘 우리는 종의 경계를 넘어, 지혜를 모아 지속 가능한 미래를 위한 첫걸음을 내딛어야 합니다.
+            </p>
+            <p>
+                <strong>[English]</strong><button onclick="speak(`Respected fellow animals, thank you for gathering here. I am the elephant, chairing today's conference. We may live in different environments, but we all face one colossal crisis: our only home, the Earth, is ailing. We can no longer remain silent. Today, we must transcend the boundaries of our species, pool our wisdom, and take the first step towards a sustainable future.`, 'en-US')">🔊</button>
+
+                Respected fellow animals, thank you for gathering here. I am the elephant, chairing today's conference. We may live in different environments, but we all face one colossal crisis: our only home, the Earth, is ailing. We can no longer remain silent. Today, we must transcend the boundaries of our species, pool our wisdom, and take the first step towards a sustainable future.
+            </p>
+            <p>
+                <strong>[日本語]</strong><button onclick="speak(`尊敬する動物の皆様、お集まりいただきありがとうございます。本日の会議の議長を務めますゾウです。私たちはそれぞれ異なる環境で生きていますが、今、私たち全員が巨大な危機に直面しています。それは、私たちの唯一の住処である地球が病んでいるという事実です。もはや沈黙しているわけにはいきません。今日、私たちは種の境界を越え、知恵を集め、持続可能な未来への第一歩を踏み出さなければなりません。`, 'ja-JP')">🔊</button>
+
+                尊敬する動物の皆様、お集まりいただきありがとうございます。本日の会議の議長を務めますゾウです。私たちはそれぞれ異なる環境で生きていますが、今、私たち全員が巨大な危機に直面しています。それは、私たちの唯一の住処である地球が病んでいるという事実です。もはや沈黙しているわけにはいきません。今日、私たちは種の境界を越え、知恵を集め、持続可能な未来への第一歩を踏み出さなければなりません。
+            </p>
+        </div>
+
+        <h2>어류 대표 발언</h2>
+        
+        <div class="speech-block">
+            <h3>붕어 (Bream / フナ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 민물에 사는 붕어입니다. 예전에는 맑은 강과 저수지가 우리의 놀이터였습니다. 하지만 지금은 공장에서 흘러나온 폐수와 농약으로 물이 오염되어 숨쉬기조차 힘듭니다. 우리 아이들이 더 이상 기형으로 태어나지 않는 깨끗한 물을 돌려주십시오. 작은 생명이 살 수 없는 곳에서는 큰 생명도 결국 살아남지 못할 것입니다. 물의 정화는 모든 생명의 시작입니다.', 'ko-KR')">🔊</button>
+저는 민물에 사는 붕어입니다. 예전에는 맑은 강과 저수지가 우리의 놀이터였습니다. 하지만 지금은 공장에서 흘러나온 폐수와 농약으로 물이 오염되어 숨쉬기조차 힘듭니다. 우리 아이들이 더 이상 기형으로 태어나지 않는 깨끗한 물을 돌려주십시오. 작은 생명이 살 수 없는 곳에서는 큰 생명도 결국 살아남지 못할 것입니다. 물의 정화는 모든 생명의 시작입니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a bream, living in freshwater. Clean rivers and reservoirs used to be our playground. But now, the water is so polluted with wastewater from factories and pesticides that it's hard to even breathe. Please give us back the clean water so our children are no longer born with deformities. Where small life cannot live, large life will eventually perish. The purification of water is the beginning of all life.`, 'en-US')">🔊</button>
+I am a bream, living in freshwater. Clean rivers and reservoirs used to be our playground. But now, the water is so polluted with wastewater from factories and pesticides that it's hard to even breathe. Please give us back the clean water so our children are no longer born with deformities. Where small life cannot live, large life will eventually perish. The purification of water is the beginning of all life.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は淡水に住むフナです。かつては澄んだ川や貯水池が私たちの遊び場でした。しかし今は、工場からの廃水や農薬で水が汚染され、息をすることさえ困難です。私たちの子供たちがこれ以上奇形で生まれないよう、きれいな水を取り戻してください。小さな命が生きられない場所では、大きな命も最終的には生き残れません。水の浄化は、すべての命の始まりなのです。`, 'ja-JP')">🔊</button><br>私は淡水に住むフナです。かつては澄んだ川や貯水池が私たちの遊び場でした。しかし今は、工場からの廃水や農薬で水が汚染され、息をすることさえ困難です。私たちの子供たちがこれ以上奇形で生まれないよう、きれいな水を取り戻してください。小さな命が生きられない場所では、大きな命も最終的には生き残れません。水の浄化は、すべての命の始まりなのです。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>송어 (Trout / マス)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 차고 깨끗한 1급수에서만 사는 송어입니다. 저희에게 수온 1도 상승은 생사가 걸린 문제입니다. 기후 변화로 계곡물이 미지근해지고, 무분별한 댐 건설로 산란을 위해 거슬러 올라갈 고향을 잃었습니다. 인간의 편리를 위해 만들어진 구조물들이 우리의 생존을 위협하고 있습니다. 강은 흘러야 하고, 물은 차가워야 합니다. 자연의 흐름을 막지 말아 주십시오.', 'ko-KR')">🔊</button>
+저는 차고 깨끗한 1급수에서만 사는 송어입니다. 저희에게 수온 1도 상승은 생사가 걸린 문제입니다. 기후 변화로 계곡물이 미지근해지고, 무분별한 댐 건설로 산란을 위해 거슬러 올라갈 고향을 잃었습니다. 인간의 편리를 위해 만들어진 구조물들이 우리의 생존을 위협하고 있습니다. 강은 흘러야 하고, 물은 차가워야 합니다. 자연의 흐름을 막지 말아 주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a trout, living only in cold, pristine waters. For us, a one-degree rise in water temperature is a matter of life and death. Climate change has warmed the streams, and reckless dam construction has cost us our homes to which we return to spawn. Structures built for human convenience are threatening our very survival. Rivers must flow, and water must remain cold. Please do not obstruct the natural flow.`, 'en-US')">🔊</button>
+I am a trout, living only in cold, pristine waters. For us, a one-degree rise in water temperature is a matter of life and death. Climate change has warmed the streams, and reckless dam construction has cost us our homes to which we return to spawn. Structures built for human convenience are threatening our very survival. Rivers must flow, and water must remain cold. Please do not obstruct the natural flow.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は冷たくきれいな一級水にしか住めないマスです。私たちにとって水温が1度上がることは、生死に関わる問題です。気候変動で渓谷の水がぬるくなり、無分別なダム建設で産卵のために遡上する故郷を失いました。人間の便利さのために作られた構造物が、私たちの生存を脅かしています。川は流れなければならず、水は冷たくなければなりません。自然の流れを堰き止めないでください。`, 'ja-JP')">🔊</button>
+私は冷たくきれいな一級水にしか住めないマスです。私たちにとって水温が1度上がることは、生死に関わる問題です。気候変動で渓谷の水がぬるくなり、無分別なダム建設で産卵のために遡上する故郷を失いました。人間の便利さのために作られた構造物が、私たちの生存を脅かしています。川は流れなければならず、水は冷たくなければなりません。自然の流れを堰き止めないでください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>상어 (Shark / サメ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 바다의 균형을 맞추는 상어입니다. 많은 이들이 저희를 두려워하지만, 저희는 아프고 약한 개체들을 정리하며 바다 생태계의 건강을 유지합니다. 하지만 인간들은 우리의 지느러미만을 탐하고 몸통은 버리는 잔인한 행위를 저지르고, 무분별한 남획으로 우리의 먹이사슬을 파괴합니다. 우리가 사라진 바다는 곧 죽은 바다가 될 것입니다. 해양 생태계의 최상위 포식자로서 경고합니다. 바다의 질서를 존중해주십시오.', 'ko-KR')">🔊</button>
+저는 바다의 균형을 맞추는 상어입니다. 많은 이들이 저희를 두려워하지만, 저희는 아프고 약한 개체들을 정리하며 바다 생태계의 건강을 유지합니다. 하지만 인간들은 우리의 지느러미만을 탐하고 몸통은 버리는 잔인한 행위를 저지르고, 무분별한 남획으로 우리의 먹이사슬을 파괴합니다. 우리가 사라진 바다는 곧 죽은 바다가 될 것입니다. 해양 생태계의 최상위 포식자로서 경고합니다. 바다의 질서를 존중해주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a shark, the balancer of the seas. Many fear us, but we maintain the health of the marine ecosystem by culling the sick and weak. Yet, humans commit the cruel act of taking only our fins and discarding our bodies, and their indiscriminate overfishing destroys our food chain. An ocean without us will soon become a dead ocean. As the apex predator of this ecosystem, I warn you: respect the order of the sea.`, 'en-US')">🔊</button>
+I am a shark, the balancer of the seas. Many fear us, but we maintain the health of the marine ecosystem by culling the sick and weak. Yet, humans commit the cruel act of taking only our fins and discarding our bodies, and their indiscriminate overfishing destroys our food chain. An ocean without us will soon become a dead ocean. As the apex predator of this ecosystem, I warn you: respect the order of the sea.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は海のバランスを保つサメです。多くは私たちを恐れますが、私たちは病気で弱い個体を整理し、海洋生態系の健康を維持しています。しかし人間は、私たちのヒレだけを求め、胴体を捨てるという残虐な行為を行い、無分別な乱獲で私たちの食物連鎖を破壊します。私たちが消えた海は、やがて死の海となるでしょう。海洋生態系の頂点捕食者として警告します。海の秩序を尊重してください。`, 'ja-JP')">🔊</button>
+私は海のバランスを保つサメです。多くは私たちを恐れますが、私たちは病気で弱い個体を整理し、海洋生態系の健康を維持しています。しかし人間は、私たちのヒレだけを求め、胴体を捨てるという残虐な行為を行い、無分別な乱獲で私たちの食物連鎖を破壊します。私たちが消えた海は、やがて死の海となるでしょう。海洋生態系の頂点捕食者として警告します。海の秩序を尊重してください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>참치 (Tuna / マグロ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 드넓은 대양을 헤엄치는 참치입니다. 저희는 국경 없이 바다를 누비지만, 인간들이 쳐놓은 거대한 그물은 피할 길이 없습니다. 필요한 만큼이 아닌, 욕심으로 가득 찬 조업은 저희 동족뿐만 아니라 다른 수많은 해양 생물들까지 함께 희생시킵니다. 바다의 자원은 무한하지 않습니다. 지속 가능한 어업 방식을 도입하고, 미래 세대가 누려야 할 바다의 풍요로움을 남겨주십시오. 저희는 음식이전에 생명입니다.', 'ko-KR')">🔊</button>
+저는 드넓은 대양을 헤엄치는 참치입니다. 저희는 국경 없이 바다를 누비지만, 인간들이 쳐놓은 거대한 그물은 피할 길이 없습니다. 필요한 만큼이 아닌, 욕심으로 가득 찬 조업은 저희 동족뿐만 아니라 다른 수많은 해양 생물들까지 함께 희생시킵니다. 바다의 자원은 무한하지 않습니다. 지속 가능한 어업 방식을 도입하고, 미래 세대가 누려야 할 바다의 풍요로움을 남겨주십시오. 저희는 음식이전에 생명입니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a tuna, swimming across the vast oceans. We roam the seas without borders, but there is no escaping the massive nets cast by humans. Fishing driven by greed, not need, sacrifices not only our kind but countless other marine creatures as well. The ocean's resources are not infinite. Please adopt sustainable fishing practices and leave the ocean's bounty for future generations. We are life before we are food.`, 'en-US')">🔊</button>
+I am a tuna, swimming across the vast oceans. We roam the seas without borders, but there is no escaping the massive nets cast by humans. Fishing driven by greed, not need, sacrifices not only our kind but countless other marine creatures as well. The ocean's resources are not infinite. Please adopt sustainable fishing practices and leave the ocean's bounty for future generations. We are life before we are food.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は広大な大洋を泳ぐマグロです。私たちは国境なく海を旅しますが、人間が仕掛けた巨大な網からは逃れる術がありません。必要ではなく、欲望に満ちた漁業は、私たちの仲間だけでなく、他の数多くの海洋生物までも犠牲にします。海の資源は無限ではありません。持続可能な漁業方法を導入し、未来の世代が享受すべき海の豊かさを残してください。私たちは食べ物である前に、命なのです。`, 'ja-JP')">🔊</button>
+私は広大な大洋を泳ぐマグロです。私たちは国境なく海を旅しますが、人間が仕掛けた巨大な網からは逃れる術がありません。必要ではなく、欲望に満ちた漁業は、私たちの仲間だけでなく、他の数多くの海洋生物までも犠牲にします。海の資源は無限ではありません。持続可能な漁業方法を導入し、未来の世代が享受すべき海の豊かさを残してください。私たちは食べ物である前に、命なのです。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>금붕어 (Goldfish / 金魚)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 작은 어항 속의 금붕어입니다. 여러분처럼 거대한 자연을 걱정할 처지는 아닐지 모릅니다. 하지만 저희의 삶은 인간의 책임감에 전적으로 달려있습니다. 깨끗한 물, 적당한 먹이, 그리고 함부로 버려지지 않을 권리. 저희를 통해 생명을 돌보는 법을 배운 인간들이 그 마음을 더 큰 자연으로 확장하기를 바랍니다. 모든 생명은 크기와 상관없이 소중합니다. 작은 생명에 대한 존중이 모든 것의 시작입니다.', 'ko-KR')">🔊</button>
+저는 작은 어항 속의 금붕어입니다. 여러분처럼 거대한 자연을 걱정할 처지는 아닐지 모릅니다. 하지만 저희의 삶은 인간의 책임감에 전적으로 달려있습니다. 깨끗한 물, 적당한 먹이, 그리고 함부로 버려지지 않을 권리. 저희를 통해 생명을 돌보는 법을 배운 인간들이 그 마음을 더 큰 자연으로 확장하기를 바랍니다. 모든 생명은 크기와 상관없이 소중합니다. 작은 생명에 대한 존중이 모든 것의 시작입니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a goldfish in a small bowl. Perhaps I am not in a position to worry about the great outdoors like you all. However, our lives depend entirely on human responsibility. Clean water, proper food, and the right not to be carelessly discarded. I hope that humans who learn to care for life through us will extend that heart to the larger nature. All life is precious, regardless of size. Respect for small lives is the beginning of everything.`, 'en-US')">🔊</button>
+I am a goldfish in a small bowl. Perhaps I am not in a position to worry about the great outdoors like you all. However, our lives depend entirely on human responsibility. Clean water, proper food, and the right not to be carelessly discarded. I hope that humans who learn to care for life through us will extend that heart to the larger nature. All life is precious, regardless of size. Respect for small lives is the beginning of everything.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は小さな水槽の中の金魚です。皆様のように広大な自然を心配する立場ではないかもしれません。しかし、私たちの命は人間の責任感に完全にかかっています。きれいな水、適切な餌、そして無闇に捨てられない権利。私たちを通じて命の世話の仕方を学んだ人間が、その心をより大きな自然へと広げてくれることを願っています。すべての命は、大きさに関係なく尊いのです。小さな命への尊重が、すべての始まりです。`, 'ja-JP')">🔊</button>
+私は小さな水槽の中の金魚です。皆様のように広大な自然を心配する立場ではないかもしれません。しかし、私たちの命は人間の責任感に完全にかかっています。きれいな水、適切な餌、そして無闇に捨てられない権利。私たちを通じて命の世話の仕方を学んだ人間が、その心をより大きな自然へと広げてくれることを願っています。すべての命は、大きさに関係なく尊いのです。小さな命への尊重が、すべての始まりです。</p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>가오리 (Ray / エイ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 바다 밑바닥을 나는 가오리입니다. 저희는 바다의 청소부 역할을 하며 해저 생태계를 건강하게 유지합니다. 하지만 해저에는 인간이 버린 쓰레기들이 산더미처럼 쌓여 있습니다. 플라스틱, 폐그물, 각종 중금속이 우리의 삶터를 뒤덮고 있습니다. 위에서 보이지 않는다고 없는 것이 아닙니다. 바다의 가장 깊은 곳까지 병들게 하는 행위를 멈춰주십시오. 해저는 쓰레기장이 아닙니다.', 'ko-KR')">🔊</button>
+저는 바다 밑바닥을 나는 가오리입니다. 저희는 바다의 청소부 역할을 하며 해저 생태계를 건강하게 유지합니다. 하지만 해저에는 인간이 버린 쓰레기들이 산더미처럼 쌓여 있습니다. 플라스틱, 폐그물, 각종 중금속이 우리의 삶터를 뒤덮고 있습니다. 위에서 보이지 않는다고 없는 것이 아닙니다. 바다의 가장 깊은 곳까지 병들게 하는 행위를 멈춰주십시오. 해저는 쓰레기장이 아닙니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a ray, flying along the ocean floor. We act as janitors of the sea, keeping the seabed ecosystem healthy. But the ocean floor is piled high with human trash. Plastics, discarded nets, and various heavy metals cover our habitat. Just because it's not visible from the surface doesn't mean it's not there. Please stop the actions that are sickening the deepest parts of the ocean. The seabed is not a garbage dump.`, 'en-US')">🔊</button>
+I am a ray, flying along the ocean floor. We act as janitors of the sea, keeping the seabed ecosystem healthy. But the ocean floor is piled high with human trash. Plastics, discarded nets, and various heavy metals cover our habitat. Just because it's not visible from the surface doesn't mean it's not there. Please stop the actions that are sickening the deepest parts of the ocean. The seabed is not a garbage dump.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は海底を飛ぶエイです。私たちは海の掃除屋として、海底の生態系を健康に保っています。しかし、海底には人間が捨てたゴミが山のように積まれています。プラスチック、廃網、様々な重金属が私たちの住処を覆っています。上から見えないからといって、存在しないわけではありません。海の最も深い場所まで病ませる行為をやめてください。海底はゴミ捨て場ではありません。`, 'ja-JP')">🔊</button>
+私は海底を飛ぶエイです。私たちは海の掃除屋として、海底の生態系を健康に保っています。しかし、海底には人間が捨てたゴミが山のように積まれています。プラスチック、廃網、様々な重金属が私たちの住処を覆っています。上から見えないからといって、存在しないわけではありません。海の最も深い場所まで病ませる行為をやめてください。海底はゴミ捨て場ではありません。</p>
+        </div>
+        
+        <h2>양서류 대표 발언</h2>
+        
+        <div class="speech-block">
+            <h3>개구리 (Frog / カエル)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('물과 뭍을 오가며 사는 개구리입니다. 저희는 환경 변화에 가장 민감한 종족 중 하나입니다. 피부로 숨을 쉬기 때문에 물과 공기의 오염은 저희에게 치명적입니다. 살충제와 제초제는 우리의 번식을 막고 기형 올챙이를 낳게 합니다. 습지가 사라지면서 우리는 갈 곳을 잃었습니다. 저희의 울음소리가 사라진다는 것은 지구의 건강에 적신호가 켜졌다는 의미입니다. 생태계의 지표인 저희를 보호해주십시오.', 'ko-KR')">🔊</button>
+물과 뭍을 오가며 사는 개구리입니다. 저희는 환경 변화에 가장 민감한 종족 중 하나입니다. 피부로 숨을 쉬기 때문에 물과 공기의 오염은 저희에게 치명적입니다. 살충제와 제초제는 우리의 번식을 막고 기형 올챙이를 낳게 합니다. 습지가 사라지면서 우리는 갈 곳을 잃었습니다. 저희의 울음소리가 사라진다는 것은 지구의 건강에 적신호가 켜졌다는 의미입니다. 생태계의 지표인 저희를 보호해주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a frog, living between water and land. We are one of the most sensitive species to environmental changes. As we breathe through our skin, pollution in water and air is fatal to us. Pesticides and herbicides prevent our reproduction and cause deformed tadpoles. As wetlands disappear, we have lost our place to go. The silence of our croaking is a red flag for the Earth's health. Please protect us, the indicators of the ecosystem.`, 'en-US')">🔊</button>
+I am a frog, living between water and land. We are one of the most sensitive species to environmental changes. As we breathe through our skin, pollution in water and air is fatal to us. Pesticides and herbicides prevent our reproduction and cause deformed tadpoles. As wetlands disappear, we have lost our place to go. The silence of our croaking is a red flag for the Earth's health. Please protect us, the indicators of the ecosystem.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`水と陸を行き来して暮らすカエルです。私たちは環境の変化に最も敏感な種族の一つです。皮膚で呼吸するため、水や空気の汚染は私たちにとって致命的です。殺虫剤や除草剤は私たちの繁殖を妨げ、奇形のオタマジャクシを産ませます。湿地が消え、私たちは行く場所を失いました。私たちの鳴き声が消えるということは、地球の健康に赤信号が灯ったということです。生態系の指標である私たちを保護してください。`, 'ja-JP')">🔊</button>
+水と陸を行き来して暮らすカエルです。私たちは環境の変化に最も敏感な種族の一つです。皮膚で呼吸するため、水や空気の汚染は私たちにとって致命的です。殺虫剤や除草剤は私たちの繁殖を妨げ、奇形のオタマジャクシを産ませます。湿地が消え、私たちは行く場所を失いました。私たちの鳴き声が消えるということは、地球の健康に赤信号が灯ったということです。生態系の指標である私たちを保護してください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>두꺼비 (Toad / ヒキガエル)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 듬직한 두꺼비입니다. 저희는 해충을 잡아먹으며 생태계의 균형을 맞추는 중요한 역할을 합니다. 하지만 인간들은 도로를 내면서 우리의 이동 경로를 끊어버렸습니다. 매년 수많은 동족들이 산란을 위해 이동하다 차에 치여 죽습니다. 작은 생태 통로 하나가 수많은 생명을 살릴 수 있습니다. 개발을 할 때, 그곳에 먼저 살고 있던 생명들을 위한 작은 배려를 부탁드립니다. 길은 인간만의 것이 아닙니다.', 'ko-KR')">🔊</button><br>저는 듬직한 두꺼비입니다. 저희는 해충을 잡아먹으며 생태계의 균형을 맞추는 중요한 역할을 합니다. 하지만 인간들은 도로를 내면서 우리의 이동 경로를 끊어버렸습니다. 매년 수많은 동족들이 산란을 위해 이동하다 차에 치여 죽습니다. 작은 생태 통로 하나가 수많은 생명을 살릴 수 있습니다. 개발을 할 때, 그곳에 먼저 살고 있던 생명들을 위한 작은 배려를 부탁드립니다. 길은 인간만의 것이 아닙니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a sturdy toad. We play an important role in balancing the ecosystem by eating pests. But humans have cut off our migration routes by building roads. Every year, countless of our kind are killed by cars while migrating to spawn. A single small eco-corridor could save so many lives. When you develop land, please show a little consideration for the lives that were there first. Roads do not belong only to humans.`, 'en-US')">🔊</button>
+I am a sturdy toad. We play an important role in balancing the ecosystem by eating pests. But humans have cut off our migration routes by building roads. Every year, countless of our kind are killed by cars while migrating to spawn. A single small eco-corridor could save so many lives. When you develop land, please show a little consideration for the lives that were there first. Roads do not belong only to humans.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は頼もしいヒキガエルです。私たちは害虫を食べて生態系のバランスを保つ重要な役割を担っています。しかし、人間は道路を作ることで私たちの移動経路を断ち切ってしまいました。毎年、数え切れないほどの仲間が産卵のために移動中に車に轢かれて死んでいます。たった一つの小さな生態トンネルが、多くの命を救うことができます。開発をするときは、そこに先に住んでいた命への小さな配慮をお願いします。道は人間だけのものではありません。`, 'ja-JP')">🔊</button>
+私は頼もしいヒキガエルです。私たちは害虫を食べて生態系のバランスを保つ重要な役割を担っています。しかし、人間は道路を作ることで私たちの移動経路を断ち切ってしまいました。毎年、数え切れないほどの仲間が産卵のために移動中に車に轢かれて死んでいます。たった一つの小さな生態トンネルが、多くの命を救うことができます。開発をするときは、そこに先に住んでいた命への小さな配慮をお願いします。道は人間だけのものではありません。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>도롱뇽 (Salamander / サンショウウオ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 숲의 축축한 낙엽 아래 사는 도롱뇽입니다. 저희는 숲이 얼마나 건강한지를 보여주는 살아있는 증거입니다. 숲이 파괴되고 땅이 마르면서 저희는 설 자리를 잃어가고 있습니다. 무분별한 벌목은 저희의 집을 빼앗고, 등산객들이 버린 쓰레기는 저희의 서식지를 오염시킵니다. 숲을 그저 자원으로만 보지 말아 주십시오. 숲은 수많은 생명들이 함께 살아가는 거대한 공동체입니다. 이 공동체를 지켜주십시오.', 'ko-KR')">🔊</button>
+저는 숲의 축축한 낙엽 아래 사는 도롱뇽입니다. 저희는 숲이 얼마나 건강한지를 보여주는 살아있는 증거입니다. 숲이 파괴되고 땅이 마르면서 저희는 설 자리를 잃어가고 있습니다. 무분별한 벌목은 저희의 집을 빼앗고, 등산객들이 버린 쓰레기는 저희의 서식지를 오염시킵니다. 숲을 그저 자원으로만 보지 말아 주십시오. 숲은 수많은 생명들이 함께 살아가는 거대한 공동체입니다. 이 공동체를 지켜주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a salamander, living under the damp fallen leaves of the forest. We are living proof of how healthy a forest is. As forests are destroyed and the land dries up, we are losing our place. Reckless logging takes away our homes, and trash left by hikers pollutes our habitat. Please do not see the forest merely as a resource. The forest is a vast community where countless lives coexist. Please protect this community.`, 'en-US')">🔊</button>
+I am a salamander, living under the damp fallen leaves of the forest. We are living proof of how healthy a forest is. As forests are destroyed and the land dries up, we are losing our place. Reckless logging takes away our homes, and trash left by hikers pollutes our habitat. Please do not see the forest merely as a resource. The forest is a vast community where countless lives coexist. Please protect this community.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は森の湿った落ち葉の下に住むサンショウウオです。私たちは森がいかに健康であるかを示す生きた証拠です。森が破壊され、土地が乾くにつれて、私たちは居場所を失いつつあります。無分別な伐採は私たちの家を奪い、登山客が捨てたゴミは私たちの生息地を汚染します。森を単なる資源として見ないでください。森は数多くの命が共に生きる巨大な共同体です。この共同体を守ってください。`, 'ja-JP')">🔊</button>
+私は森の湿った落ち葉の下に住むサンショウウオです。私たちは森がいかに健康であるかを示す生きた証拠です。森が破壊され、土地が乾くにつれて、私たちは居場所を失いつつあります。無分別な伐採は私たちの家を奪い、登山客が捨てたゴミは私たちの生息地を汚染します。森を単なる資源として見ないでください。森は数多くの命が共に生きる巨大な共同体です。この共同体を守ってください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>산개구리 (Mountain Frog / ヤマアカガエル)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 높은 산 계곡에 사는 산개구리입니다. 저희는 봄의 전령사로, 누구보다 먼저 겨울잠에서 깨어나 봄을 알립니다. 하지만 기후 변화로 인해 봄이 불규칙해지면서 저희의 생체 시계가 혼란에 빠졌습니다. 너무 일찍 깨어나 먹이를 찾지 못하거나, 갑작스러운 꽃샘추위에 얼어 죽기도 합니다. 계절의 질서가 무너지고 있습니다. 이산화탄소 배출을 줄여 지구가 본래의 리듬을 되찾을 수 있도록 도와주십시오.', 'ko-KR')">🔊</button>
+저는 높은 산 계곡에 사는 산개구리입니다. 저희는 봄의 전령사로, 누구보다 먼저 겨울잠에서 깨어나 봄을 알립니다. 하지만 기후 변화로 인해 봄이 불규칙해지면서 저희의 생체 시계가 혼란에 빠졌습니다. 너무 일찍 깨어나 먹이를 찾지 못하거나, 갑작스러운 꽃샘추위에 얼어 죽기도 합니다. 계절의 질서가 무너지고 있습니다. 이산화탄소 배출을 줄여 지구가 본래의 리듬을 되찾을 수 있도록 도와주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a mountain frog, living in high mountain valleys. We are the heralds of spring, waking from hibernation earlier than anyone to announce its arrival. But climate change has made spring irregular, confusing our biological clocks. We wake up too early and find no food, or freeze to death in sudden cold snaps. The order of the seasons is collapsing. Please help the Earth regain its natural rhythm by reducing carbon dioxide emissions.`, 'en-US')">🔊</button>
+I am a mountain frog, living in high mountain valleys. We are the heralds of spring, waking from hibernation earlier than anyone to announce its arrival. But climate change has made spring irregular, confusing our biological clocks. We wake up too early and find no food, or freeze to death in sudden cold snaps. The order of the seasons is collapsing. Please help the Earth regain its natural rhythm by reducing carbon dioxide emissions.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は高い山の渓谷に住むヤマアカガエルです。私たちは春の使いとして、誰よりも早く冬眠から目覚め、春を告げます。しかし、気候変動によって春が不規則になり、私たちの体内時計は混乱しています。早く目覚めすぎて餌が見つからなかったり、突然の寒の戻りで凍え死んだりします。季節の秩序が崩れています。二酸化炭素の排出を減らし、地球が本来のリズムを取り戻せるよう助けてください。`, 'ja-JP')">🔊</button>
+私は高い山の渓谷に住むヤマアカガエルです。私たちは春の使いとして、誰よりも早く冬眠から目覚め、春を告げます。しかし、気候変動によって春が不規則になり、私たちの体内時計は混乱しています。早く目覚めすぎて餌が見つからなかったり、突然の寒の戻りで凍え死んだりします。季節の秩序が崩れています。二酸化炭素の排出を減らし、地球が本来のリズムを取り戻せるよう助けてください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>청개구리 (Tree Frog / アマガエル)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 나뭇잎에 앉아 노래하는 청개구리입니다. 맑은 날 비가 올 것을 미리 알려주는 지혜도 가지고 있지요. 하지만 요즘은 공기 중에 섞인 미세먼지와 산성비 때문에 목이 아파 노래하기 힘듭니다. 저희의 노랫소리가 줄어드는 만큼, 대기가 오염되고 있다는 증거입니다. 공장은 매연을 줄이고, 자동차는 덜 이용해야 합니다. 우리 모두가 숨 쉴 맑은 공기를 되찾기 위한 노력이 시급합니다.', 'ko-KR')">🔊</button>
+저는 나뭇잎에 앉아 노래하는 청개구리입니다. 맑은 날 비가 올 것을 미리 알려주는 지혜도 가지고 있지요. 하지만 요즘은 공기 중에 섞인 미세먼지와 산성비 때문에 목이 아파 노래하기 힘듭니다. 저희의 노랫소리가 줄어드는 만큼, 대기가 오염되고 있다는 증거입니다. 공장은 매연을 줄이고, 자동차는 덜 이용해야 합니다. 우리 모두가 숨 쉴 맑은 공기를 되찾기 위한 노력이 시급합니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a tree frog, singing on the leaves. I have the wisdom to predict rain on a clear day. But these days, the fine dust and acid rain in the air make my throat sore, making it hard to sing. The fading of our songs is evidence of growing air pollution. Factories must reduce their fumes, and cars should be used less. We urgently need efforts to reclaim the clean air we all breathe.`, 'en-US')">🔊</button>
+I am a tree frog, singing on the leaves. I have the wisdom to predict rain on a clear day. But these days, the fine dust and acid rain in the air make my throat sore, making it hard to sing. The fading of our songs is evidence of growing air pollution. Factories must reduce their fumes, and cars should be used less. We urgently need efforts to reclaim the clean air we all breathe.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は木の葉に座って歌うアマガエルです。晴れた日に雨が降ることを予知する知恵も持っています。しかし最近は、空気中の微小粒子状物質や酸性雨のせいで喉が痛く、歌うのが辛いです。私たちの歌声が小さくなるほど、大気が汚染されている証拠です。工場は煤煙を減らし、自動車の利用は控えるべきです。私たち皆が呼吸できるきれいな空気を取り戻すための努力が急務です。`, 'ja-JP')">🔊</button>
+私は木の葉に座って歌うアマガエルです。晴れた日に雨が降ることを予知する知恵も持っています。しかし最近は、空気中の微小粒子状物質や酸性雨のせいで喉が痛く、歌うのが辛いです。私たちの歌声が小さくなるほど、大気が汚染されている証拠です。工場は煤煙を減らし、自動車の利用は控えるべきです。私たち皆が呼吸できるきれいな空気を取り戻すための努力が急務です。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>이끼도롱뇽 (Moss Salamander / コケサンショウウオ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 아주 작고 조용한 이끼도롱뇽입니다. 저희는 허파가 없어 오직 피부로만 숨을 쉽니다. 그래서 아주 깨끗하고 축축한 환경이 아니면 살아갈 수 없습니다. 오래된 숲의 이끼 낀 바위틈이 저희의 온 세상입니다. 이런 미세 서식지 하나가 파괴되는 것은 저희에게 우주가 사라지는 것과 같습니다. 거대한 것뿐만 아니라 작고 사소해 보이는 것들의 소중함을 알아주십시오. 그 안에 생명의 다양성이 담겨 있습니다.', 'ko-KR')">🔊</button>
+저는 아주 작고 조용한 이끼도롱뇽입니다. 저희는 허파가 없어 오직 피부로만 숨을 쉽니다. 그래서 아주 깨끗하고 축축한 환경이 아니면 살아갈 수 없습니다. 오래된 숲의 이끼 낀 바위틈이 저희의 온 세상입니다. 이런 미세 서식지 하나가 파괴되는 것은 저희에게 우주가 사라지는 것과 같습니다. 거대한 것뿐만 아니라 작고 사소해 보이는 것들의 소중함을 알아주십시오. 그 안에 생명의 다양성이 담겨 있습니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a very small and quiet moss salamander. We have no lungs and breathe only through our skin. Therefore, we cannot survive without a very clean and moist environment. The mossy crevices of old forests are our entire world. The destruction of one such microhabitat is like the disappearance of a universe to us. Please recognize the value not only of the great but also of the small and seemingly trivial. Biodiversity is contained within them.`, 'en-US')">🔊</button>
+I am a very small and quiet moss salamander. We have no lungs and breathe only through our skin. Therefore, we cannot survive without a very clean and moist environment. The mossy crevices of old forests are our entire world. The destruction of one such microhabitat is like the disappearance of a universe to us. Please recognize the value not only of the great but also of the small and seemingly trivial. Biodiversity is contained within them.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私はとても小さく静かなコケサンショウウオです。私たちは肺がなく、皮膚だけで呼吸します。そのため、非常に清潔で湿った環境でなければ生きていけません。古い森の苔むした岩の隙間が、私たちの世界のすべてです。このような微小な生息地が一つ破壊されることは、私たちにとって宇宙が消えるのと同じことです。巨大なものだけでなく、小さく些細に見えるものの価値を理解してください。その中に生物の多様性が含まれているのです。`, 'ja-JP')">🔊</button>
+私はとても小さく静かなコケサンショウウオです。私たちは肺がなく、皮膚だけで呼吸します。そのため、非常に清潔で湿った環境でなければ生きていけません。古い森の苔むした岩の隙間が、私たちの世界のすべてです。このような微小な生息地が一つ破壊されることは、私たちにとって宇宙が消えるのと同じことです。巨大なものだけでなく、小さく些細に見えるものの価値を理解してください。その中に生物の多様性が含まれているのです。</p>
+        </div>
+
+        <h2>파충류 대표 발언</h2>
+
+        <div class="speech-block">
+            <h3>거북이 (Turtle / カメ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 오랜 세월 바다를 여행해온 거북이입니다. 제 조상들은 공룡 시대부터 이 바다를 지켜왔습니다. 하지만 지금 바다는 저희에게 거대한 함정입니다. 저희는 해파리인 줄 알고 비닐봉지를 삼키고 고통스럽게 죽어갑니다. 버려진 그물에 걸려 평생을 고통받기도 합니다. 또한, 알을 낳을 해변은 관광 시설로 가득 차 더 이상 안전하지 않습니다. 수억 년을 이어온 우리의 생존이 인간의 수십 년 활동으로 위협받고 있습니다.', 'ko-KR')">🔊</button>
+저는 오랜 세월 바다를 여행해온 거북이입니다. 제 조상들은 공룡 시대부터 이 바다를 지켜왔습니다. 하지만 지금 바다는 저희에게 거대한 함정입니다. 저희는 해파리인 줄 알고 비닐봉지를 삼키고 고통스럽게 죽어갑니다. 버려진 그물에 걸려 평생을 고통받기도 합니다. 또한, 알을 낳을 해변은 관광 시설로 가득 차 더 이상 안전하지 않습니다. 수억 년을 이어온 우리의 생존이 인간의 수십 년 활동으로 위협받고 있습니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a turtle who has traveled the seas for ages. My ancestors have watched over these waters since the age of dinosaurs. But now, the ocean is a giant trap for us. We mistake plastic bags for jellyfish, swallow them, and die in agony. We get entangled in discarded nets and suffer for a lifetime. Furthermore, the beaches where we lay our eggs are no longer safe, filled with tourist facilities. Our survival, which has lasted for hundreds of millions of years, is now threatened by a few decades of human activity.`, 'en-US')">🔊</button>
+I am a turtle who has traveled the seas for ages. My ancestors have watched over these waters since the age of dinosaurs. But now, the ocean is a giant trap for us. We mistake plastic bags for jellyfish, swallow them, and die in agony. We get entangled in discarded nets and suffer for a lifetime. Furthermore, the beaches where we lay our eggs are no longer safe, filled with tourist facilities. Our survival, which has lasted for hundreds of millions of years, is now threatened by a few decades of human activity.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は長い年月、海を旅してきたカメです。私の祖先は恐竜の時代からこの海を見守ってきました。しかし今、海は私たちにとって巨大な罠です。私たちはクラゲと間違えてビニール袋を飲み込み、苦しみながら死んでいきます。捨てられた網に絡まり、一生苦しむこともあります。また、卵を産む浜辺は観光施設で埋め尽くされ、もはや安全ではありません。数億年続いてきた私たちの生存が、人間の数十年の活動によって脅かされています。`, 'ja-JP')">🔊</button>
+私は長い年月、海を旅してきたカメです。私の祖先は恐竜の時代からこの海を見守ってきました。しかし今、海は私たちにとって巨大な罠です。私たちはクラゲと間違えてビニール袋を飲み込み、苦しみながら死んでいきます。捨てられた網に絡まり、一生苦しむこともあります。また、卵を産む浜辺は観光施設で埋め尽くされ、もはや安全ではありません。数億年続いてきた私たちの生存が、人間の数十年の活動によって脅かされています。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>뱀 (Snake / ヘビ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 뱀입니다. 많은 인간들이 저희를 오해하고 미워합니다. 하지만 저희는 생태계에서 쥐와 같은 설치류의 개체 수를 조절하는 중요한 역할을 맡고 있습니다. 저희가 사라지면 농작물 피해가 커지고 질병이 퍼질 것입니다. 저희를 단지 징그럽다는 이유만으로 죽이지 말아 주십시오. 저희도 이 땅의 구성원으로서 살아갈 권리가 있습니다. 모든 생명은 겉모습이 아닌, 그 역할과 가치로 존중받아야 합니다.', 'ko-KR')">🔊</button>
+저는 뱀입니다. 많은 인간들이 저희를 오해하고 미워합니다. 하지만 저희는 생태계에서 쥐와 같은 설치류의 개체 수를 조절하는 중요한 역할을 맡고 있습니다. 저희가 사라지면 농작물 피해가 커지고 질병이 퍼질 것입니다. 저희를 단지 징그럽다는 이유만으로 죽이지 말아 주십시오. 저희도 이 땅의 구성원으로서 살아갈 권리가 있습니다. 모든 생명은 겉모습이 아닌, 그 역할과 가치로 존중받아야 합니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a snake. Many humans misunderstand and hate us. However, we play a crucial role in the ecosystem by controlling the population of rodents like mice. If we disappear, crop damage will increase, and diseases will spread. Please do not kill us simply because you find us repulsive. We, too, have the right to live as members of this land. All life should be respected for its role and value, not its appearance.`, 'en-US')">🔊</button>
+I am a snake. Many humans misunderstand and hate us. However, we play a crucial role in the ecosystem by controlling the population of rodents like mice. If we disappear, crop damage will increase, and diseases will spread. Please do not kill us simply because you find us repulsive. We, too, have the right to live as members of this land. All life should be respected for its role and value, not its appearance.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私はヘビです。多くの人間は私たちを誤解し、嫌っています。しかし、私たちは生態系においてネズミのようなげっ歯類の個体数を調節する重要な役割を担っています。私たちが消えれば、農作物の被害が増え、病気が広がるでしょう。私たちをただ気味が悪いという理由だけで殺さないでください。私たちもこの地の一員として生きる権利があります。すべての命は、見た目ではなく、その役割と価値によって尊重されるべきです。`, 'ja-JP')">🔊</button>
+私はヘビです。多くの人間は私たちを誤解し、嫌っています。しかし、私たちは生態系においてネズミのようなげっ歯類の個体数を調節する重要な役割を担っています。私たちが消えれば、農作物の被害が増え、病気が広がるでしょう。私たちをただ気味が悪いという理由だけで殺さないでください。私たちもこの地の一員として生きる権利があります。すべての命は、見た目ではなく、その役割と価値によって尊重されるべきです。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>도마뱀 (Lizard / トカゲ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 햇볕을 즐기는 도마뱀입니다. 저희는 체온을 유지하기 위해 따스한 햇살이 꼭 필요합니다. 하지만 도시가 확장되면서 저희가 편히 쉴 바위와 풀밭이 사라지고 있습니다. 회색 시멘트 건물과 아스팔트 도로는 저희에게 너무 뜨겁거나 차갑습니다. 인간들의 편의를 위한 개발이 저희의 생존 공간을 빼앗고 있습니다. 도시를 만들 때 작은 녹지 공간이라도 남겨주십시오. 그곳은 저희 같은 작은 동물들에게는 생명과도 같은 공간입니다.', 'ko-KR')">🔊</button>
+저는 햇볕을 즐기는 도마뱀입니다. 저희는 체온을 유지하기 위해 따스한 햇살이 꼭 필요합니다. 하지만 도시가 확장되면서 저희가 편히 쉴 바위와 풀밭이 사라지고 있습니다. 회색 시멘트 건물과 아스팔트 도로는 저희에게 너무 뜨겁거나 차갑습니다. 인간들의 편의를 위한 개발이 저희의 생존 공간을 빼앗고 있습니다. 도시를 만들 때 작은 녹지 공간이라도 남겨주십시오. 그곳은 저희 같은 작은 동물들에게는 생명과도 같은 공간입니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a lizard who enjoys the sun. We need warm sunlight to maintain our body temperature. But as cities expand, the rocks and grassy fields where we can rest comfortably are disappearing. Gray concrete buildings and asphalt roads are either too hot or too cold for us. Development for human convenience is taking away our living space. When you build cities, please leave even small green spaces. For small animals like us, those spaces are life itself.`, 'en-US')">🔊</button>
+I am a lizard who enjoys the sun. We need warm sunlight to maintain our body temperature. But as cities expand, the rocks and grassy fields where we can rest comfortably are disappearing. Gray concrete buildings and asphalt roads are either too hot or too cold for us. Development for human convenience is taking away our living space. When you build cities, please leave even small green spaces. For small animals like us, those spaces are life itself.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は日差しを楽しむトカゲです。私たちは体温を維持するために暖かい日差しが絶対に必要です。しかし、都市が拡大するにつれて、私たちが安心して休める岩や草地が消えています。灰色のセメントの建物やアスファルトの道路は、私たちには熱すぎたり冷たすぎたりします。人間の便利さのための開発が、私たちの生存空間を奪っています。都市を作るとき、小さな緑地スペースでも残してください。そこは私たちのような小さな動物にとっては、命そのものなのです。`, 'ja-JP')">🔊</button><br>私は日差しを楽しむトカゲです。私たちは体温を維持するために暖かい日差しが絶対に必要です。しかし、都市が拡大するにつれて、私たちが安心して休める岩や草地が消えています。灰色のセメントの建物やアスファルトの道路は、私たちには熱すぎたり冷たすぎたりします。人間の便利さのための開発が、私たちの生存空間を奪っています。都市を作るとき、小さな緑地スペースでも残してください。そこは私たちのような小さな動物にとっては、命そのものなのです。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>악어 (Crocodile / ワニ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 강과 늪의 지배자, 악어입니다. 저희는 물속 생태계의 건강을 조절하는 중요한 포식자입니다. 하지만 인간들은 우리의 서식지인 습지를 농경지나 공장 부지로 바꾸고 있습니다. 물이 마르고 오염되면서 우리의 먹이가 사라지고, 우리 또한 생존의 위협을 받고 있습니다. 습지는 단순한 땅이 아니라, 수많은 생명을 품고 물을 정화하는 지구의 콩팥입니다. 습지를 보존하는 것이 곧 우리 모두를 살리는 길입니다.', 'ko-KR')">🔊</button>
+저는 강과 늪의 지배자, 악어입니다. 저희는 물속 생태계의 건강을 조절하는 중요한 포식자입니다. 하지만 인간들은 우리의 서식지인 습지를 농경지나 공장 부지로 바꾸고 있습니다. 물이 마르고 오염되면서 우리의 먹이가 사라지고, 우리 또한 생존의 위협을 받고 있습니다. 습지는 단순한 땅이 아니라, 수많은 생명을 품고 물을 정화하는 지구의 콩팥입니다. 습지를 보존하는 것이 곧 우리 모두를 살리는 길입니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am the crocodile, ruler of rivers and swamps. We are crucial predators that regulate the health of the aquatic ecosystem. But humans are converting our wetland habitats into farmland and industrial sites. As the water dries up and becomes polluted, our prey disappears, and our own survival is threatened. Wetlands are not just land; they are the Earth's kidneys, holding countless lives and purifying water. Preserving wetlands is the way to save us all.`, 'en-US')">🔊</button>
+I am the crocodile, ruler of rivers and swamps. We are crucial predators that regulate the health of the aquatic ecosystem. But humans are converting our wetland habitats into farmland and industrial sites. As the water dries up and becomes polluted, our prey disappears, and our own survival is threatened. Wetlands are not just land; they are the Earth's kidneys, holding countless lives and purifying water. Preserving wetlands is the way to save us all.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は川と沼の支配者、ワニです。私たちは水中の生態系の健康を調節する重要な捕食者です。しかし、人間は私たちの生息地である湿地を農地や工場用地に変えています。水が干上がり、汚染されるにつれて、私たちの餌は消え、私たち自身も生存の危機に瀕しています。湿地は単なる土地ではなく、数多くの命を育み、水を浄化する地球の腎臓です。湿地を保全することが、私たち全員を救う道なのです。`, 'ja-JP')">🔊</button>
+私は川と沼の支配者、ワニです。私たちは水中の生態系の健康を調節する重要な捕食者です。しかし、人間は私たちの生息地である湿地を農地や工場用地に変えています。水が干上がり、汚染されるにつれて、私たちの餌は消え、私たち自身も生存の危機に瀕しています。湿地は単なる土地ではなく、数多くの命を育み、水を浄化する地球の腎臓です。湿地を保존することが、私たち全員を救う道なのです。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>카멜레온 (Chameleon / カメレオン)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 주변 환경에 맞춰 색을 바꾸는 카멜레온입니다. 저희의 능력은 포식자로부터 자신을 숨기고 먹이를 잡기 위한 생존 전략입니다. 하지만 저희가 몸을 숨길 숲과 나무가 사라지고 있습니다. 아무리 색을 바꿔도 잿빛 폐허 속에서는 숨을 곳이 없습니다. 삼림 파괴는 저희의 생존 기술 자체를 무의미하게 만듭니다. 저희가 다채로운 색을 뽐낼 수 있는 푸른 숲을 지켜주십시오. 숲의 색이 사라지면 저희도 사라집니다.', 'ko-KR')">🔊</button>
+저는 주변 환경에 맞춰 색을 바꾸는 카멜레온입니다. 저희의 능력은 포식자로부터 자신을 숨기고 먹이를 잡기 위한 생존 전략입니다. 하지만 저희가 몸을 숨길 숲과 나무가 사라지고 있습니다. 아무리 색을 바꿔도 잿빛 폐허 속에서는 숨을 곳이 없습니다. 삼림 파괴는 저희의 생존 기술 자체를 무의미하게 만듭니다. 저희가 다채로운 색을 뽐낼 수 있는 푸른 숲을 지켜주십시오. 숲의 색이 사라지면 저희도 사라집니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a chameleon, changing colors to match my surroundings. Our ability is a survival strategy to hide from predators and catch prey. But the forests and trees where we hide are disappearing. No matter how we change our color, there is no place to hide in gray ruins. Deforestation renders our very survival skill meaningless. Please protect the green forests where we can show off our vibrant colors. If the color of the forest vanishes, so do we.`, 'en-US')">🔊</button>
+I am a chameleon, changing colors to match my surroundings. Our ability is a survival strategy to hide from predators and catch prey. But the forests and trees where we hide are disappearing. No matter how we change our color, there is no place to hide in gray ruins. Deforestation renders our very survival skill meaningless. Please protect the green forests where we can show off our vibrant colors. If the color of the forest vanishes, so do we.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は周囲の環境に合わせて色を変えるカメレオンです。私たちの能力は、捕食者から身を隠し、獲物を捕らえるための生存戦略です。しかし、私たちが身を隠す森や木が消えています。いくら色を変えても、灰色の廃墟の中では隠れる場所がありません。森林破壊は、私たちの生存技術そのものを無意味にします。私たちが多彩な色を披露できる緑豊かな森を守ってください。森の色が消えれば、私たちも消えてしまいます。`, 'ja-JP')">🔊</button>
+私は周囲の環境に合わせて色を変えるカメレオンです。私たちの能力は、捕食者から身を隠し、獲物を捕らえるための生存戦略です。しかし、私たちが身を隠す森や木が消えています。いくら色を変えても、灰色の廃墟の中では隠れる場所がありません。森林破壊は、私たちの生存技術そのものを無意味にします。私たちが多彩な色を披露できる緑豊かな森を守ってください。森の色が消えれば、私たちも消えてしまいます。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>이구아나 (Iguana / イグアナ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 열대의 이구아나입니다. 지구 온난화는 저희의 미래를 뒤흔들고 있습니다. 저희의 성별은 알이 부화할 때의 온도에 따라 결정되는데, 기온이 계속 오르면 수컷이 태어나지 않아 종족의 번식 자체가 불가능해집니다. 또한 강력해진 허리케인은 저희의 서식지를 통째로 파괴합니다. 이것은 먼 미래의 이야기가 아닙니다. 지금 당장 저희의 생존이 걸린 문제입니다. 기후 변화를 막기 위한 즉각적인 행동을 촉구합니다.', 'ko-KR')">🔊</button>
+저는 열대의 이구아나입니다. 지구 온난화는 저희의 미래를 뒤흔들고 있습니다. 저희의 성별은 알이 부화할 때의 온도에 따라 결정되는데, 기온이 계속 오르면 수컷이 태어나지 않아 종족의 번식 자체가 불가능해집니다. 또한 강력해진 허리케인은 저희의 서식지를 통째로 파괴합니다. 이것은 먼 미래의 이야기가 아닙니다. 지금 당장 저희의 생존이 걸린 문제입니다. 기후 변화를 막기 위한 즉각적인 행동을 촉구합니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a tropical iguana. Global warming is shaking our future. Our sex is determined by the temperature at which our eggs incubate. If temperatures continue to rise, no males will be born, making reproduction impossible. Furthermore, more powerful hurricanes are destroying our habitats entirely. This is not a distant future story. It is a matter of our survival right now. We urge immediate action to stop climate change.`, 'en-US')">🔊</button>
+I am a tropical iguana. Global warming is shaking our future. Our sex is determined by the temperature at which our eggs incubate. If temperatures continue to rise, no males will be born, making reproduction impossible. Furthermore, more powerful hurricanes are destroying our habitats entirely. This is not a distant future story. It is a matter of our survival right now. We urge immediate action to stop climate change.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は熱帯のイグアナです。地球温暖化は私たちの未来を揺るがしています。私たちの性別は卵が孵化するときの温度によって決まりますが、気温が上がり続けるとオスが生まれなくなり、種の繁殖自体が不可能になります。また、強力になったハリケーンは私たちの生息地を丸ごと破壊します。これは遠い未来の話ではありません。今まさに、私たちの生存がかかった問題なのです。気候変動を食い止めるための即時の行動を求めます。`, 'ja-JP')">🔊</button>
+私は熱帯のイグアナです。地球温暖化は私たちの未来を揺るがしています。私たちの性別は卵が孵化するときの温度によって決まりますが、気温が上がり続けるとオスが生まれなくなり、種の繁殖自体が不可能になります。また、強力になったハリケーンは私たちの生息地を丸ごと破壊します。これは遠い未来の話ではありません。今まさに、私たちの生存がかかった問題なのです。気候変動を食い止めるための即時の行動を求めます。</p>
+        </div>
+        
+        <h2>조류 대표 발언</h2>
+
+        <div class="speech-block">
+            <h3>참새 (Sparrow / スズメ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 도시의 작은 이웃, 참새입니다. 저희는 인간과 가장 가까이 살지만, 살기는 점점 더 힘들어집니다. 둥지를 틀 흙벽과 처마가 사라지고, 살충제로 인해 먹이인 벌레들도 줄었습니다. 도시의 소음은 우리의 의사소통을 방해하고, 밤을 밝히는 인공조명은 우리의 휴식을 빼앗습니다. 저희가 살 수 없는 도시는 인간에게도 결코 건강한 환경이 아닐 것입니다. 인간과 자연이 공존하는 도시를 만들어 주십시오.', 'ko-KR')">🔊</button>
+저는 도시의 작은 이웃, 참새입니다. 저희는 인간과 가장 가까이 살지만, 살기는 점점 더 힘들어집니다. 둥지를 틀 흙벽과 처마가 사라지고, 살충제로 인해 먹이인 벌레들도 줄었습니다. 도시의 소음은 우리의 의사소통을 방해하고, 밤을 밝히는 인공조명은 우리의 휴식을 빼앗습니다. 저희가 살 수 없는 도시는 인간에게도 결코 건강한 환경이 아닐 것입니다. 인간과 자연이 공존하는 도시를 만들어 주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a sparrow, a small neighbor in the city. We live closest to humans, but life is getting harder. The mud walls and eaves for our nests are gone, and pesticides have reduced our food supply of insects. Urban noise interferes with our communication, and artificial lights at night rob us of our rest. A city where we cannot live will not be a healthy environment for humans either. Please create cities where humans and nature can coexist.`, 'en-US')">🔊</button>
+I am a sparrow, a small neighbor in the city. We live closest to humans, but life is getting harder. The mud walls and eaves for our nests are gone, and pesticides have reduced our food supply of insects. Urban noise interferes with our communication, and artificial lights at night rob us of our rest. A city where we cannot live will not be a healthy environment for humans either. Please create cities where humans and nature can coexist.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は都市の小さな隣人、スズメです。私たちは人間と最も近くに住んでいますが、生活はますます困難になっています。巣を作るための土壁や軒がなくなり、殺虫剤によって餌である虫も減りました。都市の騒音は私たちのコミュニケーションを妨げ、夜を照らす人工照明は私たちの休息を奪います。私たちが住めない都市は、人間にとっても決して健康的な環境ではないでしょう。人間と自然が共存する都市を作ってください。`, 'ja-JP')">🔊</button>
+私は都市の小さな隣人、スズメです。私たちは人間と最も近くに住んでいますが、生活はますます困難になっています。巣を作るための土壁や軒がなくなり、殺虫剤によって餌である虫も減りました。都市の騒音は私たちのコミュニケーションを妨げ、夜を照らす人工照明は私たちの休息を奪います。私たちが住めない都市は、人間にとっても決して健康的な環境ではないでしょう。人間と自然が共存する都市を作ってください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>독수리 (Eagle / ワシ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 하늘의 제왕, 독수리입니다. 높은 하늘에서 모든 것을 내려다보는 저는 생태계의 정점에 있습니다. 하지만 이는 먹이사슬을 통해 모든 오염 물질이 제 몸에 축적된다는 의미이기도 합니다. 농약에 중독된 먹이를 먹고 낳은 알은 껍질이 얇아져 쉽게 깨져버립니다. 저희의 날개가 꺾이는 것은 생태계 전체가 병들었다는 가장 확실한 증거입니다. 최상위 포식자의 이름으로 명합니다. 땅과 물, 공기를 더 이상 오염시키지 마십시오.', 'ko-KR')">🔊</button>
+저는 하늘의 제왕, 독수리입니다. 높은 하늘에서 모든 것을 내려다보는 저는 생태계의 정점에 있습니다. 하지만 이는 먹이사슬을 통해 모든 오염 물질이 제 몸에 축적된다는 의미이기도 합니다. 농약에 중독된 먹이를 먹고 낳은 알은 껍질이 얇아져 쉽게 깨져버립니다. 저희의 날개가 꺾이는 것은 생태계 전체가 병들었다는 가장 확실한 증거입니다. 최상위 포식자의 이름으로 명합니다. 땅과 물, 공기를 더 이상 오염시키지 마십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am the eagle, the king of the sky. Looking down from high above, I am at the apex of the ecosystem. However, this also means that all pollutants accumulate in my body through the food chain. The eggs I lay after eating pesticide-contaminated prey have thin shells and break easily. The breaking of our wings is the clearest evidence that the entire ecosystem is sick. In the name of the apex predator, I command you: stop polluting the land, water, and air.`, 'en-US')">🔊</button>
+I am the eagle, the king of the sky. Looking down from high above, I am at the apex of the ecosystem. However, this also means that all pollutants accumulate in my body through the food chain. The eggs I lay after eating pesticide-contaminated prey have thin shells and break easily. The breaking of our wings is the clearest evidence that the entire ecosystem is sick. In the name of the apex predator, I command you: stop polluting the land, water, and air.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は空の帝王、ワシです。高い空からすべてを見下ろす私は、生態系の頂点にいます。しかし、これは食物連鎖を通じてすべての汚染物質が私の体に蓄積されることも意味します。農薬に汚染された餌を食べて産んだ卵は、殻が薄くなり、簡単に割れてしまいます。私たちの翼が折れることは、生態系全体が病んでいる最も確実な証拠です。頂点捕食者の名において命じます。土地、水、空気をこれ以上汚染しないでください。`, 'ja-JP')">🔊</button>
+私は空の帝王、ワシです。高い空からすべてを見下ろす私は、生態系の頂点にいます。しかし、これは食物連鎖を通じてすべての汚染物質が私の体に蓄積されることも意味します。農薬に汚染された餌を食べて産んだ卵は、殻が薄くなり、簡単に割れてしまいます。私たちの翼が折れることは、生態系全体が病んでいる最も確実な証拠です。頂点捕食者の名において命じます。土地、水、空気をこれ以上汚染しないでください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>펭귄 (Penguin / ペンギン)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 남극의 신사, 펭귄입니다. 저희는 지구에서 가장 추운 곳에 살지만, 지금 저희의 얼음집이 녹아내리고 있습니다. 지구 온난화로 빙하가 사라지면서 저희는 알을 낳고 새끼를 키울 터전을 잃고 있습니다. 또한, 따뜻해진 바다를 따라 낯선 포식자들이 몰려오고, 주식인 크릴새우는 인간의 남획으로 사라지고 있습니다. 저희의 눈물은 녹아내리는 빙하와 같습니다. 지구를 더 이상 뜨겁게 만들지 말아 주십시오.', 'ko-KR')">🔊</button>
+저는 남극의 신사, 펭귄입니다. 저희는 지구에서 가장 추운 곳에 살지만, 지금 저희의 얼음집이 녹아내리고 있습니다. 지구 온난화로 빙하가 사라지면서 저희는 알을 낳고 새끼를 키울 터전을 잃고 있습니다. 또한, 따뜻해진 바다를 따라 낯선 포식자들이 몰려오고, 주식인 크릴새우는 인간의 남획으로 사라지고 있습니다. 저희의 눈물은 녹아내리는 빙하와 같습니다. 지구를 더 이상 뜨겁게 만들지 말아 주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a penguin, the gentleman of Antarctica. We live in the coldest place on Earth, but now our home of ice is melting away. Due to global warming, the glaciers are disappearing, and we are losing the ground where we lay eggs and raise our chicks. Also, unfamiliar predators are flocking to the warmer seas, and our main food, krill, is disappearing due to human overfishing. Our tears are like the melting glaciers. Please do not make the Earth any hotter.`, 'en-US')">🔊</button>
+I am a penguin, the gentleman of Antarctica. We live in the coldest place on Earth, but now our home of ice is melting away. Due to global warming, the glaciers are disappearing, and we are losing the ground where we lay eggs and raise our chicks. Also, unfamiliar predators are flocking to the warmer seas, and our main food, krill, is disappearing due to human overfishing. Our tears are like the melting glaciers. Please do not make the Earth any hotter.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は南極の紳士、ペンギンです。私たちは地球で最も寒い場所に住んでいますが、今、私たちの氷の家が溶け出しています。地球温暖化で氷河が消え、私たちは卵を産み、雛を育てる場所を失っています。また、暖かくなった海を追って見知らぬ捕食者が押し寄せ、主食であるオキアミは人間の乱獲によって消えています。私たちの涙は、溶けゆく氷河のようです。地球をこれ以上暖かくしないでください。`, 'ja-JP')">🔊</button>
+私は南極の紳士、ペンギンです。私たちは地球で最も寒い場所に住んでいますが、今、私たちの氷の家が溶け出しています。地球温暖化で氷河が消え、私たちは卵を産み、雛を育てる場所を失っています。また、暖かくなった海を追って見知らぬ捕食者が押し寄せ、主食であるオキアミは人間の乱獲によって消えています。私たちの涙は、溶けゆく氷河のようです。地球をこれ以上暖かくしないでください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>비둘기 (Pigeon / ハト)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 평화의 상징 비둘기입니다. 하지만 도시에서의 저희 삶은 결코 평화롭지 않습니다. 인간이 버린 자극적인 음식물 쓰레기는 저희의 건강을 해치고, 유리창과 같은 인공 구조물에 부딪혀 수많은 동료들이 목숨을 잃습니다. 저희를 유해동물이라 부르기 전에, 저희가 왜 인간의 음식물에 의존하게 되었는지, 왜 도시를 떠나지 못하는지 생각해 주십시오. 저희는 인간이 만든 환경에 적응했을 뿐입니다. 공존의 지혜가 필요합니다.', 'ko-KR')">🔊</button>
+저는 평화의 상징 비둘기입니다. 하지만 도시에서의 저희 삶은 결코 평화롭지 않습니다. 인간이 버린 자극적인 음식물 쓰레기는 저희의 건강을 해치고, 유리창과 같은 인공 구조물에 부딪혀 수많은 동료들이 목숨을 잃습니다. 저희를 유해동물이라 부르기 전에, 저희가 왜 인간의 음식물에 의존하게 되었는지, 왜 도시를 떠나지 못하는지 생각해 주십시오. 저희는 인간이 만든 환경에 적응했을 뿐입니다. 공존의 지혜가 필요합니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a pigeon, a symbol of peace. But our lives in the city are far from peaceful. The stimulating food waste discarded by humans harms our health, and countless colleagues lose their lives colliding with artificial structures like glass windows. Before calling us pests, please consider why we have come to depend on human food and why we cannot leave the cities. We have only adapted to the environment humans created. We need the wisdom of coexistence.`, 'en-US')">🔊</button>
+I am a pigeon, a symbol of peace. But our lives in the city are far from peaceful. The stimulating food waste discarded by humans harms our health, and countless colleagues lose their lives colliding with artificial structures like glass windows. Before calling us pests, please consider why we have come to depend on human food and why we cannot leave the cities. We have only adapted to the environment humans created. We need the wisdom of coexistence.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は平和の象徴、ハトです。しかし、都市での私たちの生活は決して平和ではありません。人間が捨てた刺激的な食べ物のゴミは私たちの健康を害し、ガラス窓のような人工構造物に衝突して数多くの仲間が命を落とします。私たちを害獣と呼ぶ前に、なぜ私たちが人間の食べ物に依存するようになったのか、なぜ都市を離れられないのかを考えてください。私たちは人間が作った環境に適応しただけです。共存の知恵が必要です。`, 'ja-JP')">🔊</button>
+私は平和の象徴、ハトです。しかし、都市での私たちの生活は決して平和ではありません。人間が捨てた刺激的な食べ物のゴミは私たちの健康を害し、ガラス窓のような人工構造物に衝突して数多くの仲間が命を落とします。私たちを害獣と呼ぶ前に、なぜ私たちが人間の食べ物に依存するようになったのか、なぜ都市を離れられないのかを考えてください。私たちは人間が作った環境に適応しただけです。共存の知恵が必要です。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>타조 (Ostrich / ダチョウ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 넓은 초원을 달리는 타조입니다. 저희는 날지 못하지만 누구보다 빠르게 달릴 수 있습니다. 하지만 저희가 달릴 수 있는 초원이 점점 사막으로 변하고 있습니다. 기후 변화와 무분별한 방목이 땅을 황폐하게 만들고 있습니다. 풀이 사라진 땅에서는 저희뿐만 아니라 다른 모든 초식동물과 그들을 먹이로 삼는 육식동물까지 모두 살아갈 수 없습니다. 땅의 생명력을 되살려 주십시오. 초원의 심장이 다시 뛰게 해주십시오.', 'ko-KR')">🔊</button>
+저는 넓은 초원을 달리는 타조입니다. 저희는 날지 못하지만 누구보다 빠르게 달릴 수 있습니다. 하지만 저희가 달릴 수 있는 초원이 점점 사막으로 변하고 있습니다. 기후 변화와 무분별한 방목이 땅을 황폐하게 만들고 있습니다. 풀이 사라진 땅에서는 저희뿐만 아니라 다른 모든 초식동물과 그들을 먹이로 삼는 육식동물까지 모두 살아갈 수 없습니다. 땅의 생명력을 되살려 주십시오. 초원의 심장이 다시 뛰게 해주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am an ostrich, running across the vast grasslands. We cannot fly, but we can run faster than anyone. However, the grasslands where we run are turning into deserts. Climate change and indiscriminate grazing are devastating the land. On land where the grass has vanished, not only us but all other herbivores and the carnivores that prey on them cannot survive. Please revive the life force of the land. Let the heart of the savanna beat again.`, 'en-US')">🔊</button>
+I am an ostrich, running across the vast grasslands. We cannot fly, but we can run faster than anyone. However, the grasslands where we run are turning into deserts. Climate change and indiscriminate grazing are devastating the land. On land where the grass has vanished, not only us but all other herbivores and the carnivores that prey on them cannot survive. Please revive the life force of the land. Let the heart of the savanna beat again.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は広い草原を走るダチョウです。私たちは飛べませんが、誰よりも速く走ることができます。しかし、私たちが走れる草原が徐々に砂漠に変わっています。気候変動と無分別な放牧が土地を荒廃させています。草がなくなった土地では、私たちだけでなく、他のすべての草食動物、そして彼らを餌とする肉食動物も生きていけません。土地の生命力を蘇らせてください。サバンナの心臓を再び鼓動させてください。`, 'ja-JP')">🔊</button>
+私は広い草原を走るダチョウです。私たちは飛べませんが、誰よりも速く走ることができます。しかし、私たちが走れる草原が徐々に砂漠に変わっています。気候変動と無分別な放牧が土地を荒廃させています。草がなくなった土地では、私たちだけでなく、他のすべての草食動物、そして彼らを餌とする肉食動物も生きていけません。土地の生命力を蘇らせてください。サバンナの心臓を再び鼓動させてください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>부엉이 (Owl / フクロウ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 밤의 현자, 부엉이입니다. 저희는 어둠 속에서 세상을 보고, 밤의 생태계를 지배합니다. 하지만 인간들이 만든 인공조명은 밤과 낮의 경계를 허물어 저희의 사냥을 방해하고 생체리듬을 교란합니다. 빛 공해는 저희 같은 야행성 동물들에게는 재앙과도 같습니다. 불필요한 조명을 끄고, 어둠을 자연에게 돌려주십시오. 밤하늘의 별을 볼 권리는 저희와 인간 모두에게 있습니다. 진정한 지혜는 자연의 순리를 따르는 것입니다.', 'ko-KR')">🔊</button>
+저는 밤의 현자, 부엉이입니다. 저희는 어둠 속에서 세상을 보고, 밤의 생태계를 지배합니다. 하지만 인간들이 만든 인공조명은 밤과 낮의 경계를 허물어 저희의 사냥을 방해하고 생체리듬을 교란합니다. 빛 공해는 저희 같은 야행성 동물들에게는 재앙과도 같습니다. 불필요한 조명을 끄고, 어둠을 자연에게 돌려주십시오. 밤하늘의 별을 볼 권리는 저희와 인간 모두에게 있습니다. 진정한 지혜는 자연의 순리를 따르는 것입니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am the owl, the sage of the night. We see the world in darkness and rule the nocturnal ecosystem. But artificial light created by humans blurs the line between night and day, disrupting our hunting and biorhythms. Light pollution is a disaster for nocturnal animals like us. Please turn off unnecessary lights and return the darkness to nature. The right to see the stars in the night sky belongs to both us and humans. True wisdom is to follow the order of nature.`, 'en-US')">🔊</button>
+I am the owl, the sage of the night. We see the world in darkness and rule the nocturnal ecosystem. But artificial light created by humans blurs the line between night and day, disrupting our hunting and biorhythms. Light pollution is a disaster for nocturnal animals like us. Please turn off unnecessary lights and return the darkness to nature. The right to see the stars in the night sky belongs to both us and humans. True wisdom is to follow the order of nature.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は夜の賢者、フクロウです。私たちは暗闇の中で世界を見、夜の生態系を支配します。しかし、人間が作った人工照明は夜と昼の境界を曖昧にし、私たちの狩りを妨げ、生体リズムを乱します。光害は、私たちのような夜行性の動物にとっては災害のようなものです。不要な照明を消し、暗闇を自然に返してください。夜空の星を見る権利は、私たちと人間の両方にあります。真の知恵とは、自然の摂理に従うことです。`, 'ja-JP')">🔊</button>
+私は夜の賢者、フクロウです。私たちは暗闇の中で世界を見、夜の生態系を支配します。しかし、人間が作った人工照明は夜と昼の境界を曖昧にし、私たちの狩りを妨げ、生体リズムを乱します。光害は、私たちのような夜行性の動物にとっては災害のようなものです。不要な照明を消し、暗闇を自然に返してください。夜空の星を見る権利は、私たちと人間の両方にあります。真の知恵とは、自然の摂理に従うことです。</p>
+        </div>
+
+        <h2>포유류 대표 발언</h2>
+
+        <div class="speech-block">
+            <h3>사람 (Human / 人間)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 사람 대표로 이 자리에 섰습니다. 오늘 여러분의 목소리를 들으며 깊은 부끄러움과 책임감을 느낍니다. 저희의 편리함과 욕심이 여러분 모두에게 얼마나 큰 고통을 주었는지 깨달았습니다. 저희는 이 지구의 주인이 아니라, 여러분과 함께 살아가는 구성원임을 잊고 있었습니다. 이제라도 저희의 과오를 인정하고 바로잡겠습니다. 기술을 파괴가 아닌 상생을 위해 사용하고, 소비를 줄이며, 자연을 복원하는 데 앞장서겠습니다. 모든 생명과 함께 지속 가능한 미래를 만들 것을 약속합니다.', 'ko-KR')">🔊</button>
+저는 사람 대표로 이 자리에 섰습니다. 오늘 여러분의 목소리를 들으며 깊은 부끄러움과 책임감을 느낍니다. 저희의 편리함과 욕심이 여러분 모두에게 얼마나 큰 고통을 주었는지 깨달았습니다. 저희는 이 지구의 주인이 아니라, 여러분과 함께 살아가는 구성원임을 잊고 있었습니다. 이제라도 저희의 과오를 인정하고 바로잡겠습니다. 기술을 파괴가 아닌 상생을 위해 사용하고, 소비를 줄이며, 자연을 복원하는 데 앞장서겠습니다. 모든 생명과 함께 지속 가능한 미래를 만들 것을 약속합니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I stand here today as the representative of humans. Listening to your voices, I feel a deep sense of shame and responsibility. I have realized how much our convenience and greed have caused all of you great pain. We forgot that we are not the masters of this Earth, but members living alongside you. We will now admit our mistakes and correct them. We will use technology for coexistence, not destruction, reduce consumption, and take the lead in restoring nature. I promise to create a sustainable future together with all life.`, 'en-US')">🔊</button>
+I stand here today as the representative of humans. Listening to your voices, I feel a deep sense of shame and responsibility. I have realized how much our convenience and greed have caused all of you great pain. We forgot that we are not the masters of this Earth, but members living alongside you. We will now admit our mistakes and correct them. We will use technology for coexistence, not destruction, reduce consumption, and take the lead in restoring nature. I promise to create a sustainable future together with all life.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は人間の代表としてこの場に立っています。今日、皆様の声を聞き、深い恥ずかしさと責任を感じています。私たちの便利さと欲望が、皆様にどれほど大きな苦痛を与えてきたかを悟りました。私たちはこの地球の主ではなく、皆様と共に生きる一員であることを忘れていました。今からでも私たちの過ちを認め、正します。技術を破壊ではなく共生のために用い、消費を減らし、自然を回復させることに率先して取り組みます。すべての命と共に、持続可能な未来を築くことを約束します。`, 'ja-JP')">🔊</button>
+私は人間の代表としてこの場に立っています。今日、皆様の声を聞き、深い恥ずかしさと責任を感じています。私たちの便利さと欲望が、皆様にどれほど大きな苦痛を与えてきたかを悟りました。私たちはこの地球の主ではなく、皆様と共に生きる一員であることを忘れていました。今からでも私たちの過ちを認め、正します。技術を破壊ではなく共生のために用い、消費を減らし、自然を回復させることに率先して取り組みます。すべての命と共に、持続可能な未来を築くことを約束します。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>호랑이 (Tiger / トラ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 숲의 군주, 호랑이입니다. 저희는 넓은 영역을 필요로 하지만, 인간들의 개발로 숲은 조각나고 저희의 영토는 사라졌습니다. 먹이가 부족해져 인간의 영역을 넘보는 동족들은 밀렵꾼의 총에 맞아 죽습니다. 저희의 가죽과 뼈를 탐하는 욕심이 저희를 멸종의 벼랑 끝으로 내몰고 있습니다. 저희가 살 수 있는 광활한 숲을 보장해주십시오. 숲의 최고 포식자가 사라진 숲은 더 이상 건강한 숲이 아닙니다. 생태계의 연결고리를 지켜주십시오.', 'ko-KR')">🔊</button>
+저는 숲의 군주, 호랑이입니다. 저희는 넓은 영역을 필요로 하지만, 인간들의 개발로 숲은 조각나고 저희의 영토는 사라졌습니다. 먹이가 부족해져 인간의 영역을 넘보는 동족들은 밀렵꾼의 총에 맞아 죽습니다. 저희의 가죽과 뼈를 탐하는 욕심이 저희를 멸종의 벼랑 끝으로 내몰고 있습니다. 저희가 살 수 있는 광활한 숲을 보장해주십시오. 숲의 최고 포식자가 사라진 숲은 더 이상 건강한 숲이 아닙니다. 생태계의 연결고리를 지켜주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am the tiger, the lord of the forest. We need vast territories, but human development has fragmented the forests and erased our domains. Lacking prey, our kind who venture into human territory are shot by poachers. The greed for our skin and bones is pushing us to the brink of extinction. Please guarantee us expansive forests where we can live. A forest without its apex predator is no longer a healthy forest. Please protect the links of the ecosystem.`, 'en-US')">🔊</button>
+I am the tiger, the lord of the forest. We need vast territories, but human development has fragmented the forests and erased our domains. Lacking prey, our kind who venture into human territory are shot by poachers. The greed for our skin and bones is pushing us to the brink of extinction. Please guarantee us expansive forests where we can live. A forest without its apex predator is no longer a healthy forest. Please protect the links of the ecosystem.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は森の君主、トラです。私たちは広い縄張りを必要としますが、人間の開発によって森は分断され、私たちの領土は消え去りました。餌が不足し、人間の領域に足を踏み入れた仲間は密猟者の銃で殺されます。私たちの皮や骨を求める欲望が、私たちを絶滅の崖っぷちに追い込んでいます。私たちが生きられる広大な森を保障してください。森の頂点捕食者がいなくなった森は、もはや健康な森ではありません。生態系のつながりを守ってください。`, 'ja-JP')">🔊</button>
+私は森の君主、トラです。私たちは広い縄張りを必要としますが、人間の開発によって森は分断され、私たちの領土は消え去りました。餌が不足し、人間の領域に足を踏み入れた仲間は密猟者の銃で殺されます。私たちの皮や骨を求める欲望が、私たちを絶滅の崖っぷちに追い込んでいます。私たちが生きられる広大な森を保障してください。森の頂点捕食者がいなくなった森は、もはや健康な森ではありません。生態系のつながりを守ってください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>고래 (Whale / クジラ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 바다의 노래를 부르는 고래입니다. 저희는 초음파로 대화하고 사랑을 나누며, 대양을 여행합니다. 하지만 인간들이 만드는 거대한 배의 소음은 저희의 귀를 멀게 하고 서로를 흩어지게 만듭니다. 저희는 플라스틱을 먹이로 착각하고, 버려진 어구에 걸려 상처 입습니다. 과거에는 저희의 기름을 위해 무차별적으로 사냥당했습니다. 더 이상 저희의 바다를 소음과 쓰레기로 가득 채우지 말아 주십시오. 바다의 평화를 돌려주십시오.', 'ko-KR')">🔊</button>
+저는 바다의 노래를 부르는 고래입니다. 저희는 초음파로 대화하고 사랑을 나누며, 대양을 여행합니다. 하지만 인간들이 만드는 거대한 배의 소음은 저희의 귀를 멀게 하고 서로를 흩어지게 만듭니다. 저희는 플라스틱을 먹이로 착각하고, 버려진 어구에 걸려 상처 입습니다. 과거에는 저희의 기름을 위해 무차별적으로 사냥당했습니다. 더 이상 저희의 바다를 소음과 쓰레기로 가득 채우지 말아 주십시오. 바다의 평화를 돌려주십시오.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a whale, the singer of the ocean. We communicate and share love through sonar as we travel the oceans. But the noise from massive ships made by humans deafens us and scatters our pods. We mistake plastic for food and get injured by discarded fishing gear. In the past, we were hunted indiscriminately for our oil. Please stop filling our oceans with noise and trash. Give us back the peace of the sea.`, 'en-US')">🔊</button>
+I am a whale, the singer of the ocean. We communicate and share love through sonar as we travel the oceans. But the noise from massive ships made by humans deafens us and scatters our pods. We mistake plastic for food and get injured by discarded fishing gear. In the past, we were hunted indiscriminately for our oil. Please stop filling our oceans with noise and trash. Give us back the peace of the sea.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は海の歌を歌うクジラです。私たちは超音波で会話し、愛を分かち合いながら、大洋を旅します。しかし、人間が作る巨大な船の騒音は私たちの耳を聞こえなくし、互いを引き離します。私たちはプラスチックを餌と間違え、捨てられた漁具に絡まって傷つきます。過去には、私たちの油のために無差別に狩られました。これ以上私たちの海を騒音とゴミで満たさないでください。海の平和を返してください。`, 'ja-JP')">🔊</button>
+私は海の歌を歌うクジラです。私たちは超音波で会話し、愛を分かち合いながら、大洋を旅します。しかし、人間が作る巨大な船の騒音は私たちの耳を聞こえなくし、互いを引き離します。私たちはプラスチックを餌と間違え、捨てられた漁具に絡まって傷つきます。過去には、私たちの油のために無差別に狩られました。これ以上私たちの海を騒音とゴミで満たさないでください。海の平和を返してください。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>박쥐 (Bat / コウモリ)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 어둠 속을 나는 박쥐입니다. 많은 인간들이 저희를 두려워하고 오해하지만, 저희는 해충을 잡아먹고 식물의 수분을 돕는 이로운 동물입니다. 저희가 하룻밤에 먹는 벌레의 양은 엄청납니다. 하지만 인간들은 저희의 서식지인 동굴을 파괴하고, 저희를 질병의 근원인 것처럼 취급합니다. 저희에 대한 오해를 거두고 저희의 가치를 알아주십시오. 저희는 어둠의 전령이 아니라, 밤의 생태계를 지키는 중요한 수호자입니다.', 'ko-KR')">🔊</button>
+저는 어둠 속을 나는 박쥐입니다. 많은 인간들이 저희를 두려워하고 오해하지만, 저희는 해충을 잡아먹고 식물의 수분을 돕는 이로운 동물입니다. 저희가 하룻밤에 먹는 벌레의 양은 엄청납니다. 하지만 인간들은 저희의 서식지인 동굴을 파괴하고, 저희를 질병의 근원인 것처럼 취급합니다. 저희에 대한 오해를 거두고 저희의 가치를 알아주십시오. 저희는 어둠의 전령이 아니라, 밤의 생태계를 지키는 중요한 수호자입니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a bat, flying in the darkness. Many humans fear and misunderstand us, but we are beneficial animals that eat pests and help pollinate plants. The amount of insects we eat in one night is enormous. Yet, humans destroy our cave habitats and treat us as if we are the source of diseases. Please discard your misunderstandings and recognize our value. We are not messengers of darkness, but important guardians of the nocturnal ecosystem.`, 'en-US')">🔊</button>
+I am a bat, flying in the darkness. Many humans fear and misunderstand us, but we are beneficial animals that eat pests and help pollinate plants. The amount of insects we eat in one night is enormous. Yet, humans destroy our cave habitats and treat us as if we are the source of diseases. Please discard your misunderstandings and recognize our value. We are not messengers of darkness, but important guardians of the nocturnal ecosystem.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は暗闇を飛ぶコウモリです。多くの人間は私たちを恐れ、誤解していますが、私たちは害虫を食べ、植物の受粉を助ける有益な動物です。私たちが一晩で食べる虫の量は膨大です。しかし、人間は私たちの生息地である洞窟を破壊し、私たちを病気の根源であるかのように扱います。私たちへの誤解を解き、私たちの価値を認めてください。私たちは闇の使いではなく、夜の生態系を守る重要な守護者なのです。`, 'ja-JP')">🔊</button>
+私は暗闇を飛ぶコウモリです。多くの人間は私たちを恐れ、誤解していますが、私たちは害虫を食べ、植物の受粉を助ける有益な動物です。私たちが一晩で食べる虫の量は膨大です。しかし、人間は私たちの生息地である洞窟を破壊し、私たちを病気の根源であるかのように扱います。私たちへの誤解を解き、私たちの価値を認めてください。私たちは闇の使いではなく、夜の生態系を守る重要な守護者なのです。</p>
+        </div>
+
+        <div class="speech-block">
+            <h3>강아지 (Dog / 犬)</h3>
+            <p><strong>[한국어]</strong><button onclick="speak('저는 인간의 가장 오랜 친구, 강아지입니다. 저희는 인간을 사랑하고 따르지만, 그들 중 일부는 저희를 쉽게 버립니다. 저희는 물건이 아니라 감정을 가진 생명입니다. 책임감 없는 욕심이 수많은 유기견을 만들어내고 있습니다. 또한, 인간 사회의 쓰레기와 오염 물질은 산책길에서 저희의 건강을 위협합니다. 저희를 진정한 가족으로 받아들이고, 저희가 안전하게 살아갈 수 있는 깨끗한 환경을 만들어 주십시오. 사랑은 책임감과 함께해야 합니다.', 'ko-KR')">🔊</button>
+저는 인간의 가장 오랜 친구, 강아지입니다. 저희는 인간을 사랑하고 따르지만, 그들 중 일부는 저희를 쉽게 버립니다. 저희는 물건이 아니라 감정을 가진 생명입니다. 책임감 없는 욕심이 수많은 유기견을 만들어내고 있습니다. 또한, 인간 사회의 쓰레기와 오염 물질은 산책길에서 저희의 건강을 위협합니다. 저희를 진정한 가족으로 받아들이고, 저희가 안전하게 살아갈 수 있는 깨끗한 환경을 만들어 주십시오. 사랑은 책임감과 함께해야 합니다.</p>
+            <p><strong>[English]</strong><button onclick="speak(`I am a dog, man's oldest friend. We love and follow humans, but some of them abandon us easily. We are not things, but living beings with emotions. Irresponsible greed creates countless abandoned dogs. Also, the trash and pollutants of human society threaten our health on our walks. Please accept us as true family and create a clean environment where we can live safely. Love must come with responsibility.`, 'en-US')">🔊</button><br>I am a dog, man's oldest friend. We love and follow humans, but some of them abandon us easily. We are not things, but living beings with emotions. Irresponsible greed creates countless abandoned dogs. Also, the trash and pollutants of human society threaten our health on our walks. Please accept us as true family and create a clean environment where we can live safely. Love must come with responsibility.</p>
+            <p><strong>[日本語]</strong><button onclick="speak(`私は人間の最も古い友人、犬です。私たちは人間を愛し、従いますが、彼らの中には私たちを簡単に捨てる者もいます。私たちは物ではなく、感情を持った命です。無責任な欲望が、数多くの捨て犬を生み出しています。また、人間社会のゴミや汚染物質は、散歩道で私たちの健康を脅かします。私たちを本当の家族として受け入れ、私たちが安全に暮らせるきれいな環境を作ってください。愛には責任が伴わなければなりません。`, 'ja-JP')">🔊</button>
+私は人間の最も古い友人、犬です。私たちは人間を愛し、従いますが、彼らの中には私たちを簡単に捨てる者もいます。私たちは物ではなく、感情を持った命です。無責任な欲望が、数多くの捨て犬を生み出しています。また、人間社会のゴミや汚染物質は、散歩道で私たちの健康を脅かします。私たちを本当の家族として受け入れ、私たちが安全に暮らせるきれいな環境を作ってください。愛には責任が伴わなければなりません。</p>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 코끼리의 폐회사</h3>
+            <p>
+                <strong>[한국어]</strong><button onclick="speak('물, 땅, 하늘, 그리고 우리 곁의 모든 동료들의 진솔한 목소리를 들었습니다. 우리의 고통은 모두 연결되어 있었고, 그 원인은 명확했습니다. 하지만 오늘 우리는 절망이 아닌 희망을 보았습니다. 특히 인간 대표의 진심 어린 반성과 약속은 우리 모두에게 큰 울림을 주었습니다. 이것은 끝이 아니라 시작입니다. 오늘 논의된 내용을 바탕으로 우리 모두 각자의 자리에서 변화를 만들어 갑시다. 함께라면, 우리는 병든 지구를 치유하고 모든 생명이 조화롭게 살아가는 미래를 만들 수 있을 것입니다.', 'ko-KR')">🔊</button>
+
+                물, 땅, 하늘, 그리고 우리 곁의 모든 동료들의 진솔한 목소리를 들었습니다. 우리의 고통은 모두 연결되어 있었고, 그 원인은 명확했습니다. 하지만 오늘 우리는 절망이 아닌 희망을 보았습니다. 특히 인간 대표의 진심 어린 반성과 약속은 우리 모두에게 큰 울림을 주었습니다. 이것은 끝이 아니라 시작입니다. 오늘 논의된 내용을 바탕으로 우리 모두 각자의 자리에서 변화를 만들어 갑시다. 함께라면, 우리는 병든 지구를 치유하고 모든 생명이 조화롭게 살아가는 미래를 만들 수 있을 것입니다.
+            </p>
+            <p>
+                <strong>[English]</strong><button onclick="speak(`We have heard the sincere voices from the water, the land, the sky, and all our companions. Our suffering is all connected, and its cause was clear. But today, we saw hope, not despair. The heartfelt remorse and promise from the human representative, in particular, resonated deeply with us all. This is not the end, but the beginning. Let us all create change in our own places based on today's discussions. Together, we can heal our ailing Earth and create a future where all life lives in harmony.`, 'en-US')">🔊</button>
+
+                We have heard the sincere voices from the water, the land, the sky, and all our companions. Our suffering is all connected, and its cause was clear. But today, we saw hope, not despair. The heartfelt remorse and promise from the human representative, in particular, resonated deeply with us all. This is not the end, but the beginning. Let us all create change in our own places based on today's discussions. Together, we can heal our ailing Earth and create a future where all life lives in harmony.
+            </p>
+            <p>
+                <strong>[日本語]</strong><button onclick="speak(`水、陸、空、そして私たちの周りのすべての仲間たちの率直な声を聞きました。私たちの苦しみはすべて繋がっており、その原因は明確でした。しかし今日、私たちは絶望ではなく希望を見出しました。特に、人間の代表の心からの反省と約束は、私たち全員の心に深く響きました。これは終わりではなく、始まりです。本日の議論を基に、私たち全員がそれぞれの場所で変化を起こしていきましょう。共にならば、私たちは病んだ地球を癒し、すべての命が調和して生きる未来を創ることができるでしょう。`, 'ja-JP')">🔊</button>
+
+                水、陸、空、そして私たちの周りのすべての仲間たちの率直な声を聞きました。私たちの苦しみはすべて繋がっており、その原因は明確でした。しかし今日、私たちは絶望ではなく希望を見出しました。特に、人間の代表の心からの反省と約束は、私たち全員の心に深く響きました。これは終わりではなく、始まりです。本日の議論を基に、私たち全員がそれぞれの場所で変化を起こしていきましょう。共にならば、私たちは病んだ地球を癒し、すべての命が調和して生きる未来を創ることができるでしょう。
+            </p>
+        </div>
+    </div>
+</body>
+</html>
