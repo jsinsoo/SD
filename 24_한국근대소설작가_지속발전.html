@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국 근대소설가 11인의 지속가능 발전 토론회 (TTS 수정판)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .author-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #6f42c1;
+            border-radius: 5px;
+            background-color: #fcfbff;
+        }
+        .author-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .author-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>한국 근대소설가 11인의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 시대를 넘어 한국 문학의 거장들을 한자리에 모셨습니다. 각자의 작품 세계를 바탕으로, 오늘날 인류의 가장 큰 화두인 '지구의 지속가능 발전'에 대한 고견을 듣고자 합니다.</p>
+                    <div class="author-item"><div class="author-header"><span class="author-title">1. 이인직</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">나 이인직은 〈혈의 누〉를 통해 낡은 조선이 무너지고 새로운 문명이 들어서는 과도기의 혼란을 그렸소. 옥련이가 구시대의 인습을 벗고 신교육을 받아 새 시대의 주역이 되듯, 이제 인류는 낡은 산업 문명의 습관을 버려야 하오. 지속가능 발전이란 바로 우리 문명의 '혈의 누'를 닦는 과정이오. 화석연료라는 낡은 인습을 과감히 타파하고, 재생에너지와 순환 경제라는 '신교육'을 받아들여야만 지구의 미래를 열 수 있소. 과거에 얽매여서는 새로운 시대를 맞이할 수 없는 법이지.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">2. 안국선</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">본인은 〈금수회의록〉에서 까마귀, 여우, 개구리의 입을 빌려 인간 세상의 부패와 탐욕을 비판했소이다. 지금도 동물들이 회의를 연다면 무슨 말을 하겠소? 인간들이 자신들의 욕심을 채우고자 숲을 불태우고 바다를 더럽혀 자신들의 삶의 터전을 송두리째 빼앗고 있다고 통탄할 것이오. 지속가능 발전의 첫걸음은 인간 중심의 오만한 사고를 버리는 것이오. 까마귀의 반포지효처럼 자연의 은혜에 보답하고, 다른 생명체의 목소리에 귀 기울이는 겸손한 자세를 되찾아야만 진정한 공존이 가능할 것이외다.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">3. 김동인</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">내 소설 〈감자〉의 주인공 복녀는 가난이라는 환경에 의해 점차 도덕적으로 파멸해갔지. 인간의 의지란 환경 앞에서 얼마나 나약한가! 지금 인류는 스스로 '기후 위기'라는 거대한 빈곤 환경을 만들고 있네. 이 척박한 환경은 미래 세대를 복녀처럼 도덕적, 실존적 파멸로 몰아넣을 걸세. 지속가능 발전은 미래 세대가 존엄을 지키며 살아갈 수 있는 최소한의 '환경'을 보존해 주는 것이야. 가난이 복녀의 삶을 결정했듯, 파괴된 지구가 미래 인류의 운명을 결정하게 해서는 안 되네.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">4. 현진건</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">〈운수 좋은 날〉의 김첨지는 아내의 죽음이라는 불길한 징조를 애써 외면하며 하루의 운수에 집착했소. 그 결과는 비극이었지. 지금 인류의 모습이 꼭 김첨지 같구려. 과학자들은 지구가 기침을 하며 죽어가고 있다고 수없이 경고했지만, 우리는 '경제 성장'이라는 눈앞의 행운에 취해 그 신호를 무시하고 있소. 지속가능 발전이란, 지구의 아픔이라는 불길한 징조를 더 이상 외면하지 않는 것이오. 당장의 운수 좋은 날을 포기하더라도, 아픈 아내의 곁을 지키는 마음으로 지구를 돌봐야만 더 큰 비극을 막을 수 있소.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">5. 염상섭</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">내 소설 〈표본실의 청개구리〉 속 지식인처럼, 우리는 문제를 너무나 잘 알고 있소. 기후 변화의 원인, 해결책, 그 모든 것을 분석하고 번민하지. 하지만 정작 행동은 하지 않고 표본실에 갇힌 청개구리처럼 절망만 하고 있소. 지속가능 발전은 더 이상의 분석과 번민이 아니라, 표본실을 박차고 나가는 '행동'을 요구하오. 완벽한 해답을 기다리다가는 모두가 박제된 표본이 될 뿐이오. 비록 불완전하더라도 지금 당장 실천하고, 실패하고, 또다시 시도하는 용기만이 우리를 이 절망의 표본실에서 구원할 것이오.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">6. 나혜석</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">저는 〈경희〉를 통해 낡은 인형의 집을 벗어나 자아를 찾아가는 신여성을 그렸습니다. 여성에게 강요되었던 순종과 희생의 굴레를 끊고 주체적인 삶을 살고자 했지요. 인류 역시 이제 자연에 대한 낡은 관념을 벗어던져야 합니다. 자연을 정복하고 이용해야 할 대상으로만 여기던 가부장적 사고방식을 버려야 합니다. 지속가능 발전이란, 인류가 자연 앞에서 겸손해지고, 자연을 동등한 파트너로 존중하며 새로운 관계를 맺는 '생태적 자아 각성'의 과정입니다. 인형의 집을 나온 경희처럼, 우리도 낡은 문명의 집에서 나와야 합니다.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">7. 이효석</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">내 글 〈메밀꽃 필 무렵〉의 배경이 된 봉평의 달밤을 기억하시오? 소금을 흩뿌린 듯한 메밀꽃밭의 아름다움은 돈으로 환산할 수 없는 가치를 지니오. 그것은 우리 삶을 풍요롭게 하는 자연과의 교감이지. 지금 우리는 경제적 효율성만을 따지느라, 이런 아름다움을 너무나 쉽게 파괴하고 있소. 지속가능 발전이란, 단순히 재앙을 막는 소극적 행위를 넘어, 메밀꽃밭의 달밤과 같은 자연의 아름다움을 미래 세대도 누릴 수 있도록 적극적으로 보존하는 것이오. 인간은 빵만으로 살 수 없듯, 콘크리트만으로 행복할 수 없기 때문이오.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">8. 박태원</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div><div id="ko-8">나, 구보는 〈소설가 구보씨의 일일〉에서 정처 없이 도시를 배회하며 근대의 풍경을 관찰했지요. 다방과 백화점, 전차 속에서 사람들은 서로에게 무관심하고 고독했소. 현대 사회는 자연으로부터 완벽히 분리된 거대한 인공의 도시를 만들었소. 우리는 자연의 순환을 잊은 채, 소비의 네트워크 속을 구보처럼 배회하고 있을 뿐이오. 지속가능 발전은 도시의 구조를 재설계하는 것에서 시작해야 하오. 옥상 텃밭, 도심 속 공원, 순환형 교통체계 등을 통해, 우리가 잃어버린 자연과의 연결고리를 도시 안에 다시 짜 넣어야 합니다.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">9. 이상</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div><div id="ko-9">내 소설 〈날개〉의 주인공은 무기력한 자의식이 갇힌 방에서 벗어나 날고 싶어 했소. '날자, 날자, 한 번만 더 날아보자꾸나.' 지금 인류는 '대량 소비'와 '화석 연료'라는 편리하지만 지속 불가능한 방에 갇혀 있소. 이 방이 무너질 것을 알면서도 무기력하게 주저앉아 있지. 지속가능 발전은 이 낡고 위험한 방을 박차고 나갈 용기요. 조금 불편하고 낯설더라도, 태양과 바람이라는 새로운 '날개'를 달고 날아오르려는 의지이지. 우리에게 필요한 것은 더 이상의 분석이 아니라, 날개를 펼치려는 단 한 번의 결단이오.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">10. 채만식</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div><div id="ko-10">내 소설 〈탁류〉는 썩어가는 금강의 흙탕물처럼, 혼탁한 시대 속에서 타락해가는 인간 군상을 그렸소이다. 강물이 더러워지니 사람들의 인심도 각박해지고, 삶도 피폐해졌지. 환경의 타락과 사회의 타락은 결코 별개의 문제가 아니오. 지금 우리가 마주한 '지속가능성의 위기' 또한 마찬가지요. 강을 오염시키는 공장 폐수와 금융 자본의 탐욕은 그 뿌리가 같소. 지속가능 발전은 단순히 강을 정화하는 기술을 개발하는 데 그쳐서는 안 되오. 사회 전반의 부정부패와 탐욕이라는 '탁류'를 걷어내고, 사회적 정의를 바로 세우는 일과 함께 가야만 성공할 수 있소.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">11. 김동리</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-11">읽기</button></div><div id="ko-11">저의 〈무녀도〉는 샤머니즘이라는 전통적 세계관과 기독교라는 외래적 세계관의 충돌을 그렸습니다. 모화가 지키려 했던 것은 단순한 미신이 아니라, 자연과 인간이 하나로 연결되어 있다는 영적인 세계였지요. 근대화 과정에서 우리는 바로 그 영적인 연결고리를 잃어버렸습니다. 지속가능 발전은 잃어버린 '영성(spirituality)'을 회복하는 과정이어야 합니다. 자연을 단순한 물질로 보는 공학적 접근을 넘어, 모든 생명에 깃든 고유한 가치를 존중하는 마음을 되찾아야 합니다. 대지를 어머니로 여기던 옛사람들의 지혜 속에서 우리는 지속가능한 미래의 실마리를 찾을 수 있을 것입니다.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered the masters of Korean literature across eras. Based on your respective literary worlds, we wish to hear your valuable opinions on 'sustainable development,' the greatest topic of our time.</p>
+                    <div class="author-item"><div class="author-header"><span class="author-title">1. Lee In-jik</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I, Lee In-jik, depicted in "Tears of Blood" the chaotic transition as the old Joseon crumbled and a new civilization emerged. Just as Ok-ryeon cast off old customs and became a protagonist of a new era through new education, humanity must now discard the habits of the old industrial civilization. Sustainable development is the very process of wiping away the 'tears of blood' of our civilization. Only by boldly breaking from the old custom of fossil fuels and embracing the 'new education' of renewable energy and a circular economy can we open the future of our planet. One cannot greet a new age while shackled to the past.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">2. Ahn Guk-seon</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">In "The Conference of Animals," I borrowed the voices of crows, foxes, and frogs to criticize the corruption and greed of the human world. If animals were to hold a conference today, what would they say? They would lament that humans, to satisfy their own greed, are burning forests, polluting oceans, and robbing them of their homes. The first step toward sustainable development is to abandon our arrogant, human-centric thinking. We must repay nature's grace, like the filial piety of the crow, and regain the humility to listen to the voices of other living beings to make true coexistence possible.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">3. Kim Dong-in</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">Bok-nyeo, the protagonist of my novel "Potato," was gradually morally ruined by her environment of poverty. How weak human will is in the face of one's environment! Humanity is now creating its own vast environment of poverty called the 'climate crisis.' This barren environment will drive future generations to moral and existential ruin, just like Bok-nyeo. Sustainable development is about preserving the minimum 'environment' in which future generations can live with dignity. Just as poverty determined Bok-nyeo's life, we must not let a destroyed Earth determine the fate of future humanity.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">4. Hyun Jin-geon</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">Kim Cheom-ji in "A Lucky Day" clung to a day's small fortune while deliberately ignoring the ominous signs of his wife's impending death. The result was tragic. Humanity today looks just like Kim Cheom-ji. Scientists have warned countless times that the Earth is coughing and dying, yet we ignore these signals, intoxicated by the immediate luck of 'economic growth.' Sustainable development means no longer ignoring the ominous sign of the Earth's pain. We must care for the Earth with the heart of one who stays by his sick wife's side, even if it means giving up a lucky day, to prevent a greater tragedy.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">5. Yeom Sang-seop</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">Like the intellectual in my novel "The Green Frog in the Specimen Room," we know the problem all too well. We analyze the causes, the solutions, all the aspects of climate change, and we despair. But we do not act, trapped in despair like a frog in a specimen jar. Sustainable development demands not more analysis and anguish, but the 'action' to break out of the specimen room. If we wait for a perfect solution, we will all end up as preserved specimens. The courage to act now, to fail, and to try again, even if imperfectly, is the only thing that will save us from this specimen room of despair.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">6. Na Hye-sok</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">In "Kyonghui," I portrayed a new woman who leaves the old doll's house to find her own self. She sought to live a self-determined life, breaking the shackles of obedience and sacrifice forced upon women. Humanity, too, must now shed its old ideas about nature. We must abandon the patriarchal mindset that views nature as an object to be conquered and exploited. Sustainable development is a process of 'ecological self-awakening,' where humanity becomes humble before nature, respects it as an equal partner, and forms a new relationship. Like Kyonghui who left the doll's house, we too must leave the house of our old civilization.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">7. Lee Hyo-seok</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">Do you remember the moonlit night in Bongpyeong, the setting of my story "When Buckwheat Flowers Bloom"? The beauty of the buckwheat field, like scattered salt, has a value that cannot be measured in money. It is a communion with nature that enriches our lives. We are now too easily destroying such beauty in the sole pursuit of economic efficiency. Sustainable development is not merely a passive act of preventing disaster, but an active effort to preserve the beauty of nature, like that moonlit night, for future generations to enjoy. For just as man cannot live by bread alone, he cannot be happy with concrete alone.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">8. Park Tae-won</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">I, Kubo, in "A Day in the Life of Kubo the Novelist," wandered aimlessly through the city, observing the modern landscape. In coffee shops, department stores, and streetcars, people were indifferent and lonely. Modern society has created a giant, artificial city completely separated from nature. We wander through a network of consumption like Kubo, having forgotten the cycles of nature. Sustainable development must begin with redesigning the structure of our cities. We must re-weave the lost connection to nature within the city through rooftop gardens, urban parks, and circular transportation systems.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">9. Yi Sang</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div><div id="en-9">The protagonist of my novel "The Wings" wanted to escape the room where his listless self-consciousness was trapped and fly. 'Let's fly, let's fly, let's try to fly just once more.' Humanity is now trapped in a convenient but unsustainable room called 'mass consumption' and 'fossil fuels.' We sit lethargically, knowing this room will collapse. Sustainable development is the courage to break out of this old, dangerous room. It is the will to fly with new 'wings' of sun and wind, even if it is a bit inconvenient and unfamiliar. What we need is not more analysis, but a single decision to spread our wings.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">10. Chae Man-sik</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div><div id="en-10">My novel "The Murky Stream" depicted a group of people degenerating in a turbid era, much like the murky waters of the decaying Geum River. As the river became dirty, people's hearts grew callous, and their lives became impoverished. The corruption of the environment and the corruption of society are by no means separate issues. The 'crisis of sustainability' we face today is the same. The factory wastewater polluting the river and the greed of finance capital share the same root. Sustainable development cannot stop at developing technology to purify rivers. It can only succeed if it goes hand-in-hand with rooting out the 'murky stream' of corruption and greed throughout society and re-establishing social justice.</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">11. Kim Dong-li</span><button class="speak-btn" data-lang="en-US" data-target="en-11">Read</button></div><div id="en-11">My "Portrait of a Shaman" depicted the clash between the traditional worldview of shamanism and the foreign worldview of Christianity. What Mohwa tried to protect was not mere superstition, but a spiritual world where nature and humans were interconnected as one. In the process of modernization, we lost that very spiritual connection. Sustainable development must be a process of recovering this lost 'spirituality.' We must move beyond the engineering approach that sees nature as mere matter and rediscover a heart that respects the intrinsic value in all life. In the wisdom of the ancients who regarded the Earth as a mother, we can find the clue to a sustainable future.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。時代を超え、韓国文学の巨匠たちにお集まりいただきました。それぞれの作品世界に基づき、今日の人類最大の話題である「地球の持続可能な発展」についてのご意見を伺いたいと思います。</p>
+                    <div class="author-item"><div class="author-header"><span class="author-title">1. 李人稙 (イ・インジク)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私、李人稙は『血の涙』を通じて、古い朝鮮が崩壊し新しい文明が訪れる過渡期の混乱を描きました。玉蓮が旧時代の因習を脱ぎ捨て、新教育を受けて新時代の主役となるように、今や人類は古い産業文明の習慣を捨てるべきです。持続可能な発展とは、まさに我々の文明の「血の涙」を拭う過程です。化石燃料という古い因習を大胆に打破し、再生可能エネルギーと循環経済という「新教育」を受け入れてこそ、地球の未来を開くことができます。過去に縛られていては、新しい時代を迎えることはできないのです。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">2. 安国善 (アン・グクソン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">私は『禽獣会議録』で、カラス、キツネ、カエルの口を借りて人間社会の腐敗と貪欲を批判しました。今、動物たちが会議を開いたら何と言うでしょうか。人間が自分たちの欲望を満たすために森を焼き、海を汚し、自分たちの住処を根こそぎ奪っていると嘆くでしょう。持続可能な発展の第一歩は、人間中心の傲慢な思考を捨てることです。カラスの返哺之孝のように自然の恩に報い、他の生命体の声に耳を傾ける謙虚な姿勢を取り戻してこそ、真の共存が可能になるでしょう。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">3. 金東仁 (キム・ドンイン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">私の小説『じゃがいも』の主人公ポクニョは、貧困という環境によって徐々に道徳的に破滅していった。人間の意志とは、環境の前でいかに脆いものか！今、人類は自ら「気候危機」という巨大な貧困環境を作り出している。この不毛な環境は、未来の世代をポクニョのように道徳的、実存的破滅へと追いやるだろう。持続可能な発展とは、未来の世代が尊厳を保ちながら生きていける最低限の「環境」を保全することだ。貧困がポクニョの人生を決定したように、破壊された地球が未来の人類の運命を決定づけるようなことがあってはならない。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">4. 玄鎮健 (ヒョン・ジンゴン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">『運の良い日』のキム첨지는、妻の死という不吉な兆候から目をそらし、一日の運に執着した。その結果は悲劇だった。今の人類の姿は、まさにキム첨地のようだ。科学者たちは地球が咳をして死にかけていると何度も警告したが、我々は「経済成長」という目の前の幸運に酔いしれ、その信号を無視している。持続可能な発展とは、地球の痛みという不吉な兆候にもはや背を向けないことだ。目先の運の良い日を諦めてでも、病気の妻のそばを守る心で地球を看病してこそ、より大きな悲劇を防ぐことができるのだ。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">5. 廉想渉 (ヨム・サンソプ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私の小説『標本室の青蛙』の知識人のように、我々は問題をあまりにもよく知っている。気候変動の原因、解決策、そのすべてを分析し、懊悩する。しかし、肝心の行動は起こさず、標本室に閉じ込められた青蛙のように絶望しているだけだ。持続可能な発展は、これ以上の分析や懊悩ではなく、標本室を飛び出す「行動」を要求する。完璧な答えを待っていては、皆が剥製の標本になるだけだ。たとえ不完全であっても、今すぐ実践し、失敗し、そして再び試みる勇気だけが、我々をこの絶望の標本室から救い出すだろう。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">6. 羅蕙錫 (ナ・ヘソク)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は『瓊姫』を通じて、古い人形の家を出て自我を探し求める新しい女性を描きました。女性に強要された順従と犠牲の軛を断ち切り、主体的な人生を生きようとしました。人類もまた、今こそ自然に対する古い観念を脱ぎ捨てるべきです。自然を征服し利用すべき対象とだけ見なす家父長的な考え方を捨てなければなりません。持続可能な発展とは、人類が自然の前で謙虚になり、自然を対等なパートナーとして尊重し、新しい関係を結ぶ「生態学的自我覚醒」の過程です。人形の家を出た瓊姫のように、私たちも古い文明の家から出なければなりません。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">7. 李孝石 (イ・ヒョソク)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私の文『そばの花咲く頃』の舞台となった蓬坪の月夜を覚えているかね。塩を撒いたようなそば畑の美しさは、金銭では換算できない価値を持つ。それは我々の人生を豊かにする自然との交感だ。今、我々は経済的効率性ばかりを追い求め、このような美しさをあまりにも簡単に破壊している。持続可能な発展とは、単に災厄を防ぐ消極的な行為を超え、そば畑の月夜のような自然の美しさを未来の世代も享受できるよう、積極的に保全することだ。人間はパンのみに生きるにあらず、コンクリートだけで幸福にはなれないのだから。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">8. 朴泰遠 (パク・テウォン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">私、久保は『小説家久保氏の一日』で、当てもなく都市を徘徊し、近代の風景を観察した。喫茶店や百貨店、電車の中で人々は互いに無関心で孤独だった。現代社会は自然から完全に分離された巨大な人工の都市を作り出した。我々は自然の循環を忘れ、消費のネットワークの中を久保のように徘徊しているに過ぎない。持続可能な発展は、都市の構造を再設計することから始めなければならない。屋上菜園、都心の中の公園、循環型交通体系などを通じて、私たちが失った自然との繋がりを都市の中に再び織り込むべきだ。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">9. 李箱 (イ・サン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">私の小説『翼』の主人公は、無気力な自意識が閉じ込められた部屋から抜け出して飛びたがっていた。「飛ぼう、飛ぼう、もう一度だけ飛んでみようではないか」。今、人類は「大量消費」と「化石燃料」という、便利だが持続不可能な部屋に閉じ込められている。この部屋が崩壊することを知りながらも、無気力に座り込んでいる。持続可能な発展とは、この古くて危険な部屋を飛び出す勇気だ。少し不便で慣れなくても、太陽と風という新しい「翼」をつけて飛び立とうとする意志だ。我々に必要なのはこれ以上の分析ではなく、翼を広げようとする、ただ一度の決断なのだ。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">10. 蔡萬植 (チェ・マンシク)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div><div id="ja-10">私の小説『濁流』は、腐っていく錦江の濁流のように、混濁した時代の中で堕落していく人間群像を描いた。川が汚れれば人々の心も荒み、生活も荒廃した。環境の堕落と社会の堕落は、決して別々の問題ではない。今我々が直面している「持続可能性の危機」も同様だ。川を汚染する工場廃水と金融資本の貪欲は、その根が同じなのだ。持続可能な発展は、単に川を浄化する技術を開発するだけではいけない。社会全般の不正腐敗と貪欲という「濁流」を걷어내、社会的正義を正すことと共に行われてこそ成功することができるのだ。</div></div>
+                    <div class="author-item"><div class="author-header"><span class="author-title">11. 金東里 (キム・ドンニ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-11">読む</button></div><div id="ja-11">私の『巫女図』は、シャーマニズムという伝統的世界観とキリスト教という外来的世界観の衝突を描きました。母花が守ろうとしたのは、単なる迷信ではなく、自然と人間が一つに繋がっているという霊的な世界でした。近代化の過程で、私たちはまさにその霊的な繋がりを失ってしまいました。持続可能な発展とは、失われた「霊性（スピリチュアリティ）」を回復する過程でなければなりません。自然を単なる物質と見る工学的アプローチを超え、すべての生命に宿る固有の価値を尊重する心を取り戻すべきです。大地を母と見なした古の人々の知恵の中に、私たちは持続可能な未来への糸口を見出すことができるでしょう。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+
+                    // *** 수정된 부분 시작 ***
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    // 버튼 종류에 따라 언어(lang) 변수를 설정하는 로직을 통합하고 명확하게 수정
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    // *** 수정된 부분 끝 ***
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

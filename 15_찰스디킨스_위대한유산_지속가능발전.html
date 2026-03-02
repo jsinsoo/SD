@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『위대한 유산』 인물들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #6c757d;
+            border-radius: 5px;
+            background-color: #fdfdff;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『위대한 유산』 인물들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro">(시간과 공간을 넘어, 소설 속 인물들이 '성찰의 살롱'에 모여 앉아 서로의 삶과 생각을 나눕니다.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">핍 (성장한 주인공)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-pip">읽기</button></div>
+                        <div id="ko-pip">저는 한때 부와 신분이라는 '위대한 유산'이 저를 행복하게 해줄 것이라 믿었습니다. 그 헛된 기대를 좇느라 제 뿌리였던 조와 비디의 소중함을 잊었죠. 지금 인류가 '경제 성장'이라는 유산에 집착하는 모습이 꼭 저의 과거 같습니다. 우리는 성장을 위해 지구라는 우리의 근원을 소홀히 하고 있습니다. 진정한 지속가능 발전은 돈이나 기술이 아니라, 우리를 키워준 자연과 정직한 노동의 가치를 다시 깨닫는 도덕적 성숙에서 시작되어야 합니다. 매그위치의 투박한 사랑이 저를 구원했듯, 이제는 우리가 자연의 조건 없는 사랑에 보답해야 할 때입니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">조 가저리 (따뜻한 대장장이)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-joe">읽기</button></div>
+                        <div id="ko-joe">저는 그저 제 대장간에서 정직하게 쇠를 두드리며 살아왔습니다. 낡은 것은 고쳐 쓰고, 필요한 만큼만 만들었죠. 요즘 세상은 너무 많은 것을 너무 빨리 만들어 버리는 것 같습니다. 그러니 자연도 사람 마음도 병드는 게 아니겠습니까. 지구의 지속가능 발전이라는 것도 그리 어려운 일은 아닐 겁니다. 쇠를 다루듯, 자연을 조심스럽게 다루고, 망가진 곳은 정성껏 고쳐주고, 우리에게 주어진 것에 감사하는 마음만 있다면 말입니다. 화려한 신사가 되는 것보다, 정직한 대장장이로 사는 것이 더 가치 있을 수 있다는 걸 잊지 않았으면 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">미스 해비샴 (멈춰버린 여인)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-havisham">읽기</button></div>
+                        <div id="ko-havisham">내 시간은 결혼 예복을 입은 채 멈췄고, 내 저택은 햇빛 없이 먼지 속에서 썩어갔지. 복수심에 사로잡혀 모든 것을 파괴하는 삶이 어떤 것인지 나는 잘 안다. 지금 인류가 지구에게 하는 짓이 꼭 나와 같구나. 과거의 상처, 즉 산업혁명의 오만함에 갇혀 미래를 보지 못하고 있어. 너희는 성장을 멈추면 모든 것을 잃을까 두려워하지만, 진정한 파멸은 멈추지 않을 때 오는 것이다. 지속가능 발전이란, 과거의 잘못을 인정하고 썩어가는 저택의 창문을 여는 용기에서 시작되어야 한다. 멈춰야 비로소 새로운 시간이 흐를 수 있음을 명심하거라.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">에스텔라 (얼음 심장의 여인)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-estella">읽기</button></div>
+                        <div id="ko-estella">저는 사랑하는 법을 배우지 못했습니다. 그저 남의 마음을 부수는 인형으로 길러졌죠. 제가 감정을 느끼지 못했듯, 지금의 문명은 자연의 고통을 느끼지 못하는 것 같습니다. 우리는 지구를 하나의 시스템이나 자원으로만 취급할 뿐, 살아 숨 쉬는 존재로 사랑하는 법을 잊었습니다. 진정한 지속가능성은 효율적인 자원 관리를 넘어, 지구와 감정적인 관계를 회복하는 데에 있습니다. 제가 고통을 겪고 나서야 비로소 사랑의 의미를 희미하게나마 알게 되었듯이, 인류도 더 큰 파국을 맞기 전에 자연을 사랑하는 법을 배워야만 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">매그위치 (비밀 후원자)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-magwitch">읽기</button></div>
+                        <div id="ko-magwitch">나는 사회의 가장 어두운 곳에서, 핍이라는 한 줄기 빛을 보았소. 내 평생의 노동으로 번 '더러운' 돈을 그 아이에게 보내 신사를 만들고 싶었지. 어쩌면 우리 문명의 풍요도 나와 같을지 모르오. 우리가 누리는 안락함은 지구 어딘가의 보이지 않는 희생, 즉 파괴된 숲과 오염된 강이라는 '어두운 과거' 위에 세워진 것일 수 있소. 지속가능 발전이란, 이 불편한 진실을 인정하는 데서 출발해야 하오. 우리가 딛고 선 기반이 결코 깨끗하지만은 않다는 것을 알고, 그 빚을 갚으려는 노력, 그것이 진정으로 미래를 위한 '신사다운' 행동이 아니겠소?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro">(Transcending time and space, the characters from the novel gather in a 'Salon of Reflection' to share their lives and thoughts.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Pip (The Protagonist, Matured)</span><button class="speak-btn" data-lang="en-US" data-target="en-pip">Read</button></div>
+                        <div id="en-pip">I once believed that a 'great expectation' of wealth and status would bring me happiness. Chasing that vain hope, I forgot the value of my roots—Joe and Biddy. Humanity's obsession with 'economic growth' today reminds me of my past. We neglect our origin, the Earth, in our pursuit of growth. True sustainable development must begin not with money or technology, but with the moral maturity to recognize the value of nature and honest labor that raised us. Just as Magwitch's rough love saved me, it is now our time to repay nature for its unconditional love.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Joe Gargery (The Kind Blacksmith)</span><button class="speak-btn" data-lang="en-US" data-target="en-joe">Read</button></div>
+                        <div id="en-joe">I've lived my life simply, hammering iron honestly in my forge. I mended what was old and made only what was needed. It seems the world today makes too much, too quickly. Is it any wonder that both nature and people's hearts are falling ill? Sustainable development for the Earth probably isn't so complicated. It’s about handling nature carefully, as I handle iron; mending what's broken with care; and being grateful for what we are given. I hope we don't forget that living as an honest blacksmith can be more worthy than becoming a fine gentleman.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Miss Havisham (The Woman Frozen in Time)</span><button class="speak-btn" data-lang="en-US" data-target="en-havisham">Read</button></div>
+                        <div id="en-havisham">My time stopped in my wedding dress, and my house decayed in dust, without sunlight. I know well what a life consumed by revenge, destroying everything, is like. What humanity is doing to the Earth now is just like me. You are trapped in a past wound—the arrogance of the Industrial Revolution—and cannot see the future. You fear that stopping growth means losing everything, but true ruin comes from not stopping. Sustainable development must begin with the courage to admit past wrongs and open the windows of this decaying mansion. Remember, only when you stop can a new time begin to flow.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Estella (The Woman with a Heart of Ice)</span><button class="speak-btn" data-lang="en-US" data-target="en-estella">Read</button></div>
+                        <div id="en-estella">I was never taught how to love. I was raised as a doll to break men's hearts. Just as I could not feel emotion, our civilization seems incapable of feeling nature's pain. We treat the Earth as a system or a resource, but we have forgotten how to love it as a living being. True sustainability lies beyond efficient resource management; it lies in restoring our emotional connection with the planet. Just as I only vaguely understood the meaning of love after experiencing great suffering, humanity must learn to love nature before we face an even greater catastrophe.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Magwitch (The Secret Benefactor)</span><button class="speak-btn" data-lang="en-US" data-target="en-magwitch">Read</button></div>
+                        <div id="en-magwitch">From the darkest corner of society, I saw a ray of light in that boy, Pip. I wanted to use my 'dirty' money, earned through a lifetime of toil, to make him a gentleman. Perhaps our civilization's prosperity is like me. The comfort we enjoy might be built upon unseen sacrifices elsewhere—a 'dark past' of destroyed forests and polluted rivers. Sustainable development must start from acknowledging this uncomfortable truth. We must recognize that the foundation we stand on is not entirely clean, and the effort to repay that debt—is that not the truly 'gentlemanly' thing to do for the future?</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro">（時間と空間を超え、小説の中の人物たちが「省察のサロン」に集い、それぞれの人生と思いを語り合います。）</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ピップ（成長した主人公）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-pip">読む</button></div>
+                        <div id="ja-pip">私はかつて、富と身分という「大いなる遺産」が私を幸せにしてくれると信じていました。その虚しい期待を追いかけるあまり、私の根源であったジョーとビディの大切さを忘れていました。今の時代、人類が「経済成長」という遺産に執着する姿は、まさに私の過去のようです。私たちは成長のために、地球という私たちの根源を疎かにしています。真の持続可能な発展とは、お金や技術ではなく、私たちを育ててくれた自然と誠実な労働の価値を再認識する道徳的な成熟から始まるべきです。マグウィッチの無骨な愛が私を救ったように、今こそ私たちが自然の無条件の愛に報いる時です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ジョー・ガージャリー（心優しき鍛冶屋）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-joe">読む</button></div>
+                        <div id="ja-joe">わしはただ、自分の鍛冶場で正直に鉄を打ちながら生きてきただけだ。古いものは修理して使い、必要な分だけを作ってきた。近頃の世の中は、あまりにも多くのものを、あまりにも速く作りすぎているようだ。だから自然も人の心も病んでしまうのではないかね。地球の持続可能な発展というのも、そう難しいことではないだろう。鉄を扱うように、自然を丁寧に扱い、壊れたところは心を込めて直し、与えられたものに感謝する心さえあればな。華やかな紳士になることより、正直な鍛冶屋として生きることの方が価値があるかもしれないと、忘れないでほしいもんだ。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ミス・ハヴィシャム（時を止めた女性）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-havisham">読む</button></div>
+                        <div id="ja-havisham">私の時間はウェディングドレスを着たまま止まり、私の屋敷は陽の光もなく埃の中で朽ちていった。復讐心にとらわれ、すべてを破壊する人生がどのようなものか、私はよく知っている。今、人類が地球にしていることは、まさに私のようだ。過去の傷、つまり産業革命の傲慢さにとらわれ、未来を見ようとしていない。お前たちは成長を止めればすべてを失うと恐れているが、真の破滅は止めないことによって訪れるのだ。持続可能な発展とは、過去の過ちを認め、朽ちていく屋敷の窓を開ける勇気から始めなければならない。止まってこそ、初めて新しい時が流れることを心に刻むがよい。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">エステラ（氷の心を持つ女性）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-estella">読む</button></div>
+                        <div id="ja-estella">私は愛し方を教わりませんでした。ただ人の心を砕く人形として育てられたのです。私が感情を感じられなかったように、今の文明は自然の苦しみを感じられていないようです。私たちは地球を一つのシステムや資源として扱うだけで、生きて呼吸する存在として愛する方法を忘れてしまいました。真の持続可能性は、効率的な資源管理を超え、地球との感情的な関係を回復することにあります。私が苦しみを経て初めて愛の意味をかすかに知ったように、人類もより大きな破局を迎える前に、自然を愛する方法を学ばなければなりません。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">マグウィッチ（秘密の後援者）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-magwitch">読む</button></div>
+                        <div id="ja-magwitch">わしは社会の最も暗い場所から、ピップという一筋の光を見た。生涯をかけて稼いだ「汚れた」金で、あの子を紳士にしたかった。もしかすると、我々の文明の豊かさもわしと同じかもしれん。我々が享受する快適さは、地球のどこかにある見えない犠牲、つまり破壊された森や汚染された川という「暗い過去」の上に築かれているのかもしれない。持続可能な発展とは、この不都合な真実を認めることから始めなければならん。我々が立つ基盤が決して綺麗ではないことを知り、その借りを返そうと努力すること、それこそが未来のための真に「紳士的な」行いではないだろうか？</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 '읽어주기' 및 '전체 듣기' 버튼을 선택합니다.
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            // 현재 재생 중인 음성을 중지하는 함수
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 다른 음성이 재생 중이면 즉시 중지합니다.
+                    stopSpeech();
+
+                    let lang;
+                    // 버튼 클래스에 따라 언어 코드와 텍스트 대상을 결정합니다.
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0; // 읽는 속도 (기본값 1)
+                        utterance.pitch = 1.0; // 음높이 (기본값 1)
+
+                        utterance.onend = function() {
+                            console.log('Speech playback finished for ' + targetId);
+                        };
+                        
+                        // 음성 재생
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

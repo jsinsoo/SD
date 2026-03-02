@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『태백산맥』 인물들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #8B4513;
+            border-radius: 5px;
+            background-color: #fffaf6;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『태백산맥』 인물들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 역사의 소용돌이 속에서 격동의 시대를 살아오신 아홉 분을 모시고, '지구의 지속가능 발전'이라는 새로운 시대의 화두에 대한 고견을 듣고자 합니다.</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 김범우 (중도적 지식인)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">저는 좌도 우도 아닌, 이념보다 사람이 먼저라고 믿었습니다. 하지만 결국 양쪽 모두에게 버림받았지요. 지금 '지속가능 발전'을 둘러싼 논의도 마치 이념 전쟁 같습니다. 한쪽은 극단적인 환경주의를, 다른 한쪽은 무책임한 개발주의를 외칩니다. 중요한 것은 구호가 아니라 '사람'입니다. 에너지 전환 과정에서 일자리를 잃는 노동자들, 기후 재난으로 삶의 터전을 잃는 농민들을 외면하는 지속가능성은 또 다른 폭력일 뿐입니다. 우리는 이념의 중간에서, 가장 고통받는 사람의 목소리부터 들어야 합니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 염상진 (이상주의 혁명가)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">내가 목숨을 걸고 꿈꿨던 세상은 모든 인민이 평등하게 잘사는 세상이었소. 지금 지구의 위기는 근본적으로 '계급 문제'와 같소. 부유한 나라와 거대 자본이라는 '지주 계급'이 지구라는 '소작지'를 무한정 착취하고, 그 오염과 고통은 가난한 나라의 '소작농'들에게 전가되고 있소. 진정한 지속가능 발전은 자본주의 체제 안에서는 불가능하오. 생산 수단, 즉 지구의 자원을 소수가 독점하는 구조를 타파하고, 모든 인류가 자원을 계획적으로 공유하고 관리하는 혁명적인 전환만이 유일한 해답이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 염미정 (비극 속 여성)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">저는 사랑하는 사람들을 이념의 소용돌이 속에서 모두 잃었습니다. 제게 남은 것은 지워지지 않는 상처뿐입니다. 지금 지구가 겪는 아픔이 제 마음의 상처와 같아 보입니다. 한번 파괴된 숲, 한번 멸종된 생명은 다시 돌아오지 않습니다. 그것은 지구에 영원히 남는 상처입니다. 지속가능 발전은 거창한 계획 이전에, 더 이상 상처를 만들지 않으려는 간절한 마음에서 시작되어야 합니다. 이미 병든 자연을 치유하고, 더 이상 어떤 생명도 우리 때문에 아파하지 않도록 보듬는 것. 그것이 제가 바라는 유일한 것입니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 하대치 (행동하는 민중)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">나는 복잡한 이론은 잘 모르오. 다만, 낫을 들고 밭을 갈아야 내 식구들이 굶지 않는다는 것만 알지. 지금 지구가 병들었다는디, 저 높은 양반들은 회의만 하고 앉았구려. 우리 같은 농사꾼들은 당장 땅이 말라가고 홍수가 나서 죽을 맛인디. 지속가능 발전은 책상머리에서 나오는 게 아니오. 당장 우리 마을 앞 하천부터 살리고, 우리 동네 쓰레기부터 줄이는 구체적인 '실천'이 중요하오. 낫을 들고 김매기를 하듯, 우리 손으로 직접 지구를 가꾸는 일부터 시작해야 하지 않겄소.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 이인국 (냉철한 혁명가)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">혁명은 감상으로 하는 것이 아니오. 목적을 위해서는 수단과 방법을 가리지 않아야 하오. 지구의 지속가능성이라는 '목표'는 인류 생존이 걸린 절대적인 과업이오. 이를 달성하기 위해서는 개개인의 선의에 기댈 것이 아니라, 강력하고 체계적인 '통제'가 필요하오. 나는 전 지구적인 '탄소 배급제'와 '자원 사용 총량제'를 실시할 것을 제안하오. 불편과 반발이 있더라도, 인류 전체의 생존이라는 대의를 위해 소수의 희생은 감수해야 하오. 목표를 위해서라면 비정한 결단도 내려야 하는 법이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 서민수 (권력 지향가)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">나는 법과 질서를 지키기 위해 빨갱이들을 소탕했을 뿐이오. 국가의 안녕을 해치는 무리는 누구든 용납할 수 없지. 지금 '환경 운동'이라는 것도 수상쩍은 구석이 많아. 국가 경제를 흔들고 사회 혼란을 부추기는 세력이 분명 배후에 있을 것이오. 지속가능 발전? 좋지. 하지만 국가의 성장과 안보를 해치면서까지 추진해서는 안 되오. 나는 먼저 강력한 '녹색 기술'을 개발하여 국부를 창출하고, 그 힘으로 환경을 통제하는 것이 올바른 순서라고 보오. 질서 없는 발전은 혼란만 가져올 뿐이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 곽재식 (기회주의 지주)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">세상이 어떻게 바뀌든, 힘 있는 쪽에 붙어서 내 재산을 지키는 것이 가장 중요하지. 예전에는 미군정이 힘이었고, 지금은 '돈'이 힘이지. '지속가능 발전'이라... 그거 돈이 되는 일인가? 탄소배출권 거래다, 친환경 에너지 사업이다 뭐다 해서 새로운 돈벌이가 생긴다면야 나도 얼마든지 찬성일세. 나는 이 새로운 판에서 어떻게 하면 내 이익을 극대화할 수 있을지에만 관심이 있네. 지구의 미래? 글쎄, 내 재산이 불어나는 한, 그 미래도 나쁘진 않겠지. 결국 모든 것은 이익을 따라 움직이는 법이라네.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. 양씨 부인 (시대의 희생자)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div><div id="ko-8">나는 그냥 밭 갈고 자식들 밥해 먹이며 살고 싶었을 뿐인디... 세상이 이리 시끄러워 아들도 잃고 남편도 잃었소. 좌익이 되믄 어떻고 우익이 되믄 어떻단 말이오. 그냥 다 같이 배 안 곯고 살믄 되는 것을... 지금 지구가 아프다는 말도 꼭 그때 같소. 높은 사람들 싸움에 우리 같은 아낙네들 등만 터지는 거지. 지속가능 발전이고 뭐고, 나는 그냥 내 손주들이 맘 놓고 숨 쉬고, 깨끗한 물 마시고, 제 땅에서 난 곡식 먹고 살 수만 있다면 더 바랄 것이 없겄소.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. 정하섭 (생존하는 민중)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div><div id="ko-9">나는 이념 같은 건 잘 모릅니다. 그저 이쪽이 득세하면 이쪽에 붙고, 저쪽이 득세하면 저쪽에 붙어서 목숨만 부지하고 싶었을 뿐입니다. 세상이 무서우니까요. '지속가능 발전'도 마찬가지입니다. 개발을 해야 먹고 산다는 사람들도 있고, 환경을 지켜야 산다는 사람들도 있습니다. 저 같은 보통 사람은 누구 말이 맞는지, 어떻게 해야 할지 모르겠습니다. 다만 한 가지 바라는 것은, 이 문제로 또다시 우리 같은 사람들이 서로 미워하고 싸우는 세상이 오지 않았으면 하는 것입니다. 그저 조용히, 무사히 살고 싶을 뿐입니다.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered nine individuals who lived through a turbulent era in the vortex of history to hear your valuable opinions on the new era's topic, 'sustainable development for the Earth.'</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. Kim Bum-woo (The Neutral Intellectual)</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I believed that people came before ideology, neither left nor right. But in the end, I was abandoned by both sides. The current debate on 'sustainable development' feels like another ideological war. One side shouts for radical environmentalism, the other for irresponsible developmentalism. What's important is not the slogan, but the 'people.' Sustainability that ignores the workers who lose their jobs in the energy transition, or the farmers who lose their homes to climate disasters, is just another form of violence. We must listen first to the voices of the most afflicted, in the middle of these ideologies.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. Yeom Sang-jin (The Idealistic Revolutionary)</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">The world I dreamed of and risked my life for was one where all people live equally well. The current crisis of the planet is fundamentally the same as a 'class problem.' The 'landlord class' of wealthy nations and giant corporations is endlessly exploiting the 'tenant farm' of the Earth, and the pollution and suffering are passed on to the 'tenant farmers' of poor nations. True sustainable development is impossible under the capitalist system. The only answer is a revolutionary transition to overthrow the structure where the means of production—the Earth's resources—are monopolized by a few, and to have all of humanity share and manage resources according to a plan.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. Yeom Mi-jung (The Tragic Woman)</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">I lost everyone I loved in the whirlwind of ideology. All that remains for me is a wound that will not fade. The pain the Earth is suffering now looks just like the wound in my heart. A forest, once destroyed, or a life, once extinct, never returns. It becomes a permanent scar on the planet. Sustainable development, before any grand plan, must begin with the desperate desire not to create any more wounds. To heal the already sick nature, and to embrace all life so that no more beings suffer because of us. That is all I wish for.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. Ha Dae-chi (The Man of Action)</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">I don't know much about complicated theories. I just know that my family won't starve if I take up my sickle and till the land. They say the Earth is sick now, but those high and mighty folks are just sitting around in meetings. Farmers like me are dying from the land drying up and the floods. Sustainable development doesn't come from a desk. What's important is concrete 'action,' like reviving the stream in front of our village and reducing the trash in our neighborhood. Just as we tend the fields with a sickle, we must start by tending to the Earth with our own hands.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. Lee In-guk (The Cold Revolutionary)</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">Revolution is not a matter of sentiment. To achieve the goal, one must not be picky about the means. The 'goal' of Earth's sustainability is an absolute task upon which human survival depends. To achieve this, we cannot rely on individual goodwill but need strong, systematic 'control.' I propose the implementation of a global 'carbon rationing' and a 'total resource usage limit.' Even if there is discomfort and opposition, small sacrifices must be endured for the greater cause of humanity's survival. For the sake of the goal, one must make dispassionate decisions.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. Seo Min-su (The Power Seeker)</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">I only rooted out the commies to protect law and order. Any group that harms the nation's security cannot be tolerated. This 'environmental movement' also has a suspicious side to it. There must be forces behind it trying to shake the national economy and incite social chaos. Sustainable development? Fine. But it must not be pursued at the expense of national growth and security. I believe the correct order is to first develop powerful 'green technology' to create national wealth, and then use that power to control the environment. Development without order only brings chaos.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. Gwak Jae-shik (The Opportunistic Landowner)</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">No matter how the world changes, what's most important is to side with the powerful and protect my property. In the old days, the US military government was power; now, 'money' is power. 'Sustainable development'... is there money in it? If it creates new business opportunities like carbon credit trading or eco-friendly energy projects, then I'm all for it. I'm only interested in how to maximize my profits in this new game. The future of the Earth? Well, as long as my wealth grows, that future can't be too bad. In the end, everything follows profit.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. Mrs. Yang (A Victim of the Era)</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">All I wanted was to farm the land and feed my children... but this world became so noisy that I lost my son and husband. What does it matter if you're left or right? As long as everyone can live without starving... They say the Earth is sick now, and it feels just like back then. When the powerful fight, it's the backs of us common women that break. Sustainability, whatever it is, I have no other wish than for my grandchildren to be able to breathe freely, drink clean water, and eat the grains from their own land.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. Jung Ha-seop (The Survivor)</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div><div id="en-9">I don't know much about ideologies. I just wanted to survive, siding with whichever side was in power. Because the world is a scary place. 'Sustainable development' feels the same. Some say we must develop to make a living, others say we must protect the environment to live. An ordinary person like me doesn't know who is right or what to do. I just hope that this issue doesn't lead to a world where people like us hate and fight each other again. I just want to live quietly and safely.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。歴史の渦の中で激動の時代を生きてこられた9名の皆様をお招きし、「地球の持続可能な発展」という新しい時代の話題についてのご意見を伺いたいと思います。</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 金範佑 (キム・ボム)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私は左でも右でもなく、理念より人間が先だと信じていました。しかし、結局は両方から見捨てられました。今の「持続可能な発展」を巡る議論も、まるで理念戦争のようです。一方は極端な環境主義を、もう一方は無責任な開発主義を叫んでいます。重要なのはスローガンではなく、「人間」です。エネルギー転換の過程で職を失う労働者、気候災害で生活の場を失う農民に背を向ける持続可能性は、また別の暴力に過ぎません。私たちは理念の中間で、最も苦しむ人々の声から聞くべきです。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 廉相振 (ヨム・サンジン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">私が命を懸けて夢見た世界は、すべての人民が平等に暮らせる世の中だった。今の地球の危機は、根本的に「階級問題」と同じだ。裕福な国と巨大資本という「地主階級」が、地球という「小作地」を無限に搾取し、その汚染と苦痛は貧しい国の「小作農」に転嫁されている。真の持続可能な発展は、資本主義体制の中では不可能だ。生産手段、すなわち地球の資源を少数が独占する構造を打破し、全人類が資源を計画的に共有し管理する革命的な転換こそが、唯一の答えだ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 廉美貞 (ヨム・ミジョン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">私は愛する人々を理念の渦の中で全て失いました。私に残されたのは、消えることのない傷だけです。今、地球が経験している痛みは、私の心の傷と同じように見えます。一度破壊された森、一度絶滅した生命は二度と戻りません。それは地球に永遠に残る傷です。持続可能な発展とは、大それた計画の前に、これ以上傷を作らないという切実な心から始まるべきです。すでに病んだ自然を癒し、これ以上いかなる生命も私たちのせいで苦しまないように抱きしめること。それが私の唯一の願いです。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 河大治 (ハ・デチ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">俺は難しい理屈はよく分からん。ただ、鎌を持って畑を耕さなきゃ、家族が飢えるってことだけは知っている。今、地球が病気だと言うが、あのお偉いさん方は会議ばかりしているようだ。俺たちみたいな農民は、今すぐ土地が干上がり、洪水で死にそうだというのに。持続可能な発展は、机の上から生まれるもんじゃねぇ。今すぐ村の前の川を生き返らせ、町のゴミを減らす、具体的な「実践」が重要だ。鎌を持って草を刈るように、俺たちの手で直接、地球を手入れすることから始めなきゃならん。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 李仁国 (イ・イングク)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">革命は感傷で行うものではない。目的のためには手段と方法を選んではならない。地球の持続可能性という「目標」は、人類の生存がかかった絶対的な課業だ。これを達成するためには、個々人の善意に頼るのではなく、強力で体系的な「統制」が必要だ。私は全地球的な「炭素配給制」と「資源使用総量制」を実施することを提案する。不便や反発があっても、人類全体の生存という大義のためには、少数の犠牲は甘受すべきだ。目的のためには非情な決断も下さねばならない。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 徐民洙 (ソ・ミンス)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は法と秩序を守るためにアカどもを掃討しただけだ。国家の安寧を害する輩は誰であろうと許さん。今の「環境運動」というのも怪しい点が多い。国家経済を揺るがし、社会混乱を煽る勢力が裏にいるに違いない。持続可能な発展？結構だ。だが、国家の成長と安保を損なってまで推進すべきではない。私はまず強力な「グリーン技術」を開発して国富を創出し、その力で環境を統制するのが正しい順序だと見ている。秩序なき発展は混乱を招くだけだ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 郭在植 (クァク・ジェシク)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">世の中がどう変わろうと、力のある側について自分の財産を守ることが一番重要だ。昔は米軍政が力だったし、今は「金」が力だ。「持続可能な発展」とやら…それは儲かる話かね？炭素排出権取引だの、環境に優しいエネルギー事業だので新しい金儲けができるというなら、私もいくらでも賛成だ。私はこの新しいゲームで、いかにして自分の利益を最大化できるかにしか興味がない。地球の未来？さあな、私の財産が増える限り、その未来も悪くはないだろう。結局、すべては利益に従って動くものなのだよ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. 梁氏夫人 (ヤンシ・プイン)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">私はただ畑を耕し、子供たちにご飯を食べさせて暮らしたかっただけなのに…世の中がこんなに騒がしくなって、息子も夫も失いました。左翼がなんだ、右翼がなんだって言うんですか。みんな一緒に飢えずに暮らせればそれでいいものを…。今、地球が病気だという話も、まるであの時のようです。偉い人たちの争いで、私たちのような女の背中が裂けるだけ。持続可能な発展だかなんだか知りませんが、私はただ、孫たちが安心して息をして、きれいな水を飲み、自分の土地でとれた穀物を食べて生きていけさえすれば、それ以上望むことはありません。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. 丁河燮 (チョン・ハソプ)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">私は理念のようなものはよく分かりません。ただ、こちらが優勢になればこちらに付き、あちらが優勢になればあちらに付いて、命だけは助かりたいと思っていました。世の中が怖いからです。「持続可能な発展」も同じです。開発をしなければ食べていけないという人もいれば、環境を守らなければ生きていけないという人もいます。私のような普通の人間には、誰が正しいのか、どうすればいいのか分かりません。ただ一つ願うのは、この問題でまた我々のような人間が互いに憎しみ合い、争う世の中が来ないでほしいということです。ただ静かに、無事に生きていきたいだけです。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,519 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>삼국지 11인 지속발전 토론 · TTS</title>
+<style>
+  :root {
+    --bg: #0b1020;
+    --card: #141a2f;
+    --ink: #e6e8ee;
+    --sub: #a9b1c9;
+    --acc: #4fd1c5;
+    --muted: #2a3353;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 24px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    background: radial-gradient(1000px 600px at 10% -10%, #15203e 0%, var(--bg) 60%);
+    color: var(--ink);
+  }
+  h1 { margin: 0 0 8px 0; font-size: 28px; }
+  p.lead { color: var(--sub); margin-top: 0; }
+  .toolbar {
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    background: rgba(255,255,255,0.04); padding: 12px 14px; border-radius: 14px; border: 1px solid var(--muted);
+  }
+  .btn {
+    border: 1px solid var(--acc); color: var(--ink); background: transparent;
+    padding: 8px 12px; border-radius: 999px; cursor: pointer; transition: .2s;
+  }
+  .btn:hover { background: rgba(79,209,197,.12); }
+  select, .langpick {
+    background: var(--card); color: var(--ink); border: 1px solid var(--muted);
+    padding: 8px 10px; border-radius: 10px;
+  }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px; margin-top: 18px;
+  }
+  .card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid var(--muted);
+    border-radius: 18px; padding: 16px;
+  }
+  .title { font-weight: 700; font-size: 16px; }
+  .role { color: var(--sub); font-size: 13px; margin-bottom: 10px; }
+  .lang {
+    border-top: 1px dashed var(--muted); margin-top: 8px; padding-top: 8px;
+  }
+  .lang h4 { margin: 0 0 8px 0; font-size: 14px; color: var(--acc); }
+  ol { margin: 0 0 8px 18px; }
+  li { margin: 6px 0; }
+  .small { font-size: 12px; color: var(--sub); }
+</style>
+</head>
+<body>
+  <h1>삼국지 11인 — 지속발전 라운드테이블</h1>
+  <p class="lead">시대와 진영을 넘어 한자리에 모인 11명의 인물이, 자신의 삶을 비추어 지구의 지속가능한 미래를 토론합니다.</p>
+  <div class="toolbar">
+    <button class="btn" onclick="playAll()">전체 읽기 ▶</button>
+    <button class="btn" onclick="speechSynthesis.cancel()">정지 ⏹</button>
+    <label class="langpick">전체 읽기 언어:
+      <select id="globalLang">
+        <option value="KR">한국어</option>
+        <option value="JA">日本語</option>
+        <option value="EN">English</option>
+      </select>
+    </label>
+    <span class="small">💡 음성은 브라우저(Web Speech API)의 설치 보이스를 사용합니다. 기기마다 다를 수 있어요.</span>
+  </div>
+
+  <div class="grid">
+<div class="card" id="촉(蜀) · 유비(劉備)">
+  <div class="title">촉(蜀) · 유비(劉備)</div>
+  <div class="role">인의 군주</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>오늘 우리는 전쟁의 회의가 아니라 지구의 회의를 열어야 합니다.</li>
+      <li>백성을 위하듯, 우리는 자연을 백성처럼 아끼고 보살펴야 합니다.</li>
+      <li>단기 치적이 아니라 세대를 잇는 장기 계획—숲과 강, 도시의 조화가 필요합니다.</li>
+      <li>가난한 이들을 먼저 생각하는 전환, 공정한 비용 분담이야말로 인의의 실천입니다.</li>
+      <li>저는 이상을 포기하지 않겠습니다. 이상이야말로 지속의 방향을 가리키는 북두입니다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>今日は戦の会議ではなく、地球の会議を開くべきです。</li>
+      <li>民を思うように、自然を民のように大切にし、守り育てねばなりません。</li>
+      <li>短期の功績ではなく、世代をつなぐ長期計画――森と川、都市の調和が要ります。</li>
+      <li>貧しい人を先に考える転換、公正な負担こそ仁義の実践です。</li>
+      <li>私は理想を捨てません。理想こそ持続の向きを示す北斗です。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>Today we must convene not a council of war, but a council for the Earth.</li>
+      <li>As we care for the people, we must cherish nature as if it were our people.</li>
+      <li>Not short-term glory, but multi‑generational plans—harmony of forests, rivers, and cities.</li>
+      <li>A just transition that puts the poor first and shares costs fairly is true benevolence.</li>
+      <li>I will not abandon ideals; they are the North Star of sustainability.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="촉(蜀) · 관우(關羽)">
+  <div class="title">촉(蜀) · 관우(關羽)</div>
+  <div class="role">의리의 상징</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>의리는 약속을 지키는 것입니다. 기후 약속도 전장(戰場)의 맹세만큼 무겁습니다.</li>
+      <li>공정한 무역과 투명한 규칙이 있어야 녹색 전환이 흔들리지 않습니다.</li>
+      <li>현장 노동자의 안전과 권리를 먼저 지키면 전환의 칼날도 바르게 섭니다.</li>
+      <li>숫자보다 신뢰가 앞서야 합니다. 신뢰가 있으면 위험도 함께 나눌 수 있습니다.</li>
+      <li>저는 장검을 들고 약한 마을을 지키듯, 취약한 공동체를 먼저 지키라 권하겠습니다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>義とは約束を守ること。気候の約束も戦場の誓いと同じほど重い。</li>
+      <li>公正な貿易と透明な規則があってこそ、グリーン転換は揺らがない。</li>
+      <li>現場の労働者の安全と権利を先に守れば、転換の刃も正しく立つ。</li>
+      <li>数字より信頼が先だ。信頼があれば危険も共に分かち合える。</li>
+      <li>私は弱き村を守るように、脆弱な共同体を先に守るべきだと進言する。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>Loyalty means keeping oaths; climate pledges weigh as heavy as vows on the battlefield.</li>
+      <li>Fair trade and transparent rules keep the green transition steady.</li>
+      <li>Protect workers’ safety and rights first, and the blade of transition will cut true.</li>
+      <li>Trust must precede metrics; with trust, we can share risk together.</li>
+      <li>As I guarded weak villages with my blade, so must we guard vulnerable communities first.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="촉(蜀) · 장비(張飛)">
+  <div class="title">촉(蜀) · 장비(張飛)</div>
+  <div class="role">호탕한 무장</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>나는 성미가 급했으나 배웠다. 분노는 숲을 먼저 태운다. 냉정을 지켜야 한다.</li>
+      <li>지속발전은 인내의 공사다. 다리와 제방처럼 튼튼히, 급히 쌓으면 무너진다.</li>
+      <li>마을의 작은 소리부터 들어야 큰 싸움이 줄어든다.</li>
+      <li>규칙을 쉽게 설명하고 모두가 지킬 수 있게 만들어야 한다.</li>
+      <li>나는 오늘 술 대신 물을 들겠다. 작은 습관이 큰 강을 만든다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>私は短気だったが学んだ。怒りは森を先に焼く。冷静さを守らねばならぬ。</li>
+      <li>持続的発展は忍耐の工事だ。橋や堤のように堅固に、急ぐと崩れる。</li>
+      <li>村の小さな声から聞けば、大きな争いは減る。</li>
+      <li>規則はわかりやすく、皆が守れるようにすべきだ。</li>
+      <li>今日は酒ではなく水を取る。小さな習慣が大河をつくる。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>I was hot‑tempered, but I learned: anger burns the forest first; keep your cool.</li>
+      <li>Sustainable progress is construction by patience—like bridges and levees; haste collapses.</li>
+      <li>Listen to the small voices in the village and the great quarrels will shrink.</li>
+      <li>Make rules simple and livable so all can keep them.</li>
+      <li>Tonight I raise water, not wine; small habits feed great rivers.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="촉(蜀) · 제갈량(諸葛亮)">
+  <div class="title">촉(蜀) · 제갈량(諸葛亮)</div>
+  <div class="role">천재 책사</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>국가란 흐름과 균형의 그물이다. 에너지·식량·물·안보를 함께 설계해야 한다.</li>
+      <li>측정 없는 관리, 관리 없는 혁신은 모래 위의 누각이다.</li>
+      <li>투명한 데이터와 시민 참여를 병진하면, 실패도 학습이 된다.</li>
+      <li>적벽의 불길은 바람과 지형을 읽은 결과였다. 오늘 우리의 바람은 데이터다.</li>
+      <li>‘출사표’의 마음으로, 사사로운 이익보다 공공선을 앞세우자.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>国家とは流れと均衡の網である。エネルギー・食糧・水・安全保障を併せて設計すべし。</li>
+      <li>測定なき管理、管理なき革新は砂上の楼閣だ。</li>
+      <li>透明なデータと市民参加を並進すれば、失敗も学習となる。</li>
+      <li>赤壁の炎は風と地形を読んだ結果。今日の我らの風はデータである。</li>
+      <li>『出師表』の心で、私益より公益を先に置こう。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>A state is a mesh of flows and balances; design energy, food, water, and security together.</li>
+      <li>Management without measurement—and innovation without governance—is a castle on sand.</li>
+      <li>Pair transparent data with civic participation; even failures become lessons.</li>
+      <li>The flames at Red Cliffs came from reading wind and terrain; today our wind is data.</li>
+      <li>With the spirit of the ‘Memorial on the Expedition,’ put the common good before private gain.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="촉(蜀) · 조운(趙雲)">
+  <div class="title">촉(蜀) · 조운(趙雲)</div>
+  <div class="role">용맹한 호위</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>아두를 품고 장판교를 건넜듯, 위기에서 아이들과 노약자를 먼저 보호해야 합니다.</li>
+      <li>재난 대응 훈련과 피난로 표시는 전장에서는 기본, 도시에서도 기본입니다.</li>
+      <li>교통과 통신이 살아 있으면 구조가 살아납니다.</li>
+      <li>안전은 비용이 아니라 생명의 조건입니다.</li>
+      <li>나는 방패를 들고 앞장서서, 위험 정보를 더 빨리 더 넓게 알리겠습니다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>長坂橋で阿斗を抱いたように、危機では子どもと高齢者を先に守るべきです。</li>
+      <li>災害対応訓練と避難路の表示は、戦場でも都市でも基本です。</li>
+      <li>交通と通信が生きていれば、救助も生きる。</li>
+      <li>安全は費用ではなく、いのちの条件です。</li>
+      <li>私は盾を掲げ、危険情報をより速く広く伝えます。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>As I carried A‑dou over Changban Bridge, we must shield children and elders first in crisis.</li>
+      <li>Drills and marked evacuation routes are basics—on battlefields and in cities alike.</li>
+      <li>Keep transport and communications alive, and rescue lives.</li>
+      <li>Safety is not a cost but a condition for life.</li>
+      <li>I will raise my shield and spread risk alerts faster and wider.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="위(魏) · 조조(曹操)">
+  <div class="title">위(魏) · 조조(曹操)</div>
+  <div class="role">냉철한 현실가</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>나는 계산을 미덕이라 여긴다. 탄소 가격과 규칙 없이는 행동은 느려진다.</li>
+      <li>권한과 책임을 분명히 하라. 실패는 빨리 드러내고 빨리 고쳐라.</li>
+      <li>기술은 칼과 같다. 휘두를 손의 법과 도덕을 먼저 준비하라.</li>
+      <li>식량과 에너지의 안보를 확보하되, 과잉 비축으로 시장을 뒤틀지 말라.</li>
+      <li>시를 지을 때처럼, 단어를 아꼈을 때 문장이 선다. 정책도 간결하라.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>私は計算を美徳と見る。炭素価格と規則なくして行動は遅い。</li>
+      <li>権限と責任を明確にせよ。失敗は早く晒し、早く直せ。</li>
+      <li>技術は剣である。振るう手の法と倫理を先に整えよ。</li>
+      <li>食糧とエネルギーの安全を確保しつつ、過剰備蓄で市場を歪めるな。</li>
+      <li>詩を作るように、言葉を惜しめば文が立つ。政策も簡潔であれ。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>I hold calculation as a virtue; without carbon pricing and rules, action lags.</li>
+      <li>Clarify authority and accountability; expose failure early and fix it fast.</li>
+      <li>Technology is a blade—prepare the law and ethics of the hand that wields it.</li>
+      <li>Secure food and energy, but do not warp markets with hoarding.</li>
+      <li>As in poetry: spare words make the line stand; policy should be concise.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="위(魏) · 사마의(司馬懿)">
+  <div class="title">위(魏) · 사마의(司馬懿)</div>
+  <div class="role">장기 전략가</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>지속가능성은 ‘견지(堅持)’의 다른 이름이다. 물러서지 않되 서두르지 말라.</li>
+      <li>위험은 숨는다. 데이터의 그늘을 의심하고 불확실성을 예산에 반영하라.</li>
+      <li>제도의 연속성이 사람의 재능을 이긴다. 인사보다 시스템을 고치라.</li>
+      <li>전략적 인내는 잃는 듯 보이게 한다. 그러나 종내는 이긴다.</li>
+      <li>나는 내일을 이기기 위해 오늘의 욕망을 묶어 두겠다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>持続可能性は「堅持」の別名だ。退かず、急ぐな。</li>
+      <li>リスクは隠れる。データの影を疑い、不確実性を予算に織り込め。</li>
+      <li>制度の連続性は人の才を凌ぐ。人事より制度を直せ。</li>
+      <li>戦略的忍耐は損に見える。しかし最後は勝つ。</li>
+      <li>私は明日に勝つため、今日の欲を縛っておく。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>Sustainability is another name for steadfastness: do not retreat, but do not rush.</li>
+      <li>Risk hides; doubt the shadows in data and price uncertainty into budgets.</li>
+      <li>Institutional continuity outruns individual talent; reform systems before personnel.</li>
+      <li>Strategic patience looks like loss—until the end.</li>
+      <li>To win tomorrow, I will bind today’s appetites.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="오(吳) · 손권(孫權)">
+  <div class="title">오(吳) · 손권(孫權)</div>
+  <div class="role">균형의 군주</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>강과 바다의 나라라면 물과 함께 살아야 한다. 습지를 적으로 보지 말라.</li>
+      <li>연안 도시의 회복력은 배와 항만보다 사람과 공동체에서 나온다.</li>
+      <li>거대 세력 사이의 균형처럼, 산업 전환도 속도와 보호의 균형이 관건이다.</li>
+      <li>지역 동맹을 촘촘히 하여 에너지와 식량을 서로 돕자.</li>
+      <li>나는 바람을 읽어 돛을 연다. 바람이 약하면 노를 잡는다—융통이 생존이다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>川と海の国なら水と共に生きるべきだ。湿地を敵と見るな。</li>
+      <li>沿岸都市のレジリエンスは船や港より人とコミュニティから生まれる。</li>
+      <li>大勢力の均衡のように、産業転換も速度と保護の均衡が鍵だ。</li>
+      <li>地域の同盟を密にし、エネルギーと食糧を助け合おう。</li>
+      <li>私は風を読んで帆を上げる。風弱ければ櫂を取る――融通が生存だ。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>A river‑and‑sea kingdom must live with water; do not treat wetlands as foes.</li>
+      <li>Coastal resilience springs more from people and community than ships and piers.</li>
+      <li>Like balancing great powers, industrial transition hinges on pace and protection.</li>
+      <li>Weave regional pacts to aid one another in energy and food.</li>
+      <li>I raise sail when winds favor; I take oars when they don’t—flexibility is survival.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="오(吳) · 주유(周瑜)">
+  <div class="title">오(吳) · 주유(周瑜)</div>
+  <div class="role">적벽의 명장</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>불은 무모하면 재앙이요, 계산하면 구원입니다. 에너지 전환도 같습니다.</li>
+      <li>입지·바람·시간을 맞추면 작은 힘으로 큰 효과를 냅니다.</li>
+      <li>기술 편중을 경계하고 포트폴리오로 위험을 분산합시다.</li>
+      <li>젊은 인재를 과감히 기용해야 새로운 전술이 나옵니다.</li>
+      <li>음악이 군의 사기를 하나로 묶듯, 문화가 전환의 마음을 묶습니다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>火は無謀なら災い、計算すれば救い。エネルギー転換も同じだ。</li>
+      <li>立地・風・時を合わせれば、小さな力で大きな効果。</li>
+      <li>技術の偏りを警戒し、ポートフォリオでリスクを分散しよう。</li>
+      <li>若き人材を大胆に用いれば、新しい戦術が生まれる。</li>
+      <li>音楽が軍の士気を束ねるように、文化が転換の心を束ねる。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>Fire brings ruin when reckless and deliverance when calculated; so with energy transition.</li>
+      <li>Align site, wind, and timing to yield great effect from small force.</li>
+      <li>Beware tech monocultures; diversify with a portfolio to spread risk.</li>
+      <li>Empower the young boldly; fresh tactics follow.</li>
+      <li>As music unites morale, culture unites the heart of transition.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="기타 · 여포(呂布)">
+  <div class="title">기타 · 여포(呂布)</div>
+  <div class="role">무력 최강</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>나는 힘만 믿고 배신을 거듭했다. 신뢰를 잃으면 아무도 함께하지 않는다.</li>
+      <li>충동은 산을 깎고 강을 흐리게 한다. 계획 없는 개발을 멈춰라.</li>
+      <li>영웅심이 아니라 공동체의식이 도시를 지킨다.</li>
+      <li>배우고 또 배워야 한다. 무력은 법과 도덕이 없으면 흉기가 된다.</li>
+      <li>내가 바꿀 수 있는 첫 전장은 나 자신이다.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>私は力に頼り裏切りを重ねた。信頼を失えば誰も共にせぬ。</li>
+      <li>衝動は山を削り川を濁す。計画なき開発を止めよ。</li>
+      <li>英雄心ではなく共同体意識が都市を守る。</li>
+      <li>学び続けよ。武力は法と道徳がなければ凶器だ。</li>
+      <li>私が変えうる最初の戦場は自分だ。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>Relying on strength, I betrayed and lost trust; then no one stands with you.</li>
+      <li>Impulse carves mountains and muddies rivers; halt development without plans.</li>
+      <li>Not heroism but community spirit defends a city.</li>
+      <li>Keep learning; without law and ethics, might becomes menace.</li>
+      <li>The first battlefield I can change is myself.</li>
+    </ol>
+  </div>
+</div>
+<div class="card" id="기타 · 동탁(董卓)">
+  <div class="title">기타 · 동탁(董卓)</div>
+  <div class="role">폭정의 경고</div>
+  <div class="lang">
+    <h4>한국어 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ko-KR')">읽기 ▶</button></h4>
+    <ol>
+      <li>나는 탐욕으로 나라를 병들게 했다. 자연도 권력의 장식품으로 여겼다.</li>
+      <li>폭력적 약탈은 잠깐 풍요 같으나 곧 폐허를 남긴다.</li>
+      <li>나는 나의 잘못을 경계로 삼겠다. 탐욕 제한이야말로 문명의 기초다.</li>
+      <li>감시와 견제가 없는 권력은 반드시 환경을 해친다.</li>
+      <li>미래 세대의 눈으로 오늘의 결정을 심판받는다고 생각하라.</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>日本語 <button class="btn" onclick="speakBlock(this.closest('.lang'), 'ja-JP')">읽기 ▶</button></h4>
+    <ol>
+      <li>私は貪欲で国を病ませた。自然も権力の飾りと見なした。</li>
+      <li>暴力的な収奪は一時の豊かさに見えて、すぐに廃墟を残す。</li>
+      <li>私は自らの過ちを戒めとする。貪欲の制御こそ文明の基礎だ。</li>
+      <li>監視と抑制なき権力は必ず環境を害する。</li>
+      <li>未来世代の目で、今日の決断が裁かれると考えよ。</li>
+    </ol>
+  </div>
+  <div class="lang">
+    <h4>English <button class="btn" onclick="speakBlock(this.closest('.lang'), 'en-US')">읽기 ▶</button></h4>
+    <ol>
+      <li>My greed sickened the realm; I treated nature as ornament to power.</li>
+      <li>Violent extraction looks like brief abundance but soon leaves ruins.</li>
+      <li>I take my faults as warning: limiting greed is the foundation of civilization.</li>
+      <li>Unchecked power invariably harms the environment.</li>
+      <li>Decide as if the future’s eyes will judge you today.</li>
+    </ol>
+  </div>
+</div>
+
+  </div>
+
+<script>
+function pickVoice(lang) {
+  const voices = window.speechSynthesis.getVoices();
+  // Prefer exact language match
+  let v = voices.find(v => v.lang === lang && v.localService) || voices.find(v => v.lang === lang);
+  // Fallback to same language family
+  if (!v) v = voices.find(v => v.lang && v.lang.startsWith(lang.split('-')[0]));
+  return v || null;
+}
+
+function speakBlock(langEl, bcp47){
+  const lis = langEl.querySelectorAll('li');
+  speechSynthesis.cancel();
+  const voice = pickVoice(bcp47);
+  const q = [];
+  lis.forEach(li => {
+    const u = new SpeechSynthesisUtterance(li.textContent.trim());
+    u.lang = bcp47;
+    if (voice) u.voice = voice;
+    u.rate = 1.0;
+    q.push(u);
+  });
+  // Chain
+  for (let i=0; i<q.length-1; i++){
+    q[i].addEventListener('end', ()=>speechSynthesis.speak(q[i+1]));
+  }
+  if (q[0]) speechSynthesis.speak(q[0]);
+}
+
+function playAll(){
+  const langMap = { KR: 'ko-KR', JA: 'ja-JP', EN: 'en-US' };
+  const code = document.getElementById('globalLang').value;
+  const bcp47 = langMap[code] || 'ko-KR';
+  speechSynthesis.cancel();
+
+  const allLis = Array.from(document.querySelectorAll('.card .lang')).flatMap(langEl => {
+    // pick the chosen language block within each card
+    const label = { 'ko-KR':'한국어', 'ja-JP':'日本語', 'en-US':'English' }[bcp47];
+    const h4 = langEl.querySelector('h4');
+    if(!h4) return [];
+    if(h4.textContent.includes(label)) {
+      return Array.from(langEl.querySelectorAll('li'));
+    }
+    return [];
+  });
+
+  const voice = pickVoice(bcp47);
+  const q = [];
+  allLis.forEach(li => {
+    const u = new SpeechSynthesisUtterance(li.textContent.trim());
+    u.lang = bcp47;
+    if (voice) u.voice = voice;
+    u.rate = 1.0;
+    q.push(u);
+  });
+  for (let i=0; i<q.length-1; i++){
+    q[i].addEventListener('end', ()=>speechSynthesis.speak(q[i+1]));
+  }
+  if (q[0]) speechSynthesis.speak(q[0]);
+}
+
+// Preload voices (Chrome quirk)
+window.speechSynthesis.onvoiceschanged = () => {};
+</script>
+
+</body>
+</html>

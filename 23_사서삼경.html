@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사서삼경, 지구의 지속가능성을 논하다</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Inter 폰트 (Tailwind 기본) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+KR:wght@400;600;700&family=Noto+Sans+JP:wght@400;600;700&display=swap');
+        body {
+            /* Noto Sans KR을 우선 적용하고, 일본어/영어가 나올 때 해당 폰트 사용 */
+            font-family: 'Inter', 'Noto Sans KR', 'Noto Sans JP', sans-serif;
+            background-color: #f0f4f8; /* 부드러운 배경색 */
+        }
+        .speaker-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .speaker-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+        .speaker-title {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e5e7eb;
+            background-color: #f9fafb;
+        }
+        .speaker-name {
+            font-size: 1.75rem; /* 28px */
+            font-weight: 700;
+            color: #1a56db; /* 깊은 파란색 */
+        }
+        .speaker-content {
+            padding: 24px;
+        }
+        .lang-text {
+            margin-bottom: 16px;
+            line-height: 1.7;
+            color: #374151;
+        }
+        .lang-label {
+            font-weight: 700;
+            font-size: 0.875rem; /* 14px */
+            color: #4b5563;
+            margin-right: 8px;
+            padding: 4px 8px;
+            background-color: #e5e7eb;
+            border-radius: 6px;
+        }
+        .play-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background-color 0.2s ease;
+        }
+        .play-button:hover {
+            background-color: #1d4ed8;
+        }
+        .play-button svg {
+            width: 16px;
+            height: 16px;
+        }
+        .control-panel {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .control-button {
+            padding: 12px 18px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .control-button.play-all-ko {
+            background-color: #dbeafe;
+            color: #1e40af;
+        }
+        .control-button.play-all-ko:hover {
+            background-color: #bfdbfe;
+        }
+        .control-button.play-all-ja {
+            background-color: #e0f2fe;
+            color: #0c4a6e;
+        }
+        .control-button.play-all-ja:hover {
+            background-color: #bae6fd;
+        }
+        .control-button.play-all-en {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+        .control-button.play-all-en:hover {
+            background-color: #bbf7d0;
+        }
+        .control-button.stop {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .control-button.stop:hover {
+            background-color: #fecaca;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="text-center mb-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">사서삼경, 지구의 지속가능성을 논하다</h1>
+            <h2 class="text-xl md:text-2xl font-semibold text-gray-700">四書三経、地球の持続可能性を語る</h2>
+            <h3 class="text-lg md:text-xl font-medium text-gray-600">The Four Books and Three Classics Discuss Earth's Sustainability</h3>
+        </header>
+
+        <!-- 오디오 제어판 -->
+        <div class="control-panel">
+            <button onclick="playAll('ko')" class="control-button play-all-ko">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M8 5v14l11-7z"/></svg>
+                전체 한국어 듣기
+            </button>
+            <button onclick="playAll('ja')" class="control-button play-all-ja">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M8 5v14l11-7z"/></svg>
+                全文 日本語で聞く
+            </button>
+            <button onclick="playAll('en')" class="control-button play-all-en">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M8 5v14l11-7z"/></svg>
+                Read All in English
+            </button>
+            <button onclick="stopSpeech()" class="control-button stop">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path d="M6 6h12v12H6z"/></svg>
+                정지
+            </button>
+        </div>
+
+        <!-- 사회자 -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name text-gray-700">사회자 (Moderator)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('mod-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="mod-ko" data-lang="ko">시대를 초월한 지혜의 상징, 사서삼경을 한자리에 모셨습니다. 오늘 토론의 주제는 인류의 미래가 걸린 '지구의 지속 가능한 발전'입니다. 먼저, 유학의 기본 틀을 제시하는 『대학』께서 토론의 문을 열어주시겠습니다.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('mod-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="mod-ja" data-lang="ja">時代を超越した知恵の象徴、四書三経の皆様をお迎えしました。本日の討論のテーマは、人類の未来がかかった「地球の持続可能な発展」です。まず、儒学の基本の枠組みを提示する『大学』様から、討論の口火を切っていただきます。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('mod-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="mod-en" data-lang="en">We have gathered the Four Books and Three Classics, symbols of timeless wisdom. Today's topic is 'Earth's Sustainable Development,' upon which humanity's future depends. First, the "Great Learning," which presents the fundamental framework of Confucianism, will open our discussion.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 대학 (大學) -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name">대학 (大學)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('univ-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="univ-ko" data-lang="ko">모든 문제의 시작과 끝은 하나로 연결되어 있습니다. 천하를 평안케 하려면 먼저 나라를 다스려야 하고, 나라를 다스리려면 가정을 바로잡아야 하며, 가정을 바로잡으려면 자신의 몸과 마음을 닦는 수신(修身)이 선행되어야 합니다. 지금의 환경 위기는 바로 우리 각자의 마음을 살피는 격물(格物)과 치지(致知)를 소홀히 한 결과입니다. 지속 가능한 발전이란, 개개인의 성의(誠意)와 정심(正心)에서 출발하여 사회와 국가, 나아가 천하 자연에까지 그 조화를 확장해 나가는 위대한 배움의 과정 그 자체입니다.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('univ-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="univ-ja" data-lang="ja">すべての問題の始まりと終わりは一つにつながっています。天下を平らかにするには、まず国を治めなければならず、国を治めるには家庭を整え、家庭を整えるには自身の心身を修める修身（しゅうしん）が先行されねばなりません。現在の環境危機は、まさに我々一人ひとりが物事を深く探求する格物（かくぶつ）と知を極める致知（ちち）を疎かにした結果です。持続可能な発展とは、個々人の誠意（せいい）と正心（せいしん）から出発し、社会と国家、ひいては天下自然にまでその調和を広げていく、偉大な学びの過程そのものです。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('univ-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="univ-en" data-lang="en">The beginning and end of all problems are interconnected. To bring peace to the world, one must first govern the nation. To govern the nation, one must regulate the family. To regulate the family, one must first cultivate one's own mind and body (修身). The current environmental crisis is the direct result of neglecting to investigate things (格物) and extend knowledge (致知) within each of us. Sustainable development is the great learning process itself—starting from individual sincerity (誠意) and a rectified mind (正心), and then extending that harmony to society, the nation, and ultimately, to all of nature.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 논어 (論語) -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name">논어 (論語)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('analects-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="analects-ko" data-lang="ko">공자께서 말씀하시길, 군자는 의로움에 밝고 소인은 이로움에 밝다(君子喩於義 小人喩於利) 하셨습니다. 지금의 위기는 눈앞의 이익만을 좇아 의로움을 저버린 결과입니다. 진정한 발전은 인(仁)의 정신을 회복하는 데 있습니다. 사람과 사람 사이의 관계를 넘어, 사람과 자연이 더불어 사는 조화로운 관계를 만들어야 합니다. 리더들이 먼저 사리사욕을 버리고 백성과 자연을 어질게 대하는 덕치(德治)를 펼친다면, 온 세상이 감화되어 자연스럽게 지속 가능한 세상이 될 것입니다.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('analects-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="analects-ja" data-lang="ja">孔子がおっしゃいました、「君子は義にさとり、小人は利にさとる」（君子喩於義 小人喩於利）と。現在の危機は、目先の利益のみを追い求め、義を捨てた結果です。真の発展は、仁（じん）の精神を回復することにあります。人と人との関係を超え、人と自然が共生する調和のとれた関係を築かなければなりません。指導者たちがまず私利私欲を捨て、民と自然に仁愛を持って接する徳治（とくち）を行えば、全世界が感化され、自ずと持続可能な世界になるでしょう。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('analects-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="analects-en" data-lang="en">Confucius said, "The superior man is conversant with righteousness; the inferior man is conversant with profit." (君子喩於義 小人喩於利) The current crisis is the result of abandoning righteousness in pursuit of immediate profit. True development lies in restoring the spirit of benevolence (仁). We must move beyond just human relationships and create a harmonious relationship where humans and nature live together. If leaders first discard their selfish desires and practice virtuous governance (德治), treating the people and nature with kindness, the entire world will be transformed and naturally become a sustainable one.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 맹자 (孟子) -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name">맹자 (孟子)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('mencius-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="mencius-ko" data-lang="ko">인간의 본성은 선하며, 타인의 고통을 차마 외면하지 못하는 측은지심(惻隱之心)을 모두 가지고 있습니다. 지금 신음하는 자연을 보고도 마음이 아프지 않다면 어찌 사람이라 하겠습니까? 백성이 굶주리지 않고 자연이 파괴되지 않도록 하는 것이 왕도(王道) 정치의 근본입니다. 국가는 단기적인 부(富)가 아니라, 백 년 앞을 내다보며 산림을 보호하고 생태계를 보살피는 항산(恒産)을 마련해야 합니다. 자연을 착취하는 것은 결국 백성의 마음을 잃고 천명(天命)을 버리는 길입니다.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('mencius-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="mencius-ja" data-lang="ja">人間の本性は善であり、他人の苦しみを見過ごせない惻隠の心（そくいんのこころ）を誰もが持っています。今、呻吟する自然を見ても心が痛まないなら、どうして人と言えるでしょうか。民が飢えず、自然が破壊されないようにすることが、王道（おうどう）政治の根本です。国家は短期的な富（とみ）ではなく、百年先を見据えて山林を保護し、生態系を守る恒産（こうさん）を築かなければなりません。自然を搾取することは、結局のところ民の心を失い、天命（てんめい）を捨てる道です。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('mencius-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="mencius-en" data-lang="en">Human nature is inherently good, and all people possess a heart of compassion (惻隱之心) that cannot bear to see the suffering of others. If one's heart does not ache upon seeing nature groaning in pain, how can one be called human? The foundation of true kingly governance (王道) is to ensure that the people do not hunger and that nature is not destroyed. The state must not pursue short-term wealth, but must establish a constant livelihood (恒産) that protects the forests and cares for the ecosystem, looking a hundred years ahead. Exploiting nature is, in the end, the way to lose the hearts of the people and abandon the Mandate of Heaven (天命).</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 중용 (中庸) -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name">중용 (中庸)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('mean-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="mean-ko" data-lang="ko">지속 가능성이란 곧 중용의 도(道)를 실천하는 것입니다. 과도한 개발도, 극단적인 보존도 모두 한쪽으로 치우친 것입니다. 자연이 부여한 천성(天性)에 따라 인간과 만물이 각자의 자리에서 조화를 이루는 상태, 그것이 바로 중화(中和)입니다. 우리는 개발과 보존이라는 양극단 사이에서 흔들리지 않는 중심을 잡아야 합니다. 모든 정책과 행동에 지극한 정성(至誠)을 다하여 하늘과 땅의 이치에 순응할 때, 비로소 만물은 저절로 자라나고 세상은 평화로워질 것입니다.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('mean-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="mean-ja" data-lang="ja">持続可能性とは、すなわち中庸の道（どう）を実践することです。過度な開発も、極端な保存も、すべて一方に偏ったものです。自然が付与した天性（てんせい）に従い、人間と万物がそれぞれの場所で調和を成す状態、それこそが中和（ちゅうわ）です。我々は開発と保存という両極端の間で、揺るがない中心を捉えなければなりません。すべての政策と行動にこの上ない誠（至誠）を尽くし、天と地の理に従う時、初めて万物は自ずと育ち、世は平和になるのです。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('mean-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="mean-en" data-lang="en">Sustainability is precisely the practice of the Way of the Mean (中庸). Both excessive development and extreme conservation are one-sided. The state where humans and all things achieve harmony in their respective places, in accordance with the nature (天性) bestowed by Heaven, is called Centrality and Harmony (中和). We must find the unwavering center between the two extremes of development and conservation. Only when we apply utmost sincerity (至誠) to all policies and actions, conforming to the principles of Heaven and Earth, will all things flourish on their own and the world become peaceful.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 시경 (詩經) -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name">시경 (詩經)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('poetry-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="poetry-ko" data-lang="ko">저 푸른 산, 저 맑은 시냇물 노래하던 옛 노래는 어디로 갔는가. 물고기는 숨을 곳을 잃고, 새들은 둥지 틀 나뭇가지가 없네. 백성들의 노래는 이제 탄식으로 가득 차, 오염된 땅과 메마른 강을 슬퍼하노라. 진정한 발전이란 백성의 마음에서 우러나오는 기쁨의 노래가 강과 산에 다시 울려 퍼지는 것입니다. 자연의 신음은 곧 백성의 신음이니, 귀를 막고 어찌 태평성대를 논할 수 있겠습니까.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('poetry-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="poetry-ja" data-lang="ja">あの青き山、あの澄んだ小川を歌った昔の歌はどこへ行ったのか。魚は隠れる場所を失い、鳥は巣を作る枝がない。民の歌は今や嘆きに満ち、汚染された大地と干上がった川を悲しんでいる。真の発展とは、民の心から湧き出る喜びの歌が、川や山に再び響き渡ることです。自然の呻きはすなわち民の呻き。耳を塞いで、どうして太平の世を論じることができましょうか。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('poetry-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="poetry-en" data-lang="en">Where have the old songs gone, the songs of green mountains and clear streams? The fish have lost their hiding places, and the birds have no branches to build their nests. The songs of the people are now filled with laments, mourning the polluted land and the barren rivers. True development is when songs of joy, welling up from the people's hearts, once again echo in the rivers and mountains. The groans of nature are the groans of the people; how can we discuss a peaceful era while covering our ears?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 서경 (書經) -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name">서경 (書經)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('history-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="history-ko" data-lang="ko">옛 성군(聖君)들께서는 하늘의 뜻(天命)을 공경하고 백성의 삶을 소중히 여겼습니다. 그분들은 산과 강에 제사를 지내며 자연을 경외했고, 함부로 자원을 낭비하지 않는 법도를 세웠습니다. 하늘은 스스로 돕는 자를 돕는다고 하였습니다. 지금의 재앙은 자연의 질서를 어지럽힌 통치자들에게 내리는 하늘의 경고입니다. 우리는 과거의 역사를 거울삼아, 자연에 대한 경외심을 회복하고 엄격한 법과 제도로써 이 땅을 다스려야만 하늘의 뜻을 다시 얻을 수 있을 것입니다.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('history-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="history-ja" data-lang="ja">古の聖君（せいくん）たちは、天の意（天命）を敬い、民の生活を大切にされました。彼らは山や川に祭祀を捧げて自然を畏敬し、みだりに資源を浪費しない法度を立てました。天は自ら助くる者を助く、と言います。現在の災厄は、自然の秩序を乱した統治者たちに下される天の警告です。我々は過去の歴史を鏡とし、自然に対する畏敬の念を回復し、厳格な法と制度をもってこの地を治めてこそ、再び天の意を得ることができるでしょう。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('history-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="history-en" data-lang="en">The-sage kings (聖君) of antiquity revered the Mandate of Heaven (天命) and cherished the lives of the people. They offered sacrifices to the mountains and rivers, showing awe for nature, and established laws against the reckless waste of resources. It is said that Heaven helps those who help themselves. The current disasters are a warning from Heaven to the rulers who have disturbed the natural order. We must take history as our mirror, restore our reverence for nature, and govern this land with
+strict laws and systems. Only then can we regain the favor of Heaven.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 주역 (周易) -->
+        <div class="speaker-card">
+            <div class="speaker-title">
+                <h2 class="speaker-name">주역 (周易)</h2>
+            </div>
+            <div class="speaker-content">
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">KO</span>
+                        <button onclick="playText('changes-ko', 'ko-KR')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>듣기
+                        </button>
+                    </div>
+                    <p id="changes-ko" data-lang="ko">우주 만물은 끊임없이 변화하며 순환하는 음양(陰陽)의 조화로 이루어져 있습니다. 지금 인류는 성과와 팽창이라는 양(陽)의 기운에만 치우쳐, 포용과 안정이라는 음(陰)의 기운을 고갈시켰습니다. 이러한 불균형은 결국 모든 것을 무너뜨리는 극단으로 치닫게 됩니다. 이제는 덜어내고 비워내는 겸손의 덕(謙卦)을 실천할 때입니다. 변화의 흐름을 읽고 순리에 따르면 위기는 곧 기회가 될 것입니다. 자연의 순환 고리에 다시 합류하여 균형을 회복하는 것만이 유일한 생존의 길입니다.</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">JA</span>
+                        <button onclick="playText('changes-ja', 'ja-JP')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>聞く
+                        </button>
+                    </div>
+                    <p id="changes-ja" data-lang="ja">宇宙の万物は、絶えず変化し循環する陰陽（いんよう）の調和によって成り立っています。今、人類は成果と膨張という陽（よう）の気運に偏り、包容と安定という陰（いん）の気運を枯渇させました。このような不均衡は、最終的にすべてを崩壊させる極端へと突き進みます。今こそ、減らし、空にする謙遜の徳（謙卦）を実践する時です。変化の流れを読み、道理に従えば、危機はすなわち機会となるでしょう。自然の循環の輪に再び加わり、均衡を回復することだけが、唯一の生存の道です。</p>
+                </div>
+                <div class="lang-text">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="lang-label">EN</span>
+                        <button onclick="playText('changes-en', 'en-US')" class="play-button">
+                            <svg fill="currentColor" viewBox="0 0 20 20"><path d="M4 4v12l12-6z"/></svg>Listen
+                        </button>
+                    </div>
+                    <p id="changes-en" data-lang="en">All things in the universe are made of the harmony of Yin (陰) and Yang (陽), which constantly change and circulate. Humanity is currently skewed toward the energy of Yang (陽)—performance and expansion—and has depleted the energy of Yin (陰), which represents reception and stability. This imbalance ultimately leads to an extreme that collapses everything. Now is the time to practice the virtue of Humility (謙卦), which is to diminish and empty oneself. If we read the flow of change and follow the natural order, crisis will become opportunity. Rejoining nature's cycle to restore balance is the only path to survival.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Web Speech API를 사용하여 텍스트를 음성으로 변환하는 함수
+        function playSpeech(text, lang) {
+            // 진행 중인 음성 출력이 있다면 취소
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = lang; // 'ko-KR', 'ja-JP', 'en-US' 등
+            utterance.rate = 0.9;  // 기본값 1보다 약간 느리게
+            utterance.pitch = 1; // 기본값 1
+            
+            // 음성 출력 시작
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // 특정 ID의 텍스트를 읽는 함수
+        function playText(elementId, lang) {
+            const text = document.getElementById(elementId).textContent;
+            playSpeech(text, lang);
+        }
+
+        // 특정 언어의 모든 텍스트를 읽는 함수
+        function playAll(lang) {
+            // 'ko', 'ja', 'en'
+            const elements = document.querySelectorAll(`[data-lang="${lang}"]`);
+            let fullText = [];
+            
+            elements.forEach(el => {
+                fullText.push(el.textContent);
+            });
+
+            // 각 섹션 사이에 잠시 멈춤을 주기 위해 줄바꿈 두 번 삽입
+            const combinedText = fullText.join(' \n\n ');
+            
+            let langCode;
+            if (lang === 'ko') {
+                langCode = 'ko-KR';
+            } else if (lang === 'ja') {
+                langCode = 'ja-JP';
+            } else {
+                langCode = 'en-US';
+            }
+            
+            playSpeech(combinedText, langCode);
+        }
+
+        // 모든 음성 출력을 중지하는 함수
+        function stopSpeech() {
+            window.speechSynthesis.cancel();
+        }
+
+        // 페이지를 떠날 때 음성 출력이 계속되지 않도록 정리
+        window.addEventListener('beforeunload', () => {
+            stopSpeech();
+        });
+    </script>
+
+</body>
+</html>

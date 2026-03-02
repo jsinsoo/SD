@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지속 가능한 지구를 위한 가곡 작가 총회</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #5d9c59;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #5d9c59;
+            border-bottom: none;
+        }
+        .speech-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 5px solid #5d9c59;
+            background-color: #eafaf1;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+        .speech-block:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .gagog-intro {
+            font-style: italic;
+            color: #1e8449;
+            background-color: #d4efdf;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+            background: #5d9c59;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-left: 10px;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background: #4a7d47;
+        }
+        .full-listen-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .full-listen-buttons button {
+            background-color: #007bff;
+            padding: 10px 15px;
+            font-size: 1em;
+            margin: 5px;
+        }
+        .full-listen-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .chairperson {
+            background-color: #fef9e7;
+            border-left-color: #f1c40f;
+        }
+        .chairperson h3 {
+            color: #f1c40f;
+        }
+    </style>
+    <script>
+        function speak(text, lang) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // 기존 음성출력 중지
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = lang;
+                utterance.rate = 0.95;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('죄송합니다. 이 브라우저에서는 음성 합성을 지원하지 않습니다.');
+            }
+        }
+
+        // 개별 듣기 버튼용 함수
+        function speakText(buttonElement) {
+            const textToSpeak = buttonElement.nextElementSibling.textContent;
+            const langClass = buttonElement.parentElement.className;
+            let langCode = '';
+            if (langClass.includes('lang-ko')) langCode = 'ko-KR';
+            else if (langClass.includes('lang-en')) langCode = 'en-US';
+            else if (langClass.includes('lang-ja')) langCode = 'ja-JP';
+            speak(textToSpeak, langCode);
+        }
+
+        // 전체 듣기 버튼용 함수
+        function listenToAll(langClass, langCode) {
+            const textElements = document.querySelectorAll(`.${langClass} span`);
+            let fullTextArray = [];
+            textElements.forEach(span => {
+                fullTextArray.push(span.textContent);
+            });
+            const fullText = fullTextArray.join('.\n\n');
+            speak(fullText, langCode);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>지속 가능한 지구를 위한 가곡 작가 총회</h1>
+
+        <div class="full-listen-buttons">
+            <button onclick="listenToAll('lang-ko', 'ko-KR')">🇰🇷 한국어 전체 듣기</button>
+            <button onclick="listenToAll('lang-en', 'en-US')">🇬🇧 영어 전체 듣기</button>
+            <button onclick="listenToAll('lang-ja', 'ja-JP')">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 한상억 (「그리운 금강산」 작사가)의 발언</h3>
+            <div class="gagog-intro">
+                안녕하십니까. 작곡가 최영섭 선생과 함께, 갈 수 없는 고향 금강산의 아름다움을 노래한 「그리운 금강산」의 작사가 한상억입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>"누구의 주제런가 맑고 고운 산, 그리운 만이천봉 말은 없구나." 노래 속 금강산은 인간의 이념 때문에 갈 수 없는 땅이 되었습니다. 오늘날, 우리 지구 전체가 인간의 욕심 때문에 점점 갈 수 없는 땅, 살 수 없는 땅이 되어가고 있습니다. 빙하 덮인 북극이 그립고, 산호초 가득한 바다가 그리워질 날이 머지않았습니다. 지속가능성이란, 우리의 후손들이 지구의 어느 곳이든 '그리운' 땅이 아닌 '살아있는' 땅으로 만날 수 있게 해주는 것입니다. 더 늦기 전에, 잃어버린 금강산을 되찾으려는 마음으로 병든 지구를 되살려야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>"Whose theme is this, the clear and beautiful mountains? The nostalgic 12,000 peaks say nothing." Geumgangsan in the song became a land we cannot visit due to human ideology. Today, our entire Earth is becoming a land we cannot visit, a land we cannot live in, due to human greed. The day is not far when we will long for the ice-covered Arctic and the coral-filled seas. Sustainability means enabling our descendants to encounter any place on Earth as a 'living' land, not a 'longed-for' land. Before it's too late, we must revive our ailing planet with the same heart that wishes to reclaim the lost Geumgangsan.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>「誰の主題であろうか、清らかで美しい山よ。懐かしい一万二千の峰々は言葉もない。」歌の中の金剛山は、人間の理念のために行けなくなった土地となりました。今日、私たちの地球全体が、人間の欲望のために次第に行けない土地、住めない土地になりつつあります。氷河に覆われた北極が懐かしく、サンゴ礁に満ちた海が懐かしくなる日も遠くありません。持続可能性とは、私たちの子孫が地球のどの場所も「懐かしい」土地ではなく、「生きている」土地として出会えるようにすることです。手遅れになる前に、失われた金剛山を取り戻そうとする心で、病んだ地球を蘇らせなければなりません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>김성태 (「동심초」 작곡가)의 발언</h3>
+            <div class="gagog-intro">
+                만해 한용운 선생의 시에 곡을 붙인 작곡가 김성태입니다. "내 마음은 호수요, 그대 노 저어 오오"라는 서정으로 기억해주십시오.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>제 노래 속 마음이 '호수'라면, 지구의 마음은 '바다'일 것입니다. 그러나 지금 그 바다는 플라스틱과 기름으로 얼룩진 채 신음하고 있습니다. 우리는 그 위에 욕심의 배를 띄우고 너무 함부로 노를 저어 왔습니다. 지속가능성이란, 지구라는 거대한 호수에 더 이상 돌을 던지지 않는 것입니다. 파문이 가라앉고, 다시 맑은 수면 위에 우리의 모습이 비칠 때까지 기다리는 것입니다. 순수한 마음으로 자연을 대할 때, 비로소 자연도 우리에게 마음의 문을 열어줄 것입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>If the heart in my song is a 'lake,' then the Earth's heart would be the 'ocean.' But now, that ocean is groaning, stained with plastic and oil. We have floated the boat of greed upon it and rowed too carelessly. Sustainability means no longer throwing stones into the great lake called Earth. It means waiting until the ripples subside and our reflection can be seen again on the clear surface. Only when we treat nature with a pure heart will nature, in turn, open its heart to us.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の歌の中の心が「湖」であるなら、地球の心は「海」でしょう。しかし今、その海はプラスチックと油で汚れ、呻いています。私たちはその上に欲望の船を浮かべ、あまりにも無造作に櫂を漕いできました。持続可能性とは、地球という巨大な湖にこれ以上石を投げないことです。波紋が収まり、再び澄んだ水面に私たちの姿が映るまで待つことです。純粋な心で自然に接するとき、初めて自然も私たちに心の扉を開いてくれるでしょう。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>김남조 (「그대 있음에」 작사가)의 발언</h3>
+            <div class="gagog-intro">
+                저는 김순남 작곡가와 함께, 사랑하는 이의 존재가 주는 힘을 노래한 「그대 있음에」의 노랫말을 쓴 김남조입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>"그대의 근심 있는 곳에 나를 불러 손잡게 하라." 이 노래는 사랑하는 이를 향한 위로의 기도입니다. 지금 가장 큰 근심에 빠진 '그대'는 바로 지구입니다. 우리는 이제 지구를 향해 이 노래를 불러야 합니다. "너의 아픔 있는 곳에 우리를 불러 함께하게 하라"고 말입니다. 지속가능성이란, 인류가 지구의 지배자가 아닌, 지구의 아픔에 공감하고 손을 잡아주는 동반자임을 깨닫는 것입니다. 자연이 있기에 우리가 존재할 수 있음을 기억하고, 이제는 우리가 자연에게 힘이 되어주어야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>"Where your worries lie, call me to hold your hand." This song is a prayer of comfort for a loved one. The 'you' who is in the greatest worry right now is the Earth. We must now sing this song to the Earth, saying, "Where your pain lies, call us to be with you." Sustainability is realizing that humanity is not the ruler of the Earth, but a companion who empathizes with its pain and holds its hand. We must remember that we can exist because nature exists, and now it is our turn to give strength to nature.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>「あなたの憂いある場所に、私を呼んで手を握らせてください。」この歌は愛する人への慰めの祈りです。今、最も大きな憂いに沈んでいる「あなた」は、まさに地球です。私たちは今、地球に向かってこの歌を歌わなければなりません。「あなたの痛みある場所に、私たちを呼んで共にいさせてください」と。持続可能性とは、人類が地球の支配者ではなく、地球の痛みに共感し、手を握る伴侶であることを悟ることです。自然があるからこそ私たちが存在できることを記憶し、今こそ私たちが自然の力になるべきです。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>한명희 (「비목」 작사가)의 발언</h3>
+            <div class="gagog-intro">
+                저는 전쟁터에서 발견한 이름 모를 병사의 녹슨 철모와 돌무덤을 보고, 작곡가 장일남 선생과 함께 「비목」을 만들었습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>"초연이 쓸고 간 깊은 계곡, 깊은 계곡 양지 녘에..." 제 노래는 인간이 만든 전쟁이 남긴 비극과 허무함을 노래합니다. 지금 인류는 자연을 상대로 또 다른 전쟁을 벌이고 있습니다. 그 전쟁터에는 이름도 없이 사라져간 수많은 동식물의 '비목'이 세워지고 있습니다. 지속가능성이란, 자연과의 이 어리석은 전쟁을 멈추는 것입니다. 승자 없는 싸움을 끝내고, 서로를 향한 총부리를 거두는 것입니다. 다시는 이 푸른 행성에 슬픈 비목이 세워지지 않도록 해야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>"In the deep valley swept by gunpowder smoke, on a sunny slope..." My song sings of the tragedy and futility left by a war made by humans. Now, humanity is waging another war against nature. On that battlefield, countless 'wooden grave posts' for unnamed animals and plants that have disappeared are being erected. Sustainability is about stopping this foolish war with nature. It is about ending a fight with no winners and putting down the guns aimed at each other. We must ensure that no more sad wooden grave posts are erected on this green planet.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>「硝煙が掃っていった深い谷、深い谷の日当たりの良い場所に…」私の歌は、人間が作り出した戦争が残した悲劇と虚しさを歌います。今、人類は自然を相手にまた別の戦争を仕掛けています。その戦場には、名もなく消えていった数多くの動植物の「碑木」が立てられています。持続可能性とは、自然とのこの愚かな戦争を止めることです。勝者のいない戦いを終え、互いに向けた銃口を収めることです。二度とこの青い惑星に悲しい碑木が立てられないようにしなければなりません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>박화목 (「보리밭」 작사가)의 발언</h3>
+            <div class="gagog-intro">
+                저는 윤용하 작곡가와 함께, 평화로운 고향의 보리밭을 노래한 박화목입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>"보리밭 사잇길로 걸어가면, 뉘 부르는 소리 있어 나를 멈춘다." 노래 속 풍경은 인간과 자연이 조화롭게 어우러진 평화 그 자체입니다. 그러나 지금의 농촌은 어떻습니까? 화학 비료와 농약, 기계 소음으로 종달새는 노래를 멈췄고, 흙은 생명력을 잃어가고 있습니다. 지속가능한 농업이란, 바로 이 노래 속 풍경을 되찾는 것입니다. 땅의 힘을 믿고, 자연의 순리를 따르며, 모든 생명이 함께 노래하는 보리밭을 우리 아이들에게 물려주어야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>"Walking along the path between the barley fields, a calling voice stops me." The scenery in the song is peace itself, where humans and nature harmonize. But what is the countryside like now? The larks have stopped singing due to chemical fertilizers, pesticides, and machine noise, and the soil is losing its vitality. Sustainable agriculture is about reclaiming the scenery from this song. We must trust the power of the land, follow the order of nature, and pass on to our children the barley fields where all life sings together.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>「麦畑の間の道を歩いていくと、誰かが呼ぶ声がして私を立ち止まらせる。」歌の中の風景は、人間と自然が調和して溶け合った平和そのものです。しかし、今の農村はどうでしょうか。化学肥料や農薬、機械の騒音でヒバリは歌うのをやめ、土は生命力を失いつつあります。持続可能な農業とは、まさにこの歌の中の風景を取り戻すことです。土地の力を信じ、自然の摂理に従い、すべての生命が共に歌う麦畑を私たちの子供たちに引き継がなければなりません。</span></p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>이은상 (「고향의 노래」 작사가)의 발언</h3>
+            <div class="gagog-intro">
+                이수인 작곡가와 함께 "내 고향 남쪽 바다"를 노래한 이은상입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>제 노래 속 고향은 파란 물결이 넘실대는 아름다운 곳입니다. 하지만 지금 대한민국의 남쪽 바다는 물론, 전 세계의 바다가 해수온 상승과 플라스틱으로 병들고 있습니다. 우리 모두의 마음속에 있는 '고향'의 원風景은 바로 깨끗한 자연입니다. 이 원風景이 사라진다면, 우리는 영원히 고향을 잃어버린 실향민이 될 것입니다. 지속가능성이란, 미래 세대가 마음껏 그리워하고 돌아갈 수 있는 푸른 고향을 지켜주는 일입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>The hometown in my song is a beautiful place where blue waves surge. But now, not only the southern sea of Korea but all the world's oceans are ailing from rising temperatures and plastic. The original landscape of 'hometown' in all our hearts is pristine nature. If this original landscape disappears, we will become displaced people who have lost their hometown forever. Sustainability is about protecting a green hometown that future generations can long for and return to as much as they wish.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の歌の中の故郷は、青い波が打ち寄せる美しい場所です。しかし今、大韓民国の南の海はもちろん、全世界の海が海水温の上昇とプラスチックで病んでいます。私たち皆の心の中にある「故郷」の原風景は、まさにきれいな自然です。この原風景が消えてしまえば、私たちは永遠に故郷を失った失郷民となるでしょう。持続可能性とは、未来の世代が心ゆくまで懐かしみ、帰ることができる青い故郷を守ることです。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>조두남 (「산유화」 작곡가)의 발언</h3>
+            <div class="gagog-intro">
+                저는 소월 김소월 선생의 시에 곡을 붙여, 홀로 피고 지는 들꽃의 아름다움과 쓸쓸함을 노래했습니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>"산에는 꽃 피네, 꽃이 피네. 갈 봄 여름 없이 꽃이 피네." 이 노래는 자연의 덧없는 순환을 노래하지만, 그 순환의 고리 자체가 끊어지고 있습니다. 기후변화로 봄꽃은 너무 일찍 피고, 꿀벌은 길을 잃습니다. 저 산에 저절로 피고 지던 그 작은 들꽃 하나조차 살 수 없는 환경을 만들고 있습니다. 지속가능성이란, 거창한 담론이 아니라 이름 없는 들꽃 하나가 제 계절에 맞춰 피고 질 수 있는 권리를 지켜주는 것입니다. 그 작은 질서가 무너지면 모든 것이 무너집니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>"Flowers bloom on the mountain, flowers bloom. Flowers bloom without spring, summer, or fall." This song sings of the ephemeral cycle of nature, but the cycle itself is breaking. Due to climate change, spring flowers bloom too early, and honeybees lose their way. We are creating an environment where even a small wildflower that used to bloom and wither on its own on that mountain cannot survive. Sustainability is not a grand discourse, but about protecting the right of a single nameless wildflower to bloom and wither in its own season. If that small order collapses, everything collapses.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>「山には花が咲く、花が咲く。春、夏、秋もなく花が咲く。」この歌は自然の儚い循環を歌っていますが、その循環の輪自体が断ち切られようとしています。気候変動で春の花はあまりにも早く咲き、ミツバチは道に迷います。あの山に自ずと咲いて散っていたその小さな野の花一つさえ生きられない環境を作っています。持続可能性とは、大げさな談論ではなく、名もない野の花一つがその季節に合わせて咲き、散る権利を守ることです。その小さな秩序が崩れれば、すべてが崩れます。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>아리랑 (전통민요 대표)의 발언</h3>
+            <div class="gagog-intro">
+                저는 작사가도 작곡가도 없습니다. 수천 년간 이 땅의 민초들의 삶 속에서 함께 울고 웃으며 불려온 노래, 아리랑입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>"나를 버리고 가시는 님은 십리도 못 가서 발병 난다." 이 노랫말은 한(恨)의 표현이지만, 이제는 자연을 버리고 가는 인류를 향한 경고가 되었습니다. 자연을 버리고 우리끼리만 잘살아보겠다는 그 걸음은, 십 리도 못 가서 기후 재앙이라는 발병을 만나게 될 것입니다. 지속가능성이란, 이 땅에 뿌리박고 살아온 우리 조상들의 지혜를 배우는 것입니다. 자연을 거스르지 않고, 함께 넘어야 할 '아리랑 고개'로 여기며 슬기롭게 살아가는 법을 되찾아야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>"My love who is abandoning me, will get sick before going ten li." These lyrics express sorrow, but now they have become a warning to humanity that is abandoning nature. The path of trying to live well by ourselves while discarding nature will surely meet the sickness of climate disaster before going even ten li. Sustainability is about learning the wisdom of our ancestors who lived rooted in this land. We must rediscover how to live wisely, not going against nature but regarding it as the 'Arirang Pass' that we must cross together.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>「私を捨てて行かれるあの方は、十里も行かずに足が痛くなる。」この歌詞は恨（ハン）の表現ですが、今や自然を捨てて去りゆく人類への警告となりました。自然を捨てて私たちだけで豊かに暮らそうというその歩みは、十里も行かずに気候災害という病に出会うでしょう。持続可能性とは、この地に根を下ろして生きてきた私たちの先祖の知恵を学ぶことです。自然に逆らわず、共に越えるべき「アリラン峠」と見なし、賢明に生きていく術を取り戻さなければなりません。</span></p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>김연준 (「청산에 살리라」 작곡가)의 발언</h3>
+            <div class="gagog-intro">
+                저는 조명희 시인의 시에 곡을 붙여, 자연에 대한 동경을 노래한 작곡가 김연준입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>"나는 수풀 우거진 청산에 살리라." 이 노래는 단순히 속세를 떠나고픈 마음이 아니라, 자연과 하나 되고픈 인간의 본원적인 소망을 담고 있습니다. 이제 우리는 '청산에 가서' 살 수는 없지만, 우리가 사는 도시를 '청산처럼' 만들 수는 있습니다. 옥상에 텃밭을 가꾸고, 거리에 나무를 심고, 빌딩 숲 사이로 바람길을 내는 것입니다. 지속가능성이란, 청산에 대한 그리움을 우리 삶의 터전 속에서 구체적인 현실로 만들어내는 노력입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>"I shall live on the green mountain, dense with forests." This song contains not just a desire to leave the secular world, but the fundamental human wish to become one with nature. Now, we may not be able to 'go and live' on the green mountain, but we can make the cities we live in 'like the green mountain.' This means tending rooftop gardens, planting trees on the streets, and creating wind paths between the forests of buildings. Sustainability is the effort to make our longing for the green mountain a concrete reality in the places we live.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>「私は草木の生い茂る青い山に生きよう。」この歌は、単に俗世を離れたいという心ではなく、自然と一つになりたいという人間の根源的な願いを込めています。今、私たちは「青い山に行って」生きることはできませんが、私たちが住む都市を「青い山のように」作ることはできます。屋上に菜園を作り、街路に木を植え、ビル群の間に風の道を作ることです。持続可能性とは、青い山への憧れを、私たちの生活の場で具体的な現実に作り上げる努力です。</span></p>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>폐회 발언: 박화목 (「강 건너 봄이 오듯」 작사가)</h3>
+            <div class="gagog-intro">
+                이수인 작곡가와 함께, 희망을 노래한 「강 건너 봄이 오듯」의 작사가 박화목입니다. 오늘 이 뜻깊은 자리를 마무리하게 되어 영광입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>우리는 오늘 잃어버린 것들에 대한 그리움과 아픔, 그리고 자연에 대한 사랑을 이야기했습니다. 마치 긴 겨울과도 같은 암울한 현실입니다. 그러나 "얼음장 밑에서도 고기는 숨쉬고, 파릇한 풀싹은 흙 속에서 자라거늘." 그렇습니다. 희망은 가장 차가운 절망 속에서 싹트는 법입니다. 우리의 작은 실천 하나하나가 얼어붙은 강 밑을 흐르는 물줄기가 되고, 남녘에서 불어오는 따뜻한 봄바람이 될 것입니다. 포기하지 않는다면, 머지않아 우리 아이들의 세상에는 강 건너 봄이 오듯, 반드시 희망의 시대가 올 것입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Today, we have spoken of our longing and pain for what we have lost, and our love for nature. It is a bleak reality, like a long winter. However, "Even under the sheet of ice, fish breathe, and green sprouts grow in the soil." Yes. Hope sprouts in the midst of the coldest despair. Each of our small actions will become the stream flowing under the frozen river and the warm spring breeze from the south. If we do not give up, an era of hope will surely come to our children's world, just as spring comes across the river.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>今日、私たちは失われたものへの懐かしさと痛み、そして自然への愛を語りました。まるで長い冬のような暗鬱な現実です。しかし、「氷の下でも魚は息をし、青々とした新芽は土の中で育つ。」そうです。希望は最も冷たい絶望の中で芽生えるものです。私たちの小さな実践一つ一つが、凍った川の下を流れる水流となり、南から吹く暖かい春風となるでしょう。諦めなければ、遠からず私たちの子供たちの世界には、川の向こうから春が来るように、必ず希望の時代が訪れるでしょう。</span></p>
+        </div>
+
+    </div>
+</body>
+</html>

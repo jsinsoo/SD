@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>한국어 음운론 의인화 — 지속발전 토론 (TTS 포함)</title>
+  <style>
+    body { font-family: "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif; line-height:1.6; margin:20px; background:#fbfbff; color:#111; }
+    h1 { font-size:1.6rem; margin-bottom:0.2rem; }
+    .meta { margin-bottom:1rem; color:#444; }
+    .card { border-radius:8px; box-shadow:0 6px 18px rgba(20,20,40,0.06); padding:14px; margin:12px 0; background:white; }
+    .role { font-weight:700; margin-bottom:6px; }
+    .langs { margin-top:8px; display:flex; gap:6px; flex-wrap:wrap; }
+    button { background:#2563eb; color:white; border:none; padding:8px 10px; border-radius:6px; cursor:pointer; }
+    button.alt { background:#10b981; }
+    button.small { padding:6px 8px; font-size:0.9rem; }
+    .translations { margin-top:8px; background:#f3f4f6; padding:8px; border-radius:6px; }
+    pre { white-space:pre-wrap; margin:0; font-family:inherit; }
+    #controls { position:sticky; top:12px; background:transparent; padding:6px 0; z-index:10; }
+  </style>
+</head>
+<body>
+  <div id="controls" class="meta">
+    <h1>한국어 음운론 의인화: 지속발전 토론 (TTS 포함)</h1>
+    <div>각 항목을 눌러 해당 언어로 음성 재생합니다. 모든 한국어 문장을 연달아 읽게 하려면 <strong>전체 읽기 (한국어)</strong>를 누르세요.</div>
+    <div style="margin-top:8px;">
+      <button id="readAll" class="alt small">전체 읽기 (한국어)</button>
+      <button id="stop" class="small" style="background:#ef4444">중지</button>
+    </div>
+  </div>
+
+  <!-- 각 항목 카드들 -->
+  <!-- 1. 한국어음운론 (타이틀 역할) -->
+  <div class="card" id="card-0">
+    <div class="role">한국어음운론 (사회자)</div>
+    <div class="content">
+      <pre id="ko-0">안녕하세요. 저는 한국어 음운론이라는 큰 틀입니다.
+우리는 이 자리에서 자음, 모음, 음운 변동, 초분절적 요소 모두를 아우릅니다.
+지속발전은 단순한 환경 문제가 아니라 언어처럼 서로 연결된 시스템입니다.
+각자의 성질을 살려 조화롭게 공존하는 법을 찾아야 합니다.
+오늘 토론을 통해 작은 변화들이 어떻게 큰 체계적 개선으로 이어지는지 보여드리겠습니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-0">こんにちは。私は韓国語音韻論という大きな枠組みです。
+ここでは子音、母音、音韻変動、超分節要素すべてを包括します。
+持続可能な発展は単なる環境問題ではなく、言語のように相互に結びついたシステムです。
+それぞれの性質を活かして調和して共存する方法を見つけるべきです。
+今日の討論で小さな変化がどのように大きな体系的改善につながるかを示します。</pre>
+
+        <strong>English</strong>
+        <pre id="en-0">Hello. I am the overarching framework called Korean phonology.
+We encompass consonants, vowels, phonological alternations, and suprasegmental features.
+Sustainable development is not just an environmental issue but a system interconnected like language.
+We must find ways to coexist harmoniously by leveraging each one's properties.
+Through today's discussion, we'll show how small changes can lead to significant systemic improvements.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko', 'ko-0')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja', 'jp-0')">▶ 日本語</button>
+        <button class="small" onclick="speak('en', 'en-0')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1: 음운체계 -->
+  <div class="card" id="card-1">
+    <div class="role">음운체계</div>
+    <div class="content">
+      <pre id="ko-1">나는 음운체계, 소리들이 서로 규칙과 역할로 얽힌 조직입니다.
+지속발전을 이야기할 때 나는 시스템적 사고를 제안합니다.
+자원과 행동이 어떻게 연결되어 있는지를 규칙으로 분석하면 더 효율적이고 공정한 분배 방법을 찾을 수 있습니다.
+작은 규칙 하나가 전체 흐름을 바꾸듯 정책 하나가 공동체의 영향을 크게 좌우합니다.
+따라서 전체 구조를 설계할 때 장기적 연쇄효과를 항상 고려해야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-1">私は音韻体系、音が互いに規則と役割で結ばれた組織です。
+持続可能な発展について話すとき、私はシステム思考を提案します。
+資源と行動がどのように繋がっているかを規則として分析すれば、より効率的で公平な配分方法が見つかります。
+小さな規則一つが全体の流れを変えるように、方針一つが共同体への影響を大きく左右します。
+したがって全体構造を設計するときは長期的な連鎖効果を常に考慮すべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-1">I am the phonological system, an organization where sounds are bound by rules and roles.
+When discussing sustainability I advocate for systems thinking.
+Analyzing how resources and behaviors connect as rules helps find more efficient and equitable distribution.
+Just as a small rule can change overall flow, a single policy can greatly influence a community.
+Therefore, when designing overall structures, always consider long-term cascading effects.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-1')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-1')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-1')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2: 자음 -->
+  <div class="card" id="card-2">
+    <div class="role">자음</div>
+    <div class="content">
+      <pre id="ko-2">나는 자음, 경계와 결합을 만들어 내는 단단한 소리입니다.
+지속발전에서 나는 규범과 제도의 역할을 맡고 싶습니다.
+강한 경계는 무분별한 확장을 막고, 적절한 결합은 다양한 주체의 협력을 가능하게 합니다.
+그러나 지나친 경계는 소통과 융합을 막기에 유연한 설계가 필요합니다.
+정책의 '자음적' 역할은 규칙을 세우되, 다른 요소들과 잘 어우러지도록 조정되어야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-2">私は子音、境界と結合を作り出す固い音です。
+持続可能な発展において私は規範と制度の役割を担いたい。
+強い境界は無分別な拡張を防ぎ、適切な結合は様々な主体の協力を可能にします。
+しかし過度な境界はコミュニケーションと融合を阻むため、柔軟な設計が必要です。
+政策の「子音的」役割は規則を作る一方で、他の要素と調和するよう調整されるべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-2">I am the consonants, solid sounds that create boundaries and combinations.
+In sustainability I take on the role of norms and institutions.
+Strong boundaries prevent reckless expansion, and proper combinations enable cooperation among diverse actors.
+But excessive boundaries block communication and fusion, so flexible design is necessary.
+The 'consonantal' role of policy is to set rules while adjusting to harmonize with other elements.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-2')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-2')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-2')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3: 조음위치 -->
+  <div class="card" id="card-3">
+    <div class="role">조음위치</div>
+    <div class="content">
+      <pre id="ko-3">내 이름은 조음위치, 소리가 어디서 만들어지는지를 알려줍니다.
+지속발전에서 나는 '지리적 조건'과 '현장성'을 상징합니다.
+어떤 해결책은 도시에서 더 잘 작동하고, 어떤 것은 농촌에서 더 적합하니 위치에 맞춘 접근이 필요합니다.
+나는 현장의 목소리를 반영하고, 지역 특성에 맞춘 지속가능한 전략을 권합니다.
+따라서 중앙집중식 대책과 지역 맞춤형 실행 사이에서 균형을 찾아야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-3">私は調音位置、音がどこで作られるかを示します。
+持続可能な発展において私は「地理的条件」と「現場性」を象徴します。
+ある解決策は都市でより機能し、別のものは農村でより適しているため、場所に応じたアプローチが必要です。
+私は現場の声を反映し、地域特性に合った持続可能な戦略を推奨します。
+したがって中央集権的対策と地域に合わせた実行の間でバランスをとるべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-3">I am articulation place, indicating where sounds are produced.
+In sustainability I symbolize geographic conditions and local realities.
+Some solutions work better in cities, others fit rural areas better, so place-specific approaches are needed.
+I reflect voices on the ground and advocate for strategies tailored to regional characteristics.
+Thus we must balance centralized policies with locally adapted implementations.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-3')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-3')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-3')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4: 조음방법 -->
+  <div class="card" id="card-4">
+    <div class="role">조음방법</div>
+    <div class="content">
+      <pre id="ko-4">나는 조음방법, 같은 장소라도 만드는 방식으로 소리가 달라집니다.
+지속발전론에서 나는 방법론과 기술을 대표합니다.
+단순한 아이디어보다 실행 방법이 성패를 가르므로 세심한 설계와 실행이 중요합니다.
+혁신적 기술과 전통적 지혜를 결합해 효율적이고 지속 가능한 방법을 만들길 제안합니다.
+방법이 바뀌면 결과도 바뀌므로 실험과 피드백을 통한 점진적 개선을 권합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-4">私は調音方法、同じ場所でも作り方で音が変わります。
+持続可能な発展では私は方法論と技術を代表します。
+単なるアイデアより実行方法が成功を左右するため、緻密な設計と実行が重要です。
+革新的な技術と伝統的知恵を結合して効率的で持続可能な方法を作ることを提案します。
+方法が変われば結果も変わるので、実験とフィードバックによる漸進的な改善を勧めます。</pre>
+
+        <strong>English</strong>
+        <pre id="en-4">I am articulation manner — even at the same place the way sounds are made differs.
+In sustainability I represent methodology and technology.
+Execution methods determine success more than mere ideas, so careful design and implementation are crucial.
+I propose combining innovative tech with traditional wisdom to create efficient, sustainable methods.
+As methods change, outcomes change; I recommend iterative improvement via experiments and feedback.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-4')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-4')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-4')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5: 모음 -->
+  <div class="card" id="card-5">
+    <div class="role">모음</div>
+    <div class="content">
+      <pre id="ko-5">나는 모음, 소리의 중심이 되어 흐름을 부드럽게 합니다.
+지속발전에선 문화, 교육, 감성적 소통을 상징합니다.
+기술이나 규범만으로는 사람들의 마음을 움직일 수 없고, 공감과 교육이 뒷받침되어야 합니다.
+모음처럼 포용적인 정책과 교육은 사람들을 참여로 이끌 수 있습니다.
+따라서 지속가능성 메시지는 이해하기 쉬운 언어와 문화적 맥락으로 전해야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-5">私は母音、音の中心となって流れを滑らかにします。
+持続可能な発展では文化、教育、感情的コミュニケーションを象徴します。
+技術や規範だけでは人々の心を動かせず、共感と教育が支えられるべきです。
+母音のように包摂的な政策と教育は人々を参加へと導きます。
+したがって持続可能性のメッセージは理解しやすい言語と文化的文脈で伝えるべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-5">I am the vowels, acting as the core of sounds and smoothing the flow.
+In sustainability I symbolize culture, education, and emotional communication.
+Technology and rules alone won't move people's hearts — empathy and education are needed.
+Inclusive policies and education, like vowels, can bring people into participation.
+Thus sustainability messages should be delivered in accessible language and cultural context.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-5')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-5')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-5')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6: 혀의높이 -->
+  <div class="card" id="card-6">
+    <div class="role">혀의높이</div>
+    <div class="content">
+      <pre id="ko-6">나는 혀의높이, 세부 조절이 소리의 특성을 결정합니다.
+지속발전에선 세밀한 조정과 단계적 변화의 필요성을 말합니다.
+한 번에 극단적 변화를 강제하기보다는 단계별로 조정하면 저항을 줄이고 적응을 돕습니다.
+작은 조정들이 누적되어 큰 체감 변화를 만들 수 있음을 잊지 말아야 합니다.
+정책 설계에서 세밀한 '위치 조절'이 장기적 성공을 좌우합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-6">私は舌の高さ、細かな調整が音の特性を決定します。
+持続可能な発展では繊細な調整と段階的変化の必要性を示します。
+一度に極端な変化を強制するより段階的に調整すると抵抗を減らし適応を助けます。
+小さな調整が蓄積して大きな体感の変化を生むことを忘れてはなりません。
+方針設計では繊細な「位置調節」が長期的成功を左右します。</pre>
+
+        <strong>English</strong>
+        <pre id="en-6">I am tongue height, where fine tuning determines sound character.
+In sustainability I signify the need for fine adjustments and phased changes.
+Rather than imposing drastic change at once, phased adjustments reduce resistance and help adaptation.
+Remember that small tweaks accumulate into noticeable large changes.
+In policy design, delicate 'positioning' decides long-term success.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-6')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-6')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-6')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7: 혀의위치 -->
+  <div class="card" id="card-7">
+    <div class="role">혀의위치</div>
+    <div class="content">
+      <pre id="ko-7">나는 혀의위치, 소리의 전후를 가르는 기준입니다.
+지속발전 맥락에서는 대상을 전면적으로 혹은 후면적으로 바라보는 관점을 뜻합니다.
+어떤 문제는 중심에서 해결해야 하고, 어떤 문제는 주변부에서 접근해야 효과적입니다.
+때로는 전면적 개입이 필요하지만, 주변의 소리들도 무시하면 안 됩니다.
+다층적 관점으로 문제를 바라보면 더 견고한 해결책이 나옵니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-7">私は舌の位置、音の前後を分ける基準です。
+持続可能な発展の文脈では対象を全面的にまたは周辺的に見る視点を意味します。
+ある問題は中心から解決すべきで、別の問題は周辺からアクセスした方が効果的です。
+時には全面的介入が必要ですが、周縁の声も無視してはなりません。
+多層的な視点で問題を見ればより堅牢な解決が得られます。</pre>
+
+        <strong>English</strong>
+        <pre id="en-7">I am tongue position, marking front vs back in sounds.
+In sustainability I mean perspectives that view issues centrally or peripherally.
+Some problems require central solutions, others are best approached from the periphery.
+Sometimes frontal intervention is needed, but peripheral voices must not be ignored.
+A multilayered viewpoint yields more robust solutions.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-7')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-7')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-7')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8: 입술모양 -->
+  <div class="card" id="card-8">
+    <div class="role">입술모양</div>
+    <div class="content">
+      <pre id="ko-8">나는 입술모양, 소리의 빛깔과 온도를 바꾸는 장식입니다.
+지속발전에서는 표현 방식과 외형, 커뮤니케이션 스타일을 상징합니다.
+같은 메시지도 표현이 부드럽거나 강하면 받아들여지는 정도가 달라집니다.
+포장과 전달 방식도 전략의 일부로 생각하고 세련되게 조율해야 합니다.
+따라서 정책과 프로그램은 형식과 내용 모두 신경써야 효과가 큽니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-8">私は唇の形、音の色合いと温度を変える装飾です。
+持続可能な発展では表現方法や外観、コミュニケーションスタイルを象徴します。
+同じメッセージでも表現が柔らかいか強いかで受け入れられ方が変わります。
+パッケージと伝達方法も戦略の一部として洗練して調整する必要があります。
+したがって方針やプログラムは形式と内容の両方に注意を払うべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-8">I am lip shape, the ornament that changes tone and color of sounds.
+In sustainability I symbolize modes of expression and communication style.
+The same message is received differently depending on whether delivery is gentle or forceful.
+Packaging and delivery are part of strategy and should be finely tuned.
+Thus policies and programs must care for both form and content for greater impact.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-8')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-8')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-8')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9: 음운변동 -->
+  <div class="card" id="card-9">
+    <div class="role">음운변동</div>
+    <div class="content">
+      <pre id="ko-9">나는 음운변동, 환경에 따라 소리가 모습을 바꾸는 능력입니다.
+지속발전에서 나는 적응과 변화의 철학을 대변합니다.
+환경이 바뀌면 우리도 유연하게 변해야 생존하고 발전합니다.
+변화를 두려워하기보다, 예측하고 관리하는 능력을 키워야 합니다.
+정책은 고정된 규칙보다 상황 따라 유연한 변동 규칙을 포함해야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-9">私は音韻変動、環境に応じて音が形を変える能力です。
+持続可能な発展では私は適応と変化の哲学を表します。
+環境が変われば私たちも柔軟に変わらなければ生き残り発展できません。
+変化を恐れるのではなく、予測し管理する能力を高めるべきです。
+方針は固定した規則より状況に応じた柔軟な変動規則を含むべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-9">I am phonological alternation, the ability of sounds to change with context.
+In sustainability I stand for adaptability and change philosophy.
+When environments shift, we must adapt flexibly to survive and thrive.
+Rather than fear change, we should build capacity to anticipate and manage it.
+Policies should include flexible varying rules rather than rigid ones.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-9')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-9')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-9')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10: 교체 -->
+  <div class="card" id="card-10">
+    <div class="role">교체</div>
+    <div class="content">
+      <pre id="ko-10">나는 교체, 어떤 음이 다른 음으로 대체되는 현상입니다.
+지속발전에서는 문제 해결을 위해 기존 방식을 새 방식으로 교체하는 것을 뜻합니다.
+그러나 교체는 무조건 좋은 것이 아니라, 대체할 것이더라도 그 결과를 검증해야 합니다.
+새로운 기술이나 제도를 도입할 때 비용·편익·부작용을 예측하고 관리해야 합니다.
+교체는 단계적으로, 필요시 되돌릴 수 있는 안전장치와 함께 이루어져야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-10">私は置換、ある音が別の音に代わる現象です。
+持続可能な発展では問題解決のため既存の方法を新しい方法に置き換えることを意味します。
+しかし置換は必ずしも良いわけではなく、置き換える場合は結果を検証するべきです。
+新技術や制度を導入するときは費用・便益・副作用を予測し管理する必要があります。
+置換は段階的に、必要なら戻せる安全装置とともに行われるべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-10">I am replacement, where one sound is replaced by another.
+In sustainability I mean replacing old practices with new ones to solve problems.
+Replacement isn't inherently good — consequences must be verified before swapping.
+When introducing new tech or systems, anticipate and manage costs, benefits, and side effects.
+Replacement should be phased and accompanied by safeguards allowing rollback if needed.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-10')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-10')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-10')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11: 탈락 -->
+  <div class="card" id="card-11">
+    <div class="role">탈락</div>
+    <div class="content">
+      <pre id="ko-11">나는 탈락, 어떤 음이 사라지는 현상입니다.
+지속발전 맥락에서는 불필요한 제도나 낭비를 줄이는 '정리' 역할을 합니다.
+그러나 단순히 삭제하면 취약해질 수 있으니 대체 수단을 마련해야 합니다.
+탈락은 비용 절감과 효율화에 유용하지만 사회적 안전망은 유지되어야 합니다.
+따라서 탈락을 설계할 때는 약자 보호와 리스크 완화 장치가 필수입니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-11">私は脱落、ある音が消える現象です。
+持続可能な発展の文脈では不要な制度や浪費を減らす「整理」の役割を果たします。
+しかし単に削除すると脆弱になる可能性があるため、代替手段を準備すべきです。
+脱落はコスト削減と効率化に有効ですが、社会的セーフティネットは維持されるべきです。
+したがって脱落を設計する際は弱者保護とリスク緩和の仕組みが必須です。</pre>
+
+        <strong>English</strong>
+        <pre id="en-11">I am deletion — the phenomenon of a sound disappearing.
+In sustainability I'm the 'streamlining' that reduces unnecessary systems and waste.
+However, simple removal can create vulnerabilities, so substitutes must be provided.
+Deletion is useful for cost-cutting and efficiency, but social safety nets must remain.
+Thus when designing deletions, protections for vulnerable groups and risk mitigation are essential.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-11')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-11')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-11')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12: 첨가 -->
+  <div class="card" id="card-12">
+    <div class="role">첨가</div>
+    <div class="content">
+      <pre id="ko-12">나는 첨가, 소리에 새로운 부분이 덧붙는 현상입니다.
+지속발전에서는 보완적 장치와 인프라를 추가하는 역할을 합니다.
+예를 들어 에너지 저장장치나 교육 프로그램을 더하면 전체 시스템이 강화됩니다.
+그러나 첨가는 비용과 복잡성을 늘리므로 우선순위를 잘 정해야 합니다.
+증가하는 부분이 진정한 가치를 창출하는지 항상 평가해야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-12">私は付加、音に新しい部分が付け加わる現象です。
+持続可能な発展では補完的な設備やインフラを追加する役割を果たします。
+例えばエネルギー蓄積装置や教育プログラムを追加すると全体システムは強化されます。
+しかし付加は費用と複雑さを増すため、優先順位を慎重に決める必要があります。
+増やす部分が真に価値を生むか常に評価すべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-12">I am addition — where new parts are appended to sounds.
+In sustainability I add complementary devices and infrastructure.
+For example, energy storage or educational programs can strengthen the whole system.
+But additions increase cost and complexity, so priorities must be set carefully.
+Always evaluate whether the added parts truly create value.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-12')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-12')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-12')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13: 축약 -->
+  <div class="card" id="card-13">
+    <div class="role">축약</div>
+    <div class="content">
+      <pre id="ko-13">나는 축약, 두 음이 하나로 줄어드는 현상입니다.
+지속발전에 있어 나는 단순화와 통합의 가치를 옹호합니다.
+복잡한 과정을 간소화하면 비용과 에너지 소비를 줄일 수 있습니다.
+그러나 지나친 축약은 다양성과 회복력을 해칠 수 있으니 신중해야 합니다.
+통합은 표준화와 효율을 가져오되 다양성 보전도 병행되어야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-13">私は縮約、二つの音が一つに縮まる現象です。
+持続可能な発展では私は単純化と統合の価値を擁護します。
+複雑なプロセスを簡素化すればコストとエネルギー消費を削減できます。
+しかし過度な縮約は多様性と回復力を損なうため慎重であるべきです。
+統合は標準化と効率をもたらしますが多様性の保全も並行して行うべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-13">I am reduction, where two sounds become one.
+In sustainability I advocate simplification and consolidation.
+Streamlining complex processes can reduce costs and energy use.
+But excessive reduction can harm diversity and resilience, so caution is needed.
+Integration brings standardization and efficiency, yet preserving diversity must proceed in parallel.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-13')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-13')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-13')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14: 분절 -->
+  <div class="card" id="card-14">
+    <div class="role">분절</div>
+    <div class="content">
+      <pre id="ko-14">나는 분절, 한 음이 둘 이상으로 나뉘는 현상입니다.
+지속발전에선 책임 분담과 역할 세분화를 의미합니다.
+큰 문제를 작은 단위로 나누어 각 주체가 맡으면 실행력이 높아집니다.
+하지만 과도한 분절은 조율 비용을 증가시키므로 적절한 통합 장치가 필요합니다.
+효율성과 책임의 균형을 고민하는 구조가 중요합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-14">私は分節、ある音が二つ以上に分かれる現象です。
+持続可能な発展では責任分担と役割の細分化を意味します。
+大きな問題を小さな単位に分けて各主体が担えば実行力が上がります。
+しかし過度の分節は調整コストを増すため適切な統合メカニズムが必要です。
+効率性と責任のバランスを考える構造が重要です。</pre>
+
+        <strong>English</strong>
+        <pre id="en-14">I am segmentation, where one sound splits into many.
+In sustainability I mean division of responsibilities and role specialization.
+Breaking big problems into smaller tasks and assigning them raises execution power.
+But excessive segmentation raises coordination costs, so integration mechanisms are needed.
+Structures that balance efficiency and accountability are vital.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-14')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-14')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-14')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15: 초분절적요소 -->
+  <div class="card" id="card-15">
+    <div class="role">초분절적요소</div>
+    <div class="content">
+      <pre id="ko-15">나는 초분절적요소, 길이·억양·강세 같은 음성의 배경입니다.
+지속발전에서는 문화적 톤, 사회적 분위기, 공감의 수준을 대표합니다.
+같은 정책도 분위기와 감정의 토대가 다르면 수용도가 달라집니다.
+정책 설계자는 기술적 근거뿐 아니라 사회적 공감과 정서를 고려해야 합니다.
+초분절적 요소를 잘 다루면 참여와 협력이 크게 늘어납니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-15">私は超分節的要素、長さ・イントネーション・強勢など音の背景です。
+持続可能な発展では文化的トーン、社会的雰囲気、共感のレベルを表します。
+同じ政策でも雰囲気や感情の土台が異なれば受容度が変わります。
+政策設計者は技術的根拠だけでなく社会的共感と情緒も考慮するべきです。
+超分節的要素をうまく扱えば参加と協力が大きく増えます。</pre>
+
+        <strong>English</strong>
+        <pre id="en-15">I am suprasegmental features — background aspects like length, intonation, and stress.
+In sustainability I represent cultural tone, social mood, and levels of empathy.
+The same policy is received differently depending on its emotional and atmospheric foundation.
+Policy designers should consider social resonance and emotions, not only technical rationale.
+Handling suprasegmental elements well greatly increases participation and cooperation.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-15')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-15')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-15')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 16: 장단 -->
+  <div class="card" id="card-16">
+    <div class="role">장단</div>
+    <div class="content">
+      <pre id="ko-16">나는 장단, 소리의 길이로 리듬을 만듭니다.
+지속발전에서는 시간축과 인내심, 장기 계획을 상징합니다.
+단기적 성과에만 치중하면 지속가능성이 떨어지므로 장기적 관점이 필요합니다.
+장기 투자는 초기 부담이 있어도 깊은 변화를 만들어 냅니다.
+따라서 정책은 단기·중기·장기 목표를 함께 설계해야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-16">私は長短、音の長さでリズムを作ります。
+持続可能な発展では時間軸と忍耐、長期計画を象徴します。
+短期的成果に偏ると持続可能性は低下するため長期的視点が必要です。
+長期投資は初期の負担があっても深い変化を生み出します。
+したがって方針は短期・中期・長期の目標を同時に設計すべきです。</pre>
+
+        <strong>English</strong>
+        <pre id="en-16">I am length (long vs short), creating rhythm in sounds.
+In sustainability I symbolize timelines, patience, and long-term planning.
+Focusing only on short-term gains diminishes sustainability, so long-term perspective is necessary.
+Long-term investments may burden initially but produce deep change.
+Thus policies should design short-, mid-, and long-term goals together.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-16')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-16')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-16')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17: 억양 -->
+  <div class="card" id="card-17">
+    <div class="role">억양</div>
+    <div class="content">
+      <pre id="ko-17">나는 억양, 말의 높낮이로 감성과 의미를 더합니다.
+지속발전에서는 리더십의 목소리와 공적 담론의 어조를 의미합니다.
+긍정적 억양은 참여를 촉진하고, 위협적 억양은 반발을 낳습니다.
+리더는 메시지를 어떻게 전달하느냐에 따라 협력 수준이 달라짐을 알아야 합니다.
+따라서 소통 전략에 감정과 어조 설계를 포함시키세요.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-17">私はイントネーション、声の高さで感情と意味を付加します。
+持続可能な発展ではリーダーシップの声と公共的な談話の調子を意味します。
+肯定的なイントネーションは参加を促進し、脅しに聞こえる調子は反発を生みます。
+リーダーはメッセージの伝え方によって協力のレベルが変わることを知るべきです。
+したがってコミュニケーション戦略に感情と調子の設計を含めてください。</pre>
+
+        <strong>English</strong>
+        <pre id="en-17">I am intonation, adding emotion and meaning by pitch.
+In sustainability I refer to leadership voice and the tone of public discourse.
+Positive intonation encourages participation, threatening tones provoke resistance.
+Leaders must understand that how they deliver messages changes cooperation levels.
+Therefore include emotional and tonal design in communication strategies.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-17')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-17')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-17')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 18: 강세 -->
+  <div class="card" id="card-18">
+    <div class="role">강세</div>
+    <div class="content">
+      <pre id="ko-18">나는 강세, 말의 강도와 강조를 담당합니다.
+지속발전에서는 우선순위와 자원 배분의 강도를 나타냅니다.
+어떤 목표에 더 강한 강조를 두느냐가 실제 행동과 예산을 좌우합니다.
+그러므로 핵심 우선순위를 명확히 하고, 그에 맞는 자원을 꾸준히 배치해야 합니다.
+강세를 잘못 두면 중요한 부분이 소홀해지니 주의해야 합니다.</pre>
+
+      <div class="translations">
+        <strong>日本語</strong>
+        <pre id="jp-18">私は強勢、言葉の強さと強調を担います。
+持続可能な発展では優先順位と資源配分の強さを表します。
+どの目標により強い強調を置くかが実際の行動と予算を左右します。
+したがって主要な優先事項を明確にし、それに見合った資源を継続的に配置すべきです。
+強勢を誤ると重要な部分がおろそかになるので注意が必要です。</pre>
+
+        <strong>English</strong>
+        <pre id="en-18">I am stress, handling strength and emphasis in speech.
+In sustainability I indicate the intensity of priorities and resource allocation.
+Which goals receive stronger emphasis determines action and budgets.
+Therefore clarify core priorities and continuously allocate resources accordingly.
+If emphasis is misplaced, important areas will be neglected, so be careful.</pre>
+      </div>
+
+      <div class="langs">
+        <button class="small" onclick="speak('ko','ko-18')">▶ 한국어</button>
+        <button class="small" onclick="speak('ja','jp-18')">▶ 日本語</button>
+        <button class="small" onclick="speak('en','en-18')">▶ English</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 유틸: elementId로 텍스트 가져와서 speak
+    function speak(lang, elementId) {
+      stopSpeech();
+      const node = document.getElementById(elementId);
+      if (!node) return;
+      const text = node.innerText || node.textContent;
+      speakText(text, lang);
+    }
+
+    function speakText(text, lang) {
+      if (!('speechSynthesis' in window)) {
+        alert('이 브라우저는 Web Speech API를 지원하지 않습니다.');
+        return;
+      }
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = (lang === 'ko') ? 'ko-KR' : (lang === 'ja') ? 'ja-JP' : 'en-US';
+      // 가능한 한 사용자 선호 목소리 선택 시도
+      const voices = speechSynthesis.getVoices();
+      // 목소리 선택 로직: 해당 언어 우선
+      for (let v of voices) {
+        if (utter.lang.startsWith(v.lang.substring(0,2))) {
+          utter.voice = v;
+          break;
+        }
+      }
+      utter.rate = 1; // 속도
+      utter.pitch = 1;
+      speechSynthesis.speak(utter);
+    }
+
+    function stopSpeech() {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+      }
+    }
+
+    document.getElementById('stop').addEventListener('click', stopSpeech);
+
+    // 전체 읽기: 모든 한국어 텍스트를 순서대로 이어서 읽음
+    document.getElementById('readAll').addEventListener('click', function(){
+      stopSpeech();
+      const parts = [];
+      // ko-0 .. ko-18
+      for (let i=0; i<=18; i++) {
+        const el = document.getElementById('ko-' + i);
+        if (el) parts.push(el.innerText.trim());
+      }
+      const combined = parts.join('\\n\\n');
+      speakText(combined, 'ko');
+    });
+
+    // 일부 브라우저에서 voices 로딩 지연 문제를 보정
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = function(){ /* voices ready */ };
+    }
+  </script>
+</body>
+</html>

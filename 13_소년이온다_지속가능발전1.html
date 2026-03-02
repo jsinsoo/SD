@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『소년이 온다』 인물들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #6c757d;
+            border-radius: 5px;
+            background-color: #fdfdff;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『소년이 온다』 인물들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro">(시간과 공간을 넘어, 소설 속 인물들이 '기억의 공간'에 모여 앉아 서로의 삶과 생각을 나눕니다.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">동호 (목격자 소년)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div>
+                        <div id="ko-1">저는 친구 정대의 죽음을 눈앞에서 봤습니다. 도망쳤다는 죄책감 때문에, 저는 그 후 썩어가는 시신들을 수습하며 그들의 마지막 존엄을 지켜주고 싶었습니다. 지금 지구도 마찬가지인 것 같아요. 우리는 매일같이 파괴되는 자연의 모습을 목격하고 있습니다. 빙하가 녹고 숲이 불타는 것은 마치 그때 쓰러져 가던 사람들의 모습과 겹쳐 보입니다. 지구의 지속가능 발전은, 죽어가는 것들의 곁을 지키는 일에서 시작되어야 합니다. 외면하지 않고, 그 고통을 똑바로 마주 보고, 우리가 할 수 있는 최소한의 존엄이라도 지켜주는 것. 그것이 살아남은 우리, 목격자인 우리가 해야 할 첫 번째 일이라고 생각합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">정대 (죽은 친구의 영혼)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div>
+                        <div id="ko-2">저는 이유도 모른 채 죽었습니다. 제 목소리는 그 누구에게도 닿지 못했죠. 지금 지구의 수많은 생명들도 저처럼 소리 없이 죽어가고 있습니다. 베어지는 나무들, 플라스틱에 갇힌 바다거북들, 서식지를 잃은 동물들. 그들에게는 목소리가 없습니다. 지속가능 발전이란, 바로 이 목소리 없는 존재들의 목소리를 들어주는 것이어야 합니다. 단순히 인간의 편의를 위해 미래 세대의 자원을 빌려 쓰는 것을 넘어, 우리와 함께 살아가는, 그러나 말할 수 없는 존재들의 고통을 헤아리는 것입니다. 그들의 침묵 속 절규를 듣지 못한다면, 우리의 발전은 또 다른 폭력에 불과할 겁니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">은숙 (고문 생존자)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div>
+                        <div id="ko-3">저는 살아남았지만, 그날의 폭력은 제 몸과 마음에 지워지지 않는 흔적을 남겼습니다. 이 상처는 결코 완전히 회복되지 않아요. 지금 인류가 지구에 가하는 행위도 마찬가지입니다. 한번 파괴된 열대우림, 한번 멸종된 생물은 다시 돌아오지 않습니다. 그것은 지구에 영원히 남는 상처입니다. 지속가능 발전은 ‘상처를 남기지 않으려는 노력’이라고 생각합니다. 성장을 하더라도 회복 불가능한 상처를 남기지 않는 방법을 찾아야 합니다. 이미 생긴 상처를 인정하고, 더 이상 상처가 깊어지지 않도록 조심스럽게 살아가는 것. 그것이 폭력을 겪고 살아남은 제가 배운 생존의 방식이자, 우리가 지구와 함께 살아갈 방식이어야 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">김진수 (살아남은 자의 죄책감)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div>
+                        <div id="ko-4">저는 그곳에서 더 강하게 맞서지 못했다는, 살아남았다는 죄책감을 평생 안고 삽니다. 우리는 지금 지구의 위기를 알면서도 행동하지 않고 있습니다. 편리함 뒤에 숨어, 누군가는 해결해주겠지 하며 방관하고 있죠. 이것은 그때의 저처럼, 행동하지 않는 죄책감을 미래 세대에게 영원히 남기는 일입니다. 지속가능 발전은 더 이상 미룰 수 없는 ‘책임’의 문제입니다. 지금 행동하지 않으면 미래 세대는 우리를 원망하며 살아갈 것입니다. 과거를 바꿀 수 없듯이, 망가진 지구도 되돌릴 수 없습니다. 그 무거운 죄책감을 미래에 떠넘기지 않기 위해, 우리는 지금 당장 행동해야만 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">선주 (말하기의 고통)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div>
+                        <div id="ko-5">저는 제가 겪은 일을 말하는 것이 너무나 고통스러웠습니다. 그 기억을 꺼내는 것 자체가 다시 그 순간을 사는 것 같았기 때문이죠. 지금 과학자들은 지구의 위기를 끊임없이 이야기하고 있습니다. 그들이 발표하는 데이터와 경고는, 어쩌면 그들이 겪는 고통스러운 ‘증언’일지도 모릅니다. 지속가능 발전은 이 불편한 진실을 외면하지 않고 ‘듣는’ 것에서 시작됩니다. 듣기 괴롭다고, 나와 상관없다고 귀를 막아서는 안 됩니다. 고통스러운 증언에 귀 기울이고, 그 증언이 더 이상 필요 없는 세상을 만들기 위해 함께 노력하는 것. 그것이 기억의 무게를 아는 우리가 가져야 할 자세입니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">동호 어머니 (남겨진 자의 삶)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div>
+                        <div id="ko-6">저는 아들 동호가 겪었을 고통을 생각하며 남은 날들을 살아갑니다. 자식을 잃은 부모의 마음처럼, 우리는 미래 세대가 살아갈 터전을 잃게 하고 있습니다. 지금의 풍요가 미래 세대의 고통 위에서 이뤄진 것이라면, 우리는 부모로서 자격이 없습니다. 지속가능 발전은 결국 다음 세대를 향한 ‘사랑’의 다른 이름이라고 생각합니다. 내 아이가 깨끗한 물을 마시고, 푸른 숲을 보며, 안전하게 살아가길 바라는 마음. 그 소박하고도 절실한 마음이 모일 때, 우리는 비로소 파괴적인 발전을 멈추고 미래를 위한 길을 선택할 수 있을 겁니다. 더 이상 어떤 아이도 상처받지 않는 세상을 물려주는 것, 그것이 남겨진 우리의 유일한 희망입니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="language-header">🇬🇧 English</div>
+                <div class="text-content">
+                    <p class="intro">(Transcending time and space, the characters from the novel gather in a 'Space of Memory' to share their lives and thoughts.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Dong-ho (The Boy Witness)</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div>
+                        <div id="en-1">I saw my friend Jeong-dae die right before my eyes. Overwhelmed with the guilt of running away, I later wanted to protect the final dignity of the dead by tending to their decaying bodies. I think the Earth is in a similar state now. We witness nature being destroyed every day. The melting glaciers and burning forests overlap with the images of people falling back then. Sustainable development for the Earth must begin with tending to those that are dying. It’s about not looking away, facing the pain directly, and preserving what little dignity we can. I believe that is the first duty for us, the survivors, the witnesses.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Jeong-dae (The Soul of a Dead Friend)</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div>
+                        <div id="en-2">I died without knowing why. My voice never reached anyone. Right now, countless lives on Earth are dying silently, just like me. The felled trees, the sea turtles trapped in plastic, the animals that have lost their habitats—they have no voice. Sustainable development must be about listening to the voices of these voiceless beings. It goes beyond simply borrowing resources from future generations for human convenience; it's about understanding the suffering of beings who live alongside us but cannot speak. If we fail to hear the screams in their silence, our 'development' will be nothing more than another form of violence.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Eun-sook (A Torture Survivor)</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div>
+                        <div id="en-3">I survived, but the violence of that day left an indelible mark on my body and soul. This wound never fully heals. What humanity is doing to the Earth right now is the same. A rainforest, once destroyed, or a species, once extinct, never comes back. It becomes a permanent scar on the planet. I think sustainable development is the 'effort not to leave a scar.' Even as we grow, we must find ways to avoid inflicting irreversible damage. It's about acknowledging the wounds that already exist and living carefully so they don't deepen. This is the way of survival I learned as a survivor of violence, and it must be the way we live with the Earth.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Kim Jin-su (Survivor's Guilt)</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div>
+                        <div id="en-4">I live with the lifelong guilt of having survived, of not fighting back harder in that place. We know about the Earth's crisis, yet we fail to act. We hide behind convenience, watching idly, hoping someone else will solve it. This is like I was back then; it is an act that leaves the guilt of inaction for future generations to bear forever. Sustainable development is a matter of 'responsibility' that can no longer be postponed. If we don't act now, future generations will live resenting us. Just as the past cannot be changed, a broken Earth cannot be restored. To avoid passing on that heavy guilt to the future, we must act right now.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Seon-ju (The Pain of Speaking)</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div>
+                        <div id="en-5">It was excruciatingly painful for me to speak about what I went through. Bringing up the memory was like reliving that moment all over again. Today, scientists are constantly talking about the Earth's crisis. The data and warnings they release might be their own form of painful 'testimony.' Sustainable development begins with 'listening' to this uncomfortable truth, not turning away from it. We shouldn't close our ears just because it's hard to hear or feels irrelevant. It is our duty, as those who know the weight of memory, to listen to the painful testimony and work together to create a world where such testimony is no longer needed.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Dong-ho's Mother (The Life of One Left Behind)</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div>
+                        <div id="en-6">I live my remaining days thinking of the pain my son, Dong-ho, must have endured. Like a parent who has lost a child, we are causing future generations to lose the very ground they will live on. If our current prosperity is built upon the suffering of future generations, we are not worthy of being parents. I believe sustainable development is ultimately another name for 'love' for the next generation. The simple, desperate wish for my child to drink clean water, see green forests, and live safely. When those feelings gather, we can finally stop our destructive progress and choose a path for the future. Passing on a world where no more children are hurt—that is the only hope left for us.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="language-header">🇯🇵 日本語</div>
+                <div class="text-content">
+                    <p class="intro">（時間と空間を超え、小説の中の人物たちが「記憶の空間」に集い、それぞれの人生と思いを語り合います。）</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ドンホ（目撃者の少年）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div>
+                        <div id="ja-1">僕は友達のチョンデが目の前で死ぬのを見ました。逃げたという罪悪感から、その後は腐敗していく遺体を収拾し、彼らの最後の尊厳を守ってあげたかったんです。今の地球も同じだと思います。私たちは毎日、破壊されていく自然の姿を目撃しています。溶けていく氷河や燃える森は、あの時倒れていった人々の姿と重なって見えます。地球の持続可能な発展は、死にゆくもののそばに寄り添うことから始めるべきです。目を背けず、その痛みにまっすぐ向き合い、私たちができる最低限の尊厳だけでも守ってあげること。それが生き残った私たち、目撃者である私たちがすべき最初の仕事だと思います。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">チョンデ（死んだ友人の魂）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div>
+                        <div id="ja-2">僕は理由も分からずに死にました。僕の声は誰にも届かなかった。今、地球の多くの命も僕のように声なく死んでいます。切り倒される木々、プラスチックに閉じ込められたウミガメ、生息地を失った動物たち。彼らに声はありません。持続可能な発展とは、まさにこの声なき存在たちの声に耳を傾けることであるべきです。単に人間の便宜のために未来世代の資源を借りるだけでなく、私たちと共に生きる、しかし話すことのできない存在たちの苦しみを思いやることです。彼らの沈黙の中の叫びを聞くことができなければ、私たちの発展はまた別の暴力に過ぎないでしょう。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ウンスク（拷問の生存者）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div>
+                        <div id="ja-3">私は生き残りましたが、あの日の暴力は私の心と体に消えない痕跡を残しました。この傷は決して完全には癒えません。今、人類が地球に加えている行為も同じです。一度破壊された熱帯雨林、一度絶滅した生物は二度と戻ってきません。それは地球に永遠に残る傷です。持続可能な発展とは、「傷を残さないための努力」だと思います。成長するにしても、回復不可能な傷を残さない方法を見つけなければなりません。すでにできてしまった傷を認め、これ以上傷が深くならないように注意深く生きていくこと。それが暴力を経験して生き残った私が学んだ生存の方法であり、私たちが地球と共に生きていくべき方法です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">キム・ジンス（生き残った者の罪悪感）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div>
+                        <div id="ja-4">私はあの場所でもっと強く立ち向かえなかったこと、生き残ったことへの罪悪感を一生抱えて生きています。私たちは今、地球の危機を知りながら行動していません。便利さの陰に隠れ、誰かが解決してくれるだろうと傍観しています。これはあの時の私のように、行動しない罪悪感を未来の世代に永遠に残すことです。持続可能な発展は、もはや先延ばしにできない「責任」の問題です。今行動しなければ、未来の世代は私たちを恨みながら生きていくでしょう。過去を変えられないように、壊れてしまった地球も元には戻せません。その重い罪悪感を未来に押し付けないために、私たちは今すぐ行動しなければなりません。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ソンジュ（語ることの苦痛）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div>
+                        <div id="ja-5">私は自分が経験したことを話すのが、あまりにも苦痛でした。その記憶を呼び起こすこと自体が、再びその瞬間を生きるようだったからです。今、科学者たちは地球の危機を絶えず語っています。彼らが発表するデータや警告は、もしかしたら彼らが経験する苦痛に満ちた「証言」なのかもしれません。持続可能な発展は、この不都合な真実に目を背けず、「聞く」ことから始まります。聞くのが辛いから、自分には関係ないからと耳を塞いではいけません。苦しい証言に耳を傾け、その証言がもはや必要のない世界を作るために共に努力すること。それが記憶の重さを知る私たちが持つべき姿勢です。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ドンホの母（残された者の人生）</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div>
+                        <div id="ja-6">私は息子ドンホが経験したであろう苦痛を思いながら、残りの日々を生きています。子を失った親の心のように、私たちは未来の世代が生きるべき場所を失わせています。今の豊かさが未来の世代の苦しみの上にあるのなら、私たちは親として失格です。持続可能な発展は、結局、次の世代への「愛」の別名だと思います。自分の子供がきれいな水を飲み、青い森を見て、安全に生きてほしいと願う心。そのささやかで切実な心が集まるとき、私たちは初めて破壊的な発展を止め、未来のための道を選ぶことができるでしょう。これ以上どんな子供も傷つかない世界を譲り渡すこと、それが残された私たちの唯一の希望です。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 '읽어주기' 및 '전체 듣기' 버튼을 선택합니다.
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            // 현재 재생 중인 음성을 중지하는 함수
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 다른 음성이 재생 중이면 즉시 중지합니다.
+                    stopSpeech();
+
+                    let lang;
+                    // 버튼 클래스에 따라 언어 코드와 텍스트 대상을 결정합니다.
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0; // 읽는 속도 (기본값 1)
+                        utterance.pitch = 1.0; // 음높이 (기본값 1)
+
+                        utterance.onend = function() {
+                            console.log('Speech playback finished for ' + targetId);
+                        };
+                        
+                        // 음성 재생
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼국지 11인 영웅들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #8B4513;
+            border-radius: 5px;
+            background-color: #fffaf6;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>삼국지 11인 영웅들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. 천하를 호령했던 영웅들을 모시고, '지구의 지속가능 발전'이라는 새로운 천하대세에 대한 고견을 듣고자 합니다.</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 유비 (촉)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div><div id="ko-1">나는 평생을 인의(仁義)를 위해, 곤경에 빠진 백성을 구하기 위해 살아왔소. 지금 지구의 백성들이 기후 변화와 환경 오염으로 고통받고 있으니, 어찌 군주된 자로서 모른 척하겠소. 지속가능 발전이란, 결국 백성을 사랑하는 마음에서 시작되는 것이오. 당장의 부국강병을 위해 백성의 터전인 자연을 파괴하는 것은 인의에 어긋나는 일이오. 비록 나의 길이 더디고 현실적이지 않다고 비웃음당할지라도, 나는 모든 생명이 더불어 사는 '덕(德)의 왕국'을 세우는 길을 묵묵히 걸어갈 것이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 관우 (촉)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div><div id="ko-2">나 관운장은 한 번 맺은 의리는 목숨과도 바꾸지 않았소. 지속가능 발전은 미래 세대와의 '의리'를 지키는 문제요. 우리가 지금 누리는 풍요는 미래 세대의 자원을 빌려 쓰는 것과 같소. 이 자원을 함부로 낭비하고 더럽히는 것은, 신의를 저버리는 배신 행위와 다름없소. 나는 나의 청룡언월도로 지구를 파괴하는 모든 불의(不義)를 베어버릴 것이오. 한 치의 흔들림 없는 의로운 마음으로 미래와의 약속을 지키는 것, 그것이 대장부가 마땅히 가야 할 길이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 장비 (촉)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div><div id="ko-3">나는 복잡한 건 잘 모르오! 다만, 의롭지 못한 놈들은 내 장팔사모가 용서치 않을 뿐! 지금 지구를 병들게 하는 저 욕심 많은 놈들이 바로 내가 무찔러야 할 역적이 아니겠소? 회의만 하고 앉아 있을 시간이 어디 있단 말이오! 당장 숲을 베는 놈들, 강을 더럽히는 놈들, 힘없는 나라에 쓰레기를 버리는 놈들을 찾아내어 호되게 벌을 주어야 하오. 지속가능 발전? 그거 좋은 거 아니오? 그럼 좋은 일은 당장 해야지, 뭘 그리 재고 따진단 말이오!</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 제갈량 (촉)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div><div id="ko-4">신(臣) 제갈량, 삼가 아룁니다. 천하의 형세는 이미 위태롭고, 지구의 기운은 쇠진하였사옵니다. 이는 하루아침의 일이 아니오라, 오랜 시간 쌓여온 문제입니다. 저는 '백년지계(百年之計)'를 세울 것을 제안합니다. 지금 당장의 이익이 아니라, 100년 뒤의 미래를 내다보는 장기적인 계획이 필요합니다. 동남풍을 예측하여 적벽을 불태웠듯, 우리는 과학적 데이터를 통해 기후의 흐름을 예측하고, 가장 효과적인 '녹색 성장'의 진법을 펼쳐야 합니다. 저의 출사표가 선제(先帝)를 향한 충의였듯, 우리의 지속가능 정책은 미래 세대를 향한 충의가 되어야 할 것입니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 조운 (촉)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div><div id="ko-5">저는 장판교에서 수십만 대군을 뚫고 어린 주군을 구해냈습니다. 저의 창은 공격이 아닌, 지켜야 할 것을 위한 방어의 창이었습니다. 지금 지구의 수많은 연약한 생명들이 바로 제가 지켜야 할 '아두'와 같습니다. 멸종 위기에 처한 동물들, 파괴되는 원시림, 오염되는 바다는 인류의 탐욕이라는 적군에 둘러싸여 있습니다. 지속가능 발전이란, 이 연약한 생명들을 온몸으로 지켜내는 충의의 실천입니다. 이들을 지키지 못한다면, 우리가 이룬 그 어떤 발전도 결국 부끄러운 승리가 될 뿐입니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 조조 (위)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div><div id="ko-6">나는 천하를 얻기 위해 명분보다는 실리를 택했다. 세상은 인의만으로 다스릴 수 없는 법. 지속가능 발전? 그거 좋은 명분이군. 나는 이 명분을 이용해 새로운 천하를 얻을 것이다. '친환경 기술'이라는 새로운 무기를 개발하여 기술 패권을 장악하고, '탄소 국경세'라는 새로운 관문을 세워 다른 나라들을 통제할 것이다. 유비처럼 뜬구름 잡는 소리는 하지 않겠다. 인재를 모아 녹색 산업을 일으키고, 강력한 법으로 환경을 통제하여, 이 혼란한 시대를 평정하고 새로운 질서를 세우는 것. 그것이 나의 방식이다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 사마의 (위)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div><div id="ko-7">저는 때를 기다릴 줄 아는 사람입니다. 제갈량과의 싸움에서도, 저는 서두르지 않고 적이 스스로 지칠 때를 기다렸습니다. 지구의 지속가능성 문제도 마찬가지입니다. 지금 당장 모든 것을 바꾸려는 급진적인 시도는 오히려 더 큰 혼란을 부를 수 있습니다. 우리는 겉으로 순응하는 척하며, 조용히 힘을 길러야 합니다. 수십 년에 걸쳐 친환경 기술을 축적하고, 관련 인재를 양성하며, 국제 사회의 판도가 바뀌는 결정적인 순간을 기다려야 합니다. 가장 오래 살아남는 자가 결국 최후의 승자가 되는 법입니다.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. 손권 (오)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div><div id="ko-8">나는 북쪽의 조조와 서쪽의 유비 사이에서, 우리 강동의 실리를 지키기 위해 끊임없이 균형을 유지했소. 지금의 세계도 마찬가지요. 기후 위기를 주도한 선진국들과, 성장이 필요한 개발도상국들 사이의 갈등이 팽팽하지. 지속가능 발전은 이 둘 사이의 '외교적 균형'을 통해 이루어져야 하오. 우리는 어느 한쪽에 휩쓸리지 않고, 녹색 기술 ODA, 탄소 배출권 거래 등 실리적인 협력 방안을 찾아 우리만의 생존 전략을 세워야 하오. 명분만 좇지도, 힘에 굴복하지도 않는 현명한 외교가 우리 강동, 아니 지구 전체를 지키는 길이 될 것이오.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. 주유 (오)</span><button class="speak-btn" data-lang="ja-JP" data-target="ko-9">읽기</button></div><div id="ja-9">하늘은 왜 저 주유를 낳고, 또 제갈량을 낳았단 말인가! 그러나 적벽에서 조조의 백만 대군을 불태운 것은 바로 나, 주유의 지략이었소. 나는 판을 뒤엎는 창의적인 발상을 중시하오. 지금의 화석 연료 문명은 조조의 대선단과 같소. 정면으로 부딪혀서는 이길 수 없지. 우리는 '불'을 이용해야 하오. 바로 '태양에너지'와 '핵융합'이라는 궁극의 불 말이오. 기존의 패러다임을 완전히 바꾸는 혁신적인 기술에 모든 것을 걸어야 합니다. 제갈량처럼 점진적인 방법만 논하다가는, 결국 기회를 놓치고 말 것이오!</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">10. 여포 (기타)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div><div id="ko-10">나는 이 천하에서 가장 강한 무력을 지녔다. 내 앞을 막는 자는 누구든 벨 수 있지. 지속가능 발전? 그런 골치 아픈 것은 약한 자들이나 하는 소리다. 나는 지금 당장 나에게 가장 큰 이익을 주는 자에게 붙을 것이다. 오늘 나에게 막대한 부를 약속한다면, 나는 그를 위해 숲을 벨 수도, 강을 막을 수도 있다. 내일의 일은 내일 생각하면 그만. 이 적토마와 방천화戟이 있는 한, 나는 언제나 최강의 편에 설 것이다. 미래 세대? 그들이 나에게 무엇을 해줄 수 있단 말인가?</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">11. 동탁 (기타)</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-11">읽기</button></div><div id="ko-11">나는 황제를 끼고 낙양의 모든 재물과 미녀를 내 손아귀에 넣었다. 내 눈앞의 쾌락보다 더 중요한 것이 어디 있단 말이냐! 지구의 자원이 고갈된다고? 그 전에 내가 다 써버리면 그만이다. 숲이 사라지면 어떤가, 내 궁궐을 짓는 데 나무가 필요한 것을. 강이 오염되면 어떤가, 내 연회에 쓸 술만 있으면 족하다. 지속가능 발전은 나의 즐거움을 방해하는 귀찮은 소리에 불과하다. 미래는 오는 자들의 몫이지, 지금 즐기는 나의 몫이 아니다.</div></div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. We have gathered the heroes who once commanded the realm to hear their valuable opinions on the new great cause of our time, 'sustainable development for the Earth.'</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. Liu Bei (Shu)</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div><div id="en-1">I have lived my entire life for benevolence and righteousness, to save the people in distress. Now that the people of the Earth are suffering from climate change and environmental pollution, how can I, as a lord, pretend not to see? Sustainable development, in the end, begins with a heart that loves the people. To destroy nature, the home of the people, for the sake of immediate wealth and power, goes against benevolence. Though my path may be slow and derided as unrealistic, I will silently walk the path of building a 'kingdom of virtue' where all living beings coexist.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. Guan Yu (Shu)</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div><div id="en-2">I, Guan Yunchang, would not trade the righteousness of a sworn oath for my own life. Sustainable development is a matter of upholding 'righteousness' with future generations. The prosperity we enjoy now is like borrowing resources from them. To waste and pollute these resources recklessly is no different from an act of betrayal. With my Green Dragon Crescent Blade, I will cut down all injustice that destroys the Earth. To keep the promise with the future with an unwavering, righteous heart—that is the path a great warrior must walk.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. Zhang Fei (Shu)</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div><div id="en-3">I don't know much about complicated things! But my Serpent Halberd will not forgive any unrighteous scoundrels! Aren't those greedy villains who are making the Earth sick the very traitors I must defeat? Where is the time to sit around in meetings! We must find those who cut down forests, pollute rivers, and dump trash in weaker nations, and punish them severely right now. Sustainable development? Isn't that a good thing? Then a good thing must be done immediately, why all the hesitation and calculation!</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. Zhuge Liang (Shu)</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div><div id="en-4">Your humble servant, Zhuge Liang, reports. The state of the world is already perilous, and the Earth's energy is depleted. This is not the result of a single day, but a problem that has accumulated over a long time. I propose establishing a 'Hundred-Year Plan.' We need a long-term plan that looks not to immediate gains, but to the future a century from now. Just as I predicted the southeastern wind to burn the Red Cliffs, we must predict the flow of the climate through scientific data and unfold the most effective formation for 'green growth.' As my memorial was a pledge of loyalty to the late emperor, our sustainability policy must be a pledge of loyalty to future generations.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. Zhao Yun (Shu)</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div><div id="en-5">At Changban, I broke through an army of hundreds of thousands to rescue my young lord. My spear was not for attack, but for the defense of what must be protected. The many fragile lives on Earth today are like the young lord Adou whom I had to protect. Endangered animals, pristine forests, and polluted oceans are surrounded by the enemy army of human greed. Sustainable development is the practice of loyalty, protecting these fragile lives with one's whole being. If we fail to protect them, any development we achieve will ultimately be a shameful victory.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. Cao Cao (Wei)</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div><div id="en-6">To win the realm, I chose pragmatism over empty justifications. The world cannot be ruled by benevolence alone. Sustainable development? A fine justification. I will use this justification to win a new realm. I will seize technological supremacy by developing a new weapon called 'green technology,' and control other nations by setting up a new checkpoint called a 'carbon border tax.' I will not speak of empty dreams like Liu Bei. I will gather talent, foster green industries, and control the environment with strong laws to pacify this chaotic era and establish a new order. That is my way.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. Sima Yi (Wei)</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div><div id="en-7">I am a man who knows how to wait for the right time. Even in my battle against Zhuge Liang, I did not rush; I waited for the enemy to exhaust himself. The issue of global sustainability is the same. Radical attempts to change everything at once may only lead to greater chaos. We must feign compliance on the surface while quietly building our strength. We must accumulate green technology over decades, nurture relevant talent, and wait for the decisive moment when the global political landscape shifts. The one who endures the longest is the ultimate victor.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. Sun Quan (Wu)</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div><div id="en-8">Between Cao Cao in the north and Liu Bei in the west, I constantly maintained a balance to protect the interests of my land, Jiangdong. The world today is the same. The conflict between the developed nations that led the climate crisis and the developing nations that need growth is tense. Sustainable development must be achieved through 'diplomatic balance' between these two. We must not be swayed by either side but must formulate our own survival strategy by finding pragmatic cooperative measures like Green ODA and carbon credit trading. Wise diplomacy that neither chases empty justifications nor bows to power will be the way to protect our Jiangdong, nay, the entire Earth.</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. Zhou Yu (Wu)</span><button class="speak-btn" data-lang="ja-JP" data-target="en-9">Read</button></div><div id="ja-9">"Having given life to me, Zhou Yu, why did Heaven also give life to Zhuge Liang!" Yet, it was I, Zhou Yu, whose strategy burned Cao Cao's million-man army at Red Cliffs. I value creative thinking that turns the tables. The current fossil fuel civilization is like Cao Cao's great fleet. We cannot win by a frontal assault. We must use 'fire.' The ultimate fire of 'solar energy' and 'nuclear fusion,' that is. We must bet everything on innovative technology that completely changes the existing paradigm. If we only discuss gradual methods like Zhuge Liang, we will eventually miss our chance!</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">10. Lu Bu (Other)</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div><div id="en-10">I possess the greatest martial strength in this realm. I can cut down anyone who stands in my way. Sustainable development? Such troublesome words are for the weak. I will side with whoever offers me the greatest benefit right now. If someone promises me immense wealth today, I can cut down forests or dam rivers for them. Tomorrow's problems can be thought about tomorrow. As long as I have my Red Hare and this halberd, I will always be on the side of the strongest. Future generations? What can they do for me?</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">11. Dong Zhuo (Other)</span><button class="speak-btn" data-lang="en-US" data-target="en-11">Read</button></div><div id="en-11">I held the emperor and seized all the wealth and beauties of Luoyang for myself. What could be more important than the pleasure before my eyes? The Earth's resources are being depleted? I'll just use them all up before that happens. So what if the forests disappear, I need wood to build my palaces. So what if the rivers are polluted, as long as there is wine for my banquets. Sustainable development is just annoying noise that interrupts my pleasure. The future belongs to those who will come, not to me who enjoys the present.</div></div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。天下を号令した英雄の皆様をお招きし、「地球の持続可能な発展」という新しい天下の大勢についてのご意見を伺いたいと思います。</p>
+                    <div class="character-item"><div class="character-header"><span class="character-title">1. 劉備 (蜀)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div><div id="ja-1">私は生涯を仁義のため、苦境にある民を救うために生きてきた。今、地球の民が気候変動と環境汚染で苦しんでいるのに、どうして君主たる者が見て見ぬふりができようか。持続可能な発展とは、結局のところ、民を愛する心から始まるものだ。目先の富国強兵のために民の住処である自然を破壊することは、仁義に反する。たとえ私の道が遅々として現実的でないと笑われようとも、私はすべての生命が共に生きる「徳の王国」を築く道を黙々と歩んでいく。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">2. 関羽 (蜀)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div><div id="ja-2">我、関雲長は一度結んだ義理は命に変えても守り通した。持続可能な発展とは、未来の世代との「義理」を守る問題だ。我々が今享受している豊かさは、未来の世代の資源を借りているのと同じこと。この資源を無駄に使い、汚すことは、信義を裏切る行為に他ならない。私は我が青龍偃月刀で、地球を破壊するすべての不義を斬り捨てる所存だ。一片の揺るぎもない義の心で未来との約束を守ること、それこそが大丈夫たる者の歩むべき道だ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">3. 張飛 (蜀)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div><div id="ja-3">俺は難しいことはよく分からん！ただ、義理に背く奴は俺の丈八蛇矛が許さんだけだ！今、地球を病ませている欲深い奴らこそ、俺が討ち果たすべき逆賊ではないか？会議ばかりしている暇がどこにある！今すぐ森を伐る奴、川を汚す奴、力のない国にゴミを捨てる奴らを見つけ出し、厳しく罰を与えるべきだ。持続可能な発展？そいつは良いことじゃないか。だったら良いことは今すぐやるべきだ、何をぐずぐずしている！</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">4. 諸葛亮 (蜀)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div><div id="ja-4">臣、諸葛亮、謹んで申し上げます。天下の形勢はすでに危うく、地球の気運は衰えております。これは一朝一夕のことではなく、長い時間をかけて積み重なってきた問題です。私は「百年の計」を立てることを提案します。目先の利益ではなく、100年後の未来を見据えた長期的な計画が必要です。東南の風を予測して赤壁を燃やしたように、我々は科学的データを通じて気候の流れを予測し、最も効果的な「グリーン成長」の陣法を敷かねばなりません。私の出師の表が先帝への忠義であったように、我々の持続可能政策は未来の世代への忠義でなければなりません。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">5. 趙雲 (蜀)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div><div id="ja-5">私は長坂で数十万の大軍を突破し、若き主君を救い出しました。私の槍は攻撃のためではなく、守るべきもののための防御の槍でした。今、地球の数多の弱き命こそが、私が守るべき「阿斗様」です。絶滅の危機に瀕した動物たち、破壊される原生林、汚染される海は、人類の貪欲という敵軍に包囲されています。持続可能な発展とは、この弱き命を全身全霊で守り抜く忠義の実践です。彼らを守れなければ、我々が成し遂げたいかなる発展も、結局は恥ずべき勝利に過ぎません。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">6. 曹操 (魏)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div><div id="ja-6">私は天下を得るために、名分より実利を選んだ。世は仁義だけでは治まらぬものだ。持続可能な発展？それは良い名分だな。私はこの名分を利用して、新たな天下を手に入れる。「環境技術」という新しい武器を開発して技術覇権を握り、「炭素国境税」という新たな関所を設けて他国を制御する。劉備のような絵空事は言わん。人材を集めてグリーン産業を興し、強力な法で環境を統制し、この混乱の時代を平定して新しい秩序を打ち立てる。それが私のやり方だ。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">7. 司馬懿 (魏)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div><div id="ja-7">私は時を待つことを知る人間です。諸葛亮との戦いにおいても、私は焦らず、敵が自ら疲弊する時を待ちました。地球の持続可能性の問題も同じです。今すぐ全てを変えようとする急進的な試みは、かえって大きな混乱を招きかねません。我々は表向きは従うふりをしながら、静かに力を蓄えるべきです。数十年にわたり環境技術を蓄積し、関連人材を育成し、国際社会の勢力図が変わる決定的な瞬間を待たねばなりません。最も長く生き残った者が、最終的な勝者となるのです。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">8. 孫権 (呉)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div><div id="ja-8">私は北の曹操と西の劉備の間で、我が江東の実利を守るために絶えず均衡を保ってきた。今の世界も同じこと。気候危機を主導した先進国と、成長が必要な発展途上国との間の対立が激しい。持続可能な発展は、この両者の間の「外交的均衡」を通じて成し遂げられるべきだ。我々はどちらか一方に流されることなく、グリーン技術のODAや炭素排出権取引など、実利的な協力策を見出し、我々自身の生存戦略を立てなければならぬ。名分のみを追わず、力にも屈しない賢明な外交こそが、我が江東、いや地球全体を守る道となるだろう。</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">9. 周瑜 (呉)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div><div id="ja-9">天はなぜこの周瑜を産みながら、また諸葛亮を産んだのか！しかし、赤壁で曹操の百万の大軍を焼き払ったのは、この私、周瑜の知略であった。私は局面を覆す創造的な発想を重んじる。今の化石燃料文明は、曹操の大船団のようなもの。正面からぶつかっては勝てぬ。我々は「火」を用いるべきだ。すなわち「太陽エネルギー」と「核融合」という究極の火をな。既存のパラダイムを完全に覆す革新的な技術にすべてを賭けるべきだ。諸葛亮のように漸進的な方法ばかり論じていては、結局、好機を逃すことになるぞ！</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">10. 呂布 (他)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div><div id="ja-10">俺はこの天下で最強の武を持つ。俺の前に立ちはだかる者は誰であろうと斬るまでだ。持続可能な発展？そんな面倒なことは弱い奴らの言うことだ。俺は今、俺に最大の利益をもたらす者に付く。今日、俺に莫大な富を約束するなら、俺はその者のために森を伐り、川を堰き止めてやることもできる。明日のことなど明日考えればよい。この赤兎馬と方天画戟がある限り、俺は常に最強の側に立つ。未来の世代？奴らが俺に何をしてくれるというのだ？</div></div>
+                    <div class="character-item"><div class="character-header"><span class="character-title">11. 董卓 (他)</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-11">読む</button></div><div id="ja-11">わしは皇帝を擁し、洛陽のすべての財宝と美女をこの手にした。目の前の快楽より重要なものがどこにある！地球の資源が枯渇するだと？その前にわしがすべて使い果たしてしまえばよいことだ。森が消えて何だというのだ、わしの宮殿を建てるのに木材が必要なのだ。川が汚染されて何だというのだ、わしの宴に使う酒さえあれば十分だ。持続可能な発展など、わしの楽しみを邪魔する耳障りな雑音に過ぎん。未来は来る者たちのものだ、今を楽しむわしの知ったことではないわ。</div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    stopSpeech();
+                    
+                    const targetId = this.getAttribute('data-target');
+                    let lang;
+
+                    if (this.classList.contains('global-btn')) {
+                        if (targetId.includes('-ko')) {
+                            lang = 'ko-KR';
+                        } else if (targetId.includes('-en')) {
+                            lang = 'en-US';
+                        } else if (targetId.includes('-ja')) {
+                            lang = 'ja-JP';
+                        }
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0;
+                        utterance.pitch = 1.0;
+
+                        utterance.onend = () => console.log('Speech playback finished for ' + targetId);
+                        
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

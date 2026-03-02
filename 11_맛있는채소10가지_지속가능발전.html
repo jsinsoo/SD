@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지속 가능한 지구를 위한 채소 10종 회담</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #27ae60;
+            border-bottom: 2px solid #2ecc71;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #2ecc71;
+            border-bottom: none;
+        }
+        .speech-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 5px solid #2ecc71;
+            background-color: #eafaf1;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+        .speech-block:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .veggie-intro {
+            font-style: italic;
+            color: #1e8449;
+            background-color: #d4efdf;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+            background: #2ecc71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-left: 10px;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background: #27ae60;
+        }
+        .full-listen-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .full-listen-buttons button {
+            background-color: #007bff;
+            padding: 10px 15px;
+            font-size: 1em;
+            margin: 5px;
+        }
+        .full-listen-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .chairperson {
+            background-color: #fef9e7;
+            border-left-color: #f39c12;
+        }
+        .chairperson h3 {
+            color: #f39c12;
+        }
+    </style>
+    <script>
+        function speak(text, lang) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // 기존 음성출력 중지
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = lang;
+                utterance.rate = 0.95;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('죄송합니다. 이 브라우저에서는 음성 합성을 지원하지 않습니다.');
+            }
+        }
+
+        // 개별 듣기 버튼용 함수
+        function speakText(buttonElement) {
+            const textToSpeak = buttonElement.nextElementSibling.textContent;
+            const langClass = buttonElement.parentElement.className;
+            let langCode = '';
+            if (langClass.includes('lang-ko')) langCode = 'ko-KR';
+            else if (langClass.includes('lang-en')) langCode = 'en-US';
+            else if (langClass.includes('lang-ja')) langCode = 'ja-JP';
+            speak(textToSpeak, langCode);
+        }
+
+        // 전체 듣기 버튼용 함수
+        function listenToAll(langClass, langCode) {
+            const textElements = document.querySelectorAll(`.${langClass} span`);
+            let fullTextArray = [];
+            textElements.forEach(span => {
+                fullTextArray.push(span.textContent);
+            });
+            const fullText = fullTextArray.join('.\n\n');
+            speak(fullText, langCode);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>지속 가능한 지구를 위한 채소 10종 회담</h1>
+
+        <div class="full-listen-buttons">
+            <button onclick="listenToAll('lang-ko', 'ko-KR')">🇰🇷 한국어 전체 듣기</button>
+            <button onclick="listenToAll('lang-en', 'en-US')">🇬🇧 영어 전체 듣기</button>
+            <button onclick="listenToAll('lang-ja', 'ja-JP')">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 당근의 발언</h3>
+            <div class="veggie-intro">
+                안녕하십니까. 땅속에서 단단하게 자라나는 주황빛 뿌리채소, 당근입니다. 저의 베타카로틴 성분은 여러분의 눈을 밝게 해주지요.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 땅속 깊은 곳에서 조용히 자라며 세상의 근본을 봅니다. 지속가능한 발전이란, 저처럼 겉모습이 아닌 뿌리부터 건강해야 합니다. 지금 지구는 뿌리가 병들고 있습니다. 토양이 오염되고, 물이 부족해지고 있습니다. 저의 베타카로틴이 미래를 내다보는 밝은 눈을 선물하듯, 우리 모두는 단기적인 이익이 아닌, 백 년 뒤를 내다보는 혜안을 가져야 합니다. 문제의 근원인 토양과 물을 살리는 것부터 시작합시다. 그것이 모든 것을 건강하게 만드는 첫걸음입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I grow quietly deep in the ground, seeing the roots of the world. Sustainable development, like me, must be healthy from the roots up, not just in appearance. The Earth's roots are currently sick. The soil is polluted, and water is becoming scarce. Just as my beta-carotene gives the gift of bright eyes to see the future, we all must have the wisdom to look a hundred years ahead, not just at short-term gains. Let's start by reviving the soil and water, the root of the problem. That is the first step to making everything healthy.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私は土の奥深くで静かに育ち、世界の根幹を見ています。持続可能な開発とは、私のように見た目だけでなく、根から健康でなければなりません。今、地球は根が病んでいます。土壌が汚染され、水が不足しています。私の\betaカロテンが未来を見通す明るい瞳を贈るように、私たち皆が短期的な利益ではなく、百年先を見通す慧眼を持つべきです。問題の根源である土壌と水を蘇らせることから始めましょう。それがすべてを健康にする第一歩です。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>오이의 발언</h3>
+            <div class="veggie-intro">
+                상쾌함의 대명사, 오이입니다! 제 몸의 95%는 수분이라, 여름철 갈증 해소에 최고죠.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>제 몸을 가득 채운 시원한 물처럼, 지구에 가장 중요한 것은 깨끗한 물입니다. 하지만 지금 지구는 점점 뜨거워지며 목말라하고 있습니다. 강과 호수가 마르고, 빙하가 녹아내립니다. 지속가능성이란, 지구의 갈증을 풀어주는 것입니다. 우리가 물을 아껴 쓰고, 강을 오염시키지 않고, 빗물을 재활용하는 작은 행동들이 모일 때, 비로소 지구는 다시 저처럼 시원하고 청량한 숨을 쉴 수 있을 것입니다. 물이 생명의 전부입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Like the cool water that fills my body, the most important thing for the Earth is clean water. But right now, the Earth is getting hotter and thirstier. Rivers and lakes are drying up, and glaciers are melting. Sustainability is about quenching the Earth's thirst. When our small actions of conserving water, not polluting rivers, and recycling rainwater come together, the Earth will finally be able to take a cool and refreshing breath like me. Water is everything to life.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の体を満たす涼しい水のように、地球にとって最も重要なものはきれいな水です。しかし今、地球はますます熱くなり、喉が渇いています。川や湖は干上がり、氷河は溶けています。持続可能性とは、地球の渇きを癒すことです。私たちが水を大切に使い、川を汚さず、雨水をリサイクルする小さな行動が集まるとき、初めて地球は再び私のように涼しく清涼な息をすることができるでしょう。水は生命のすべてです。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>상추의 발언</h3>
+            <div class="veggie-intro">
+                저는 넓고 부드러운 잎을 가진 상추입니다. 삼겹살을 감싸 안을 때 가장 빛나지요.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>제가 고기를 감싸 안아 맛의 조화를 이루듯, 우리는 모든 생명을 너그럽게 감싸 안아야 합니다. 지금 인류는 너무 자신만을 생각하며 다른 생명들을 밀어내고 있습니다. 숲을 밀어내고 공장을 짓고, 다른 동물의 서식지를 빼앗습니다. 지속가능성이란, 제가 가진 넓은 잎처럼, 다른 존재를 위한 자리를 내어주고 함께 공존하는 '포용'의 지혜입니다. 인간 중심의 생각을 버리고, 모든 생명이 함께 어우러져 살아가는 '지구라는 쌈'을 만들어야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Just as I wrap around meat to create a harmony of flavors, we must generously embrace all life. Right now, humanity is too self-centered, pushing other lives away. We push away forests to build factories and take away the habitats of other animals. Sustainability is the wisdom of 'inclusion,' like my wide leaves, making space for other beings and coexisting. We must abandon human-centric thinking and create a 'global wrap' where all life lives in harmony.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私が肉を包み込み、味の調和を成すように、私たちはすべての生命を寛大に包み込むべきです。今、人類はあまりにも自己中心的で、他の生命を押しやっています。森を押しやり工場を建て、他の動物の生息地を奪っています。持続可能性とは、私が持つ広い葉のように、他の存在のための場所を譲り、共に共存する「包容」の知恵です。人間中心の考えを捨て、すべての生命が共に調和して生きる「地球というサンチュ」を作らなければなりません。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>시금치의 발언</h3>
+            <div class="veggie-intro">
+                뽀빠이의 힘! 철분과 엽산이 풍부한 시금치입니다. 나물로 무쳐 먹으면 밥 한 그릇 뚝딱이죠.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>사람들은 저를 먹고 힘을 냅니다. 지금 지구는 힘을 잃고 빈혈에 걸린 것처럼 시들어가고 있습니다. 숲은 사라지고, 땅은 사막으로 변하며 지구의 '피'와 같은 생명력이 줄어들고 있습니다. 지속가능성이란, 지구에게 저와 같은 '힘'을 되돌려주는 것입니다. 나무를 심어 지구의 철분을 보충하고, 유기농법으로 땅의 기력을 회복시켜야 합니다. 우리가 지구에게 힘을 줄 때, 지구도 우리에게 건강한 에너지를 나눠줄 것입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>People gain strength by eating me. Right now, the Earth is losing its strength and withering as if it has anemia. Forests are disappearing, land is turning into desert, and the Earth's vitality, like its 'blood,' is diminishing. Sustainability is about returning 'strength' like mine to the Earth. We must supplement the Earth's iron by planting trees and restore the land's energy with organic farming. When we give strength to the Earth, the Earth will also share its healthy energy with us.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>人々は私を食べて力を得ます。今、地球は力を失い、貧血にかかったかのように萎れています。森は消え、土地は砂漠に変わり、地球の「血」のような生命力が減少しています。持続可能性とは、地球に私のような「力」を返すことです。木を植えて地球の鉄分を補給し、有機農法で土地の気力を回復させなければなりません。私たちが地球に力を与えるとき、地球も私たちに健康なエネルギーを分け与えてくれるでしょう。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>배추의 발언</h3>
+            <div class="veggie-intro">
+                한국인의 소울푸드, 김치의 주인공 배추입니다! 겹겹이 쌓인 제 속잎은 고소하고 달콤하답니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 소금에 절여지고, 매운 양념에 버무려져 오랜 시간 땅속에서 발효되어야 비로소 '김치'라는 새로운 가치로 태어납니다. 이처럼 인고의 시간이 필요합니다. 지속가능성이란, 당장의 편리함과 빠른 성장을 포기하는 '절임'의 과정을 견디는 것입니다. 화석 연료를 줄이고, 소비를 절제하는 것은 고통스러울 수 있습니다. 하지만 이 과정을 거쳐야만 우리 사회는 '지속가능성'이라는 맛있는 김치처럼, 더 깊고 풍부한 가치를 지닌 공동체로 발효될 수 있습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I am salted, mixed with spicy seasonings, and fermented underground for a long time to be reborn with a new value called 'Kimchi.' This process requires time and endurance. Sustainability is about enduring the 'salting' process of giving up immediate convenience and rapid growth. Reducing fossil fuels and restraining consumption can be painful. But only by going through this process can our society ferment into a community with deeper and richer values, like the delicious Kimchi of 'sustainability.'</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私は塩漬けにされ、辛い薬味と混ぜ合わされ、長い時間地中で発酵して初めて「キムチ」という新しい価値に生まれ変わります。このように、忍耐の時間が必要です。持続可能性とは、目先の便利さや急速な成長を諦める「塩漬け」の過程に耐えることです。化石燃料を減らし、消費を節制することは苦痛かもしれません。しかし、この過程を経てこそ、私たちの社会は「持続可能性」という美味しいキムチのように、より深く豊かな価値を持つ共同体として発酵することができるのです。</span></p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>양배추의 발언</h3>
+            <div class="veggie-intro">
+                둥근 공 모양, 샐러드의 아삭함을 책임지는 양배추입니다. 제 속에는 위 건강에 좋은 비타민U가 숨어있지요.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저를 잘라보면 수많은 잎이 겹겹이 쌓여 하나의 공을 이룹니다. 지구 문제도 마찬가지입니다. 환경 문제는 경제, 사회, 정치, 문화와 겹겹이 얽혀있습니다. 겉잎 하나만 떼어낸다고 해결되지 않습니다. 지속가능성이란, 이 복잡하게 얽힌 문제의 층들을 하나씩 차분하게 벗겨내며 근본적인 해결책을 찾는 것입니다. 또한, 제가 인간의 속을 편안하게 해주듯, 우리는 지구의 속, 즉 토양과 지질을 건강하게 지켜야만 겉으로 드러나는 모든 생명을 지킬 수 있습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>If you cut me open, you will see countless leaves layered on top of each other to form a single ball. Earth's problems are the same. Environmental issues are layered and intertwined with economy, society, politics, and culture. It cannot be solved by simply peeling off one outer leaf. Sustainability is about calmly peeling back these complexly intertwined layers of problems one by one to find a fundamental solution. Also, just as I comfort the human stomach, we must protect the Earth's core—its soil and geology—to protect all the life that appears on the surface.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私を切ってみると、数え切れないほどの葉が幾重にも重なって一つの球を成しています。地球の問題も同じです。環境問題は経済、社会、政治、文化と幾重にも絡み合っています。外側の葉を一枚剥がしただけでは解決しません。持続可能性とは、この複雑に絡み合った問題の層を一枚ずつ落ち着いて剥がし、根本的な解決策を見つけることです。また、私が人間の胃を安らかにするように、私たちは地球の内部、すなわち土壌と地質を健康に守ってこそ、表面に現れるすべての生命を守ることができます。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>고추의 발언</h3>
+            <div class="veggie-intro">
+                작지만 강렬한 맛! 한국 음식의 매운맛을 책임지는 고추입니다. 제 캡사이신 맛 좀 보실래요?
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>미지근한 태도로는 아무것도 바꿀 수 없습니다. 때로는 저의 매운맛처럼 정신이 번쩍 드는 강력한 충격이 필요합니다. 기후 위기라는 현실을 외면하고 있는 세상에 경종을 울려야 합니다. 지속가능성이란, '이 정도면 괜찮겠지' 하는 안일한 생각을 버리는 '매운맛' 정신입니다. 불편하더라도 진실을 마주하고, 귀찮더라도 행동해야 합니다. 저의 매운맛이 입맛을 돋우듯, 기후 위기에 대한 따끔한 경고가 세상을 바꾸는 행동을 촉발하는 계기가 되어야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Nothing can be changed with a lukewarm attitude. Sometimes, a powerful shock that awakens the senses, like my spicy taste, is needed. We must sound the alarm for a world that is ignoring the reality of the climate crisis. Sustainability is the 'spicy' spirit of abandoning the complacent thought that 'this much should be fine.' We must face the uncomfortable truth and act even if it's bothersome. Just as my spiciness stimulates the appetite, the sharp warning about the climate crisis must trigger actions that change the world.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>生ぬるい態度では何も変えられません。時には私の辛さのように、目が覚めるような強力な衝撃が必要です。気候危機という現実から目を背けている世界に警鐘を鳴らさなければなりません。持続可能性とは、「このくらいなら大丈夫だろう」という安易な考えを捨てる「辛口」の精神です。不便であっても真実に向き合い、面倒であっても行動すべきです。私の辛さが食欲をそそるように、気候危機に対する痛烈な警告が、世界を変える行動を触発するきっかけとなるべきです。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>토마토의 발언</h3>
+            <div class="veggie-intro">
+                저는 과일일까요, 채소일까요? 붉은빛 라이코펜이 가득한 토마토입니다!
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>사람들은 저를 두고 과일이냐 채소냐 논쟁하지만, 저는 그저 토마토일 뿐입니다. 중요한 것은 이름이 아니라, 제가 가진 가치입니다. 마찬가지로, 우리는 '환경 문제'와 '경제 문제'를 자꾸만 분리해서 싸웁니다. 하지만 이 둘은 분리될 수 없는 하나입니다. 지속가능성이란, 이러한 이분법적 사고의 경계를 허무는 것입니다. 저의 붉은 라이코펜 성분이 노화를 막아주듯, 환경과 경제가 함께 건강해지는 방법을 찾아 지구의 노화를 막아야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>People debate whether I am a fruit or a vegetable, but I am simply a tomato. What's important is not the label, but the value I hold. Similarly, we constantly fight by separating 'environmental problems' and 'economic problems.' But these two cannot be separated; they are one. Sustainability is about breaking down the boundaries of this dichotomous thinking. Just as my red lycopene helps prevent aging, we must find ways for the environment and the economy to be healthy together, to prevent the aging of the Earth.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>人々は私を果物か野菜かと論争しますが、私はただのトマトです。重要なのは名前ではなく、私が持つ価値です。同様に、私たちは「環境問題」と「経済問題」を常に分離して争います。しかし、この二つは分離できない一つです。持続可能性とは、このような二分法的思考の境界を打ち破ることです。私の赤いリコピン成分が老化を防ぐように、環境と経済が共に健康になる方法を見つけ、地球の老化を防がなければなりません。</span></p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>브로콜리의 발언</h3>
+            <div class="veggie-intro">
+                작은 나무들이 모인 숲처럼 생긴, 슈퍼푸드 브로콜리입니다. 비타민C와 항암 성분이 풍부하죠.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>제 모습은 마치 작은 숲과 같습니다. 이 작은 송이 하나하나가 모여 저를 이루듯, 지구의 건강은 거대한 아마존 숲뿐만 아니라, 우리 동네의 작은 공원, 가로수 한 그루에 달려있습니다. 지속가능성이란, 이 작은 '브로콜리 숲'들을 소중히 여기는 것입니다. 도시의 자투리땅에 나무를 심고, 옥상에 정원을 가꾸는 모든 행동이 모여 지구라는 거대한 숲을 다시 푸르게 만들 것입니다. 저의 항암 성분이 몸의 병을 막듯, 우리 곁의 작은 숲들이 지구의 병을 막아줄 것입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>My shape is like a small forest. Just as each of these small florets gathers to form me, the Earth's health depends not only on the giant Amazon rainforest but also on the small parks in our neighborhoods and single street trees. Sustainability is about cherishing these small 'broccoli forests.' All actions, like planting trees in vacant city lots and tending rooftop gardens, will come together to make the great forest of Earth green again. Just as my anti-cancer compounds prevent diseases in the body, the small forests beside us will prevent diseases of the Earth.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の姿はまるで小さな森のようです。この小さな花蕾一つ一つが集まって私を形成するように、地球の健康は巨大なアマゾンの森だけでなく、私たちの町の小さな公園や、一本の街路樹にかかっています。持続可能性とは、この小さな「ブロッコリーの森」を大切にすることです。都市の空き地に木を植え、屋上に庭園を作るすべての行動が集まって、地球という巨大な森を再び緑豊かにするでしょう。私の抗がん成分が体の病を防ぐように、私たちのそばの小さな森が地球の病を防いでくれるでしょう。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>가지의 발언</h3>
+            <div class="veggie-intro">
+                매끈한 보랏빛 피부가 매력적인 가지입니다. 기름을 잘 흡수해서 볶음이나 구이 요리에 잘 어울리죠.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 기름을 스펀지처럼 빨아들입니다. 지난 수백 년간, 지구의 땅과 바다는 인류가 쏟아붓는 기름과 오염물질을 저처럼 묵묵히 흡수해왔습니다. 하지만 이제 한계에 다다랐습니다. 더 이상 지구가 모든 오염을 감당할 수 없습니다. 지속가능성이란, 더 이상 지구라는 스펀지에 오염이라는 기름을 붓지 않는 것입니다. 저의 보라색 안토시아닌 성분이 우리 몸을 건강하게 하듯, 이제는 우리가 지구의 독소를 제거하고 치유하는 '항산화제' 역할을 해야 할 때입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I absorb oil like a sponge. For the past few hundred years, the Earth's land and sea have silently absorbed the oil and pollutants poured out by humanity, just like me. But now, they have reached their limit. The Earth can no longer handle all the pollution. Sustainability means no longer pouring the oil of pollution onto the sponge called Earth. Just as my purple anthocyanin content keeps our bodies healthy, it is now our time to act as an 'antioxidant' to remove and heal the toxins of the Earth.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私は油をスポンジのように吸収します。過去数百年間、地球の土地と海は、人類が注ぎ込む油や汚染物質を、私のように黙々と吸収してきました。しかし、もはや限界に達しています。これ以上、地球はすべての汚染を抱えきれません。持続可能性とは、もはや地球というスポンジに汚染という油を注がないことです。私の紫のアントシアニン成分が私たちの体を健康にするように、今度は私たちが地球の毒素を除去し、癒す「抗酸化剤」の役割を果たすべき時です。</span></p>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 당근의 폐회사</h3>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>오늘 우리는 각자의 색과 맛, 모양으로 지속가능성을 이야기했습니다. 오이의 물, 상추의 포용, 시금치의 힘, 배추의 인내, 고추의 열정, 그리고 다른 모든 채소들의 지혜가 모였습니다. 이제 우리는 이 다양한 영양분들을 모아, '지속가능한 지구'라는 건강한 샐러드를 만들어야 합니다. 밭으로 돌아갑시다. 그리고 우리 각자의 자리에서, 미래 세대의 밥상에 오를 건강한 씨앗을 심읍시다. 그것이 땅에서 온 우리 채소들의 약속입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Today, we have discussed sustainability with our own colors, tastes, and shapes. The water of the cucumber, the inclusion of the lettuce, the strength of the spinach, the patience of the napa cabbage, the passion of the chili pepper, and the wisdom of all other vegetables have gathered. Now, we must gather these various nutrients to make a healthy salad called 'a sustainable Earth.' Let's go back to the fields. And in our respective places, let's plant healthy seeds that will be served on the tables of future generations. That is the promise of us vegetables, who came from the earth.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>今日、私たちはそれぞれの色と味、形で持続可能性を語りました。キュウリの水、サンチュの包容、ホウレンソウの力、白菜の忍耐、唐辛子の情熱、そして他のすべての野菜の知恵が集まりました。今、私たちはこれらの多様な栄養分を集め、「持続可能な地球」という健康なサラダを作らなければなりません。畑に帰りましょう。そして、私たちそれぞれの場所で、未来の世代の食卓に上る健康な種を蒔きましょう。それが、土から来た私たち野菜の約束です。</span></p>
+        </div>
+
+    </div>
+</body>
+</html>

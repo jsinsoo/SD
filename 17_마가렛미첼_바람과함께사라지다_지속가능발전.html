@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>『바람과 함께 사라지다』 인물들의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .character-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid #a52a2a;
+            border-radius: 5px;
+            background-color: #fffafafa;
+        }
+        .character-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .character-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>『바람과 함께 사라지다』 인물들의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro">(타라의 붉은 노을 아래, 시대를 초월한 인물들이 모여 대화를 나눕니다.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">스칼렛 오하라</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-scarlett">읽기</button></div>
+                        <div id="ko-scarlett">저는 전쟁으로 모든 것이 불타버린 타라를 다시 일으켜 세워야 했습니다. 굶지 않기 위해, 내 사람들을 지키기 위해 억척스럽게 살았죠. 지구의 지속가능성이요? 제게는 거창한 이상보다 당장 살아남는 게 중요합니다. 하지만 이것 하나는 압니다. 땅이 없으면 목화도 없고, 먹을 것도 없다는 걸요. 지금의 풍요를 위해 지구의 모든 것을 뽑아 쓴다면, 우리 자식들은 무엇을 먹고 살죠? "내일은 내일의 태양이 뜬다"고 말했지만, 그 태양이 뜰 땅이 없다면 무슨 소용이겠어요. 지속가능성이란 결국 내일의 타라를 지키는 일입니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">레트 버틀러</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-rhett">읽기</button></div>
+                        <div id="ko-rhett">저는 언제나 현실을 직시하는 사람입니다. 남부의 신사들이 명예를 외치며 자멸할 때, 저는 전쟁의 본질이 돈과 이권임을 알았죠. 지금 여러분이 말하는 '지속가능 발전'도 마찬가지입니다. 각국 정상들이 모여 그럴듯한 약속을 하지만, 뒤에서는 여전히 자국의 이익을 위해 지구를 파괴하고 있죠. 위선일 뿐입니다. 솔직히 말해서, 이기적인 인간들이 변할 거라 기대하지 않습니다. "Frankly, my dear, I don't give a damn." 하지만 내 딸 보니가 살아갈 세상이었다면... 아마 달랐을 겁니다. 결국 지속가능성이란 우리가 진정으로 사랑하는 다음 세대를 위해 기꺼이 손해를 감수할 용기가 있느냐의 문제일 겁니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">애슐리 윌크스</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-ashley">읽기</button></div>
+                        <div id="ko-ashley">제가 사랑했던 남부는 사라졌습니다. 그 고결한 정신과 아름다운 전통은 이제 기억 속에만 존재하죠. 저는 그 사라져 가는 것들의 가치를 믿었습니다. 지금의 지구도 마찬가지 아닐까요? 우리는 경제 발전이라는 명목 아래 숲과 강, 오래된 공동체의 아름다움을 잃어가고 있습니다. 이것은 단순히 자원의 문제가 아닙니다. 우리 영혼의 일부가 사라지는 것과 같습니다. 진정한 지속가능 발전은 단순히 기술로 환경 문제를 해결하는 것을 넘어, 우리가 잃어버린 것들의 가치를 기억하고, 자연과 조화롭게 살아가던 옛 정신을 되찾으려는 노력에서 시작되어야 합니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">멜러니 해밀턴</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-melanie">읽기</button></div>
+                        <div id="ko-melanie">전쟁 속에서 저는 모두가 서로를 미워할 때에도, 사람에 대한 믿음을 잃지 않으려 노력했습니다. 스칼렛의 강인함 속에서 희망을 보았고, 레트의 냉소 뒤에 숨은 따뜻함을 믿었죠. 지구의 지속가능성도 결국 서로에 대한 믿음과 사랑의 문제라고 생각해요. 우리 모두는 보이지 않는 끈으로 연결되어 있으니까요. 한 지역의 환경 파괴는 결국 다른 모든 이의 고통으로 돌아옵니다. 지속가능한 미래를 만드는 것은 거대한 계획이 아니라, 내 이웃을 돌보고, 약한 존재를 감싸 안으며, 우리 모두가 하나의 공동체임을 깨닫는 작은 친절과 헌신에서 시작되는 것이라고 믿습니다.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">제럴드 오하라</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-gerald">읽기</button></div>
+                        <div id="ko-gerald">내 딸 스칼렛에게 항상 말했지. 세상에서 유일하게 가치 있는 것은 바로 '땅'이라고! 돈도, 명예도 바람처럼 사라지지만, 땅은 영원하니까. 타라의 붉은 흙이 우리 가문의 뿌리였던 것처럼, 이 지구라는 땅은 인류 전체의 뿌리다. 그런데 지금 사람들은 뿌리를 망가뜨리면서 열매만 탐하고 있구나. 어리석은 짓이다! 지속가능 발전? 그런 어려운 말은 모르겠다. 하지만 이것만은 알아둬라. 땅을 사랑하지 않는 자는 결국 모든 것을 잃게 될 것이다. 땅을 지키는 것이야말로 우리 후손에게 물려줄 수 있는 유일하고도 진정한 유산이다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro">(Under Tara's red sunset, timeless characters gather for a conversation.)</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Scarlett O'Hara</span><button class="speak-btn" data-lang="en-US" data-target="en-scarlett">Read</button></div>
+                        <div id="en-scarlett">I had to rebuild Tara from the ashes of war. To keep from starving, to protect my people, I lived fiercely. Sustainability? To me, surviving today is more important than grand ideals. But I know one thing: without land, there's no cotton, and nothing to eat. If we use up everything the Earth has for today's prosperity, what will our children live on? I used to say, "Tomorrow is another day," but what good is that if there's no land for that sun to rise upon? Sustainability, after all, is about saving Tara for tomorrow.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Rhett Butler</span><button class="speak-btn" data-lang="en-US" data-target="en-rhett">Read</button></div>
+                        <div id="en-rhett">I have always been a man who faces reality. While the gentlemen of the South destroyed themselves shouting of honor, I knew the war was about money and interests. It's the same with this 'sustainable development' you all speak of. World leaders gather and make handsome promises, but behind the scenes, they continue to destroy the planet for their own gain. It's hypocrisy. Frankly, my dear, I don't expect selfish human beings to change. "Frankly, my dear, I don't give a damn." But if it were a world for my Bonnie to live in... perhaps it would have been different. In the end, sustainability is a question of whether we have the courage to willingly take a loss for the next generation we truly love.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Ashley Wilkes</span><button class="speak-btn" data-lang="en-US" data-target="en-ashley">Read</button></div>
+                        <div id="en-ashley">The South I loved is gone. Its noble spirit and beautiful traditions exist only in memory. I believed in the value of those vanishing things. Isn't it the same with the Earth today? In the name of economic progress, we are losing the beauty of our forests, rivers, and old communities. This isn't just a matter of resources; it's as if a part of our soul is disappearing. True sustainable development must begin not merely by solving environmental problems with technology, but by remembering the value of what we have lost and striving to reclaim the old spirit of living in harmony with nature.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Melanie Hamilton</span><button class="speak-btn" data-lang="en-US" data-target="en-melanie">Read</button></div>
+                        <div id="en-melanie">In the midst of war, even when everyone hated each other, I tried not to lose my faith in people. I saw hope in Scarlett's strength and believed in the warmth hidden behind Rhett's cynicism. I think sustainability is also a matter of faith and love for one another. We are all connected by invisible threads. Environmental destruction in one region eventually returns as suffering for all others. Building a sustainable future doesn't start with grand plans, but with small acts of kindness and devotion—caring for our neighbors, embracing the weak, and realizing that we are all one community.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">Gerald O'Hara</span><button class="speak-btn" data-lang="en-US" data-target="en-gerald">Read</button></div>
+                        <div id="en-gerald">I always told my Scarlett, "The land is the only thing in the world worth workin' for, worth fightin' for, worth dyin' for!" Money and honor can vanish like the wind, but the land is forever. Just as the red earth of Tara was the root of our family, this planet Earth is the root of all humankind. But people now are destroying the roots while coveting only the fruit. It's foolishness! Sustainable development? I don't know such difficult words. But know this: he who does not love the land will eventually lose everything. Protecting the land is the only true legacy we can pass on to our descendants.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro">（タラの赤い夕焼けの下、時代を超えた人物たちが集い、対話を交わします。）</p>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">スカーレット・オハラ</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-scarlett">読む</button></div>
+                        <div id="ja-scarlett">私は戦争で全てが燃え尽きたタラを、もう一度立て直さなければなりませんでした。飢えないために、私の大切な人たちを守るために、がむしゃらに生きてきましたわ。地球の持続可能性ですって？私にとっては、壮大な理想より、今を生き抜くことが重要です。でも、一つだけ分かっていることがあります。土地がなければ綿も育たないし、食べるものもないということです。今の豊かさのために地球の全てを使い果たしてしまったら、私たちの子孫は何を食べて生きていくのでしょう？「明日は明日の風が吹く」と言いましたが、その風が吹くべき土地がなければ、何の意味があるというのですか。持続可能性とは、結局、明日のタラを守ることなのです。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">レット・バトラー</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-rhett">読む</button></div>
+                        <div id="ja-rhett">私はいつでも現実を直視する人間だ。南部の紳士たちが名誉を叫びながら自滅していく時、私は戦争の本質が金と利権だと知っていた。君たちが言う「持続可能な発展」も同じことさ。各国の首脳が集まっては聞こえのいい約束をするが、裏では自国の利益のために地球を破壊し続けている。偽善に過ぎない。正直なところ、利己的な人間が変わるとは期待していない。「Frankly, my dear, I don't give a damn.」だが、もし私の娘ボニーが生きる世界だったなら…おそらく違っただろう。結局、持続可能性とは、私たちが心から愛する次の世代のために、喜んで損失を甘受する勇気があるかどうかの問題なのだ。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">アシュリー・ウィルクス</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-ashley">読む</button></div>
+                        <div id="ja-ashley">私が愛した南部は消え去りました。その高潔な精神と美しい伝統は、今や記憶の中にしか存在しません。私は、その消えゆくものの価値を信じていました。今の地球も同じではないでしょうか。私たちは経済発展という名の下に、森や川、古き良き共同体の美しさを失いつつあります。これは単なる資源の問題ではありません。私たちの魂の一部が消えていくのと同じことです。真の持続可能な発展とは、単に技術で環境問題を解決することを超え、私たちが失ったものの価値を記憶し、自然と調和して生きていた古の精神を取り戻そうとする努力から始まるべきなのです。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">メラニー・ハミルトン</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-melanie">読む</button></div>
+                        <div id="ja-melanie">戦争の最中、誰もが憎しみ合っていた時でさえ、私は人々への信頼を失わないように努めました。スカーレットの強さの中に希望を見出し、レットの皮肉の裏に隠された温かさを信じていました。地球の持続可能性も、結局は互いへの信頼と愛の問題だと思うのです。私たちは皆、見えない絆で結ばれているのですから。ある地域の環境破壊は、いずれ他のすべての人々の苦しみとなって返ってきます。持続可能な未来を築くことは、壮大な計画からではなく、隣人を思いやり、弱い存在を抱きしめ、私たち全員がひとつの共同体であることを悟る、小さな親切と献身から始まると信じています。</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-header"><span class="character-title">ジェラルド・オハラ</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-gerald">読む</button></div>
+                        <div id="ja-gerald">娘のスカーレットにはいつも言っていた。「この世で唯一価値があるのは『土地』だ！」と。金も名誉も風のように消えるが、土地は永遠だからな。タラの赤い土が我ら一族の根であったように、この地球という土地は人類全体の根だ。だというのに、今の人間は根を傷つけながら実だけを貪っている。愚かなことだ！持続可能な発展？そんな難しい言葉は知らん。だが、これだけは覚えておけ。土地を愛さない者は、結局すべてを失うことになる。土地を守ることこそ、我々が子孫に残せる唯一にして真の遺産なのだ。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 '읽어주기' 및 '전체 듣기' 버튼을 선택합니다.
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            // 현재 재생 중인 음성을 중지하는 함수
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 다른 음성이 재생 중이면 즉시 중지합니다.
+                    stopSpeech();
+
+                    let lang;
+                    // 버튼 클래스에 따라 언어 코드와 텍스트 대상을 결정합니다.
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0; // 읽는 속도 (기본값 1)
+                        utterance.pitch = 1.0; // 음높이 (기본값 1)
+
+                        utterance.onend = function() {
+                            console.log('Speech playback finished for ' + targetId);
+                        };
+                        
+                        // 음성 재생
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

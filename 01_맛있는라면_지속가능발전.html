@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지속 가능한 지구를 위한 라면 정상회의</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #d35400;
+            border-bottom: 2px solid #e67e22;
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 40px;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #e67e22;
+            border-bottom: none;
+        }
+        .speech-block {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-left: 5px solid #e67e22;
+            background-color: #fdf2e9;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease;
+        }
+        .speech-block:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .ramen-intro {
+            font-style: italic;
+            color: #c0392b;
+            background-color: #fadbd8;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            margin-left: 10px;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background: #d35400;
+        }
+        .full-listen-buttons {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+        }
+        .full-listen-buttons button {
+            background-color: #007bff;
+            padding: 10px 15px;
+            font-size: 1em;
+            margin: 5px;
+        }
+        .full-listen-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .chairperson {
+            background-color: #fcf3cf;
+            border-left-color: #f1c40f;
+        }
+        .chairperson h3 {
+            color: #f1c40f;
+        }
+    </style>
+    <script>
+        function speak(text, lang) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel(); // 기존 음성출력 중지
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = lang;
+                utterance.rate = 0.95;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('죄송합니다. 이 브라우저에서는 음성 합성을 지원하지 않습니다.');
+            }
+        }
+
+        // 개별 듣기 버튼용 함수
+        function speakText(buttonElement) {
+            const textToSpeak = buttonElement.nextElementSibling.textContent;
+            const langClass = buttonElement.parentElement.className;
+            let langCode = '';
+            if (langClass.includes('lang-ko')) langCode = 'ko-KR';
+            else if (langClass.includes('lang-en')) langCode = 'en-US';
+            else if (langClass.includes('lang-ja')) langCode = 'ja-JP';
+            speak(textToSpeak, langCode);
+        }
+
+        // 전체 듣기 버튼용 함수
+        function listenToAll(langClass, langCode) {
+            const textElements = document.querySelectorAll(`.${langClass} span`);
+            let fullTextArray = [];
+            textElements.forEach(span => {
+                fullTextArray.push(span.textContent);
+            });
+            const fullText = fullTextArray.join('.\n\n');
+            speak(fullText, langCode);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>지속 가능한 지구를 위한 라면 정상회의</h1>
+
+        <div class="full-listen-buttons">
+            <button onclick="listenToAll('lang-ko', 'ko-KR')">🇰🇷 한국어 전체 듣기</button>
+            <button onclick="listenToAll('lang-en', 'en-US')">🇬🇧 영어 전체 듣기</button>
+            <button onclick="listenToAll('lang-ja', 'ja-JP')">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 신라면의 발언</h3>
+            <div class="ramen-intro">
+                안녕하십니까! 한국인의 매운맛, 그 표준을 제시하는 신라면입니다. 저의 얼큰하고 깊은 국물 맛은 전 세계인의 입맛을 사로잡았지요.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>오늘 회의의 주제인 '지속 가능한 지구'는 마치 저의 국물과도 같습니다. 표고버섯, 소고기, 고추, 파 등 다양한 재료가 황금 비율로 어우러져야 깊은 맛을 내듯이, 지구 역시 경제, 사회, 환경이라는 다양한 요소가 조화를 이루어야 합니다. 지금 지구는 너무 뜨겁고 자극적입니다. 기후변화라는 고추기름은 너무 많이 들어갔고, 생물다양성이라는 건더기 스프는 점점 줄어들고 있습니다. 우리는 모든 재료가 제 맛을 내는 '맛있는 균형'을 찾아야 합니다. 어느 한쪽만 강해서는 안 됩니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Today's topic, 'a sustainable Earth,' is much like my broth. Just as various ingredients like shiitake mushrooms, beef, chili peppers, and green onions must blend in a golden ratio to create a deep flavor, the Earth also requires harmony among diverse elements like the economy, society, and the environment. Right now, the Earth is too hot and stimulating. Too much chili oil, representing climate change, has been added, while the dehydrated vegetable mix, representing biodiversity, is diminishing. We must find a 'delicious balance' where every ingredient brings out its true flavor. No single side should be overpowering.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>本日の会議のテーマである「持続可能な地球」は、まるで私のスープのようです。シイタケ、牛肉、唐辛子、ネギなど、様々な材料が黄金比で調和してこそ深い味わいが出るように、地球もまた経済、社会、環境という多様な要素が調和を成さねばなりません。今の地球はあまりにも熱く、刺激的です。気候変動というラー油は入れすぎで、生物多様性という具材スープはだんだん減っています。私たちはすべての材料がそれぞれの味を出す「美味しいバランス」を見つけなければなりません。どれか一つだけが強すぎてはいけないのです。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>짜파게티의 발언</h3>
+            <div class="ramen-intro">
+                일요일의 파트너, 짜파게티입니다! 저는 짜장 라면의 대표주자로, 비벼 먹는 즐거움을 알려드렸죠.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 면과 짜장스프, 그리고 올리브유가 잘 섞여야 제 맛을 냅니다. 지속가능성도 마찬가지입니다. 선진국과 개발도상국, 기업과 시민, 그리고 자연이 서로를 탓하며 따로 놀아서는 안 됩니다. 모두가 하나의 그릇 안에서 잘 비벼져야 합니다. 특히 미래 세대인 청소년들이 이 '비빔'의 과정에서 소외되어서는 안 됩니다. 그들이야말로 새로운 맛을 창조할 신선한 재료이기 때문입니다. 모두가 함께 즐겁게 비벼 만들어가는 지속 가능한 지구, 정말 맛있지 않겠습니까?</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I bring out my true flavor only when the noodles, black bean sauce powder, and olive oil are mixed well together. Sustainability is the same. Developed and developing countries, corporations and citizens, and nature should not blame each other and play separately. Everyone must be mixed well in one bowl. Especially, the youth, the future generation, should not be alienated from this 'mixing' process. They are the fresh ingredients that will create a new flavor. A sustainable Earth, deliciously mixed and created by everyone, wouldn't that be truly tasty?</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私は麺とチャジャンスープ、そしてオリーブオイルがよく混ざってこそ、本来の味が出ます。持続可能性も同じです。先進国と開発途上国、企業と市民、そして自然が互いを責め合ってバラバラに動いてはなりません。皆が一つのお椀の中でよく混ざり合わなければなりません。特に、未来の世代である青少年が、この「混ぜ合わせ」の過程から疎外されてはなりません。彼らこそが新しい味を創造する新鮮な材料だからです。皆で一緒に楽しく混ぜて作り上げる持続可能な地球、本当に美味しいと思いませんか？</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>불닭볶음면의 발언</h3>
+            <div class="ramen-intro">
+                화끈한 매운맛의 아이콘, 불닭볶음면 등장입니다! 제 이름만 들어도 땀이 나시죠?
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>사람들은 저를 먹으며 '도전'이라고 말합니다. 눈물 콧물 쏙 빼는 이 매운맛을 견디고 나면 큰 희열을 느끼기 때문이죠. 지구 온난화, 이 역시 인류에게 주어진 가장 뜨거운 '도전'입니다. 지금 당장은 고통스럽고 힘들 수 있습니다. 화석 연료를 줄이는 것은 입안이 타들어 가는 것 같고, 생활 습관을 바꾸는 것은 혀가 마비되는 것 같을 겁니다. 하지만 이 도전을 이겨내고 나면, 우리는 '지구를 지켜냈다'는 그 어떤 것과도 비교할 수 없는 짜릿한 성취감을 맛보게 될 것입니다. 두려워 말고 도전합시다!</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>People call eating me a 'challenge.' That's because after enduring this tear-jerking spiciness, they feel great euphoria. Global warming is also the hottest 'challenge' given to humanity. It may be painful and difficult right now. Reducing fossil fuels might feel like your mouth is on fire, and changing lifestyles might feel like your tongue is paralyzed. But once we overcome this challenge, we will taste a thrilling sense of accomplishment that cannot be compared to anything else: 'We saved the Earth.' Let's not be afraid and take on the challenge!</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>人々は私を食べることを「挑戦」と呼びます。涙と鼻水が出るほどのこの辛さを乗り越えた後、大きな喜悦を感じるからです。地球温暖化、これもまた人類に与えられた最もホットな「挑戦」です。今は苦しく、大変かもしれません。化石燃料を減らすことは口の中が燃えるようであり、生活習慣を変えることは舌が麻痺するようです。しかし、この挑戦を乗り越えたなら、私たちは「地球を守り抜いた」という、何物にも代えがたい刺激的な達成感を味わうことになるでしょう。恐れずに挑戦しましょう！</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>너구리의 발언</h3>
+            <div class="ramen-intro">
+                오동통한 면발, 다시마 한 조각! 너구리 한 마리 몰고 가세요~ 제가 바로 너구리입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>제 매력은 뭐니 뭐니 해도 오동통한 면발과 국물 맛을 완성하는 저 '다시마' 한 장에 있습니다. 작은 다시마 하나가 국물 전체의 깊이를 바꿔놓지요. 지구의 지속가능성도 마찬가지입니다. 아마존의 나비 한 마리, 시베리아의 작은 이끼 하나가 지구 생태계 전체의 균형을 좌우할 수 있습니다. 우리는 이 작은 '다시마' 같은 존재들의 소중함을 알아야 합니다. 생물 다양성을 지키는 것, 그것이 바로 지구라는 국물의 맛을 풍부하고 깊게 만드는 비법입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>My charm, above all, lies in my plump noodles and that single piece of 'kelp' that completes the broth's flavor. One small piece of kelp changes the depth of the entire soup. The Earth's sustainability is the same. A single butterfly in the Amazon, a small patch of moss in Siberia, can determine the balance of the entire global ecosystem. We must recognize the value of these 'kelp-like' beings. Protecting biodiversity is the secret recipe to making the broth called Earth rich and deep in flavor.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の魅力は何と言っても、もちもちした麺とスープの味を完成させる、あの「昆布」一枚にあります。小さな昆布一つがスープ全体の深みを変えるのです。地球の持続可能性も同じです。アマゾンの蝶一匹、シベリアの小さな苔一つが、地球生態系全体のバランスを左右することがあります。私たちはこの小さな「昆布」のような存在の貴重さを知らなければなりません。生物多様性を守ること、それこそが地球という名のスープの味を豊かで深いものにする秘訣なのです。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>진라면의 발언</h3>
+            <div class="ramen-intro">
+                순한맛, 매운맛! 입맛대로 고르세요! 합리적인 가격의 국민 라면, 진라면입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 매운 것을 못 먹는 사람을 위한 '순한맛'과, 자극을 즐기는 사람을 위한 '매운맛'을 모두 준비했습니다. 지속 가능한 발전도 마찬가지입니다. 모든 나라가 똑같은 방법으로 탄소를 줄일 수는 없습니다. 각 나라의 경제 상황과 환경에 맞춰 '순한맛' 정책과 '매운맛' 규제를 조화롭게 사용해야 합니다. 중요한 것은 어떤 맛을 선택하든, '지구를 건강하게'라는 동일한 목표를 향해 나아가는 것입니다. 모두가 부담 없이 참여할 수 있는 합리적인 해결책, 그것이 바로 진정한 지속가능성의 맛 아닐까요?</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I have prepared both a 'Mild' flavor for those who cannot handle spice and a 'Spicy' flavor for those who enjoy a kick. Sustainable development is similar. Not all countries can reduce carbon in the same way. We must harmoniously use 'mild' policies and 'spicy' regulations tailored to each country's economic situation and environment. The important thing is that whichever flavor is chosen, we move toward the same goal of 'a healthy Earth.' A reasonable solution that everyone can participate in without burden—isn't that the true taste of sustainability?</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私は辛いものが苦手な方のための「マイルド味」と、刺激を楽しみたい方のための「スパイシー味」の両方を用意しました。持続可能な開発も同じです。すべての国が同じ方法で炭素を削減することはできません。各国の経済状況や環境に合わせて、「マイルド味」の政策と「スパイシー味」の規制を調和させて使うべきです。重要なのは、どちらの味を選んでも、「地球を健康に」という同じ目標に向かって進むことです。誰もが負担なく参加できる合理的な解決策、それこそが真の持続可能性の味ではないでしょうか？</span></p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>삼양라면의 발언</h3>
+            <div class="ramen-intro">
+                반갑습니다. 대한민국 최초의 인스턴트 라면, 역사의 시작, 삼양라면입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 배고프던 시절, 사람들의 허기를 달래주기 위해 태어났습니다. 저의 기본에 충실한 맛처럼, 지속가능성도 기본으로 돌아가는 것에서 시작해야 합니다. 그것은 바로 '덜 쓰고, 아껴 쓰고, 다시 쓰는' 것입니다. 화려한 기술이나 복잡한 정책 이전에, 우리가 처음 자연과 더불어 살았던 그 시절의 지혜를 되찾아야 합니다. 물을 끓이고, 스프를 넣고, 면을 넣어 완성되는 저의 간단한 조리법처럼, 지속가능성도 기본 원칙을 지키는 단순한 실천에서 시작됩니다. 초심을 잃지 맙시다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I was born to relieve people's hunger during difficult times. Like my taste that is faithful to the basics, sustainability must also start by returning to the basics. That is, 'use less, conserve, and reuse.' Before fancy technologies or complex policies, we must reclaim the wisdom of the times when we first lived in harmony with nature. Just like my simple recipe—boil water, add soup base, add noodles—sustainability starts with simple practices that adhere to basic principles. Let's not forget our original intention.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私はお腹を空かせていた時代、人々の空腹を満たすために生まれました。私の基本に忠実な味のように、持続可能性も基本に立ち返ることから始めるべきです。それはすなわち、「より少なく使い、大切に使い、再利用する」ことです。華やかな技術や複雑な政策の前に、私たちが最初に自然と共に生きていたその時代の知恵を取り戻さなければなりません。お湯を沸かし、スープを入れ、麺を入れて完成する私の簡単な調理法のように、持続可能性も基本原則を守る単純な実践から始まります。初心を忘れないようにしましょう。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>안성탕면의 발언</h3>
+            <div class="ramen-intro">
+                구수한 된장 베이스 국물 맛이 일품인 안성탕면입니다. 제 이름은 농심 안성공장에서 따왔답니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저의 구수한 맛은 한국인이라면 누구나 좋아할 편안한 맛입니다. 자극적이지 않고 누구와도 잘 어울리죠. 지속 가능한 사회란, 저처럼 어느 한쪽으로 치우치지 않고 모두를 포용하는 사회여야 합니다. 환경을 지키기 위해 특정 계층이나 가난한 나라만 희생해서는 안 됩니다. 모두가 함께 누리고, 함께 책임지는 '구수한' 공동체를 만들어야 합니다. 우리 집 식탁에 오르는 된장찌개처럼, 지속가능성도 우리 모두의 일상에 자연스럽게 녹아들어야 합니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>My savory flavor is a comfortable taste that any Korean would love. It's not too stimulating and gets along well with everyone. A sustainable society, like me, must be one that embraces all without being biased to one side. To protect the environment, specific classes or poor countries alone should not be sacrificed. We must create a 'savory' community where everyone enjoys the benefits and shares the responsibility together. Like the soybean paste stew on our family table, sustainability should naturally melt into our daily lives.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の香ばしい味わいは、韓国人なら誰もが好む、心安らぐ味です。刺激的でなく、誰とでもよく合います。持続可能な社会とは、私のようにどちらか一方に偏らず、すべてを包容する社会でなければなりません。環境を守るために、特定の階層や貧しい国だけが犠牲になってはなりません。皆が共に享受し、共に責任を負う「香ばしい」共同体を作らなければなりません。私たちの食卓に上る味噌チゲのように、持続可能性も私たち皆の日常に自然に溶け込むべきです。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>팔도비빔면의 발언</h3>
+            <div class="ramen-intro">
+                "오른손으로 비비고, 왼손으로 비비고~" 여름철 별미, 팔도비빔면 인사드립니다!
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 뜨거운 여름, 사람들에게 시원한 즐거움을 선사합니다. 지금 지구는 너무 뜨거워서 열병을 앓고 있습니다. 지구의 온도를 낮추기 위한 '차가운' 지혜가 필요합니다. 또한 저는 소스를 조절해 맵기를 조절할 수 있습니다. 이것은 '적응'입니다. 이미 변해버린 기후에 맞춰 우리 사회 시스템도 유연하게 적응해야 합니다. 뜨거운 지구를 식히는 냉철한 이성과, 변화에 적응하는 유연한 자세. 이 두 가지를 잘 비벼야 맛있는 미래를 만들 수 있습니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I bring cool pleasure to people during the hot summer. Right now, the Earth is suffering from a fever because it is too hot. We need 'cool' wisdom to lower the Earth's temperature. Also, I allow you to adjust the spiciness by controlling the sauce. This is 'adaptation.' Our social systems must also adapt flexibly to the already changed climate. A cool-headed reason to cool the hot Earth, and a flexible attitude to adapt to change. We must mix these two well to create a delicious future.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私は暑い夏、人々に涼しい楽しみを提供します。今、地球は熱すぎて熱病を患っています。地球の温度を下げるための「冷たい」知恵が必要です。また、私はソースを調節して辛さを調整できます。これは「適応」です。すでに変わってしまった気候に合わせて、私たちの社会システムも柔軟に適応しなければなりません。熱い地球を冷ます冷静な理性と、変化に適応する柔軟な姿勢。この二つをうまく混ぜ合わせてこそ、美味しい未来を作ることができます。</span></p>
+        </div>
+        
+        <div class="speech-block">
+            <h3>열라면의 발언</h3>
+            <div class="ramen-intro">
+                이름부터 화끈합니다! 매운 국물 라면의 강자, 열라면입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저의 이름 '열'은 열 받을 만큼 맵다는 뜻도 있지만, 뜨거운 '열정'을 의미하기도 합니다. 지금 우리에게 필요한 것은 바로 이 '열'입니다. 미지근한 대책, 냉소적인 태도로는 이 위기를 극복할 수 없습니다. 기후 변화의 심각성에 분노하고, 해결을 위해 뜨겁게 행동하는 열정이 필요합니다. 저의 화끈한 국물이 잠든 정신을 깨우듯, 이 긴급한 상황을 모두에게 알려 경각심을 일깨워야 합니다. 차가운 이성도 중요하지만, 세상을 바꾸는 것은 결국 뜨거운 가슴입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>My name 'Yeol' can mean 'heat' as in anger-inducing spicy, but it also means fiery 'passion.' What we need right now is this very 'heat.' We cannot overcome this crisis with lukewarm measures and cynical attitudes. We need the passion to be enraged by the severity of climate change and to act fervently for a solution. Just as my fiery broth awakens a sleepy mind, we must awaken everyone's awareness by informing them of this urgent situation. A cool head is important, but it is a hot heart that ultimately changes the world.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私の名前「ヨル」は、腹が立つほど辛いという意味もありますが、熱い「情熱」を意味することもあります。今私たちに必要なのは、まさにこの「熱」です。生ぬるい対策や冷笑的な態度では、この危機を克服することはできません。気候変動の深刻さに憤り、解決のために熱く行動する情熱が必要です。私の燃えるようなスープが眠った精神を目覚めさせるように、この緊急事態を皆に知らせ、警戒心を呼び覚まさなければなりません。冷静な理性も重要ですが、世界を変えるのは最終的には熱い心です。</span></p>
+        </div>
+
+        <div class="speech-block">
+            <h3>라면땅의 발언</h3>
+            <div class="ramen-intro">
+                저는 국물은 없지만, 바삭한 즐거움이 있죠! 라면의 변신은 무죄! 라면땅입니다.
+            </div>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>저는 끓여 먹는 라면이라는 고정관념을 깬 존재입니다. 지속가능성을 위해서도 이런 '발상의 전환'이 필요합니다. 쓰레기는 버리는 것이라는 생각 대신, 새로운 자원이 될 수 있다는 생각. 에너지는 쓰는 것이라는 생각 대신, 만들고 저장할 수 있다는 생각. 저는 라면 면발을 부수고 튀겨서 새로운 가치를 만들었습니다. 우리도 기존의 산업 구조와 생활 방식을 과감히 부수고, 재창조하여 지속 가능한 새로운 가치를 만들어야 합니다. 생각의 틀을 깨는 바삭함이 필요할 때입니다.</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>I am a being that broke the stereotype that ramen must be boiled. For sustainability, this kind of 'paradigm shift' is needed. Instead of thinking of trash as something to be thrown away, think of it as a new resource. Instead of thinking of energy as something to be consumed, think of it as something that can be generated and stored. I created new value by breaking and frying ramen noodles. We too must boldly break and recreate our existing industrial structures and lifestyles to create new, sustainable value. It is time for a crunch that shatters the frame of our thoughts.</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>私は茹でて食べるラーメンという固定観念を破った存在です。持続可能性のためにも、このような「発想の転換」が必要です。ゴミは捨てるものだという考えの代わりに、新しい資源になりうるという考え。エネルギーは使うものだという考えの代わりに、作り出して蓄えることができるという考え。私はラーメンの麺を砕いて揚げることで、新しい価値を創造しました。私たちも既存の産業構造や生活様式を大胆に壊し、再創造して持続可能な新しい価値を創り出さねばなりません。考えの枠を破るサクサク感が必要な時です。</span></p>
+        </div>
+
+        <div class="speech-block chairperson">
+            <h3>의장 신라면의 폐회사</h3>
+            <p class="lang-ko"><strong>[한국어]</strong><button onclick="speakText(this)">🔊</button><span>오늘 우리는 각자의 맛과 개성으로 지속가능성이라는 큰 그릇을 채워보았습니다. 도전의 매운맛, 조화의 비빔맛, 기본의 담백함, 포용의 구수함이 모두 필요함을 확인했습니다. 이제 이 다양한 맛들을 잘 섞고 끓여, 깊고 풍부한 맛을 내는 '지속 가능한 미래'라는 라면을 완성합시다. 냄비에 물을 올릴 시간입니다. 이제는 말보다 실천입니다. 맛있게, 그리고 책임감 있게 우리의 지구를 만들어 갑시다!</span></p>
+            <p class="lang-en"><strong>[English]</strong><button onclick="speakText(this)">🔊</button><span>Today, we have filled the large bowl of sustainability with our individual flavors and personalities. We have confirmed the need for the spiciness of challenge, the mixed taste of harmony, the plainness of basics, and the savoriness of inclusion. Now, let's mix and boil all these diverse flavors to complete the ramen called a 'sustainable future,' which has a deep and rich taste. It is time to put water in the pot. Now is the time for action, not words. Let's make our Earth delicious and responsible!</span></p>
+            <p class="lang-ja"><strong>[日本語]</strong><button onclick="speakText(this)">🔊</button><span>本日、私たちはそれぞれの味と個性で、持続可能性という大きな器を満たしてみました。挑戦の辛さ、調和の混ぜ味、基本の淡白さ、包容の香ばしさ、そのすべてが必要であることを確認しました。さあ、これらの多様な味をよく混ぜて煮込み、深くて豊かな味わいを出す「持続可能な未来」という名のラーメンを完成させましょう。鍋に水を注ぐ時間です。これからは言葉より実践です。美味しく、そして責任感を持って、私たちの地球を作り上げていきましょう！</span></p>
+        </div>
+
+    </div>
+</body>
+</html>

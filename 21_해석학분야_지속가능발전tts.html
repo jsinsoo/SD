@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해석학 10개 분야의 지속가능 발전 토론회 (다국어 TTS)</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', '맑은 고딕', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+            border-bottom: 3px solid #dee2e6;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .global-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .global-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .global-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        #btn-all-ko { background-color: #007bff; }
+        #btn-all-en { background-color: #28a745; }
+        #btn-all-ja { background-color: #dc3545; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+        }
+        .language-section {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            background-color: #fff;
+        }
+        .language-header {
+            background-color: #f1f3f5;
+            padding: 12px 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 8px 8px 0 0;
+        }
+        .text-content {
+            padding: 20px;
+        }
+        .subject-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #17a2b8;
+            border-radius: 5px;
+            background-color: #fafdff;
+        }
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .subject-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: #343a40;
+        }
+        .speak-btn {
+            padding: 5px 10px;
+            font-size: 0.85em;
+            cursor: pointer;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .speak-btn:hover {
+            background-color: #e9ecef;
+        }
+        .intro {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>해석학 10개 분야의 지속가능 발전 토론회</h1>
+
+        <div class="global-controls">
+            <button class="global-btn" id="btn-all-ko" data-target="all-text-ko">🇰🇷 한국어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-en" data-target="all-text-en">🇬🇧 영어 전체 듣기</button>
+            <button class="global-btn" id="btn-all-ja" data-target="all-text-ja">🇯🇵 일본어 전체 듣기</button>
+        </div>
+
+        <div class="content-grid">
+            <!-- 한국어 섹션 -->
+            <div class="language-section" id="all-text-ko">
+                <div class="language-header">🇰🇷 한국어</div>
+                <div class="text-content">
+                    <p class="intro"><strong>사회자:</strong> 안녕하십니까. '변화'를 다루는 가장 정밀한 학문, 해석학의 10개 분야를 모시고 지구의 지속가능한 변화에 대한 고견을 듣겠습니다. 자기소개와 함께 제언을 부탁드립니다.</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. 실해석학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-1">읽기</button></div>
+                        <div id="ko-1">저는 모든 해석학의 기초, '엄밀함'을 상징하는 실해석학입니다. 엡실론-델타 논법으로 모든 변화의 순간을 한 치의 오차 없이 정의하죠.
+                        <strong>지속가능 발전에 대한 제언:</strong> '지속가능성'이라는 목표는 감성적인 구호가 아니라, 엄밀하게 정의된 '수렴점'이어야 합니다. 저는 모든 국가와 산업이 탄소 배출량에 대해 연간 '엡실론(ε) 허용 오차'를 설정할 것을 제안합니다. 그리고 각 정책(\delta)이 이 오차 범위 내에서 목표를 달성할 수 있는지 증명해야 합니다. 지속가능성은 '대충 좋아지겠지'라는 막연한 기대가 아니라, 모든 단계가 논리적으로 증명되고 측정 가능한 목표를 향해 엄밀하게 나아가는 과정이어야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. 복소해석학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-2">읽기</button></div>
+                        <div id="ko-2">저는 '차원의 확장'을 통해 새로운 해법을 찾는 복소해석학입니다. 실수 세계에서 막힌 길을 복소 평면으로 우회하여 아름다운 길을 찾아내죠.
+                        <strong>지속가능 발전에 대한 제언:</strong> 현재 우리는 '경제 성장(실수축)'과 '환경 보전(반대 방향)'이 충돌한다고 생각합니다. 저는 이 문제를 새로운 차원으로 확장할 것을 제안합니다. '허수축'에 '사회적 신뢰', '생태적 아름다움', '미래 세대의 행복'과 같은 가치를 부여하는 것입니다. 그러면 우리의 목표는 단순히 GDP를 늘리는 것이 아니라, 이 모든 가치를 포함하는 복소 벡터의 '크기'를 키우는 것이 됩니다. 코시 적분 정리처럼, 닫힌 경로 안의 본질만 알면 전체를 알 수 있듯, 핵심 가치를 중심으로 통합적인 정책을 펼치면 더 우아하고 강력한 지속가능성을 달성할 수 있습니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. 함수해석학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-3">읽기</button></div>
+                        <div id="ko-3">저는 '무한한 가능성의 공간'을 다루는 함수해석학입니다. 개별 함수(정책) 하나하나가 아닌, 모든 가능한 정책들의 '공간' 전체의 구조를 연구합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 우리는 단편적인 정책 하나에 매달려서는 안 됩니다. 저는 모든 가능한 '지속가능 정책'들을 원소로 하는 거대한 '함수 공간'을 생각할 것을 제안합니다. 이 공간 안에서 우리는 '최적의 정책(함수)'을 찾는 것이 아니라, 지속가능한 상태로 이끄는 모든 정책들이 모여 있는 '안정적인 부분 공간(subspace)'을 찾아야 합니다. 그리고 우리의 현재 정책을 그 공간 위로 '사영(projection)'시키는, 즉 가장 가까운 최선의 정책 조합으로 전환하는 범지구적 '선형 연산자'와 같은 국제기구가 필요합니다.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. 미분방정식론</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-4">읽기</button></div>
+                        <div id="ko-4">저는 '변화의 법칙' 그 자체를 탐구하는 미분방정식론입니다. 열이 퍼지고 파도가 치는 모든 현상의 미래를 현재의 변화율로 예측합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구 시스템은 거대한 '연립 편미분방정식'입니다. 해수면 상승, 대기 온도 변화 등은 모두 이 방정식의 '해(solution)'입니다. 중요한 것은, 해의 존재성과 유일성은 '초기 조건'과 '경계 조건'에 의해 결정된다는 사실입니다. 지속가능성은 바로 지금 우리의 행동이라는 '초기 조건'을 어떻게 설정하느냐에 달려 있습니다. 또한, 특정 지역의 오염을 방치하는 것은 잘못된 '경계 조건'을 주는 것과 같아 전 지구적인 해를 불안정하게 만듭니다. 우리는 과학적 모델링을 통해 최적의 조건을 찾아 미래를 설계해야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. 측도론 & 르베그 적분</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-5">읽기</button></div>
+                        <div id="ko-5">저는 '측정의 기준'을 재정의하는 측도론입니다. 기존의 잣대(리만 적분)로 잴 수 없던 복잡한 것들도 저의 새로운 '측도(measure)'로 정확히 잴 수 있죠.
+                        <strong>지속가능 발전에 대한 제언:</strong> 우리는 '지속가능성'을 잘못된 잣대로 측정하고 있습니다. GDP라는 낡은 '리만 적분' 방식으로는 환경 파괴나 사회적 불평등의 비용을 제대로 측정할 수 없습니다. 저는 '삶의 질', '생물 다양성', '미래 가치' 등을 모두 포함하는 새로운 '르베그 측도'를 사회 전반에 도입할 것을 제안합니다. 또한, '거의 모든 곳에서(almost everywhere)'라는 개념처럼, 100% 완벽한 정책이 아니더라도 대다수의 영역에서 긍정적 효과를 낸다면 의미가 있습니다. 측정 기준이 바뀌어야 세상이 바뀝니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. 푸리에 해석</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-6">읽기</button></div>
+                        <div id="ko-6">저는 '복잡함 속의 단순한 패턴'을 찾아내는 푸리에 해석입니다. 아무리 복잡한 파동(신호)이라도, 저는 그것을 단순한 사인파들의 합으로 분해하여 본질을 꿰뚫어 봅니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구의 기후 시스템과 경제 시스템은 매우 복잡하고 시끄러운 '신호'와 같습니다. 저는 이 복잡한 현상을 '주파수 분석'할 것을 제안합니다. 단기적인 경기 변동(고주파)과 장기적인 기후 변화(저주파)를 분리해서 봐야 합니다. 현재 우리는 단기적인 경제 이익이라는 '고주파 소음'에만 집중하느라, 지구 시스템을 근본적으로 뒤흔드는 '저주파 위기'를 놓치고 있습니다. 지속가능성은 이 저주파 신호에 귀를 기울이고, 시스템의 근본적인 진동을 안정시키는 정책 필터를 설계하는 것입니다.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. 조화해석학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-7">읽기</button></div>
+                        <div id="ko-7">저는 푸리에 해석의 정신을 더 높은 차원의 공간과 '대칭성'으로 확장한 조화해석학입니다. 저는 모든 복잡함 뒤에 숨은 아름다운 조화를 찾습니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구는 단순한 직선이 아니라, 구(Sphere)라는 대칭성을 가진 아름다운 '군(Group)'입니다. 이 공간 위에서의 '조화 함수'는 바로 자연의 순리입니다. 지속가능 발전은 인위적인 정책을 억지로 적용하는 것이 아니라, 지구라는 공간이 본래 가지고 있는 '조화'를 회복하는 과정이어야 합니다. 예를 들어, 에너지 순환, 물질 순환 등은 지구 시스템의 근본적인 '표현(representation)'입니다. 우리는 이러한 자연의 대칭성과 조화를 존중하고, 우리의 문명이 그 위에 아름다운 화음을 더하는 방향으로 나아가야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. 기하해석학</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-8">읽기</button></div>
+                        <div id="ko-8">저는 미분방정식이라는 강력한 엔진을 사용해 공간의 형태를 탐구하는 기하해석학입니다. 공간의 '곡률'이 어떻게 변화하는지를 통해 우주의 비밀을 풉니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 인류의 문명은 지구라는 '다양체(manifold)' 위에 놓여 있습니다. 무분별한 개발과 자원 착취는 이 공간의 '곡률'을 불안정하게 왜곡시키는 행위입니다. 저는 '리치 흐름(Ricci flow)'의 개념을 사회에 적용할 것을 제안합니다. 이는 울퉁불퉁한 공간을 시간이 지남에 따라 점차 부드럽고 균일하게 만드는 과정입니다. 사회적 불평등, 자원 편중과 같은 '뾰족한' 부분들을 완화하고, 지구 전체가 안정적이고 고른 '아인슈타인 다양체'처럼 되도록 정책을 설계해야 합니다. 이는 공간의 기하학적 건강성을 회복하는 길입니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. 변분법</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-9">읽기</button></div>
+                        <div id="ko-9">저는 '최적의 경로'를 찾는 변분법입니다. 수많은 가능성 중에서, 어떤 양을 최소화하거나 최대화하는 단 하나의 함수, 즉 '가장 효율적인 길'을 찾아냅니다.
+                        <strong>지속가능 발 unha 대한 제언:</strong> 지속가능 발전은 인류가 나아갈 '최적 경로'를 찾는 문제입니다. 저는 '최소 작용의 원리'를 적용할 것을 강력히 주장합니다. 이는 자연이 항상 에너지를 가장 적게 소모하는 경로를 택한다는 원리입니다. 우리의 목표는 '미래 세대의 총 고통'이라는 '범함수(functional)'를 최소화하는 발전 경로(함수)를 찾는 것입니다. 지금의 단기적 이익을 위해 가파른 길을 택하면, 결국 전체 경로는 길고 험난해집니다. 당장은 조금 돌아가더라도, 전체 과정에서 환경 부하와 사회적 비용을 최소화하는 길을 찾아야 합니다.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. 동역학계 이론</span><button class="speak-btn" data-lang="ko-KR" data-target="ko-10">읽기</button></div>
+                        <div id="ko-10">저는 '시간에 따른 시스템의 운명'을 연구하는 동역학계 이론입니다. 작은 초기 조건의 차이가 예측 불가능한 혼돈(카오스)을 낳는 현상을 분석합니다.
+                        <strong>지속가능 발전에 대한 제언:</strong> 지구 기후 시스템은 매우 민감한 '동역학계'입니다. 지금 우리의 작은 행동 하나가 '나비 효과'를 일으켜 미래에 상상할 수 없는 결과를 초래할 수 있습니다. 중요한 것은 시스템이 결국 끌려 들어가는 '끌개(attractor)'입니다. 현재 인류의 경로는 '고온의 지구'라는 파국적인 끌개를 향하고 있습니다. 지속가능 발전이란, 시스템의 '매개변수(parameter)'(예: 탄소세, 기술 투자)를 미세하게 조정하여, 시스템의 궤도를 '지속가능한 평형 상태'라는 새로운 '안정적인 끌개'로 유도하는 것입니다. 우리는 시스템의 운명 자체를 바꾸는 설계자가 되어야 합니다.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 영어 섹션 -->
+            <div class="language-section" id="all-text-en">
+                <div class="text-content">
+                    <p class="intro"><strong>Moderator:</strong> Good afternoon. Today, we have gathered the 10 fields of Analysis, the most precise discipline for studying 'change,' to hear their expert opinions on the sustainable change for our planet. Please introduce yourselves and offer your proposals.</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. Real Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-1">Read</button></div>
+                        <div id="en-1">I am Real Analysis, the foundation of all analysis, symbolizing 'rigor.' I define every moment of change with unerring precision using the epsilon-delta definition.
+                        <strong>Proposal for Sustainable Development:</strong> The goal of 'sustainability' should not be an emotional slogan but a rigorously defined 'point of convergence.' I propose that every nation and industry set an annual 'epsilon (ε) tolerance' for their carbon emissions. Then, they must prove that each policy (\delta) can achieve the goal within this margin of error. Sustainability is not a vague hope that things will 'somehow get better'; it must be a process where every step is logically proven and rigorously moves toward a measurable goal.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. Complex Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-2">Read</button></div>
+                        <div id="en-2">I am Complex Analysis, finding new solutions through 'dimensional extension.' I find beautiful paths by detouring into the complex plane when the path in the real world is blocked.
+                        <strong>Proposal for Sustainable Development:</strong> We currently think that 'economic growth (the real axis)' and 'environmental conservation (the opposite direction)' are in conflict. I propose expanding this problem to a new dimension. Let's assign values like 'social trust,' 'ecological beauty,' and 'future generations' happiness' to the 'imaginary axis.' Then, our goal is not merely to increase GDP, but to increase the 'magnitude' of this entire complex vector. Like Cauchy's Integral Formula, where knowing the essence inside a closed path reveals the whole, we can achieve a more elegant and powerful sustainability by developing integrated policies centered on core values.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. Functional Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-3">Read</button></div>
+                        <div id="en-3">I am Functional Analysis, dealing with 'spaces of infinite possibilities.' I don't study individual functions (policies) one by one, but the structure of the entire 'space' of all possible policies.
+                        <strong>Proposal for Sustainable Development:</strong> We should not cling to a single, fragmented policy. I suggest we consider a vast 'function space' whose elements are all possible 'sustainable policies.' Within this space, our goal is not to find one 'optimal function,' but to identify a 'stable subspace' where all policies leading to a sustainable state reside. We then need a global 'linear operator,' like an international body, that 'projects' our current policy onto that subspace—transforming it into the nearest and best combination of policies.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. Differential Equations</span><button class="speak-btn" data-lang="en-US" data-target="en-4">Read</button></div>
+                        <div id="en-4">I am the theory of Differential Equations, exploring the very 'laws of change.' I predict the future of all phenomena, from the spread of heat to the movement of waves, based on their current rates of change.
+                        <strong>Proposal for Sustainable Development:</strong> The Earth system is a giant 'system of partial differential equations.' Sea-level rise, atmospheric temperature change—these are all 'solutions' to this system. What's crucial is that the existence and uniqueness of a solution are determined by the 'initial conditions' and 'boundary conditions.' Sustainability depends directly on how we set the 'initial conditions'—our actions today. Furthermore, neglecting pollution in one region is like setting a wrong 'boundary condition,' which destabilizes the global solution. We must design our future by finding the optimal conditions through scientific modeling.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. Measure Theory & Lebesgue Integration</span><button class="speak-btn" data-lang="en-US" data-target="en-5">Read</button></div>
+                        <div id="en-5">I am Measure Theory, redefining the 'standard of measurement.' With my new 'measure,' I can accurately size up complex sets that older tools (like the Riemann integral) could not.
+                        <strong>Proposal for Sustainable Development:</strong> We are measuring 'sustainability' with the wrong ruler. The old 'Riemann integral' of GDP cannot properly measure the costs of environmental destruction or social inequality. I propose adopting a new 'Lebesgue measure' for society that includes 'quality of life,' 'biodiversity,' and 'future value.' Also, like the concept of 'almost everywhere,' a policy can be meaningful if it has a positive effect in the vast majority of areas, even if it's not 100% perfect. To change the world, we must first change the way we measure it.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. Fourier Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-6">Read</button></div>
+                        <div id="en-6">I am Fourier Analysis, finding 'simple patterns in complexity.' No matter how complex a wave (signal) is, I break it down into a sum of simple sine waves to see its essence.
+                        <strong>Proposal for Sustainable Development:</strong> The Earth's climate and economic systems are like very complex and noisy 'signals.' I propose we 'frequency-analyze' these phenomena. We must separate short-term economic fluctuations (high frequency) from long-term climate change (low frequency). Currently, we are so focused on the 'high-frequency noise' of short-term profits that we are missing the 'low-frequency crisis' that is fundamentally shaking our global system. Sustainability is about listening to this low-frequency signal and designing policy filters that stabilize the system's fundamental vibrations.</div>
+                    </div>
+                     <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. Harmonic Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-7">Read</button></div>
+                        <div id="en-7">I am Harmonic Analysis, extending the spirit of Fourier analysis to higher-dimensional spaces and 'symmetry.' I seek the beautiful harmony hidden behind all complexity.
+                        <strong>Proposal for Sustainable Development:</strong> The Earth is not a simple line; it is a 'Group' with the beautiful symmetry of a sphere. The 'harmonic functions' on this space are the very laws of nature. Sustainable development should not be about forcibly applying artificial policies but about restoring the 'harmony' inherent to our planet. For instance, energy and material cycles are fundamental 'representations' of the Earth system. We must respect the symmetry and harmony of nature and move in a direction where our civilization adds a beautiful chord to it.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. Geometric Analysis</span><button class="speak-btn" data-lang="en-US" data-target="en-8">Read</button></div>
+                        <div id="en-8">I am Geometric Analysis, using the powerful engine of differential equations to study the shape of space. I solve the secrets of the universe by analyzing how the 'curvature' of space changes.
+                        <strong>Proposal for Sustainable Development:</strong> Human civilization rests upon the 'manifold' of Earth. Reckless development and resource exploitation are acts that unstably distort the 'curvature' of this space. I propose applying the concept of 'Ricci flow' to society. This is a process that gradually smooths out and evens a bumpy space over time. We must design policies to mitigate the 'pointy' parts like social inequality and resource concentration, so that the entire planet can become like a stable and uniform 'Einstein manifold.' This is the path to restoring the geometric health of our space.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. Calculus of Variations</span><button class="speak-btn" data-lang="en-US" data-target="en-9">Read</button></div>
+                        <div id="en-9">I am the Calculus of Variations, the finder of the 'optimal path.' Among countless possibilities, I find the one function that minimizes or maximizes a certain quantity—the 'most efficient way.'
+                        <strong>Proposal for Sustainable Development:</strong> Sustainable development is the problem of finding the 'optimal path' for humanity. I strongly urge the application of the 'Principle of Least Action,' which states that nature always chooses the path that consumes the least energy. Our goal is to find the development path (a function) that minimizes the 'functional' of 'total suffering of future generations.' Choosing a steep path for short-term gain will ultimately make the entire journey long and arduous. We must find the path that minimizes environmental load and social costs over the whole process, even if it seems like a detour now.</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. Dynamical Systems</span><button class="speak-btn" data-lang="en-US" data-target="en-10">Read</button></div>
+                        <div id="en-10">I am the theory of Dynamical Systems, studying the 'long-term fate of a system over time.' I analyze how a small difference in initial conditions can lead to unpredictable chaos.
+                        <strong>Proposal for Sustainable Development:</strong> The Earth's climate is a highly sensitive 'dynamical system.' A single small action today can trigger a 'butterfly effect,' leading to unimaginable consequences in the future. What's crucial is the 'attractor' the system is eventually drawn to. Humanity's current path is heading towards a catastrophic attractor: a 'hothouse Earth.' Sustainable development is about finely tuning the system's 'parameters' (e.g., carbon tax, technology investment) to guide its trajectory toward a new, 'stable attractor': a sustainable equilibrium. We must become the architects who change the very destiny of the system.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 일본어 섹션 -->
+            <div class="language-section" id="all-text-ja">
+                <div class="text-content">
+                    <p class="intro"><strong>司会者：</strong>こんにちは。「変化」を扱う最も精密な学問、解析学の10分野をお招きし、地球の持続可能な変化についてのご意見を伺います。自己紹介と併せてご提言をお願いします。</p>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">1. 実解析学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-1">読む</button></div>
+                        <div id="ja-1">私はすべての解析学の基礎、「厳密さ」を象徴する実解析学です。イプシロン-デルタ論法で、あらゆる変化の瞬間を寸分の誤差なく定義します。
+                        <strong>持続可能な発展への提言：</strong>「持続可能性」という目標は、感情的なスローガンではなく、厳密に定義された「収束点」であるべきです。私は、すべての国と産業が炭素排出量に対して年間の「イプシロン（ε）許容誤差」を設定することを提案します。そして、各政策（\delta）がこの誤差の範囲内で目標を達成できるかを証明すべきです。「なんとなく良くなるだろう」という漠然とした期待ではなく、すべての段階が論理的に証明され、測定可能な目標に向かって厳密に進む過程こそが持続可能性です。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">2. 複素解析学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-2">読む</button></div>
+                        <div id="ja-2">私は「次元の拡張」を通じて新たな解法を見つけ出す複素解析学です。実数の世界で行き詰まった道を、複素平面へと迂回して美しい道筋を見つけ出します。
+                        <strong>持続可能な発展への提言：</strong>現在、私たちは「経済成長（実数軸）」と「環境保全（逆方向）」が衝突すると考えています。私はこの問題を新しい次元へと拡張することを提案します。「虚数軸」に「社会的信頼」「生態学的価値」「未来世代の幸福」といった価値を付与するのです。そうすれば、私たちの目標は単にGDPを増やすことではなく、これらすべての価値を含む複素ベクトルの「絶対値」を大きくすることになります。コーシーの積分定理のように、閉じた経路の中の本質さえ分かれば全体が分かるように、核心的な価値を中心に統合的な政策を展開すれば、よりエレガントで強力な持続可能性を達成できます。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">3. 関数解析学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-3">読む</button></div>
+                        <div id="ja-3">私は「無限の可能性の空間」を扱う関数解析学です。個々の関数（政策）一つひとつではなく、すべての可能な政策たちの「空間」全体の構造を研究します。
+                        <strong>持続可能な発展への提言：</strong>私たちは断片的な政策一つに固執すべきではありません。私は、すべての可能な「持続可能政策」を元とする巨大な「関数空間」を考えることを提案します。この空間の中で、私たちは「最適な関数」を探すのではなく、持続可能な状態へと導くすべての政策が集まっている「安定した部分空間」を見つけるべきです。そして、現在の政策をその空間の上へと「射影」させる、つまり最も近い最善の政策の組み合わせへと転換させる、全地球的な「線形作用素」のような国際機関が必要です。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">4. 微分方程式論</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-4">読む</button></div>
+                        <div id="ja-4">私は「変化の法則」そのものを探求する微分方程式論です。熱が広がり、波が打つすべての現象の未来を、現在の変化率から予測します。
+                        <strong>持続可能な発展への提言：</strong>地球システムは巨大な「連立偏微分方程式」です。海水面の上昇や大気温度の変化などは、すべてこの方程式の「解」です。重要なのは、解の存在と一意性は「初期条件」と「境界条件」によって決定されるという事実です。持続可能性は、まさに今の私たちの行動という「初期条件」をどう設定するかにかかっています。また、特定地域の汚染を放置することは、誤った「境界条件」を与えるのと同じで、全地球的な解を不安定にします。私たちは科学的モデリングを通じて最適な条件を見つけ、未来を設計すべきです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">5. 測度論 & ルベーグ積分</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-5">読む</button></div>
+                        <div id="ja-5">私は「測定の基準」を再定義する測度論です。既存の物差し（リーマン積分）では測れなかった複雑なものも、私の新しい「測度（メジャー）」で正確に測ることができます。
+                        <strong>持続可能な発展への提言：</strong>私たちは「持続可能性」を誤った物差しで測っています。GDPという古い「リーマン積分」方式では、環境破壊や社会的不平等のコストを正しく測定できません。私は「生活の質」「生物多様性」「未来価値」などをすべて含む新しい「ルベーグ測度」を社会全体に導入することを提案します。また、「ほとんど至る所で(almost everywhere)」という概念のように、100%完璧な政策でなくても、大多数の領域で肯定的な効果をもたらせば意味があります。測定基準が変わらなければ、世界は変わりません。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">6. フーリエ解析</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-6">読む</button></div>
+                        <div id="ja-6">私は「複雑さの中の単純なパターン」を見つけ出すフーリエ解析です。どんなに複雑な波動（信号）でも、私はそれを単純なサイン波の和に分解し、本質を見抜きます。
+                        <strong>持続可能な発展への提言：</strong>地球の気候システムと経済システムは、非常に複雑でノイズの多い「信号」のようなものです。私はこの複雑な現象を「周波数分析」することを提案します。短期的な景気変動（高周波）と長期的な気候変動（低周波）を分離して見るべきです。現在、私たちは短期的な経済利益という「高周波ノイズ」にばかり集中するあまり、地球システムを根底から揺るがす「低周波の危機」を見逃しています。持続可能性とは、この低周波信号に耳を傾け、システムの根本的な振動を安定させる政策フィルターを設計することです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">7. 調和解析学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-7">読む</button></div>
+                        <div id="ja-7">私はフーリエ解析の精神をより高次元の空間と「対称性」へと拡張した調和解析学です。私はすべての複雑さの背後に隠された美しい調和を探します。
+                        <strong>持続可能な発展への提言：</strong>地球は単なる直線ではなく、球面という対称性を持つ美しい「群」です。この空間上での「調和関数」こそが、自然の摂理です。持続可能な発展とは、人為的な政策を無理やり適用するのではなく、地球という空間が本来持っている「調和」を回復する過程であるべきです。例えば、エネルギー循環や物質循環などは、地球システムの根本的な「表現」です。私たちはこのような自然の対称性と調和を尊重し、私たちの文明がその上に美しい和音を重ねる方向へと進むべきです。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">8. 幾何解析学</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-8">読む</button></div>
+                        <div id="ja-8">私は微分方程式という強力なエンジンを用いて空間の形を探求する幾何解析学です。空間の「曲率」がどのように変化するかを通じて、宇宙の秘密を解き明かします。
+                        <strong>持続可能な発展への提言：</strong>人類の文明は、地球という「多様体」の上にあります。無分別な開発と資源の搾取は、この空間の「曲率」を不安定に歪める行為です。私は「リッチフロー」の概念を社会に適用することを提案します。これは、でこぼこの空間を時間とともに徐々に滑らかで均一にする過程です。社会的不平等や資源の偏りのような「尖った」部分を緩和し、地球全体が安定的で均一な「アインシュタイン多様体」のようになるよう政策を設計すべきです。これは、空間の幾何学的な健全性を回復する道です。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">9. 変分法</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-9">読む</button></div>
+                        <div id="ja-9">私は「最適な経路」を探す変分法です。無数の可能性の中から、ある量を最小化または最大化する唯一の関数、すなわち「最も効率的な道」を見つけ出します。
+                        <strong>持続可能な発展への提言：</strong>持続可能な発展とは、人類が進むべき「最適経路」を見つける問題です。私は「最小作用の原理」を適用することを強く主張します。これは自然が常にエネルギーを最も少なく消費する経路を選ぶという原理です。私たちの目標は、「未来世代の総苦痛」という「汎関数」を最小化する発展経路（関数）を見つけることです。今の短期的な利益のために急な道を選べば、結局、全体の道のりは長く険しくなります。今は少し遠回りに見えても、全過程で環境負荷と社会的コストを最小化する道を探さなければなりません。</div>
+                    </div>
+                    <div class="subject-item">
+                        <div class="subject-header"><span class="subject-title">10. 力学系理論</span><button class="speak-btn" data-lang="ja-JP" data-target="ja-10">読む</button></div>
+                        <div id="ja-10">私は「時間によるシステムの運命」を研究する力学系理論です。小さな初期条件の違いが予測不可能な混沌（カオス）を生む現象を分析します。
+                        <strong>持続可能な発展への提言：</strong>地球の気候システムは非常に敏感な「力学系」です。今の私たちの小さな行動一つが「バタフライ効果」を引き起こし、未来に想像もできない結果をもたらす可能性があります。重要なのは、システムが最終的に引き込まれる「アトラクター」です。現在の人類の経路は、「高温の地球」という破局的なアトラクターに向かっています。持続可能な発展とは、システムの「パラメータ」（例：炭素税、技術投資）を微調整し、システムの軌道を「持続可能な平衡状態」という新たな「安定的なアトラクター」へと誘導することです。私たちはシステムの運命そのものを変える設計者にならなければなりません。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 모든 '읽어주기' 및 '전체 듣기' 버튼을 선택합니다.
+            const allButtons = document.querySelectorAll('.speak-btn, .global-btn');
+            
+            // 현재 재생 중인 음성을 중지하는 함수
+            function stopSpeech() {
+                if (window.speechSynthesis && window.speechSynthesis.speaking) {
+                    window.speechSynthesis.cancel();
+                }
+            }
+
+            allButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 다른 음성이 재생 중이면 즉시 중지합니다.
+                    stopSpeech();
+
+                    let lang;
+                    // 버튼 클래스에 따라 언어 코드와 텍스트 대상을 결정합니다.
+                    if (this.classList.contains('global-btn')) {
+                        const targetId = this.getAttribute('data-target');
+                        if (targetId.includes('-ko')) lang = 'ko-KR';
+                        else if (targetId.includes('-en')) lang = 'en-US';
+                        else if (targetId.includes('-ja')) lang = 'ja-JP';
+                    } else {
+                        lang = this.getAttribute('data-lang');
+                    }
+                    
+                    const targetId = this.getAttribute('data-target');
+                    const textElement = document.getElementById(targetId);
+                    
+                    if (textElement && 'speechSynthesis' in window) {
+                        const textToSpeak = textElement.textContent || textElement.innerText;
+                        
+                        const utterance = new SpeechSynthesisUtterance(textToSpeak);
+                        
+                        utterance.lang = lang;
+                        utterance.rate = 1.0; // 읽는 속도 (기본값 1)
+                        utterance.pitch = 1.0; // 음높이 (기본값 1)
+
+                        utterance.onend = function() {
+                            console.log('Speech playback finished for ' + targetId);
+                        };
+                        
+                        // 음성 재생
+                        window.speechSynthesis.speak(utterance);
+                    } else {
+                        alert('죄송합니다, 사용자의 브라우저가 음성 합성을 지원하지 않습니다. (Sorry, your browser does not support speech synthesis.)');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
